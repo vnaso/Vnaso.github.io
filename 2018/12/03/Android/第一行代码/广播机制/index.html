@@ -26,6 +26,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -86,7 +93,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '6.6.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -112,7 +119,7 @@
 <meta name="keywords" content="Android 广播">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一行代码之广播机制">
-<meta property="og:url" content="http://yoursite.com/2018/12/03/Android/第一行代码/广播机制/index.html">
+<meta property="og:url" content="http://vnaso.github.io/2018/12/03/Android/第一行代码/广播机制/index.html">
 <meta property="og:site_name" content="Vnaso">
 <meta property="og:description" content="广播机制广播机制简介Android中的广播分为两种类型:标准广播和有序广播  标准广播:是一种完全异步执行的广播.在广播发出之后,所有的广播接收器几乎都会在听一时刻接收到这条广播消息,没有先后顺序可言,同事意味着无法被截断. 有序广播:是一种同步执行的广播.在广播发出后,同一时刻只有一个广播接收器能够接收到这条广播消息.当这个广播接收器的逻辑执行完毕后,广播才会继续传递.所以有先后顺序,优先级高的">
 <meta property="og:locale" content="en">
@@ -129,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/03/Android/第一行代码/广播机制/">
+  <link rel="canonical" href="http://vnaso.github.io/2018/12/03/Android/第一行代码/广播机制/">
 
 
 
@@ -410,7 +417,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/Android/第一行代码/广播机制/">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2018/12/03/Android/第一行代码/广播机制/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -573,7 +580,24 @@
     
     
     
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------------The End -------------------</div>
+    
+</div>
+    
+    </div>
 
+    
+    
+    
+    <div>
+          
+            
+          
+    </div>  
     
 
     
@@ -582,12 +606,35 @@
     
 
     
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>vnaso</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="http://vnaso.github.io/2018/12/03/Android/第一行代码/广播机制/" title="第一行代码之广播机制">http://vnaso.github.io/2018/12/03/Android/第一行代码/广播机制/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Android-广播/" rel="tag"># Android 广播</a>
+            <a href="/tags/Android-广播/" rel="tag"><i class="fa fa-tag"></i> Android 广播</a>
           
         </div>
       
@@ -829,6 +876,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -891,11 +945,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
