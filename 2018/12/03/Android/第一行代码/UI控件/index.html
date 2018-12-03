@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="UI控件常用控件 TextView Button EditText  通过findViewById()方法得到实例,然后调用getText()方法获取输入内容,在调用toString()方法转换成字符串  ImageView  通过android:src指定图片  ProgressBar  通过android:visibility指定,可选值有visible,invisible,gone.或set">
+<meta name="keywords" content="Android UI控件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一行代码之UI控件">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/Android/第一行代码/UI控件/index.html">
+<meta property="og:site_name" content="Vnaso">
+<meta property="og:description" content="UI控件常用控件 TextView Button EditText  通过findViewById()方法得到实例,然后调用getText()方法获取输入内容,在调用toString()方法转换成字符串  ImageView  通过android:src指定图片  ProgressBar  通过android:visibility指定,可选值有visible,invisible,gone.或set">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/697611/201503/270953107553628.png">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201203/23/0_13325462686Gu4.gif">
+<meta property="og:updated_time" content="2018-12-03T10:31:45.585Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一行代码之UI控件">
+<meta name="twitter:description" content="UI控件常用控件 TextView Button EditText  通过findViewById()方法得到实例,然后调用getText()方法获取输入内容,在调用toString()方法转换成字符串  ImageView  通过android:src指定图片  ProgressBar  通过android:visibility指定,可选值有visible,invisible,gone.或set">
+<meta name="twitter:image" content="http://images.cnitblog.com/blog2015/697611/201503/270953107553628.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/03/Android/第一行代码/UI控件/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>第一行代码之UI控件 | Vnaso</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Vnaso</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Schedule</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+    <a href="https://github.com/yourname" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/Android/第一行代码/UI控件/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">第一行代码之UI控件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-03 18:13:00 / Modified: 18:31:45" itemprop="dateCreated datePublished" datetime="2018-12-03T18:13:00+08:00">2018-12-03</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/第一行代码/" itemprop="url" rel="index"><span itemprop="name">第一行代码</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="UI控件"><a href="#UI控件" class="headerlink" title="UI控件"></a>UI控件</h2><h3 id="常用控件"><a href="#常用控件" class="headerlink" title="常用控件"></a>常用控件</h3><ul>
+<li>TextView</li>
+<li>Button</li>
+<li>EditText</li>
+</ul>
+<p>通过<code>findViewById()</code>方法得到实例,然后调用<code>getText()</code>方法获取输入内容,在调用<code>toString()</code>方法转换成字符串</p>
+<ul>
+<li>ImageView</li>
+</ul>
+<p>通过<code>android:src</code>指定图片</p>
+<ul>
+<li>ProgressBar</li>
+</ul>
+<p>通过<code>android:visibility</code>指定,可选值有<code>visible</code>,<code>invisible</code>,<code>gone</code>.<br>或<code>setVisibility()</code>方法传入常量值<code>View.VISIBLE</code>,<code>View.INVISIBLE</code>,<code>View.GONE</code>.<br><code>android:max</code>属性设定最大值</p>
+<ul>
+<li>AlertDialog</li>
+</ul>
+<p>通过<code>AlertDialog.Builder builer = new AlertDialog.Builder(MainActivity.this);</code>创建<code>Builder</code>实例<br>使用<code>setTitle</code>,<code>setMessage</code>,<code>setCancelable</code>,<code>setPositiveButton</code>,<code>setNegativeButton</code>,来赋予属性.最后使用<code>create()</code>方法创建<code>AlertDialog</code>实例,再调用<code>show()</code>方法即可显示.</p>
+<ul>
+<li>ProgressDialog</li>
+</ul>
+<p>通过<code>ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);</code>创建实例,其他方法类似于<code>AlterDialog</code><br><strong>注意</strong> 如果<code>setCancelable()</code>中传入了<code>false</code>,表示<code>ProgressDialog</code>不能通过<code>Back</code>键取消掉.此时必须在某个时刻调用<code>ProgressDialog</code>的<code>dismiss()</code>方法来销毁</p>
+<h3 id="基本布局"><a href="#基本布局" class="headerlink" title="基本布局"></a>基本布局</h3><h4 id="线性布局"><a href="#线性布局" class="headerlink" title="线性布局"></a>线性布局</h4><p><code>LinearLayout</code>线性布局会将它说包含的控件在线性方向上依次排列,可通过<code>android:orientation</code>来设置<code>vertical</code>或<code>horizontal</code>.可以使用<code>android:layout_weight</code>来按比例指定控件大小</p>
+<h4 id="相对布局"><a href="#相对布局" class="headerlink" title="相对布局"></a>相对布局</h4><p><code>RelativeLayout</code>相对布局可以通过相对定位的方式让控件出现在布局的任何位置,通过对控件添加属性可完成对控件的布局</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">android:layout_alignParentTop</td>
+<td style="text-align:center">true/false</td>
+<td>和父布局顶部对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">android:layout_alignParentRight</td>
+<td style="text-align:center">true/false</td>
+<td>和父布局右端对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">android:layout_centerInParent</td>
+<td style="text-align:center">true/false</td>
+<td>和父布局中心对齐</td>
+</tr>
+<tr>
+<td style="text-align:center">android:layout_toLeftOf</td>
+<td style="text-align:center">控件的id的引用</td>
+<td>使控件位于引用控件的左侧</td>
+</tr>
+<tr>
+<td style="text-align:center">android:layout_above</td>
+<td style="text-align:center">控件的id的引用</td>
+<td>使控件位于引用控件的上方</td>
+</tr>
+<tr>
+<td style="text-align:center">android:layout_below</td>
+<td style="text-align:center">控件的id的引用</td>
+<td>使控件位于引用控件的下方</td>
+</tr>
+</tbody>
+</table>
+<p>这些属性可以结合使用,以实现不同的定位</p>
+<h4 id="帧布局"><a href="#帧布局" class="headerlink" title="帧布局"></a>帧布局</h4><p><code>FrameLayout</code>帧布局的所有控件都默认摆放在布局的左上角,通过<code>android:layout_gravity</code>来设置对齐方式,<code>left</code>,<code>right</code>,<code>center</code>,<code>top</code>,<code>bottom</code>.这些属性可用<code>|</code>链接一起使用,例如:<code>right|top</code>右上角对齐</p>
+<h4 id="百分比布局"><a href="#百分比布局" class="headerlink" title="百分比布局"></a>百分比布局</h4><p>百分比布局只为<code>FrameLayout</code>和<code>RelativeLayout</code>进行了功能扩展,提供了<code>PercentFrameLayout</code>和<code>PercentRelativeLayout</code>两个布局</p>
+<p>百分比布局需要在项目的<code>build.gradle</code>中添加百分比布局库的依赖,在<code>app/build.gradle</code>文件的<code>dependencies</code>闭包中添加<code>compile &#39;com.android.support:percent:24.2.1&#39;</code></p>
+<blockquote>
+<p>每当修改了任何<code>gradle</code>文件时,<code>Android Studio</code>会提示需要同步修改后的<code>gradle1</code>,点击<code>Sync Now</code>即可</p>
+</blockquote>
+<p>百分比布局中,可为控件添加属性<code>app:layout_widthPercent</code>和<code>app:layout_heightPercent</code>分别设置布局长宽的百分比值.使用<code>app</code>需要在布局中定义一个<code>app</code>的命名空间</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">android:support.percent.PercentFrameLayout</span></span></span><br><span class="line">    &lt;!-- 此处省略其他设置 --&gt;</span><br><span class="line">    xmlns:app="http://schema.android.com/apk/res-auto"&gt;<span class="tag">&lt;/<span class="name">android:support.percent.PercentFrameLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="自定义布局"><a href="#自定义布局" class="headerlink" title="自定义布局"></a>自定义布局</h3><h4 id="引入布局"><a href="#引入布局" class="headerlink" title="引入布局"></a>引入布局</h4><p>使用引入布局来减少重复的布局代码</p>
+<p><strong>使用方法</strong></p>
+<p>在一个布局下,通过<code>&lt;include layout = &quot;@Layout/xxx&quot;&gt;</code>来引入指定名称的<code>xml</code>布局文件</p>
+<h4 id="自定义布局-1"><a href="#自定义布局-1" class="headerlink" title="自定义布局"></a>自定义布局</h4><p>如果不居中有一些控件要求能够响应事件,我们还是需要在每个活动中为这些空间单独编写一次事件注册代码,比如说标题栏中的返回按钮,不管在哪一个活动中,这个按钮的功能都是相同的.而如果每个活动中都要重新注册一遍返回按钮的点击事件,无疑会增加很多重复代码,这种情况下最好是使用自定义控件的方式解决</p>
+<ol>
+<li>新建<code>TitleLayout</code>继承自<code>LinearLayout</code>,让它称为我们自定义的标题栏控件</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TitleLayout</span> <span class="keyword">extends</span> <span class="title">LinearLayout</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TitleLayout</span><span class="params">(Context context,AttributeSet attrs)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context,attrs);</span><br><span class="line">        <span class="comment">// 指定加载的布局是R.layout.title,父布局是TitleLayout=this</span></span><br><span class="line">        LayoutInflater.from(context).inflate(R.layout.title,<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重写<code>LinearLayout</code>中带有两个参数的构造函数,在布局中引入<code>TitleLayout</code>控件就会调用这个构造函数,然后借助<code>LayoutInflater</code>的<code>from()</code>方法构建出一个<code>LayoutInflater</code>对象调用<code>inflate()</code>方法来对<code>R.layout.title</code>布局进行动态加载.<code>inflate()</code>方法需要传入两个参数,第一个参数是要加载的布局文件的<code>id</code>,第二个参数是给加载好的布局再添加一个父布局</p>
+<ol>
+<li>在布局文件中添加自定义文件</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">...</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">com.example.TitleLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>必须指明自定义控件的完整类名,包名不可以省略</p>
+<ol>
+<li>为按钮添加注册点击事件</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Button titleBack = (Button)findViewById(R.id.title_back);</span><br><span class="line">titleBack.setOnclickListener(<span class="keyword">new</span> OnClickListener()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span>&#123;</span><br><span class="line">        <span class="comment">// do same thing</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这样,每当在一个布局中引人自定义控件时,控件的点击事件就已经自动实现好了(默认使用写好的<code>onClick()</code>方法),省去重复冗余的代码</p>
+<h3 id="ListView"><a href="#ListView" class="headerlink" title="ListView"></a>ListView</h3><p>当程序中有大量数据需要展示时,可以借助<code>ListView</code>实现,<code>ListView</code>允许用户通过手指上下滑动的方式将屏幕外的数据滚动到屏幕内,同时屏幕上原有的数据则会滚动出屏幕</p>
+<h4 id="定制ListView"><a href="#定制ListView" class="headerlink" title="定制ListView"></a>定制ListView</h4><ol>
+<li>定义一个实体类,作为<code>ListView</code>适配器的适配类型,需要有<code>getter</code>方法</li>
+<li>为<code>ListView</code>的子项创建一个自定义的布局</li>
+<li>创建一个自定义的适配器,该适配器继承来自<code>ArrayAdapter</code>,并将泛型指定为实体类</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitAdapter</span> <span class="keyword">extends</span> <span class="title">ArrayAdapter</span>&lt;<span class="title">Fruit</span>&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> resourceId;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FruitAdapter</span><span class="params">(Context context,<span class="keyword">int</span> textViewResourceId,List&lt;Fruit&gt; objects)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context,textViewResourceId,objects);</span><br><span class="line">        resourceId = textViewResourceId;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">int</span> position,View convertView,ViewGroup parent)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 获取当前项的实例</span></span><br><span class="line">        Fruit fruit = getItem(position);</span><br><span class="line">        View view;</span><br><span class="line">        <span class="comment">// 为当前项加载传入的布局,false表示不为这个View添加父布局,否则无法添加到ListView中</span></span><br><span class="line">        <span class="keyword">if</span>(convertView == <span class="keyword">null</span>)&#123;</span><br><span class="line">            view = LayoutInflater.from(getContext()).inflate(resourceId,parent,<span class="keyword">false</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            view = convertView;</span><br><span class="line">        &#125;</span><br><span class="line">        TextView fruitName = (TextView)view.findViewById(R.id.fruit_name);</span><br><span class="line">        fruitName.setText(fruit.getName);</span><br><span class="line">           <span class="keyword">return</span> view;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>FruitAdapter</code>重写了父类的一组构造函数,用于将上下文,<code>ListView</code>子项布局的<code>id</code>和数据都传递进来.另外重写<code>getView()</code>,这个方法在每个子项被滚动到屏幕内的时候都会被调用</p>
+<p><code>if</code>代码段用于优化<code>ListView</code>的加载,防止了在每一次调用<code>getView()</code>方法时都将布局重新加载一遍.原理是getView()<code>方法中传入的</code>convertView`可以将之前加载好的布局进行==缓存==,以便之后可以进行调用</p>
+<p><code>LayoutInflater</code>的<code>inflate(int resourceId,ViewGroup root,boolean attachToRoot)</code>方法接收3个参数,第一个参数为要填充的<code>xml</code>文件的<code>id</code>,第二个参数为从第一个参数填充成的<code>view</code>对象的父控件,意义是为第一个参数生成的<code>View</code>对象的根布局提供一些列<code>LayoutParams</code>参数的控件,第三个参数表示第一个参数填充成的<code>View</code>对象是否要附着到第二个参数指定的空间上作为子控件</p>
+<p>接下来为每个<code>View</code>设置属性,并将布局返回.这样就完成了自定义的适配器</p>
+<ol>
+<li>创建自定义的适配器对象,并把适配器传递给<code>ListView</code>,就完成了定制<code>ListView</code>界面</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">initFruits();    <span class="comment">// 初始化包含所有列表项的List</span></span><br><span class="line">FruitAdapter adapter = <span class="keyword">new</span> FruidAdapter(MainActivity.<span class="keyword">this</span>,R.layout.fruit_item,fruitList);</span><br><span class="line">ListView listView = (ListView)findViewById(R.id.list_view);</span><br><span class="line">listView.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
+<h4 id="使用ViewHolder进行优化"><a href="#使用ViewHolder进行优化" class="headerlink" title="使用ViewHolder进行优化"></a>使用ViewHolder进行优化</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitAdapter</span> <span class="keyword">extends</span> <span class="title">ArrayAdapter</span>&lt;<span class="title">Fruit</span>&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> resourceId;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FruitAdapter</span><span class="params">(Context context,<span class="keyword">int</span> textViewResourceId,List&lt;Fruit&gt; objects)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context,textViewResourceId,objects);</span><br><span class="line">        resourceId = textViewResourceId;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">int</span> position,View convertView,ViewGroup parent)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 获取当前项的bean实例</span></span><br><span class="line">        Fruit fruit = getItem(position);</span><br><span class="line">        View view;</span><br><span class="line">        ViewHolder viewHolder;</span><br><span class="line">        <span class="comment">// 为当前项加载传入的布局,false表示不为这个View添加父布局,否则无法添加到ListView中</span></span><br><span class="line">        <span class="keyword">if</span>(convertView == <span class="keyword">null</span>)&#123;</span><br><span class="line">            view = LayoutInflater.from(getContext()).inflate(resourceId,parent,<span class="keyword">false</span>);</span><br><span class="line">            viewHolder = <span class="keyword">new</span> ViewHolder();</span><br><span class="line">            viewHolder.fruitName = (TextView)view.findViewById(R.id.fruit_name);</span><br><span class="line">            <span class="comment">// 将ViewHolder存储在View中</span></span><br><span class="line">            view.setTag(viewHolder);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            view = convertView;</span><br><span class="line">            <span class="comment">// 通过View重新获取ViewHolder</span></span><br><span class="line">            viewHolder = (ViewHolder)view.getTag();</span><br><span class="line">        &#125;</span><br><span class="line">        fruitName.setText(fruit.getName);</span><br><span class="line">           <span class="keyword">return</span> view;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span></span>&#123;</span><br><span class="line">    TextView fruitName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>新增一个内部类<code>ViewHolder</code>,用于对控件的实例进行缓存,当<code>convertView</code>为<code>null</code>的时候创建一个<code>ViewHolder</code>对象,并将控件的实例全部存放在<code>ViewHolder</code>中,当<code>convertView</code>不为<code>null</code>时,调用<code>getTag()</code>方法取出<code>ViewHolder</code>,这样所有的控件都缓存在<code>ViewHolder</code>里,从而避免了每次都通过<code>findViewById()</code>方法来获取控件的实例</p>
+<h4 id="ListView的点击事件"><a href="#ListView的点击事件" class="headerlink" title="ListView的点击事件"></a>ListView的点击事件</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ListView listView = (ListView)findViewById(R.id.list_view);</span><br><span class="line">listView.setOnClickListener(<span class="keyword">new</span> AdapterView.OnItemClickListener()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(AdapterView&lt;?&gt; parent,View view,<span class="keyword">int</span> position,<span class="keyword">long</span> id)</span></span>&#123;</span><br><span class="line">        Fruit fruit = fruitList.get(position);</span><br><span class="line">        <span class="comment">// do something</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>使用<code>setOnItemClickListener()</code>方法为<code>ListView</code>注册一个监听器,当点击<code>ListView</code>中任何一个子项时,就会回调<code>onItemClick()</code>方法,通过<code>position</code>参数判断出用户点击的是哪一个子项,接着获取到相对应的对象</p>
+<h3 id="RecyclerView"><a href="#RecyclerView" class="headerlink" title="RecyclerView"></a>RecyclerView</h3><p>要使用<code>REcyclerView</code>控件,需要在项目的<code>build.gradle</code>中添加相应的依赖库</p>
+<p>在<code>app/build.gradle</code>文件的<code>dependencies</code>闭包中添加<code>implementation&#39;com.android.support:design:26.1.0&#39;</code>或者<code>implementation&#39;com.android.support:recyclerview-v7:26.1.0&#39;</code>,并在添加完之后点击<code>Sync Now</code>进行同步.前者中的<code>design</code>包含后者中的<code>recyclerview-v7</code>模块(功能更加齐全)</p>
+<ol>
+<li>定义一个实体类,作为<code>RecyclerView</code>适配器的适配类型,需要有<code>getter</code>方法</li>
+<li>为<code>RecyclerView</code>的子项创建一个自定义的布局</li>
+<li>为<code>RecyclerView</code>创建一个适配器<code>FruitAdapter</code>继承自<code>RecyclerView.Adapter</code>,并将泛型指定为<code>FruitAdapter.ViewHolder</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitAdapter</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">Adapter</span>&lt;<span class="title">FruitAdapter</span>.<span class="title">ViewHolder</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Fruit&gt; mFruitList;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态类,只在第一次加载外部类时加载一次</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span></span>&#123;</span><br><span class="line">        TextView fruitName;</span><br><span class="line">        <span class="comment">// 此处传入的view一般是RecyclerView子项的最外层布局</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ViewHolder</span><span class="params">(View view)</span></span>&#123;</span><br><span class="line">            <span class="keyword">super</span>(view);</span><br><span class="line">            fruitName = (Text)view.findViewById(R.id.fruit_name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 用于传入要显示的数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FruitAdapter</span><span class="params">(List&lt;Fruit&gt; fruitList)</span></span>&#123;</span><br><span class="line">        mFruitList = fruitList;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 用于创建ViewHolder实例</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent,<span class="keyword">int</span> viewType)</span></span>&#123;</span><br><span class="line">        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item,parent,<span class="keyword">false</span>);</span><br><span class="line">        ViewHolder holder = <span class="keyword">new</span> ViewHolder(view);</span><br><span class="line">        <span class="keyword">return</span> holder;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 用于对RecyclerView子项的数据进行赋值</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(ViewHolder holder,<span class="keyword">int</span> position)</span></span>&#123;</span><br><span class="line">        Fruit fruit = mFruitList.get(position);</span><br><span class="line">        holder.fruitName.setText(fruit.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 用于获得RecyclerView的子项个数</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mFruitList.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>定义了一个内部类<code>ViewHolder</code>,<code>ViewHolder</code>继承自<code>RecyclerView.ViewHolder</code>然后<code>ViewHolder</code>的构造函数传入一个<code>View</code>参数,这个参数通常是<code>RecyclerView</code>子项的最外层布局,之后便可以通过<code>findViewById</code>得到布局中的View实例</p>
+<p>因继承自<code>RecyclerView.Adapter</code>,所以必须重写<code>onCreateViewHolder()</code>,<code>onBindViewHolder()</code>和<code>getItemCount()</code>方法.</p>
+<p><code>onCreateViewHolder(ViewGroup parent,int viewType)</code>用于创建<code>ViewHolder</code>实例.在方法中加载<code>RecyclerView</code>的子项<code>fruit_item</code>布局,然后用加载出来的布局创建一个<code>ViewHolder</code>实例返回</p>
+<p><code>onBindViewHolder()</code>方法用于对<code>RecyclerView</code>子项的数据进行赋值,会在每个子项被滚动到屏幕内的时候执行,通过<code>position</code>参数获得当前项的实例</p>
+<p><code>getItemCount()</code>方法用于告诉<code>RecyclerView</code>一共有多少个子项</p>
+<ol>
+<li>使用<code>RecyclerView</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> List&lt;Fruit&gt; fruitList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">initFruits();   <span class="comment">// 初始化RecyclerView子项数据</span></span><br><span class="line">RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_view);</span><br><span class="line"><span class="comment">// 创建一个LinearLayoutManager对象</span></span><br><span class="line">LinearLayoutManager layoutManager = <span class="keyword">new</span> LinearLayoutManager(<span class="keyword">this</span>);</span><br><span class="line"><span class="comment">// 指定RecyclerView的布局方式为 LinearLayout</span></span><br><span class="line">recyclerView.setLayoutManager(layoutManager);</span><br><span class="line">FruitAdaper adapter = <span class="keyword">new</span> FruitAdapter(fruitList);</span><br><span class="line">recyclerView.setAdapter(adapter);</span><br></pre></td></tr></table></figure>
+<p>创建一个<code>LinearLayoutManager</code>对象,并将它设置到<code>RecyclerView</code>当中.<code>LayoutManager</code>用于指定<code>RecyclerView</code>的布局方式</p>
+<h4 id="RecyclerView工作原理"><a href="#RecyclerView工作原理" class="headerlink" title="RecyclerView工作原理"></a>RecyclerView工作原理</h4><p><img src="http://images.cnitblog.com/blog2015/697611/201503/270953107553628.png" alt="RecyclerView工作原理"></p>
+<h4 id="横向滚动和瀑布流布局"><a href="#横向滚动和瀑布流布局" class="headerlink" title="横向滚动和瀑布流布局"></a>横向滚动和瀑布流布局</h4><ul>
+<li>横向滚动</li>
+</ul>
+<p>创建一个<code>LinearLayoutManager</code>对象,并将方向设置为水平,再把它设置到<code>RecyclerView</code>当中</p>
+<p><code>layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL)</code></p>
+<ul>
+<li>瀑布流</li>
+</ul>
+<p><code>RecyclerView</code>提供了三种内置布局排列方式:<code>LinearLayoutManager</code>,<code>GridLayoutManager</code>和<code>StaggeredGridLayoutManager</code></p>
+<p><code>StaggerGridLayoutManager</code>瀑布流布局的宽度是根据布局的列数来自动适配,而不是固定值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">StaggeredGridLayoutManager layoutManager = <span class="keyword">new</span> StaggeredGridLayoutManager(<span class="number">3</span>,StaggeredGridLayoutManager.VERTICAL);</span><br></pre></td></tr></table></figure>
+<p><code>StaggeredGridLayoutManager</code>的构造函数接收两个常熟,第一个参数是用于指定布局的列数,第二个参数用于指定布局的排列方向</p>
+<h4 id="点击事件"><a href="#点击事件" class="headerlink" title="点击事件"></a>点击事件</h4><p><code>RecyclerView</code>没有提供类似于<code>setOnItemClickListener()</code>这样的注册监听器的方法,而需要自己给子项具体的<code>View</code>去注册点击事件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitAdapter</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">Adapter</span>&lt;<span class="title">FruitAdapter</span>.<span class="title">ViewHolder</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Fruit&gt; mFruitList;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态类,只在第一次加载外部类时加载一次</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span></span>&#123;</span><br><span class="line">        View fruitView;</span><br><span class="line">        TextView fruitName;</span><br><span class="line">        <span class="comment">// 此处传入的view一般是RecyclerView子项的最外层布局</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ViewHolder</span><span class="params">(View view)</span></span>&#123;</span><br><span class="line">            <span class="keyword">super</span>(view);</span><br><span class="line">            fruitView = view;</span><br><span class="line">            fruitName = (Text)findViewById(R.id.fruit_name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 用于传入要显示的数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FruitAdapter</span><span class="params">(List&lt;Fruit&gt; fruitList)</span></span>&#123;</span><br><span class="line">        mFruitList = fruitList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent,<span class="keyword">int</span> viewType)</span></span>&#123;</span><br><span class="line">        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item,parent,<span class="keyword">false</span>);</span><br><span class="line">        <span class="keyword">final</span> ViewHolder holder = <span class="keyword">new</span> ViewHolder(view);</span><br><span class="line">        <span class="comment">// 为fruitView注册点击事件</span></span><br><span class="line">        holder.fruitView.setOnClickListerner(<span class="keyword">new</span> View.OnClickListerner()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span>&#123;</span><br><span class="line">                <span class="keyword">int</span> position = holder.getAdapterPosition();</span><br><span class="line">                Fruit fruit = mFruitList.get(position);</span><br><span class="line">                <span class="comment">// do something</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> holder;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<code>ViewHolder</code>中添加<code>fruitView</code>变量来保存子项最外层的布局实例,然后在`onCreateViewHolder()方法中注册点击事件即可</p>
+<h3 id="GridView"><a href="#GridView" class="headerlink" title="GridView"></a>GridView</h3><h4 id="GridView简略流程图"><a href="#GridView简略流程图" class="headerlink" title="GridView简略流程图"></a>GridView简略流程图</h4><p><img src="http://hi.csdn.net/attachment/201203/23/0_13325462686Gu4.gif" alt="GridView加载流程图"></p>
+<p>在使用<code>GridView</code>时,同样也需要传入一个适配器.如果需要加载过多的图片时,推荐自行重写一个类继承自<code>BaseAdapter)</code>或<code>SimpleAdapter</code>.</p>
+<h3 id="BaseAdapter子类需要重写实现的方法简介"><a href="#BaseAdapter子类需要重写实现的方法简介" class="headerlink" title="BaseAdapter子类需要重写实现的方法简介"></a>BaseAdapter子类需要重写实现的方法简介</h3><blockquote>
+<p><code>android</code>中的适配器<code>Adapter</code>是数据与视图<code>View</code>之间的桥梁,用于对要显示的数据进行处理,并通过绑定到组件进行数据的显示.</p>
+<p><code>BaseAdapter</code>是<code>Android</code>应用程序中经常用到的基础数据适配器的基类，它实现了Adapter接口。其主要用途是将一组数据传到像<code>ListView</code>、<code>Spinner</code>、<code>Gallery</code>及<code>GridView</code>等UI显示组件进行显示.我们经常使用的<code>ListView</code>的<code>adapter</code>,即<code>SimpleAdapter</code>,是继承自<code>BaseAdapter</code>基类的。<code>BaseAdapter</code>是一个基类,没有实现绑定数据的功能.而<code>SimpleAdapter</code>实现了基本控件的绑定,如<code>TextView</code>,<code>Button</code>,<code>ImageView</code>等。并已经为我们实现好了数据优化工作。</p>
+</blockquote>
+<ul>
+<li><p><code>getCount()</code>:决定了我们将要绘制的资源数,当然这个数目不能大于资源的总数,不过却可以小于资源的总数.</p>
+<blockquote>
+<p>How many items are in the data set represented by this Adapter.</p>
+</blockquote>
+</li>
+<li><p><code>getItem(int position)</code>:<code>getItem</code>方法不是在<code>Baseadapter</code>类中被调用的,而是在<code>Adapterview.getItemAtPosition(position)</code>中被调用的.<code>getItemAtPosition(position)</code>是在<code>setOnItemClickListener</code>,<code>setOnItemLongClickListener</code>、<code>setOnItemSelectedListener</code>的点击选择处理事件中方便地调用来获取当前行数据的.</p>
+<blockquote>
+<p>Get the data item associated with the specified position in the data set.</p>
+</blockquote>
+</li>
+<li><p><code>getItemId(int position)</code>:该方法的返回值决定第<code>position</code>处的列表项的ID,某些方法(如<code>onclicklistener</code>的<code>onclick</code>方法)有<code>id</code>这个参数,而这个<code>id</code>参数就是取决于`这个返回值的</p>
+<blockquote>
+<p>Get the row id associated with the specified position in the list.</p>
+</blockquote>
+</li>
+<li><p><code>getView(int position, View convertView, ViewGroup parent)</code>:通过传入的参数position,加工成我们想要的<code>View</code>并返回</p>
+<blockquote>
+<p>Get a View that displays the data at the specified position in the data set.</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="onItemClick方法"><a href="#onItemClick方法" class="headerlink" title="onItemClick方法"></a>onItemClick方法</h4><p><code>onItemClick()</code>方法位于<code>Adapter.OnItemClickListener</code>,<code>OnItemClickListener</code>是静态内部接口.</p>
+<blockquote>
+<p>class里面的interface都是static的</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemClick</span><span class="params">(AdapterView&lt;?&gt; parent, View view, <span class="keyword">int</span> position, <span class="keyword">long</span> id)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 实现点击响应事件</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>AdapterView&lt;?&gt; parent</li>
+</ul>
+<p>当前被点击的<code>View</code>，如果你是为<code>ListView</code>加入的<code>Listener</code>,那么当前的<code>View</code>就是<code>ListView</code></p>
+<ul>
+<li>View view</li>
+</ul>
+<p>每次点击<code>Item</code>的<code>View</code></p>
+<ul>
+<li>int position</li>
+</ul>
+<p>每次点击<code>Item</code>的位置,默认从<code>0</code>开始</p>
+<ul>
+<li>long id</li>
+</ul>
+<p>每次点击<code>Item</code>的<code>id</code>(注意:加入的<code>headerView</code>是 -1),没有<code>headerView</code>时(默认情况下)，position与id是一样的</p>
+<h3 id="UI实战应用"><a href="#UI实战应用" class="headerlink" title="UI实战应用"></a>UI实战应用</h3><p>p146</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android-UI控件/" rel="tag"># Android UI控件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/03/Android/AndroidProject/AndroidProj-2/" rel="next" title="GridView实现的连连看">
+                <i class="fa fa-chevron-left"></i> GridView实现的连连看
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/03/Android/第一行代码/Fragment/" rel="prev" title="第一行代码之Fragment">
+                第一行代码之Fragment <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vnaso">
+            
+              <p class="site-author-name" itemprop="name">vnaso</p>
+              <p class="site-description motion-element" itemprop="description">for everything</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/vnaso" title="GitHub &rarr; https://github.com/vnaso" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:2873084431@qq.com" title="E-Mail &rarr; mailto:2873084431@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/5537597047" title="Weibo &rarr; https://weibo.com/u/5537597047" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UI控件"><span class="nav-text">UI控件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用控件"><span class="nav-text">常用控件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本布局"><span class="nav-text">基本布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性布局"><span class="nav-text">线性布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相对布局"><span class="nav-text">相对布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帧布局"><span class="nav-text">帧布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#百分比布局"><span class="nav-text">百分比布局</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义布局"><span class="nav-text">自定义布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引入布局"><span class="nav-text">引入布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义布局-1"><span class="nav-text">自定义布局</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ListView"><span class="nav-text">ListView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定制ListView"><span class="nav-text">定制ListView</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用ViewHolder进行优化"><span class="nav-text">使用ViewHolder进行优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ListView的点击事件"><span class="nav-text">ListView的点击事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RecyclerView"><span class="nav-text">RecyclerView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RecyclerView工作原理"><span class="nav-text">RecyclerView工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#横向滚动和瀑布流布局"><span class="nav-text">横向滚动和瀑布流布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#点击事件"><span class="nav-text">点击事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GridView"><span class="nav-text">GridView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GridView简略流程图"><span class="nav-text">GridView简略流程图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BaseAdapter子类需要重写实现的方法简介"><span class="nav-text">BaseAdapter子类需要重写实现的方法简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#onItemClick方法"><span class="nav-text">onItemClick方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI实战应用"><span class="nav-text">UI实战应用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">vnaso</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.6.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
