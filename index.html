@@ -31,7 +31,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -781,7 +781,7 @@ File--&gt;Project structure 打开项目结构界面
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2018/12/03/Java/Hibernate-issues/">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2018/12/03/Android/Tips/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -801,7 +801,7 @@ File--&gt;Project structure 打开项目结构界面
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2018/12/03/Java/Hibernate-issues/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Hibernate踩坑集锦</a>
+                <a href="/2018/12/03/Android/Tips/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Android编程Tips</a>
               
             
           </h1>
@@ -826,7 +826,7 @@ File--&gt;Project structure 打开项目结构界面
                 
               
 
-              <time title="Created: 2018-12-03 18:13:00 / Modified: 18:33:51" itemprop="dateCreated datePublished" datetime="2018-12-03T18:13:00+08:00">2018-12-03</time>
+              <time title="Created: 2018-12-03 18:13:00 / Modified: 18:18:03" itemprop="dateCreated datePublished" datetime="2018-12-03T18:13:00+08:00">2018-12-03</time>
             
 
             
@@ -848,14 +848,7 @@ File--&gt;Project structure 打开项目结构界面
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaFramework/" itemprop="url" rel="index"><span itemprop="name">JavaFramework</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaFramework/Hibernate/" itemprop="url" rel="index"><span itemprop="name">Hibernate</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
 
                 
                 
@@ -891,12 +884,13 @@ File--&gt;Project structure 打开项目结构界面
       
         
           
-          Hibernate踩坑集锦hibernate.cfg.xml配置&lt;hibernate-configuration&gt;    &lt;session-factory&gt;        &lt;!-- 定义数据库驱动 --&gt;        &lt;property name="hibernate.connection.driver_class"&gt;com.mysql.cj.jdbc.Driver&lt;/property&gt;        &lt;!-- 定义用户名 --&gt;        &lt;property name="hibernate.connectio
+          Tips代码技巧相关使用反射来动态加载资源如果在实际项目中,需要加载许多张图片,手动添加就会变得十分复杂.这时可以使用反射来动态加载.同时还降低了耦合度.事例代码如下:
+// 反射动态添加图片Field[] fields = R.drawable.class.getFields();int i = 0;for (Field field :        fields) &#123;    if (field.getName().startsWith("img_")) &#123;        try &#123;            imageList.add(new TestImage(
           ...
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2018/12/03/Java/Hibernate-issues/#more" rel="contents">
+              <a class="btn" href="/2018/12/03/Android/Tips/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1945,184 +1939,6 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2018/12/03/Android/Tips/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/03/Android/Tips/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Android编程Tips</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-12-03 18:13:00 / Modified: 18:18:03" itemprop="dateCreated datePublished" datetime="2018-12-03T18:13:00+08:00">2018-12-03</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Tips代码技巧相关使用反射来动态加载资源如果在实际项目中,需要加载许多张图片,手动添加就会变得十分复杂.这时可以使用反射来动态加载.同时还降低了耦合度.事例代码如下:
-// 反射动态添加图片Field[] fields = R.drawable.class.getFields();int i = 0;for (Field field :        fields) &#123;    if (field.getName().startsWith("img_")) &#123;        try &#123;            imageList.add(new TestImage(
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/12/03/Android/Tips/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2018/12/03/Android/AndroidProject/AndroidProj-2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2246,6 +2062,190 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
           
             <div class="post-button text-center">
               <a class="btn" href="/2018/12/03/Android/AndroidProject/AndroidProj-2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2018/12/03/Java/Hibernate-issues/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/12/03/Java/Hibernate-issues/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Hibernate踩坑集锦</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-03 18:13:00 / Modified: 18:33:51" itemprop="dateCreated datePublished" datetime="2018-12-03T18:13:00+08:00">2018-12-03</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaFramework/" itemprop="url" rel="index"><span itemprop="name">JavaFramework</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaFramework/Hibernate/" itemprop="url" rel="index"><span itemprop="name">Hibernate</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Hibernate踩坑集锦hibernate.cfg.xml配置&lt;hibernate-configuration&gt;    &lt;session-factory&gt;        &lt;!-- 定义数据库驱动 --&gt;        &lt;property name="hibernate.connection.driver_class"&gt;com.mysql.cj.jdbc.Driver&lt;/property&gt;        &lt;!-- 定义用户名 --&gt;        &lt;property name="hibernate.connectio
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/03/Java/Hibernate-issues/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
