@@ -108,24 +108,25 @@
 
 
 
-  <meta name="description" content="for everything">
+  <meta name="description" content="Spring笔记IOC简化Java开发采取以下四种策略,降低Java开发的复杂性  基于POJO的轻量级和最小侵入性编程 通过依赖注入(DI)和面向接口实现松耦合 基于切面和惯例进行声明式编程 通过切面和模板减少样板式代码   依赖注入 Sprin通过应用上下文(Application Context)装载bean的定义并把它们组装起来.Spring应用上下文全权负责对象的创建和组装.Spring">
 <meta name="keywords" content="coding">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vnaso">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring笔记">
+<meta property="og:url" content="http://yoursite.com/2018/12/01/Spring-notes/index.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="for everything">
+<meta property="og:description" content="Spring笔记IOC简化Java开发采取以下四种策略,降低Java开发的复杂性  基于POJO的轻量级和最小侵入性编程 通过依赖注入(DI)和面向接口实现松耦合 基于切面和惯例进行声明式编程 通过切面和模板减少样板式代码   依赖注入 Sprin通过应用上下文(Application Context)装载bean的定义并把它们组装起来.Spring应用上下文全权负责对象的创建和组装.Spring">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-03T09:07:36.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vnaso">
-<meta name="twitter:description" content="for everything">
+<meta name="twitter:title" content="spring笔记">
+<meta name="twitter:description" content="Spring笔记IOC简化Java开发采取以下四种策略,降低Java开发的复杂性  基于POJO的轻量级和最小侵入性编程 通过依赖注入(DI)和面向接口实现松耦合 基于切面和惯例进行声明式编程 通过切面和模板减少样板式代码   依赖注入 Sprin通过应用上下文(Application Context)装载bean的定义并把它们组装起来.Spring应用上下文全权负责对象的创建和组装.Spring">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/01/Spring-notes/">
 
 
 
@@ -135,7 +136,7 @@
   };
 </script>
 
-  <title>Vnaso</title>
+  <title>spring笔记 | Vnaso</title>
   
 
 
@@ -184,8 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -222,7 +222,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -390,155 +390,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/03/hello-world/" class="post-title-link" itemprop="http://yoursite.com/index.html">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-12-03 13:21:30" itemprop="dateCreated datePublished" datetime="2018-12-03T13:21:30+08:00">2018-12-03</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -570,10 +424,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/01/Spring-notes/" class="post-title-link" itemprop="http://yoursite.com/index.html">spring笔记</a>
+          <h1 class="post-title" itemprop="name headline">spring笔记
               
             
           </h1>
@@ -666,9 +517,7 @@
       
 
       
-        
-          
-            <h1 id="Spring笔记"><a href="#Spring笔记" class="headerlink" title="Spring笔记"></a>Spring笔记</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="简化Java开发"><a href="#简化Java开发" class="headerlink" title="简化Java开发"></a>简化Java开发</h3><p>采取以下四种策略,降低Java开发的复杂性</p>
+        <h1 id="Spring笔记"><a href="#Spring笔记" class="headerlink" title="Spring笔记"></a>Spring笔记</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="简化Java开发"><a href="#简化Java开发" class="headerlink" title="简化Java开发"></a>简化Java开发</h3><p>采取以下四种策略,降低Java开发的复杂性</p>
 <ul>
 <li>基于POJO的轻量级和最小侵入性编程</li>
 <li>通过依赖注入(DI)和面向接口实现松耦合</li>
@@ -1087,8 +936,6 @@
 <p>Callback:如何代理.它和InvocationHandler的作用是一样的,它也是一个接口,我们一般使用该接口的子类MethodInterceptor.在使用时也是创建该接口的匿名内部类</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Actor actor = (Actor)Enhance.create(actor.getClass(),new MethhodInterceptor()&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object proxy,Method method,Object[] args,MethodProxy methodProxy)throws Throwable&#123;</span><br><span class="line">        // 执行被代理对象的任何方法,都会经过该方法.它和基于接口动态代理的invoke方法作用是一样的</span><br><span class="line">        // 方法的参数</span><br><span class="line">        // 前面三个和invoke方法的参数含义和作用都是一样的</span><br><span class="line">        // MethodProxy methodProxy: 当前执行方法的代理对象,一般不用</span><br><span class="line">        // TODO 增强的代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
@@ -1111,12 +958,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/03/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1126,14 +989,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1154,8 +1018,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1245,6 +1118,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring笔记"><span class="nav-number">1.</span> <span class="nav-text">Spring笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC"><span class="nav-number">1.1.</span> <span class="nav-text">IOC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简化Java开发"><span class="nav-number">1.1.1.</span> <span class="nav-text">简化Java开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bean"><span class="nav-number">1.1.2.</span> <span class="nav-text">Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bean的创建方式"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">bean的创建方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bean的作用范围"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">bean的作用范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bean的生命周期"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">bean的生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在config类中装配bean"><span class="nav-number">1.1.3.</span> <span class="nav-text">在config类中装配bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖注入"><span class="nav-number">1.1.4.</span> <span class="nav-text">依赖注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注入方式"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">注入方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注入的数据类型"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">注入的数据类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于注解的IoC"><span class="nav-number">1.1.5.</span> <span class="nav-text">基于注解的IoC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Srping整合junit"><span class="nav-number">1.1.6.</span> <span class="nav-text">Srping整合junit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP"><span class="nav-number">1.2.</span> <span class="nav-text">AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#术语"><span class="nav-number">1.2.1.</span> <span class="nav-text">术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aop配置步骤"><span class="nav-number">1.2.2.</span> <span class="nav-text">aop配置步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#切点表达式"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">切点表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xml"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java注解"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">java注解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通知类型"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">通知类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明式事务"><span class="nav-number">1.3.</span> <span class="nav-text">声明式事务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#API"><span class="nav-number">1.3.1.</span> <span class="nav-text">API</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PlatformTransactionManager"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">PlatformTransactionManager</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#接口方法"><span class="nav-number">1.3.1.1.1.</span> <span class="nav-text">接口方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实现类"><span class="nav-number">1.3.1.1.2.</span> <span class="nav-text">实现类</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TransactionDefinition"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">TransactionDefinition</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法"><span class="nav-number">1.3.1.2.1.</span> <span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TransactionStatus"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">TransactionStatus</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法-1"><span class="nav-number">1.3.1.3.1.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xml配置"><span class="nav-number">1.3.2.</span> <span class="nav-text">xml配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java配置"><span class="nav-number">1.3.3.</span> <span class="nav-text">java配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.4.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实用技巧"><span class="nav-number">1.4.1.</span> <span class="nav-text">实用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#善用properties-降低维护成本-减弱依赖"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">善用properties,降低维护成本,减弱依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态代理"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">动态代理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于接口的动态代理"><span class="nav-number">1.4.1.2.1.</span> <span class="nav-text">基于接口的动态代理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于子类的动态代理"><span class="nav-number">1.4.1.2.2.</span> <span class="nav-text">基于子类的动态代理</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1393,6 +1282,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
