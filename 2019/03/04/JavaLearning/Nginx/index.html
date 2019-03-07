@@ -115,24 +115,25 @@
 
 
 
-  <meta name="description" content="for everything">
-<meta name="keywords" content="coding">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vnaso">
-<meta property="og:url" content="http://vnaso.github.io/index.html">
+  <meta name="description" content="Nginx使用Nginx配置 在···/nginx/conf目录下的nginx.conf  # 全局块...              # events块events &amp;#123;            ...&amp;#125;# http块http      &amp;#123;    # http全局块    ...       # 虚拟主机server块    server            &amp;#12">
+<meta name="keywords" content="Nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx学习笔记">
+<meta property="og:url" content="http://vnaso.github.io/2019/03/04/JavaLearning/Nginx/index.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="for everything">
+<meta property="og:description" content="Nginx使用Nginx配置 在···/nginx/conf目录下的nginx.conf  # 全局块...              # events块events &amp;#123;            ...&amp;#125;# http块http      &amp;#123;    # http全局块    ...       # 虚拟主机server块    server            &amp;#12">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-03-07T14:14:03.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vnaso">
-<meta name="twitter:description" content="for everything">
+<meta name="twitter:title" content="Nginx学习笔记">
+<meta name="twitter:description" content="Nginx使用Nginx配置 在···/nginx/conf目录下的nginx.conf  # 全局块...              # events块events &amp;#123;            ...&amp;#125;# http块http      &amp;#123;    # http全局块    ...       # 虚拟主机server块    server            &amp;#12">
 
 
 
 
 
 
-  <link rel="canonical" href="http://vnaso.github.io/">
+  <link rel="canonical" href="http://vnaso.github.io/2019/03/04/JavaLearning/Nginx/">
 
 
 
@@ -142,7 +143,7 @@
   };
 </script>
 
-  <title>Vnaso</title>
+  <title>Nginx学习笔记 | Vnaso</title>
   
 
 
@@ -191,8 +192,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -229,7 +229,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -397,408 +397,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/05/JavaLearning/ServerSetting/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/05/JavaLearning/ServerSetting/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Linux线上环境搭建</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-05 14:11:00" itemprop="dateCreated datePublished" datetime="2019-03-05T14:11:00+08:00">2019-03-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:15:17" itemprop="dateModified" datetime="2019-03-07T22:15:17+08:00">2019-03-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          服务器环境搭建
-Java安装
-到官网下载jdk.
-
-解压到tar -zxvf jdk_8u_201 -C /usr/java
-
-编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile
-export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport PATH=$PATH:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:
-
-检查是否安装成功:java -version
-
-
-My
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/05/JavaLearning/ServerSetting/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/04/JavaLearning/Linux/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/04/JavaLearning/Linux/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Linux学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-04 15:24:00" itemprop="dateCreated datePublished" datetime="2019-03-04T15:24:00+08:00">2019-03-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:11:20" itemprop="dateModified" datetime="2019-03-07T22:11:20+08:00">2019-03-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Linux学习笔记系统命令tar解压解压到指定目录:tar -zxvf &lt;要解压的文件&gt; -C &lt;目的路径&gt;
-
-tar 命令参数
--x或–extract或–get:从备份文件中还原文件
--Z或–compress或–uncompress:通过compress指令处理备份文件
--f&lt;备份文件&gt;或–file=&lt;备份文件&gt;:指定备份文件
--v:显示操作过程
--C &lt;目录&gt;:这个选项用在解压缩,若要在特定目录解压缩,可以使用这个选项
-
-防火墙(使用firewalld)开启关闭重启:service firewalld start/stop/res
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/04/JavaLearning/Linux/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -830,10 +431,7 @@ tar 命令参数
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/04/JavaLearning/Nginx/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Nginx学习笔记</a>
+          <h1 class="post-title" itemprop="name headline">Nginx学习笔记
               
             
           </h1>
@@ -933,23 +531,178 @@ tar 命令参数
       
 
       
-        
-          
-          Nginx使用Nginx配置
-在···/nginx/conf目录下的nginx.conf
+        <h1 id="Nginx使用"><a href="#Nginx使用" class="headerlink" title="Nginx使用"></a>Nginx使用</h1><h2 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h2><blockquote>
+<p>在<code>···/nginx/conf</code>目录下的<code>nginx.conf</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 全局块</span><br><span class="line">...              </span><br><span class="line"># events块</span><br><span class="line">events &#123;         </span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br><span class="line"># http块</span><br><span class="line">http      </span><br><span class="line">&#123;</span><br><span class="line">    # http全局块</span><br><span class="line">    ...   </span><br><span class="line">    # 虚拟主机server块</span><br><span class="line">    server        </span><br><span class="line">    &#123; </span><br><span class="line">        # server全局块</span><br><span class="line">        ...       </span><br><span class="line">        # location块</span><br><span class="line">        location [PATTERN]   </span><br><span class="line">        &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">        location [PATTERN] </span><br><span class="line">        &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server</span><br><span class="line">    &#123;</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">    # http全局块</span><br><span class="line">    ...     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="全局块"><a href="#全局块" class="headerlink" title="全局块"></a>全局块</h3><blockquote>
+<p>配置影响nginx全局的指令.一般有运行nginx服务器的用户组,nginx进程pid存放路径,日志存放路径,配置文件引入,允许生成worker process数等.</p>
+</blockquote>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">########### 每个指令必须有分号结束。#################</span><br><span class="line">#user administrator administrators;  #配置用户或者组，默认为nobody nobody。</span><br><span class="line">#worker_processes <span class="number">2</span>;  #允许生成的进程数，默认为<span class="number">1</span></span><br><span class="line">#pid /nginx/pid/nginx.pid;   #指定nginx进程运行文件存放地址</span><br><span class="line">error_log log/error.log debug;  #制定日志路径，级别。这个设置可以放入全局块，http块，server块，级别以此为：debug|info|notice|warn|error|crit|alert|emerg</span><br></pre></td></tr></table></figure>
+<h3 id="events块"><a href="#events块" class="headerlink" title="events块"></a>events块</h3><blockquote>
+<p>配置影响nginx服务器或与用户的网络连接.有每个进程的最大连接数,选取哪种事件驱动模型处理连接请求,是否允许同时接受多个网路连接,开启多个网络连接序列化等.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">accept_mutex</span> <span class="literal">on</span>;   <span class="comment">#设置网路连接序列化，防止惊群现象发生，默认为on</span></span><br><span class="line">    <span class="attribute">multi_accept</span> <span class="literal">on</span>;  <span class="comment">#设置一个进程是否同时接受多个网络连接，默认为off</span></span><br><span class="line">    <span class="comment">#use epoll;      #事件驱动模型，select|poll|kqueue|epoll|resig|/dev/poll|eventport</span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;    <span class="comment">#每个worker process最大连接数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="http块"><a href="#http块" class="headerlink" title="http块"></a>http块</h3><blockquote>
+<p>可以嵌套多个server,配置代理,缓存,日志定义等绝大多数功能和第三方模块的配置.如文件引入,mime-type定义,日志自定义,是否使用sendfile传输文件,连接超时时间,单连接请求数等.</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       mime.types;   <span class="comment">#文件扩展名与文件类型映射表</span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream; <span class="comment">#默认文件类型，默认为text/plain</span></span><br><span class="line">    <span class="comment">#access_log off; #取消服务日志    </span></span><br><span class="line">    <span class="attribute">log_format</span> myFormat <span class="string">'<span class="variable">$remote_addr</span>–<span class="variable">$remote_user</span> [<span class="variable">$time_local</span>] <span class="variable">$request</span> <span class="variable">$status</span> <span class="variable">$body_bytes_sent</span> <span class="variable">$http_referer</span> <span class="variable">$http_user_agent</span> <span class="variable">$http_x_forwarded_for</span>'</span>; <span class="comment">#自定义格式</span></span><br><span class="line">    <span class="attribute">access_log</span> log/access.log myFormat;  <span class="comment">#combined为日志格式的默认值</span></span><br><span class="line">    <span class="attribute">sendfile</span> <span class="literal">on</span>;   <span class="comment">#允许sendfile方式传输文件，默认为off，可以在http块，server块，location块。</span></span><br><span class="line">    <span class="attribute">sendfile_max_chunk</span> <span class="number">100k</span>;  <span class="comment">#每个进程每次调用传输数量不能大于设定的值，默认为0，即不设上限。</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span> <span class="number">65</span>;  <span class="comment">#连接超时时间，默认为75s，可以在http，server，location块。</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 定义常量</span></span><br><span class="line">    <span class="comment"># 负载均衡,按权重或规则将请求转发到某个服务器</span></span><br><span class="line">    <span class="attribute">upstream</span> mysvr &#123;   </span><br><span class="line">      <span class="attribute">server</span> <span class="number">127.0.0.1:7878</span>;</span><br><span class="line">      <span class="attribute">server</span> <span class="number">192.168.10.121:3333</span> backup;  <span class="comment">#热备</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="attribute">error_page</span> <span class="number">404</span> https://www.baidu.com; <span class="comment">#请求失败时跳转的错误页</span></span><br></pre></td></tr></table></figure>
+<h3 id="server块"><a href="#server块" class="headerlink" title="server块"></a>server块</h3><blockquote>
+<p>配置虚拟主机的相关参数,一个http中可以有多个server.</p>
+<p>并且可以过滤有人恶意将某些域名指向自己的主机服务器.</p>
+</blockquote>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义某个负载均衡服务器   </span></span><br><span class="line">server &#123;</span><br><span class="line">    keepalive_requests 120; #单连接请求上限次数。</span><br><span class="line">    listen       4545;   #监听端口</span><br><span class="line">    server_name  127.0.0.1;   #监听地址       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>server_name</code></p>
+<p><code>server_name</code>是监听你的HTTP请求头中的<code>host</code>.</p>
+<blockquote>
+<p>默认情况下，Nginx 允许直接以 IP 的方式就能直接访问到网站，或者通过未设置的域名访问(比如有人把他自己的域名指向了你的服务器 IP),可通过如下设置进行防护</p>
+<p>例如:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> server &#123;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	listen 80 default_server;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	server_name _;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	<span class="built_in">return</span> 444; <span class="comment"># 过滤其他域名的请求，返回444状态码</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> &#125;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> server &#123;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	listen 80;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	server_name www.aaa.com; <span class="comment"># www.aaa.com域名</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	location / &#123;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 		proxy_pass http://localhost:8080; <span class="comment"># 对应端口号8080</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	&#125;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> &#125;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> server &#123;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	listen 80;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	server_name www.bbb.com; <span class="comment"># www.bbb.com域名</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	location / &#123;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 		proxy_pass http://localhost:8081; <span class="comment"># 对应端口号8081</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 	&#125;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> &#125;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><code>server_name</code>的值为<code>www.aaa.com</code>.在浏览器中输入<code>www.aaa.com</code>,那么匹配到了对应<code>server_name</code>,请求就会被转发到<code>http://localhost:8080</code>.这里<code>www.aaa.com</code>和<code>www.bbb.com</code>都绑定到了服务器</p>
+<p>而对于未绑定的域名指向服务器时,匹配不到配置的虚拟主机域名,就会使用默认的虚拟主机,然会返回444.</p>
+<p><code>listen 80 default_server</code>:指定该<code>server</code>配置段为<code>80</code>端口的默认主机，即对于未绑定的域名指向你的服务器时,匹配不到你配置的虚拟主机域名后,会默认使用这个虚拟主机</p>
+<p><code>server_name _</code>:此处的<code>_</code>可以换成任意其他无效字符或无效的域名,表示该<code>server</code>配置不会被正常访问到</p>
+</blockquote>
+</li>
+<li><p><code>access_log</code>:日志</p>
+<p>格式:<code>access_log logs/aaa.access.log main</code>-<code>日志类型 日志存放路径 日志格式</code></p>
+</li>
+</ul>
+<h3 id="location块"><a href="#location块" class="headerlink" title="location块"></a>location块</h3><p><a href="https://segmentfault.com/a/1190000013267839" target="_blank" rel="noopener">详细参考-知否</a></p>
+<p><a href="./知否-nginx.md">详细参考-本地</a></p>
+<blockquote>
+<p>配置请求的路由,以及各种页面的处理情况</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">location</span>  ~*^.+$ &#123;       <span class="comment">#请求的url过滤,正则匹配</span></span><br><span class="line">   <span class="comment">#root path;  #根目录</span></span><br><span class="line">   <span class="comment">#index vv.txt;  #设置默认页</span></span><br><span class="line">   <span class="attribute">proxy_pass</span>  http://mysvr;  <span class="comment">#请求转向mysvr 定义的服务器列表</span></span><br><span class="line">   <span class="attribute">deny</span> <span class="number">127.0.0.1</span>;  <span class="comment">#拒绝的ip</span></span><br><span class="line">   <span class="attribute">allow</span> <span class="number">172.18.5.54</span>; <span class="comment">#允许的ip           </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>通配符</p>
+<ul>
+<li><code>=</code>表示精确匹配.只有请求的url路径与后面的字符串完全相等时,才会命中</li>
+<li><code>~</code>表示该规则是使用正则定义的,区分大小写</li>
+<li><code>~*</code>表示该规则是使用正则定义的,不区分大小写</li>
+<li><code>^~</code>表示如果该符号后面的字符是最佳匹配,采用该规则,不再进行后续的查找</li>
+</ul>
+</li>
+<li><p>属性解释</p>
+<p><code>root</code>表示<code>url</code>匹配上了此<code>location</code>定义的正则后,就将这个<code>url</code>映射到定义的根目录.</p>
+<blockquote>
+<p>例如 <code>location /user/img</code>,<code>root /usr/local/resource;</code>.</p>
+<p>那么如果请求为<code>http://www.aaa.com/user/img/aaa.jpg</code>,<code>/user/img</code>对应<code>/usr/local/resource</code>.该请求得到的结果就是<code>/usr/local/resource</code>下的<code>aaa.jpg</code></p>
+</blockquote>
+<p><code>index</code>就是设置默认的欢迎页面.页面需要存在于定义的<code>root</code>目录下.</p>
+<blockquote>
+<p>接上例<code>index index.html;</code>.</p>
+<p>那么如果请求为<code>http://www.aaa.com/user/img/</code>,请求的结果就是<code>/usr/local/resource/user/img</code>下的<code>index.html</code>,有点类似于相对路径.而如果要让<code>index.html</code>为<code>/usr/local/resource/</code>路径下的<code>index.html</code>的话,需要把<code>root</code>换为<code>alias</code>,具体参照<code>root</code>和<code>alias</code>的区别.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Linux下命令"><a href="#Linux下命令" class="headerlink" title="Linux下命令"></a>Linux下命令</h2><blockquote>
+<p>在<code>···/nginx/sbin/</code>目录下</p>
+</blockquote>
+<ul>
+<li><p>启动nginx:<code>nginx -s start</code></p>
+</li>
+<li><p>停止nginx:<code>nginx -s stop</code></p>
+</li>
+<li>重启nginx:<code>nginx -s reload</code></li>
+<li>测试配置:<code>nginx -t</code></li>
+</ul>
+<h2 id="Nginx日志目录"><a href="#Nginx日志目录" class="headerlink" title="Nginx日志目录"></a>Nginx日志目录</h2><blockquote>
+<p>在<code>···/nginx/logs/</code>目录下</p>
+</blockquote>
+<p>目录下通常存放有<code>access.log</code>,<code>error.log</code>以及<code>nginx.pid</code>.</p>
+<p><code>nginx.pid</code>中保存着<code>nginx</code>的进程号,可以通过查看此文件获取进程号来kill nginx.</p>
+<h2 id="root和alias的区别"><a href="#root和alias的区别" class="headerlink" title="root和alias的区别"></a>root和alias的区别</h2><h4 id="root-示例1"><a href="#root-示例1" class="headerlink" title="root 示例1"></a>root 示例1</h4><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line"><span class="keyword">location</span> <span class="title">/ &#123;</span></span><br><span class="line"><span class="title">	root</span> /data/www/;</span><br><span class="line">	index index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请求<code>http://example.com</code>这个地址,那么在服务器中真实对应的地址为<code>/data/www/index.html</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">请求</th>
+<th style="text-align:center">真实地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>http://example.com</code></td>
+<td style="text-align:center"><code>/data/www/index.html</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>http://example.com/a.png</code></td>
+<td style="text-align:center"><code>/data/www/a.png</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="root-示例2"><a href="#root-示例2" class="headerlink" title="root 示例2"></a>root 示例2</h4><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line"><span class="keyword">location</span> <span class="title">/aaa</span>/ &#123;</span><br><span class="line">	root /data/www/;</span><br><span class="line">	index index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">请求</th>
+<th style="text-align:center">真实地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>http://example.com/aaa/</code></td>
+<td style="text-align:center"><code>/data/www/aaa/indexhtml</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>http://example.com/aaa/a.gif</code></td>
+<td style="text-align:center"><code>/data/www/aaa/a.gif</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="alias-示例1"><a href="#alias-示例1" class="headerlink" title="alias 示例1"></a>alias 示例1</h4><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line"><span class="keyword">location</span> <span class="title">/&#123;</span></span><br><span class="line"><span class="title">    alias</span> /data/www/;</span><br><span class="line">    index index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">请求</th>
+<th style="text-align:center">真实地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>http://example.com</code></td>
+<td style="text-align:center"><code>/data/www/index.html</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>http://example.com/b.jpg</code></td>
+<td style="text-align:center"><code>/data/www/a.jpg</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="alias-示例2"><a href="#alias-示例2" class="headerlink" title="alias 示例2"></a>alias 示例2</h4><figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">location</span> /<span class="keyword">bbb/&#123;</span></span><br><span class="line"><span class="keyword"> </span>   <span class="meta">alias</span> /<span class="meta">data</span>/www/<span class="comment">;</span></span><br><span class="line">    index index.html<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">请求</th>
+<th style="text-align:center">真实地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>http://example.com/bbb/</code></td>
+<td style="text-align:center"><code>/data/www/index.html</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>http://example.com/bbb/b.jpg</code></td>
+<td style="text-align:center"><code>/data/www/b.jpg</code></td>
+</tr>
+</tbody>
+</table>
+<p>对比上面4个示例可以发现,使用<code>root</code>的真实地址是<code>root</code>+<code>location</code>+(<code>文件名</code>),而使用<code>alias</code>的真实地址是<code>alias</code>+(<code>文件名</code>).</p>
+<blockquote>
+<p><strong>注意</strong></p>
+<ul>
+<li><p><code>alias</code>只能作用在<code>location</code>中,而<code>root</code>可以存在<code>server</code>,<code>http</code>,<code>location</code>.</p>
+</li>
+<li><p><code>alias</code>后面必须要用<code>/</code>结束.</p>
+</li>
+</ul>
+</blockquote>
 
-# 全局块...              # events块events &#123;            ...&#125;# http块http      &#123;    # http全局块    ...       # 虚拟主机server块    server            &#123;         # server全局块        ...               # location块        location [PATTERN]           &#12
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/04/JavaLearning/Nginx/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
       
     </div>
 
@@ -960,12 +713,20 @@ tar 命令参数
     
     <div>
     
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------------The End -------------------</div>
+    
+</div>
+    
     </div>
 
     
     
     
     <div>
+          
+            
           
     </div>  
     
@@ -976,437 +737,66 @@ tar 命令参数
     
 
     
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>vnaso</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="http://vnaso.github.io/2019/03/04/JavaLearning/Nginx/" title="Nginx学习笔记">http://vnaso.github.io/2019/03/04/JavaLearning/Nginx/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/02/15/JavaLearning/logback/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/15/JavaLearning/logback/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Logback学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-15 19:24:00" itemprop="dateCreated datePublished" datetime="2019-02-15T19:24:00+08:00">2019-02-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:14:27" itemprop="dateModified" datetime="2019-03-07T22:14:27+08:00">2019-03-07</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Logback/" itemprop="url" rel="index"><span itemprop="name">Logback</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Nginx/" rel="tag"><i class="fa fa-tag"></i> Nginx</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          Logback使用标签属性介绍根标签 - configuration属性
-scan:布尔值.表示是否自动扫描logback.xml的文本变化.
-
-scanPeriod:字符串.表示每间隔多长时间对logback.xml进行扫描.格式:数字 + 时间单位(如:seconds,minutes)
-
-debug:布尔值.表示是否打印logback内部的日志信息.
-
-
-常用配置为:&lt;configuration scan=&quot;true&quot; scanPeriod=&quot;60 seconds&quot; debug=&quot;false&quot;&gt;&lt;/configu
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/15/JavaLearning/logback/#more" rel="contents">
-                Read more &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/15/JavaLearning/logback/" rel="next" title="Logback学习笔记">
+                <i class="fa fa-chevron-left"></i> Logback学习笔记
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/02/04/JavaLearning/Maven/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/04/JavaLearning/Maven/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Maven学习笔记</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-          <span class="post-time">
+          <span class="post-nav-divider"></span>
 
+          <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/03/04/JavaLearning/Linux/" rel="prev" title="Linux学习笔记">
+                Linux学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-04 17:26:00" itemprop="dateCreated datePublished" datetime="2019-02-04T17:26:00+08:00">2019-02-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:14:20" itemprop="dateModified" datetime="2019-03-07T22:14:20+08:00">2019-03-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Maven/" itemprop="url" rel="index"><span itemprop="name">Maven</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Maven使用Maven安装与配置下载与安装Maven官网下载地址
-
-在如下位置点击下载最新版本Maven的压缩包
-
-
-
-解压文件得到apache-maven-xxx文件夹.xxx为版本号
-
-新建环境变量MAVEN_HOME,变量值为maven根目录地址
-
-打开环境变量设置的步骤为:
-
-右击此电脑-&gt;属性-&gt;高级系统设置-&gt;高级-&gt;环境变量
-Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
-
-
-
-
-编辑环境变量path,添加%MAVEN_HOME%\bin\
-
-至此,maven安装完毕.打开命令提示符窗口(Win+R-&gt;cmd),输入mvn 
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/04/JavaLearning/Maven/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1416,14 +806,15 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1444,8 +835,17 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1564,6 +964,22 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Nginx使用"><span class="nav-text">Nginx使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置"><span class="nav-text">Nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局块"><span class="nav-text">全局块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#events块"><span class="nav-text">events块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http块"><span class="nav-text">http块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#server块"><span class="nav-text">server块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location块"><span class="nav-text">location块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux下命令"><span class="nav-text">Linux下命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx日志目录"><span class="nav-text">Nginx日志目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#root和alias的区别"><span class="nav-text">root和alias的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#root-示例1"><span class="nav-text">root 示例1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#root-示例2"><span class="nav-text">root 示例2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alias-示例1"><span class="nav-text">alias 示例1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alias-示例2"><span class="nav-text">alias 示例2</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1714,6 +1130,10 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
