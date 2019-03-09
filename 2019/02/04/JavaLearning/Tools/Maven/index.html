@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
+<meta name="keywords" content="Maven">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maven学习笔记">
+<meta property="og:url" content="http://vnaso.github.io/2019/02/04/JavaLearning/Tools/Maven/index.html">
+<meta property="og:site_name" content="Vnaso">
+<meta property="og:description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34zwb8dnj30tx0iota7.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx358arq3ij30qo0dcmx6.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/02/28/5c77e94283e08.png">
+<meta property="og:updated_time" content="2019-03-07T14:14:20.570Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Maven学习笔记">
+<meta name="twitter:description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://vnaso.github.io/2019/02/04/JavaLearning/Tools/Maven/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Maven学习笔记 | Vnaso</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Vnaso</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Schedule</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+    <a href="https://github.com/vnaso" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/02/04/JavaLearning/Tools/Maven/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Maven学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-04 17:26:00" itemprop="dateCreated datePublished" datetime="2019-02-04T17:26:00+08:00">2019-02-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-07 22:14:20" itemprop="dateModified" datetime="2019-03-07T22:14:20+08:00">2019-03-07</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Maven/" itemprop="url" rel="index"><span itemprop="name">Maven</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Maven使用"><a href="#Maven使用" class="headerlink" title="Maven使用"></a>Maven使用</h1><h2 id="Maven安装与配置"><a href="#Maven安装与配置" class="headerlink" title="Maven安装与配置"></a>Maven安装与配置</h2><h3 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h3><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Maven官网下载地址</a></p>
+<ol>
+<li>在如下位置点击下载最新版本<code>Maven</code>的压缩包</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg" alt="Maven下载"></p>
+<ol start="2">
+<li><p>解压文件得到<code>apache-maven-xxx</code>文件夹.<code>xxx</code>为版本号</p>
+</li>
+<li><p>新建环境变量<code>MAVEN_HOME</code>,变量值为maven根目录地址</p>
+<blockquote>
+<p>打开环境变量设置的步骤为:</p>
+<ul>
+<li>右击<code>此电脑</code>-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>高级</code>-&gt;<code>环境变量</code></li>
+<li><code>Win+R</code>-&gt;<code>sysdm.cpl</code>-&gt;<code>高级</code>-&gt;<code>环境变量</code></li>
+</ul>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34zwb8dnj30tx0iota7.jpg" alt="maven环境变量"></p>
+</li>
+<li><p>编辑环境变量<code>path</code>,添加<code>%MAVEN_HOME%\bin\</code></p>
+</li>
+<li><p>至此,maven安装完毕.打开命令提示符窗口(<code>Win+R</code>-&gt;<code>cmd</code>),输入<code>mvn -v</code>查询maven版本,检查maven是否成功安装.成功如图所示<img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx358arq3ij30qo0dcmx6.jpg" alt="maven成功安装"></p>
+</li>
+</ol>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="创建maven仓库"><a href="#创建maven仓库" class="headerlink" title="创建maven仓库"></a>创建maven仓库</h4><blockquote>
+<p> 如果不自行创建,maven将默认使用<code>Default: ${user.home}/.m2/repository</code>作为本地仓库</p>
+</blockquote>
+<ol>
+<li><p>在想要作为maven仓库的地方创建文件夹<code>maven-repository</code>作为maven的本地仓库</p>
+</li>
+<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
+</li>
+<li><p>在<code>&lt;settings&gt;</code>标签下,找到<code>&lt;localRepository&gt;</code>标签.如果没有则自行添加.</p>
+<p>修改值为本地仓库的地址,如<code>&lt;localRepository&gt;C:\Maven\apache-maven-3.6.0\maven-repository&lt;/localRepository&gt;</code></p>
+</li>
+</ol>
+<h4 id="修改下载镜像地址"><a href="#修改下载镜像地址" class="headerlink" title="修改下载镜像地址"></a>修改下载镜像地址</h4><blockquote>
+<p>将下载镜像更换为阿里云中央仓库,解决依赖从境外网站下载过慢的问题</p>
+</blockquote>
+<ol>
+<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
+</li>
+<li><p>在<code>&lt;settings&gt;</code>标签下找到<code>&lt;mirrors&gt;</code>标签,添加如下代码</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存即可</p>
+</li>
+</ol>
+<h4 id="针对Maven添加依赖时没有自动提示的解决方案"><a href="#针对Maven添加依赖时没有自动提示的解决方案" class="headerlink" title="针对Maven添加依赖时没有自动提示的解决方案"></a>针对Maven添加依赖时没有自动提示的解决方案</h4><ol>
+<li><p>到Maven仓库官网搜索,点击需要添加的依赖.复制<code>&lt;dependency&gt;</code>标签即可.</p>
+<blockquote>
+<p><a href="https://mvnrepository.com/" target="_blank" rel="noopener">Maven仓库官网</a></p>
+</blockquote>
+</li>
+</ol>
+<h4 id="在IDEA中配置Maven"><a href="#在IDEA中配置Maven" class="headerlink" title="在IDEA中配置Maven"></a>在IDEA中配置Maven</h4><ol>
+<li>打开IDEA,<code>settings</code>-&gt;<code>Build,Execution,Deployment</code>-&gt;<code>Build Tools</code>-&gt;<code>Maven</code></li>
+<li>修改<code>Maven home directory</code>为maven安装根目录</li>
+<li>勾选<code>User settings file</code>后的<code>Override</code>,然后修改为<code>安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></li>
+<li>勾选<code>Local repository</code>后的<code>Override</code>,然后修改为本地的repository地址</li>
+</ol>
+<h2 id="Maven项目结构"><a href="#Maven项目结构" class="headerlink" title="Maven项目结构"></a>Maven项目结构</h2><table>
+<thead>
+<tr>
+<th>项目根目录/</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src/</td>
+<td></td>
+</tr>
+<tr>
+<td>main/</td>
+<td>项目主体根目录</td>
+</tr>
+<tr>
+<td>java</td>
+<td>源代码目录</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>所需资源目录</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>资源过滤文件目录</td>
+</tr>
+<tr>
+<td>assembly</td>
+<td>组件的描述配置(如何打包)</td>
+</tr>
+<tr>
+<td>config</td>
+<td>配置文件</td>
+</tr>
+<tr>
+<td>wepapp</td>
+<td>web应用的目录.<br>WEB-INF,css,js等</td>
+</tr>
+<tr>
+<td>test/</td>
+<td>项目测试目录根</td>
+</tr>
+<tr>
+<td>java</td>
+<td>单元测试java源代码文件</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>测试需要用的资源库</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>c测试资源过滤库</td>
+</tr>
+<tr>
+<td>site</td>
+<td>Site一些文档</td>
+</tr>
+<tr>
+<td>target/</td>
+<td>存放项目构建后的文件和目录.<br>jar,war,编译的class文件等</td>
+</tr>
+<tr>
+<td>pom.xml</td>
+<td>MMaven的pom文件</td>
+</tr>
+<tr>
+<td>LICENSE.TXT</td>
+<td>项目的LISENCE</td>
+</tr>
+<tr>
+<td>README.TXT</td>
+<td>项目的README</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Maven生命周期"><a href="#Maven生命周期" class="headerlink" title="Maven生命周期"></a>Maven生命周期</h2><blockquote>
+<p>Maven生命周期执行顺序从上至下</p>
+<p><strong>每执行当前指令之前,会把之前(上方)的指令都执行一次</strong></p>
+<p><strong>每执行当前周期之前会执行之前的生命周期</strong></p>
+</blockquote>
+<h3 id="clean生命周期"><a href="#clean生命周期" class="headerlink" title="clean生命周期"></a>clean生命周期</h3><blockquote>
+<p> 清理项目</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">clean</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>pre-clean</code></td>
+<td style="text-align:left">执行清理前需要完成的工作<br>execute processes needed prior to the actual project cleaning</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>clean</code></td>
+<td style="text-align:left">清理上一次构建生成的文件<br>remove all files generated by the previous build</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>post-clean</code></td>
+<td style="text-align:left">执行清理后需要完成的工作<br>execute processes needed to finalize the project cleaning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default生命周期"><a href="#default生命周期" class="headerlink" title="default生命周期"></a>default生命周期</h3><blockquote>
+<p>构建项目</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">default</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>validate</code></td>
+<td>验证工程是否正确,所需要的资源是否可用<br>validate the project is correct and all necessary information is available</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>compile</code></td>
+<td>编译项目的源代码<br>compile the source code of the project</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>test</code></td>
+<td>使用已编译的测试代码,测试已编译的源代码<br>test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>package</code></td>
+<td>采用编译的代码,并以其可分配格式(如JAR)进行打包<br>take the compiled code and package it in its distributable format, such as a JAR.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>verify</code></td>
+<td>运行所有检查,验证包是否有效且达到质量标准<br>run any checks on results of integration tests to ensure quality criteria are met</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>install</code></td>
+<td>把包安装在本地的repository中,可以被其他工程作为依赖来使用<br>install the package into the local repository, for use as a dependency in other projects locally</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>deploy</code></td>
+<td>在整合或者发布环境下执行,将最终版本的包拷贝到远程的repository,使得其他的开发者或者工程可以共享<br>done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="site生命周期"><a href="#site生命周期" class="headerlink" title="site生命周期"></a>site生命周期</h3><blockquote>
+<p> 建立和发布项目站点</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>site</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pre-site</code></td>
+<td>生成项目站点之前需要完成的工作<br>execute processes needed prior to the actual project site generation</td>
+</tr>
+<tr>
+<td><code>site</code></td>
+<td>生成项目站点文档<br>generate the project’s site documentation</td>
+</tr>
+<tr>
+<td><code>post-site</code></td>
+<td>生成项目站点之后需要完成的工作<br>execute processes needed to finalize the site generation, and to prepare for site deployment</td>
+</tr>
+<tr>
+<td><code>site-deploy</code></td>
+<td>将项目站点发布到服务器<br>deploy the generated site documentation to the specified web server</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Maven默认生命周期"><a href="#Maven默认生命周期" class="headerlink" title="Maven默认生命周期"></a>Maven默认生命周期</h3><table>
+<thead>
+<tr>
+<th>Default Lifecycle</th>
+<th>生命周期阶段</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>validate</code></td>
+<td>验证</td>
+<td>确保当前配置和 POM 的内容是有效的。这包含对 pom.xml 文件树的验证。</td>
+</tr>
+<tr>
+<td><code>initialize</code></td>
+<td>初始化</td>
+<td>在执行构建生命周期的主任务之前可以进行初始化。</td>
+</tr>
+<tr>
+<td><code>generate-sources</code></td>
+<td>生成源码</td>
+<td>代码生成器可以开始生成在以后阶段中处理或编译的源代码。</td>
+</tr>
+<tr>
+<td><code>process-sources</code></td>
+<td>处理源码</td>
+<td>提供解析、修改和转换源码。常规源码和生成的源码都可以在这里处理。</td>
+</tr>
+<tr>
+<td><code>generate-resources</code></td>
+<td>生成资源</td>
+<td>可以生成非源码资源。通常包括元数据文件和配置文件。</td>
+</tr>
+<tr>
+<td><code>process-resources</code></td>
+<td>处理资源</td>
+<td>处理非源码资源。修改、转换和重定位资源都能在这阶段发生。</td>
+</tr>
+<tr>
+<td><code>compile</code></td>
+<td>编译</td>
+<td>编译源码。编译过的类被放到目标目录树中。</td>
+</tr>
+<tr>
+<td><code>process-classes</code></td>
+<td>处理类</td>
+<td>处理类文件转换和增强步骤。字节码交织器和常用工具常在这一阶段操作。</td>
+</tr>
+<tr>
+<td><code>generate-test-sources</code></td>
+<td>生成测试源码</td>
+<td>mojo 可以生成要操作的单元测试代码。</td>
+</tr>
+<tr>
+<td><code>process-test-sources</code></td>
+<td>处理测试源码</td>
+<td>在编译前对测试源码执行任何必要的处理。在这一阶段，可以修改、转换或复制源代码。</td>
+</tr>
+<tr>
+<td><code>generate-test-resources</code></td>
+<td>生成测试资源</td>
+<td>允许生成与测试相关的（非源码）资源。</td>
+</tr>
+<tr>
+<td><code>process-test-resources</code></td>
+<td>处理测试资源</td>
+<td>可以处理、转换和重新定位与测试相关的资源。</td>
+</tr>
+<tr>
+<td><code>test-compile</code></td>
+<td>测试编译</td>
+<td>编译单元测试的源码。</td>
+</tr>
+<tr>
+<td><code>process-test-classes</code></td>
+<td></td>
+<td>对测试编译生成的文件做后期处理(需Maven2.0.5及以上)</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>测试</td>
+<td>运行编译过的单元测试并累计结果。</td>
+</tr>
+<tr>
+<td><code>prepare-package</code></td>
+<td></td>
+<td>执行打包前的所有操作(需Maven2.1及以上)</td>
+</tr>
+<tr>
+<td><code>package</code></td>
+<td>打包</td>
+<td>将可执行的二进制文件打包到一个分布式归档文件中，如 JAR 或 WAR。</td>
+</tr>
+<tr>
+<td><code>pre-integration-test</code></td>
+<td>前集成测试</td>
+<td>准备集成测试。这种情况下的集成测试是指在一个受到一定控制的模拟的真 实部署环境中测试代码。这一步能将归档文件部署到一个服务器上执行。</td>
+</tr>
+<tr>
+<td><code>integration-test</code></td>
+<td>集成测试</td>
+<td>执行真正的集成测试。</td>
+</tr>
+<tr>
+<td><code>post-integration-test</code></td>
+<td>后集成测试</td>
+<td>解除集成测试准备。这一步涉及测试环境重置或重新初始化。</td>
+</tr>
+<tr>
+<td><code>verify</code></td>
+<td>检验</td>
+<td>检验可部署归档的有效性和完整性。过了这个阶段，将安装该归档。</td>
+</tr>
+<tr>
+<td><code>install</code></td>
+<td>安装</td>
+<td>将该归档添加到本地 Maven 目录。这一步让其他可能依赖该归档的模块可以使用它。</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>部署</td>
+<td>将该归档添加到远程 Maven 目录。这一步让这个工件能为更多的人所用。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Maven环境隔离配置"><a href="#Maven环境隔离配置" class="headerlink" title="Maven环境隔离配置"></a>Maven环境隔离配置</h2><blockquote>
+<p>在<code>pom.xml</code>中的<code>&lt;build&gt;</code>节点下插入<code>&lt;resources&gt;</code>节点,在其中添加<code>&lt;resource&gt;</code>节点来声明要进行环境分离的<code>resource</code>目录.然后在<code>pom.xml</code>中<code>&lt;project&gt;</code>节点下(与<code>&lt;build&gt;</code>同级)增加<code>&lt;profiles&gt;</code>节点,通过添加<code>&lt;profile&gt;</code>节点来配置不同环境.</p>
+</blockquote>
+<ol>
+<li><p>在<code>&lt;build&gt;</code>节点下插入<code>&lt;resources&gt;</code>节点</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置resources资源文件夹目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources.$&#123;deploy.type&#125;<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 排除指定文件 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">excludes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclude</span>&gt;</span>*.jsp<span class="tag">&lt;/<span class="name">exclude</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">excludes</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置resources资源文件夹目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>&lt;project&gt;</code>节点下插入<code>&lt;profiles&gt;</code>节点,并配置各个环境的环境标识及其他属性</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- dev环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置默认使用该环境 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- beta环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>beta<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>beta<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- product环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>prod<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>prod<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建<code>resources.&lt;环境标识&gt;</code>目录,这样便可结合<code>&lt;resource&gt;</code>中定义的<code>${deploy.type}</code>和<code>&lt;profile&gt;</code>中定义的<code>&lt;properties&gt;</code>属性值来选择使用哪个环境</p>
+<p><img src="https://i.loli.net/2019/02/28/5c77e94283e08.png" alt="resources目录结构.png"></p>
+</li>
+</ol>
+<h2 id="Maven命令使用"><a href="#Maven命令使用" class="headerlink" title="Maven命令使用"></a>Maven命令使用</h2><blockquote>
+<p><code>-Dmaven.test.skip=true</code>:跳过测试</p>
+<p><code>-P${deploy.type}</code>:使用指定的环境.例如:<code>mvn package -Pdev</code>,使用<code>dev</code>环境</p>
+<p><code>mvn help:effective-settings</code>:查看生效的配置.这里的内容是<code>settings.xml</code>中生效的配置,可以用来查看<code>repository</code>地址和<code>mirror</code>的配置</p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------------The End -------------------</div>
+    
+</div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+            
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>vnaso</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="http://vnaso.github.io/2019/02/04/JavaLearning/Tools/Maven/" title="Maven学习笔记">http://vnaso.github.io/2019/02/04/JavaLearning/Tools/Maven/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Maven/" rel="tag"><i class="fa fa-tag"></i> Maven</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/15/JavaLearning/Tools/logback/" rel="prev" title="Logback学习笔记">
+                Logback学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vnaso">
+            
+              <p class="site-author-name" itemprop="name">vnaso</p>
+              <p class="site-description motion-element" itemprop="description">for everything</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/vnaso" title="GitHub &rarr; https://github.com/vnaso" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:2873084431@qq.com" title="E-Mail &rarr; mailto:2873084431@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/5537597047" title="Weibo &rarr; https://weibo.com/u/5537597047" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven使用"><span class="nav-text">Maven使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven安装与配置"><span class="nav-text">Maven安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载与安装"><span class="nav-text">下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建maven仓库"><span class="nav-text">创建maven仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改下载镜像地址"><span class="nav-text">修改下载镜像地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#针对Maven添加依赖时没有自动提示的解决方案"><span class="nav-text">针对Maven添加依赖时没有自动提示的解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在IDEA中配置Maven"><span class="nav-text">在IDEA中配置Maven</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven项目结构"><span class="nav-text">Maven项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven生命周期"><span class="nav-text">Maven生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clean生命周期"><span class="nav-text">clean生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#default生命周期"><span class="nav-text">default生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#site生命周期"><span class="nav-text">site生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Maven默认生命周期"><span class="nav-text">Maven默认生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven环境隔离配置"><span class="nav-text">Maven环境隔离配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven命令使用"><span class="nav-text">Maven命令使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">vnaso</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.6.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
