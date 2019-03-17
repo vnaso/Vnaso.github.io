@@ -115,33 +115,32 @@
 
 
 
-  <meta name="description" content="服务器环境搭建 Java安装 到官网下载jdk.  解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="Spring IOCIOC 和 DI 简介 IOC(Inversion of Control)控制翻转, 包含了两个方面: 控制 和 反转 简单理解: 控制: 当前对象对内部成员的控制权 反转:控制权不由当前对象管理, 由其他类 / 第三方容器来管理  IOC 不够开门见山, 于是 Martin Fowler 提出了 DI(Dependency Injection)来替代 IOC. 即让调用类对某">
+<meta name="keywords" content="Note,Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux线上环境搭建">
-<meta property="og:url" content="http://vnaso.github.io/2019/03/05/JavaLearning/ServerSetting/index.html">
+<meta property="og:title" content="Spring">
+<meta property="og:url" content="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/Spring/index.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载jdk.  解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport">
+<meta property="og:description" content="Spring IOCIOC 和 DI 简介 IOC(Inversion of Control)控制翻转, 包含了两个方面: 控制 和 反转 简单理解: 控制: 当前对象对内部成员的控制权 反转:控制权不由当前对象管理, 由其他类 / 第三方容器来管理  IOC 不够开门见山, 于是 Martin Fowler 提出了 DI(Dependency Injection)来替代 IOC. 即让调用类对某">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/04/5c7d0e96800b4.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b93f19dc78.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b807a8ab63.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b8283e0357.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b83014f41b.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b96f1831a8.png">
-<meta property="og:updated_time" content="2019-03-07T14:15:17.929Z">
+<meta property="og:image" content="https://i.loli.net/2019/03/16/5c8cb48e17ac1.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/16/5c8cb74808c6e.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qe4jy22j30qk0jbq3s.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qg7jep9j30lf076wen.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qhyg3wcj30mi0j3t9w.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qicuovuj30oa0l2dh9.jpg">
+<meta property="og:updated_time" content="2019-03-17T02:14:23.820Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux线上环境搭建">
-<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载jdk.  解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport">
-<meta name="twitter:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
+<meta name="twitter:title" content="Spring">
+<meta name="twitter:description" content="Spring IOCIOC 和 DI 简介 IOC(Inversion of Control)控制翻转, 包含了两个方面: 控制 和 反转 简单理解: 控制: 当前对象对内部成员的控制权 反转:控制权不由当前对象管理, 由其他类 / 第三方容器来管理  IOC 不够开门见山, 于是 Martin Fowler 提出了 DI(Dependency Injection)来替代 IOC. 即让调用类对某">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/16/5c8cb48e17ac1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://vnaso.github.io/2019/03/05/JavaLearning/ServerSetting/">
+  <link rel="canonical" href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/Spring/">
 
 
 
@@ -151,7 +150,7 @@
   };
 </script>
 
-  <title>Linux线上环境搭建 | Vnaso</title>
+  <title>Spring | Vnaso</title>
   
 
 
@@ -422,7 +421,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/05/JavaLearning/ServerSetting/">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/Spring/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -439,7 +438,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux线上环境搭建
+          <h1 class="post-title" itemprop="name headline">Spring
               
             
           </h1>
@@ -464,7 +463,7 @@
                 
               
 
-              <time title="Created: 2019-03-05 14:11:00" itemprop="dateCreated datePublished" datetime="2019-03-05T14:11:00+08:00">2019-03-05</time>
+              <time title="Created: 2019-03-16 15:27:00" itemprop="dateCreated datePublished" datetime="2019-03-16T15:27:00+08:00">2019-03-16</time>
             
 
             
@@ -481,7 +480,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-07 22:15:17" itemprop="dateModified" datetime="2019-03-07T22:15:17+08:00">2019-03-07</time>
+                <time title="Modified: 2019-03-17 10:14:23" itemprop="dateModified" datetime="2019-03-17T10:14:23+08:00">2019-03-17</time>
               
             
           </span>
@@ -498,7 +497,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -532,177 +531,176 @@
       
 
       
-        <p>服务器环境搭建</p>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>到<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载<code>jdk</code>.</p>
-</li>
-<li><p>解压到<code>tar -zxvf jdk_8u_201 -C /usr/java</code></p>
-</li>
-<li><p>编辑环境变量<code>vim /etc/profile</code>,使环境变量生效<code>source /etc/profile</code></p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">export CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/<span class="selector-tag">dt</span><span class="selector-class">.jar</span>:<span class="variable">$JAVA_HOME</span>/lib/tools<span class="selector-class">.jar</span>:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$GIT_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin:</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否安装成功:<code>java -version</code></p>
-</li>
-</ol>
-<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="安装1T-e-gt-dle-reo"><a href="#安装1T-e-gt-dle-reo" class="headerlink" title="安装1T/e&gt;dle=reo"></a>安装1T/e&gt;dle=reo</h4><ol>
-<li>到<a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">官网Yum仓库</a>下载<code>rpm</code>包.</li>
-<li><code>rpm -ivh &lt;文件名&gt;</code>或者<code>yum localinstall &lt;文件名&gt;</code>安装刚才下载好的包</li>
-<li>此时便可以通过<code>yum</code>安装最新的<code>mysql</code>.使用指令<code>yum install mysql-community-server</code>安装</li>
-</ol>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ul>
-<li>启动<code>mysql</code>:<code>service mysqld start</code></li>
-<li>关闭<code>mysql</code>:<code>service mysqld stop</code></li>
-</ul>
+        <h2 id="Spring-IOC"><a href="#Spring-IOC" class="headerlink" title="Spring IOC"></a>Spring IOC</h2><h3 id="IOC-和-DI-简介"><a href="#IOC-和-DI-简介" class="headerlink" title="IOC 和 DI 简介"></a>IOC 和 DI 简介</h3><blockquote>
+<p>IOC(Inversion of Control)控制翻转, 包含了两个方面: 控制 和 反转</p>
+<p>简单理解:</p>
+<p><strong>控制</strong>: 当前对象对内部成员的控制权</p>
+<p><strong>反转</strong>:控制权不由当前对象管理, 由其他类 / 第三方容器来管理</p>
+</blockquote>
+<p>IOC 不够开门见山, 于是 Martin Fowler 提出了 DI(Dependency Injection)来替代 IOC. 即让调用类对某一个接口实现类的依赖关系由第三方(容器或协作类)注入, 以移除调用类对某一个接口实现类的依赖.</p>
+<blockquote>
+<p>通过 DI, 对象的依赖关系将有系统中负责协调各对象的第三方组件在创建对象的时候进行设定, 对象无须自行创建或管理他们的依赖关系. 依赖关系将被自动注入到需要它们的对象当中去.</p>
+</blockquote>
+<p>使用 IOC 的好处:</p>
 <ol>
-<li><p>查看<code>mysql</code>提供的初始<code>root</code>密码:<code>cat /var/log/mysqld.log | grep password</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png" alt="mysql_pwd.png"></p>
-</li>
-<li><p>登录<code>mysql</code>,若出现提示<code>Access denied for user &#39;root&#39;@&#39;localhost&#39;</code>,可能是密码错了.否则百度</p>
-</li>
-<li><p>修改<code>root</code>密码:<code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;vnaso943983&#39;;</code></p>
-<blockquote>
-<p>如果不想使用强密码,需要先降低密码策略等级:</p>
-<p><code>SET GLOBAL validate_password.policy=0;</code></p>
-</blockquote>
-</li>
-<li><p>创建用户<code>CREATE USER &#39;vnaso&#39;@&#39;%&#39; IDENTIFIED BY &#39;vnaso222&#39;;</code>,并授权:<code>GRANT ALL ON *.* TO &#39;vnaso&#39;@&#39;%&#39; WITH GRANT OPTION;</code></p>
-</li>
-<li><p>修改默认字符集.打开<code>/etc/my.cnf</code>,添加如下配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 对本地的mysql客户端的配置</span><br><span class="line">[client]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 对其他远程连接的mysql客户端的配置</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 本地mysql服务的配置</span><br><span class="line">[mysqld]</span><br><span class="line">character-set-client-handshake = FALSE</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">collation-server = utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
-<p>查看字符集:<code>SHOW VARIABLES WHERE Variable_name LIKE &#39;character\_set\_%&#39; OR Variable_name LIKE &#39;collation%&#39;;</code></p>
-</li>
-<li><p>查看时区:<code>show variables like &#39;%zone%&#39;;</code></p>
-<p><img src="https://i.loli.net/2019/03/04/5c7d0e96800b4.png" alt="mysql_timezone.png"></p>
-</li>
-<li><p>修改时区为<code>UTC</code>:<code>set time_zone = &#39;utc&#39;;flush privileges;</code>修改时区并刷新.</p>
+<li>不用自己组装, 拿来就用</li>
+<li>单例, 效率高, 不浪费空间</li>
+<li>便于单元测试, 方便切换 mock 组件</li>
+<li>便于进行 AOP 操作, 对于使用者是透明的</li>
+<li>统一配置, 便于修改</li>
+</ol>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>IOC 容器其实就是一个大工厂, 用来管理我们所有的对象以及依赖关系</p>
 <ul>
-<li><p>如果报错<code>Unknown or incorrect time zone: &#39;UTC&#39;</code>,在<code>shell</code>执行:<code>mysql_tzinfo_to_sql /usr/share/zoneinfo |mysql -u root mysql -p</code>,有warning提示<code>Unable to load xxx</code>是正常的.</p>
+<li>通过反射获取类的所有信息</li>
+<li>通过配置文件或注解来描述类与类之间的关系</li>
+<li>结合配置信息和反射来构建出对应的对象和依赖关系</li>
+</ul>
+<p>Spring IoC 容器实现对象的创建和依赖:</p>
+<p><img src="https://i.loli.net/2019/03/16/5c8cb48e17ac1.png" alt="1962542e-a76a-427a-a289-00f4315546cb.png"></p>
+<ol>
+<li>根据 bean 配置信息在容器内创建 bean定义注册表.</li>
+<li>根据注册表加载、实例化 bean, 建立 bean 与 bean 之间的依赖系.</li>
+<li>将这些准备就绪的 bean 放到 Map 缓存池中, 等待应用程序调用.</li>
+</ol>
+<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><blockquote>
+<p>AOP(Aspect Oriented Programming)面向切面编程: 通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术. 利用 AOP 可以对业务逻辑的各个部分进行隔离, 从而使业务逻辑各部分之间的耦合度降低, 提高程序的可用性, 同时提高了开发的效率.</p>
+</blockquote>
+<h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><ul>
+<li><p>连接点(Join point)</p>
+<p>连接点是程序执行过程中能够应用通知的所有点. 目前 Spring AOP 仅支持方法级.</p>
 </li>
-<li><p>如果修改了之后,再次查询还是<code>System</code>,修改配置文件<code>/etc/my.cnf</code>,在<code>[mysqld]</code>下添加<code>default-time-zone = UTC</code></p>
-</li>
+<li><p>通知(Advice)</p>
+<p>通知是指拦截到切点之后要做的事情就是通知, 包含了需要用于多个应用对象的横切行为.</p>
+<p>通知的 5 种类型:</p>
+<ul>
+<li><code>Before</code>: 在方法被调用之前调用</li>
+<li><code>After</code>: 在方法完成后调用通知, 无论方法是否执行成功</li>
+<li><code>After-returning</code>: 在方法成功执行之后调用通知</li>
+<li><code>After-throwing</code>: 在方法抛出异常后调用通知</li>
+<li><code>Aroud</code>: 通知包含了被通知的方法, 在被通知的方法调用之前和调用之后执行定义的行为</li>
 </ul>
 </li>
-</ol>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>到<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">官网</a>获取下载链接.<code>wget &lt;url&gt;</code>下载</p>
+<li><p>切点(Pointcut)</p>
+<p>切点定义了通知被应用的具体位置. 切点定义了那些连接点会得到通知.</p>
 </li>
-<li><p>使用<code>tar -zxvf &lt;文件名&gt;</code>解压缩.</p>
+<li><p>切面(Aspect)</p>
+<p>切面是通知和切点的结合. 通知和切点共同定义了切面的全部内容–它是什么, 在何时和在何处完成其功能.</p>
 </li>
-<li><p>安装<code>git</code>前置依赖:<code>yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel curl-devel perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></p>
+<li><p>引入(Introduction)</p>
+<p>引入允许我们向现有的类添加新方法或属性.</p>
 </li>
-<li><p>进入<code>git</code>安装目录下,进行安装:<code>./configure --prefix=/usr/local/git</code>-&gt;<code>make &amp;&amp; make install</code></p>
-<p>如果报错<code>no such file or directory</code>.使用:<code>yum install autoconf</code>然后在目录中键入<code>autoconf</code>,再次进行安装即可.</p>
+<li><p>织入(Weaving)</p>
+<p>织入是把切面应用到目标对象并创建新的代理对象的过程. 切面在指定的连接点被织入到目标对象中. 在目标对象的生命周期里有多个点可以进行织入.</p>
 </li>
-<li><p>添加环境变量.<code>vim /etc/profile</code>,使环境变量生效<code>source /etc/profile</code></p>
+<li><p>顾问(Advisor)</p>
+<p>顾问是切面的一种, 能够将通知以更为复杂的方式织入到目标对象中, 是将通知包装为更复杂的切面的装配器.</p>
 </li>
-<li><p>检查是否安装成功<code>git --version</code></p>
+</ul>
+<h2 id="Bean"><a href="#Bean" class="headerlink" title="Bean"></a>Bean</h2><p><strong>Spring 容器(Bean 工厂)可简单分成两种</strong>:</p>
+<ul>
+<li>BeanFactory: 这是 Spring 中较原始的 Factory, 无法支持 Spring 的许多插件, 如: AOP, Web 应用等.</li>
+<li>ApplicationContext: 这是 BeanFactory 派生而来, 还继承了其他许多接口, 提供了更多的功能. 因此, 大多数场合都是使用 ApplicationContext.</li>
+</ul>
+<p><strong>BeanFactory 类继承体系</strong></p>
+<p><img src="https://i.loli.net/2019/03/16/5c8cb74808c6e.png" alt="UTOOLS1552725831513.png"></p>
+<p><strong>ApplicationContext 类继承体系</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qe4jy22j30qk0jbq3s.jpg" alt=""></p>
+<p>其中在 ApplicationContext 子类中还有一个比较重要的: WebApplicationContext: 专门为 Web 应用服务</p>
+<p><strong>Spring 与 Web 应用的上下文融合</strong>:</p>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qg7jep9j30lf076wen.jpg" alt=""></p>
+<h3 id="Bean-的生命周期"><a href="#Bean-的生命周期" class="headerlink" title="Bean 的生命周期"></a>Bean 的生命周期</h3><p><strong>BeanFactory 的生命周期</strong>:</p>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qhyg3wcj30mi0j3t9w.jpg" alt=""></p>
+<p><strong>ApplicationContext 的生命周期</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g14qicuovuj30oa0l2dh9.jpg" alt=""></p>
+<p>上图中 <strong>设置属性值</strong> 的下一步应是: 调用 BeanNameAware 的 setBeanName() 方法</p>
+<p>分类对方法进行解析:</p>
+<ul>
+<li>Bean 自身的方法: 如调用 Bean 的构造方法实例化 Bean, 调用 setter 设置 Bean 的属性值以及通过 init-method 和 destroy-method 所指定的方法</li>
+<li>Bean 级生命周期接口方法: 如 BeanNameAware, BeanFactory, InitializingBean 和 DisposableBean, 这些接口方法由 Bean 类直接实现. </li>
+<li>容器级生命周期接口方法: 图中带 “★” 的步骤是由 InstantiationAwareBeanPostProcessor 和 BeanPostProcessor 这两个接口实现, 一般称它们的实现类为 <strong>后处理器</strong>. 后处理器接口一般不由 Bean 本身实现, 它们独立于 Bean, 实现类以容器附加装置的形式注册到 Spring 容器中并通过接口反射为 Spring 容器预先识别. 当 Spring 容器创建任何 Bean 的时候, 这些后处理器都会发生作用, 所以这些后处理器的影响是全局性的. 用户可以通过合理地编写后处理器, 让其仅对特定的 Bean 进行加工处理.</li>
+</ul>
+<p><strong>ApplicationContext 与 BeanFactory 不同之处</strong>:</p>
+<ul>
+<li>ApplicationContext 会利用 Java 反射机制自动识别出配置文件中定义的 BeanPostProcessor, InstantiationAwareBeanPostProcessor 和 BeanFactoryPostProcessor 后置器, 并自动将它们注册到应用上下文中. 而 BeanFactory 需要在代码中通过手动调用 <code>addBeanPostProcessor()</code> 方法进行注册.</li>
+<li>ApplicationContext 在初始化应用上下文的时候就实例化所有单实例的 Bean, 而 BeanFactory 在初始化容器的时候并未实例化 Bean, 直到第一次访问某个 Bean 时才实例化目标 Bean.</li>
+</ul>
+<p><strong>整个步骤详细描述</strong>:</p>
+<ol>
+<li><p>Spring 找到配置文件中 Spring Bean 的定义, 再利用 Java Reflection API 对 Bean 进行实例化.</p>
 </li>
-</ol>
-<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><ol>
-<li><p>生成私钥:<code>ssh-keygen -t rsa -C &quot;XXX@outlook.com&quot;</code>密钥名称可自定义</p>
+<li><p>Spring 将值和 Bean 的引用注入到 Bean 对应的属性中.</p>
 </li>
-<li><p>告知系统来管理生成的密钥:<code>ssh-add ~/.ssh/id_rsa</code></p>
+<li><p>如果 Bean 实现了 BeanNameAware 接口, Spring 将 Bean 的 ID 传递给 setBeanName() 方法, 设置 Bean 的名字.</p>
+</li>
+<li><p>如果 Bean 实现了 BeanFactoryAware 接口, Spring 将调用 setBeanFactory() 方法, 将 BeanFactory 容器实例传入.</p>
+</li>
+<li><p>如果 Bean 实现了 ApplicationContextAware 接口, Spring 将调用 setApplicationContext() 方法, 将 Bean 所在的应用上下文的引用传入进来.</p>
+</li>
+<li><p>与上面的类似, 如果实现了其他 *Aware 接口, 就调用相应的方法.</p>
 <blockquote>
-<p> 如果报错<code>could not open a connection to your authentication agent</code></p>
-<p>执行命令:eval <code>ssh-agent</code>(是<code>~</code>,而不是单引号).然后再执行:<code>ssh-add ~/.ssh/id_rsa</code></p>
+<ul>
+<li><strong>ApplicationContextAware</strong>: 获得 ApplicationContext 对象, 可以用来获取所有 Bean definition 的名字.</li>
+<li><strong>BeanFactoryAware</strong>: 获得 BeanFactory 对象，可以用来检测 Bean 的作用域。</li>
+<li><strong>BeanNameAware</strong>: 获得 Bean 在配置文件中定义的名字.</li>
+<li><strong>ResourceLoaderAware</strong>: 获得 ResourceLoader 对象, 可以获得 classpath 中某个文件. </li>
+<li><strong>ServletContextAware</strong>: 在一个 MVC 应用中可以获取 ServletContext 对象, 可以读取 context 中的参数.</li>
+<li><strong>ServletConfigAware</strong>: 在一个MVC应用中可以获取 ServletConfig 对象, 可以读取config中的参数.</li>
+</ul>
 </blockquote>
 </li>
-<li><p>在远程服务器中添加公钥:<code>cat ~/.ssh/id_rsa.pub</code></p>
+<li><p>如果 Bean 实现了 BeanPostProcessor 接口, Spring 将调用它们的 postProcessBeforeInitialization() 方法.</p>
+</li>
+<li><p>如果 Bean 实现了 InitializingBean 接口, Spring 将调用它们的 afterPropertiesSet() 方法. 类似地, 如果 Bean 使用 init-method 声明了初始化方法, 该方法也会被调用.</p>
+</li>
+<li><p>如果 Bean 实现了 BeanPostProcessor 接口, Spring 将调用它们的 postProcessAfterInitialization() 方法.</p>
+</li>
+<li><p>此时 Bean 已经准备就绪, 可以被应用程序使用了. 它们将一直驻留在应用上下文, 直到该应用上下文被销毁.</p>
+</li>
+<li><p>如果 Bean 实现了 DisposableBean 接口, Spring 将调用它的 destroy() 接口方法. 同样, 如果 Bean 使用 destroy-method 声明了销毁方法, 该方法也会被调用.</p>
 </li>
 </ol>
-<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">官网</a>下载压缩包,解压.</li>
-<li>安装<code>nginx</code>编译文件及库文件<code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel pcre pcre-devel</code></li>
-<li>进入解压后的目录进行安装:<code>./configure --prefix=/usr/local/nginx</code>-&gt;<code>make &amp;&amp; make install</code></li>
-<li>测试:<code>/usr/local/sbin/nginx -t</code></li>
-</ol>
-<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>参考<a href="./Nginx.md">Nginx配置文件说明</a></p>
-<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">官网</a>下载压缩包,解压.一般选择<code>core</code>就行</li>
-<li>防火墙打开<code>8080</code>端口,启动tomcat:<code>$CATALINA_HOME/bin/startup.sh</code></li>
-<li>测试:访问<code>&lt;服务器地址&gt;:8080</code></li>
-</ol>
-<h4 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h4><ol>
-<li><p>修改默认编码.<code>vim /opt/Develop/apache-tomcat-9.0.16/conf/server.xml</code>.搜索<code>8080</code>,在<code>&lt;Connector&gt;</code>节点中添加<code>URIEncoding=&quot;UTF-8&quot;</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b93f19dc78.png" alt="tomcatEncoding.png"></p>
-</li>
-<li><p>编辑环境变量.<code>vim /etc/profile</code>,添加<code>export CATALINA_HOME = /opt/apache-tomcat-9.0.1</code>.然后<code>source /etc/profile</code>使配置生效</p>
-</li>
-</ol>
-<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h4 id="安装-4"><a href="#安装-4" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">官网</a>下载压缩包,解压.</li>
-<li>添加环境变量:<code>vim /etc/profile</code>,添加<code>export $MAVEN_HOME=...</code>.并将<code>$MAVEN_HOME/bin</code>添加到<code>$PATH</code>中</li>
-<li><code>source /etc/profile</code>使配置生效</li>
-<li>测试:<code>mvn -v</code></li>
-</ol>
-<h2 id="Vstpd"><a href="#Vstpd" class="headerlink" title="Vstpd"></a>Vstpd</h2><h4 id="安装-5"><a href="#安装-5" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>下载安装:<code>yum install vstpd</code></p>
-</li>
-<li><p>创建接收上传文件的文件夹:<code>mkdir /ftpfile</code></p>
-</li>
-<li><p>创建只有上传权限不能登录的用户:<code>useradd ftpuser -d /ftpfile/ -s /sbin/nologin</code></p>
-</li>
-<li><p>给创建的<code>ftpuser</code>此用户赋予<code>/ftpfile</code>的权限:<code>chown -R ftpuser.ftpuser /ftpfile/</code>.此时用户名和用户组都是<code>ftpuser</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b807a8ab63.png" alt="ftpuser.png"></p>
-</li>
-<li><p>给<code>ftpuser</code>设置密码:<code>passwd ftpuser</code></p>
-</li>
-<li><p>编辑配置文件,让上传目录指向之前创建的目录:<code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<blockquote>
-<p>搜索<code>banner</code>节点,此处配置<code>ftp</code>的欢迎信息.<code>ftpd_banner=xxxxx</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b8283e0357.png" alt="ftp_banner.png"></p>
-<p>可以选择添加<code>use_localtime=yes</code>表示使用服务器时间</p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b83014f41b.png" alt="ftp_root.png"></p>
-<p>添加<code>anonymous_enable=NO</code>关闭匿名用户访问</p>
-<p>配置FTP被动模式的端口</p>
-<p><code>pasv_min_port=30000</code><br><code>pasv_max_port=30000</code></p>
-</blockquote>
-</li>
-<li><p>ftp配置</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 修改为NO，关闭匿名用户访问</span></span><br><span class="line"><span class="attr">anonymous_enable</span>=<span class="literal">NO</span></span><br><span class="line"><span class="comment"># 将所有本地用户限制在自家目录中。</span></span><br><span class="line"><span class="attr">chroot_local_user</span>=<span class="literal">YES</span> </span><br><span class="line"><span class="comment"># 设置系统用户FTP主目录</span></span><br><span class="line"><span class="attr">local_root</span>=/data</span><br><span class="line"><span class="comment"># 开启charoot写权限</span></span><br><span class="line"><span class="attr">allow_writeable_chroot</span>=<span class="literal">YES</span></span><br><span class="line"><span class="comment">#配置可以登录ftp的用户目录</span></span><br><span class="line"><span class="attr">userlist_deny</span>=<span class="literal">NO</span></span><br><span class="line"><span class="attr">userlist_file</span>=/etc/vsftpd/user_list</span><br><span class="line"><span class="comment">#配置ftp用户访问目录配置目录</span></span><br><span class="line"><span class="attr">user_config_dir</span>=/etc/vsftpd/userconfig</span><br><span class="line"><span class="comment"># 配置FTP被动模式的端口</span></span><br><span class="line"><span class="attr">pasv_min_port</span>=<span class="number">30000</span></span><br><span class="line"><span class="attr">pasv_max_port</span>=<span class="number">30000</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置<code>ftp</code>用户登录后访问的目录</p>
-<blockquote>
-<p>在<code>/etc/vsftpd</code>目录下新建<code>userconfig</code>目录</p>
-<p>在目录下配置用户的登录目录,文件名即对应的用户名</p>
-<p><code>vim /etc/vsftpd/userconfig/ftpuser</code></p>
-<p>在创建的文件中添加<code>local_root=/ftpfile/ftpuser</code>  <code>/ftpfile</code>表示对应用户登录ftp时的根目录</p>
-<p><strong>注意</strong>:路径前不能有空格,否则不识别!!!!会报错<code>unrecognised variable in config file: local_root</code></p>
-</blockquote>
-</li>
-<li><p>重启<code>vsftpd</code></p>
-<blockquote>
-<p>启动:<code>systemctl start vsftpd.service(service vsftpd start)</code></p>
-<p>停止:<code>systemctl stop vsftpd.service(service vsftpd stop)</code></p>
-<p>重启:<code>systemctl restart vsftpd.service(service vsftpd restart)</code></p>
-</blockquote>
-</li>
-<li><p>打开防火墙,添加<code>21</code>端口和<code>30000</code>端口.</p>
-<blockquote>
-<p>添加端口:<code>firewall-cmd --add-port=21/tcp --permanent</code>,<code>firewall-cmd --add-port=21/tcp --permanent</code></p>
-<p>重启防火墙:<code>firewall-cmd --reload</code></p>
-</blockquote>
-</li>
-<li><p>测试.浏览器打开<code>ftp://服务器地址</code>登录.如果只能下载不能上传,请查阅<code>开启关闭SELinux</code>相关信息</p>
-</li>
-</ol>
-<h2 id="swap交换缓存"><a href="#swap交换缓存" class="headerlink" title="swap交换缓存"></a>swap交换缓存</h2><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><ol>
-<li>创建<code>swap</code>文件:<code>sudo fallocate -l 4G /swapfile</code>(在<code>/</code>下创建一个大小为4G的文件<code>swapfile</code>)</li>
-<li>授权<code>swap</code>文件:<code>chmod 600 /swapfile</code>(该文件的读写只能<code>root</code>操作)</li>
-<li>告知系统将文件用于<code>swap</code>:<code>mkswap /swapfile</code></li>
-<li>启用<code>swap</code>文件:<code>swapon /swapfile</code></li>
-<li>确认:<code>free</code></li>
-</ol>
-<blockquote>
-<p>至此已经在系统中启用了<code>swap</code>交换缓存,但是一旦系统重启后,服务器还不能自动启用该文件.</p>
-</blockquote>
-<h4 id="使swap永久生效"><a href="#使swap永久生效" class="headerlink" title="使swap永久生效"></a>使swap永久生效</h4><ol>
-<li>打开文件<code>nano /etc/fstab</code>,在文件末尾添加<code>/swapfile   swap    swap    sw  0   0</code></li>
-<li><code>^X</code>表示<code>Ctrl + X</code>,按下选择<code>yes</code>保存退出.</li>
-</ol>
-<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><p>在腾讯云服务器中的配置</p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b96f1831a8.png" alt="profile.png"></p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">CLASS_PATH</span>=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">GIT_HOME</span>=/usr/local/git</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">MAVEN_HOME</span>=/opt/Develop/apache-maven-3.6.0</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/usr/java/jdk1.8.0_201</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JRE_HOME</span>=/usr/java/jdk1.8.0_201/jre</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">CATALINA_HOME</span>=/opt/Develop/apache-tomcat-9.0.16</span><br></pre></td></tr></table></figure>
+<h3 id="Bean-的作用域"><a href="#Bean-的作用域" class="headerlink" title="Bean 的作用域"></a>Bean 的作用域</h3><p><strong>Spring Framework</strong> 支持五种作用域, 分别阐述如下表:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">作用域</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">singleton</td>
+<td>整个 <code>Spring IoC</code>容器内只有一个这样的 <code>bean</code>, 生成后一直保持到容器销毁</td>
+</tr>
+<tr>
+<td style="text-align:center">prototype</td>
+<td>每次从容器获取该 <code>bean</code>都会得到一个新的实例, 会被如何保持, 会被保持多长时间, 都由使用者决定, 容器不再管理</td>
+</tr>
+<tr>
+<td style="text-align:center">application</td>
+<td>整个 <code>ServletContext</code> 视为一个应用, 在这个应用内只有一个这样的 <code>bean</code>, 创建之后一直保持到该 <code>ServletContext</code> 销毁</td>
+</tr>
+<tr>
+<td style="text-align:center">session</td>
+<td>整个 <code>HTTP Session</code> 对应只有一个这样的 <code>bean</code>, 创建之后一直保持到该 <code>HTTP session</code> 被销毁</td>
+</tr>
+<tr>
+<td style="text-align:center">request</td>
+<td>整个 <code>HTTP request</code>请求处理过程对应只有一个这样的 <code>bean</code>, 创建之后一直保持到该 <code>HTTP request</code> 处理完被销毁</td>
+</tr>
+</tbody>
+</table>
+<p>五种作用域中, 通过 <code>scope = &quot;singleton&quot;(xml)</code>, <code>@Scope(&quot;singleton&quot;)(annotation)</code>. 其中 request, session 和 global session 三种作用域仅在基于 web 的应用中使用. 只能用在基于 web 的 Spring ApplicationContext 环境.</p>
+<h4 id="singleton-唯一-bean-实例"><a href="#singleton-唯一-bean-实例" class="headerlink" title="singleton - 唯一 bean 实例"></a>singleton - 唯一 bean 实例</h4><p>当一个 bean 的作用域为 singleton, 那么 Spring IoC 容器中只会存在一个共享的 bean 实例, 并且所有对 bean 的请求. 只要 id 与该 bean 定义相匹配, 则只会返回 bean 的同一实例. 可以指定 bean 节点的 <code>lazy-init = &quot;true&quot;</code> 来延迟初始化 bean. 这时候, 只有在第一次获取 bean 时才会初始化 bean, 即第一次请求该 bean 时才初始化. </p>
+<h4 id="prototype-每次请求都会创建一个新的实例"><a href="#prototype-每次请求都会创建一个新的实例" class="headerlink" title="prototype - 每次请求都会创建一个新的实例"></a>prototype - 每次请求都会创建一个新的实例</h4><p>当一个 bean 的作用域为 prototype, 表示一个 bean 定义对应多个对象实例. prototype 作用域的 bean 会导致每次对该 bean 请求时都会创建一个新的 bean 实例. **prototype 是原型类型, 它在创容器时并没有实例化, 而是当我们获取 bean 时才会去创建一个对象. </p>
+<h4 id="request-每一次-HTTP-请求都会产生一个新的-bean-仅在当前-HTTP-request-内有效"><a href="#request-每一次-HTTP-请求都会产生一个新的-bean-仅在当前-HTTP-request-内有效" class="headerlink" title="request - 每一次 HTTP 请求都会产生一个新的 bean, 仅在当前 HTTP request 内有效"></a>request - 每一次 HTTP 请求都会产生一个新的 bean, 仅在当前 HTTP request 内有效</h4><p>每一次 HTTP 请求都会产生一个新的 bean, 同时该 bean 仅在当前 HTTP request 内有效, 当请求结束后, 该对象的生命周期即宣告结束.</p>
+<h4 id="session-一次-HTTP-请求都会产生一个新的-bean-仅在当前-HTTP-session-内有效"><a href="#session-一次-HTTP-请求都会产生一个新的-bean-仅在当前-HTTP-session-内有效" class="headerlink" title="session - 一次 HTTP 请求都会产生一个新的 bean, 仅在当前 HTTP session 内有效"></a>session - 一次 HTTP 请求都会产生一个新的 bean, 仅在当前 HTTP session 内有效</h4><p>每一次 HTTP 请求都会产生一个新的 bean, 同时该 bean 仅在当前 HTTP session 内有效. 当 HTTP session 最终被废弃的时候, 在该 HTTP session 作用域内的 bean 也会被废弃掉.</p>
+<h4 id="globalSession"><a href="#globalSession" class="headerlink" title="globalSession"></a>globalSession</h4><p>作用域类似于标准的 HTTP session 作用域. 不过仅仅在基于 portlet 的 web 应用中才有意义. Portlet 规范定义了全局 Session 的概念, 它被所有构成某个 portlet web 应用的各种不同的 portlet 所共享. 在global session 作用域中定义的 bean 被限定于全局 portlet Session 的生命周期范围内.</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>Spring IOC知识点一网打尽: <a href="https://segmentfault.com/a/1190000014979704" target="_blank" rel="noopener">https://segmentfault.com/a/1190000014979704</a></li>
+<li>JavaGuide: <a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">https://github.com/Snailclimb/JavaGuide</a></li>
+<li>Spring 实战 第4版</li>
+</ul>
 
       
     </div>
@@ -753,7 +751,7 @@
   <li class="post-copyright-link">
     <strong>Post link: </strong>
     
-    <a href="http://vnaso.github.io/2019/03/05/JavaLearning/ServerSetting/" title="Linux线上环境搭建">http://vnaso.github.io/2019/03/05/JavaLearning/ServerSetting/</a>
+    <a href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/Spring/" title="Spring">http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/Spring/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
@@ -766,7 +764,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+            <a href="/tags/Note/" rel="tag"><i class="fa fa-tag"></i> Note</a>
+          
+            <a href="/tags/Spring/" rel="tag"><i class="fa fa-tag"></i> Spring</a>
           
         </div>
       
@@ -779,8 +779,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/04/JavaLearning/Nginx/" rel="next" title="Nginx学习笔记">
-                <i class="fa fa-chevron-left"></i> Nginx学习笔记
+              <a href="/2019/03/16/JavaLearning/JavaNote/Framework/SpringMVC/" rel="next" title="SpringMVC">
+                <i class="fa fa-chevron-left"></i> SpringMVC
               </a>
             
           </div>
@@ -788,6 +788,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/16/JavaLearning/JavaNote/Java/Java集合/" rel="prev" title="ArrayList">
+                ArrayList <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -859,7 +863,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -882,7 +886,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -905,7 +913,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -971,7 +991,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装1T-e-gt-dle-reo"><span class="nav-text">安装1T/e&gt;dle=reo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-text">环境变量配置</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-IOC"><span class="nav-text">Spring IOC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IOC-和-DI-简介"><span class="nav-text">IOC 和 DI 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP"><span class="nav-text">AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#术语"><span class="nav-text">术语</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bean"><span class="nav-text">Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bean-的生命周期"><span class="nav-text">Bean 的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bean-的作用域"><span class="nav-text">Bean 的作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#singleton-唯一-bean-实例"><span class="nav-text">singleton - 唯一 bean 实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prototype-每次请求都会创建一个新的实例"><span class="nav-text">prototype - 每次请求都会创建一个新的实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#request-每一次-HTTP-请求都会产生一个新的-bean-仅在当前-HTTP-request-内有效"><span class="nav-text">request - 每一次 HTTP 请求都会产生一个新的 bean, 仅在当前 HTTP request 内有效</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session-一次-HTTP-请求都会产生一个新的-bean-仅在当前-HTTP-session-内有效"><span class="nav-text">session - 一次 HTTP 请求都会产生一个新的 bean, 仅在当前 HTTP session 内有效</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#globalSession"><span class="nav-text">globalSession</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

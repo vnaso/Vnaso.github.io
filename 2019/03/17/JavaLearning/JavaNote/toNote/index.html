@@ -115,30 +115,25 @@
 
 
 
-  <meta name="description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
-<meta name="keywords" content="Maven">
+  <meta name="description" content="记录需要了解的知识点  Copy on Write">
+<meta name="keywords" content="coding">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven学习笔记">
-<meta property="og:url" content="http://vnaso.github.io/2019/02/04/JavaLearning/Maven/index.html">
+<meta property="og:title" content="Vnaso">
+<meta property="og:url" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/toNote/index.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
+<meta property="og:description" content="记录需要了解的知识点  Copy on Write">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34zwb8dnj30tx0iota7.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx358arq3ij30qo0dcmx6.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/02/28/5c77e94283e08.png">
-<meta property="og:updated_time" content="2019-03-07T14:14:20.570Z">
+<meta property="og:updated_time" content="2019-03-16T12:28:55.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven学习笔记">
-<meta name="twitter:description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg">
+<meta name="twitter:title" content="Vnaso">
+<meta name="twitter:description" content="记录需要了解的知识点  Copy on Write">
 
 
 
 
 
 
-  <link rel="canonical" href="http://vnaso.github.io/2019/02/04/JavaLearning/Maven/">
+  <link rel="canonical" href="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/toNote/">
 
 
 
@@ -148,7 +143,7 @@
   };
 </script>
 
-  <title>Maven学习笔记 | Vnaso</title>
+  <title> | Vnaso</title>
   
 
 
@@ -419,7 +414,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/02/04/JavaLearning/Maven/">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/toNote/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -436,7 +431,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Maven学习笔记
+          <h1 class="post-title" itemprop="name headline">
               
             
           </h1>
@@ -461,7 +456,7 @@
                 
               
 
-              <time title="Created: 2019-02-04 17:26:00" itemprop="dateCreated datePublished" datetime="2019-02-04T17:26:00+08:00">2019-02-04</time>
+              <time title="Created: 2019-03-17 23:17:48" itemprop="dateCreated datePublished" datetime="2019-03-17T23:17:48+08:00">2019-03-17</time>
             
 
             
@@ -478,36 +473,11 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-07 22:14:20" itemprop="dateModified" datetime="2019-03-07T22:14:20+08:00">2019-03-07</time>
+                <time title="Modified: 2019-03-16 20:28:55" itemprop="dateModified" datetime="2019-03-16T20:28:55+08:00">2019-03-16</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Maven/" itemprop="url" rel="index"><span itemprop="name">Maven</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -536,389 +506,9 @@
       
 
       
-        <h1 id="Maven使用"><a href="#Maven使用" class="headerlink" title="Maven使用"></a>Maven使用</h1><h2 id="Maven安装与配置"><a href="#Maven安装与配置" class="headerlink" title="Maven安装与配置"></a>Maven安装与配置</h2><h3 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h3><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Maven官网下载地址</a></p>
-<ol>
-<li>在如下位置点击下载最新版本<code>Maven</code>的压缩包</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg" alt="Maven下载"></p>
-<ol start="2">
-<li><p>解压文件得到<code>apache-maven-xxx</code>文件夹.<code>xxx</code>为版本号</p>
-</li>
-<li><p>新建环境变量<code>MAVEN_HOME</code>,变量值为maven根目录地址</p>
-<blockquote>
-<p>打开环境变量设置的步骤为:</p>
-<ul>
-<li>右击<code>此电脑</code>-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>高级</code>-&gt;<code>环境变量</code></li>
-<li><code>Win+R</code>-&gt;<code>sysdm.cpl</code>-&gt;<code>高级</code>-&gt;<code>环境变量</code></li>
+        <h1 id="记录需要了解的知识点"><a href="#记录需要了解的知识点" class="headerlink" title="记录需要了解的知识点"></a>记录需要了解的知识点</h1><ul>
+<li style="list-style: none"><input type="checkbox"> Copy on Write</li>
 </ul>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34zwb8dnj30tx0iota7.jpg" alt="maven环境变量"></p>
-</li>
-<li><p>编辑环境变量<code>path</code>,添加<code>%MAVEN_HOME%\bin\</code></p>
-</li>
-<li><p>至此,maven安装完毕.打开命令提示符窗口(<code>Win+R</code>-&gt;<code>cmd</code>),输入<code>mvn -v</code>查询maven版本,检查maven是否成功安装.成功如图所示<img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx358arq3ij30qo0dcmx6.jpg" alt="maven成功安装"></p>
-</li>
-</ol>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="创建maven仓库"><a href="#创建maven仓库" class="headerlink" title="创建maven仓库"></a>创建maven仓库</h4><blockquote>
-<p> 如果不自行创建,maven将默认使用<code>Default: ${user.home}/.m2/repository</code>作为本地仓库</p>
-</blockquote>
-<ol>
-<li><p>在想要作为maven仓库的地方创建文件夹<code>maven-repository</code>作为maven的本地仓库</p>
-</li>
-<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
-</li>
-<li><p>在<code>&lt;settings&gt;</code>标签下,找到<code>&lt;localRepository&gt;</code>标签.如果没有则自行添加.</p>
-<p>修改值为本地仓库的地址,如<code>&lt;localRepository&gt;C:\Maven\apache-maven-3.6.0\maven-repository&lt;/localRepository&gt;</code></p>
-</li>
-</ol>
-<h4 id="修改下载镜像地址"><a href="#修改下载镜像地址" class="headerlink" title="修改下载镜像地址"></a>修改下载镜像地址</h4><blockquote>
-<p>将下载镜像更换为阿里云中央仓库,解决依赖从境外网站下载过慢的问题</p>
-</blockquote>
-<ol>
-<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
-</li>
-<li><p>在<code>&lt;settings&gt;</code>标签下找到<code>&lt;mirrors&gt;</code>标签,添加如下代码</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存即可</p>
-</li>
-</ol>
-<h4 id="针对Maven添加依赖时没有自动提示的解决方案"><a href="#针对Maven添加依赖时没有自动提示的解决方案" class="headerlink" title="针对Maven添加依赖时没有自动提示的解决方案"></a>针对Maven添加依赖时没有自动提示的解决方案</h4><ol>
-<li><p>到Maven仓库官网搜索,点击需要添加的依赖.复制<code>&lt;dependency&gt;</code>标签即可.</p>
-<blockquote>
-<p><a href="https://mvnrepository.com/" target="_blank" rel="noopener">Maven仓库官网</a></p>
-</blockquote>
-</li>
-</ol>
-<h4 id="在IDEA中配置Maven"><a href="#在IDEA中配置Maven" class="headerlink" title="在IDEA中配置Maven"></a>在IDEA中配置Maven</h4><ol>
-<li>打开IDEA,<code>settings</code>-&gt;<code>Build,Execution,Deployment</code>-&gt;<code>Build Tools</code>-&gt;<code>Maven</code></li>
-<li>修改<code>Maven home directory</code>为maven安装根目录</li>
-<li>勾选<code>User settings file</code>后的<code>Override</code>,然后修改为<code>安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></li>
-<li>勾选<code>Local repository</code>后的<code>Override</code>,然后修改为本地的repository地址</li>
-</ol>
-<h2 id="Maven项目结构"><a href="#Maven项目结构" class="headerlink" title="Maven项目结构"></a>Maven项目结构</h2><table>
-<thead>
-<tr>
-<th>项目根目录/</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src/</td>
-<td></td>
-</tr>
-<tr>
-<td>main/</td>
-<td>项目主体根目录</td>
-</tr>
-<tr>
-<td>java</td>
-<td>源代码目录</td>
-</tr>
-<tr>
-<td>resources</td>
-<td>所需资源目录</td>
-</tr>
-<tr>
-<td>filters</td>
-<td>资源过滤文件目录</td>
-</tr>
-<tr>
-<td>assembly</td>
-<td>组件的描述配置(如何打包)</td>
-</tr>
-<tr>
-<td>config</td>
-<td>配置文件</td>
-</tr>
-<tr>
-<td>wepapp</td>
-<td>web应用的目录.<br>WEB-INF,css,js等</td>
-</tr>
-<tr>
-<td>test/</td>
-<td>项目测试目录根</td>
-</tr>
-<tr>
-<td>java</td>
-<td>单元测试java源代码文件</td>
-</tr>
-<tr>
-<td>resources</td>
-<td>测试需要用的资源库</td>
-</tr>
-<tr>
-<td>filters</td>
-<td>c测试资源过滤库</td>
-</tr>
-<tr>
-<td>site</td>
-<td>Site一些文档</td>
-</tr>
-<tr>
-<td>target/</td>
-<td>存放项目构建后的文件和目录.<br>jar,war,编译的class文件等</td>
-</tr>
-<tr>
-<td>pom.xml</td>
-<td>MMaven的pom文件</td>
-</tr>
-<tr>
-<td>LICENSE.TXT</td>
-<td>项目的LISENCE</td>
-</tr>
-<tr>
-<td>README.TXT</td>
-<td>项目的README</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Maven生命周期"><a href="#Maven生命周期" class="headerlink" title="Maven生命周期"></a>Maven生命周期</h2><blockquote>
-<p>Maven生命周期执行顺序从上至下</p>
-<p><strong>每执行当前指令之前,会把之前(上方)的指令都执行一次</strong></p>
-<p><strong>每执行当前周期之前会执行之前的生命周期</strong></p>
-</blockquote>
-<h3 id="clean生命周期"><a href="#clean生命周期" class="headerlink" title="clean生命周期"></a>clean生命周期</h3><blockquote>
-<p> 清理项目</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">clean</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>pre-clean</code></td>
-<td style="text-align:left">执行清理前需要完成的工作<br>execute processes needed prior to the actual project cleaning</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>clean</code></td>
-<td style="text-align:left">清理上一次构建生成的文件<br>remove all files generated by the previous build</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>post-clean</code></td>
-<td style="text-align:left">执行清理后需要完成的工作<br>execute processes needed to finalize the project cleaning</td>
-</tr>
-</tbody>
-</table>
-<h3 id="default生命周期"><a href="#default生命周期" class="headerlink" title="default生命周期"></a>default生命周期</h3><blockquote>
-<p>构建项目</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">default</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>validate</code></td>
-<td>验证工程是否正确,所需要的资源是否可用<br>validate the project is correct and all necessary information is available</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>compile</code></td>
-<td>编译项目的源代码<br>compile the source code of the project</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>test</code></td>
-<td>使用已编译的测试代码,测试已编译的源代码<br>test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>package</code></td>
-<td>采用编译的代码,并以其可分配格式(如JAR)进行打包<br>take the compiled code and package it in its distributable format, such as a JAR.</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>verify</code></td>
-<td>运行所有检查,验证包是否有效且达到质量标准<br>run any checks on results of integration tests to ensure quality criteria are met</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>install</code></td>
-<td>把包安装在本地的repository中,可以被其他工程作为依赖来使用<br>install the package into the local repository, for use as a dependency in other projects locally</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>deploy</code></td>
-<td>在整合或者发布环境下执行,将最终版本的包拷贝到远程的repository,使得其他的开发者或者工程可以共享<br>done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="site生命周期"><a href="#site生命周期" class="headerlink" title="site生命周期"></a>site生命周期</h3><blockquote>
-<p> 建立和发布项目站点</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>site</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pre-site</code></td>
-<td>生成项目站点之前需要完成的工作<br>execute processes needed prior to the actual project site generation</td>
-</tr>
-<tr>
-<td><code>site</code></td>
-<td>生成项目站点文档<br>generate the project’s site documentation</td>
-</tr>
-<tr>
-<td><code>post-site</code></td>
-<td>生成项目站点之后需要完成的工作<br>execute processes needed to finalize the site generation, and to prepare for site deployment</td>
-</tr>
-<tr>
-<td><code>site-deploy</code></td>
-<td>将项目站点发布到服务器<br>deploy the generated site documentation to the specified web server</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Maven默认生命周期"><a href="#Maven默认生命周期" class="headerlink" title="Maven默认生命周期"></a>Maven默认生命周期</h3><table>
-<thead>
-<tr>
-<th>Default Lifecycle</th>
-<th>生命周期阶段</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>validate</code></td>
-<td>验证</td>
-<td>确保当前配置和 POM 的内容是有效的。这包含对 pom.xml 文件树的验证。</td>
-</tr>
-<tr>
-<td><code>initialize</code></td>
-<td>初始化</td>
-<td>在执行构建生命周期的主任务之前可以进行初始化。</td>
-</tr>
-<tr>
-<td><code>generate-sources</code></td>
-<td>生成源码</td>
-<td>代码生成器可以开始生成在以后阶段中处理或编译的源代码。</td>
-</tr>
-<tr>
-<td><code>process-sources</code></td>
-<td>处理源码</td>
-<td>提供解析、修改和转换源码。常规源码和生成的源码都可以在这里处理。</td>
-</tr>
-<tr>
-<td><code>generate-resources</code></td>
-<td>生成资源</td>
-<td>可以生成非源码资源。通常包括元数据文件和配置文件。</td>
-</tr>
-<tr>
-<td><code>process-resources</code></td>
-<td>处理资源</td>
-<td>处理非源码资源。修改、转换和重定位资源都能在这阶段发生。</td>
-</tr>
-<tr>
-<td><code>compile</code></td>
-<td>编译</td>
-<td>编译源码。编译过的类被放到目标目录树中。</td>
-</tr>
-<tr>
-<td><code>process-classes</code></td>
-<td>处理类</td>
-<td>处理类文件转换和增强步骤。字节码交织器和常用工具常在这一阶段操作。</td>
-</tr>
-<tr>
-<td><code>generate-test-sources</code></td>
-<td>生成测试源码</td>
-<td>mojo 可以生成要操作的单元测试代码。</td>
-</tr>
-<tr>
-<td><code>process-test-sources</code></td>
-<td>处理测试源码</td>
-<td>在编译前对测试源码执行任何必要的处理。在这一阶段，可以修改、转换或复制源代码。</td>
-</tr>
-<tr>
-<td><code>generate-test-resources</code></td>
-<td>生成测试资源</td>
-<td>允许生成与测试相关的（非源码）资源。</td>
-</tr>
-<tr>
-<td><code>process-test-resources</code></td>
-<td>处理测试资源</td>
-<td>可以处理、转换和重新定位与测试相关的资源。</td>
-</tr>
-<tr>
-<td><code>test-compile</code></td>
-<td>测试编译</td>
-<td>编译单元测试的源码。</td>
-</tr>
-<tr>
-<td><code>process-test-classes</code></td>
-<td></td>
-<td>对测试编译生成的文件做后期处理(需Maven2.0.5及以上)</td>
-</tr>
-<tr>
-<td><code>test</code></td>
-<td>测试</td>
-<td>运行编译过的单元测试并累计结果。</td>
-</tr>
-<tr>
-<td><code>prepare-package</code></td>
-<td></td>
-<td>执行打包前的所有操作(需Maven2.1及以上)</td>
-</tr>
-<tr>
-<td><code>package</code></td>
-<td>打包</td>
-<td>将可执行的二进制文件打包到一个分布式归档文件中，如 JAR 或 WAR。</td>
-</tr>
-<tr>
-<td><code>pre-integration-test</code></td>
-<td>前集成测试</td>
-<td>准备集成测试。这种情况下的集成测试是指在一个受到一定控制的模拟的真 实部署环境中测试代码。这一步能将归档文件部署到一个服务器上执行。</td>
-</tr>
-<tr>
-<td><code>integration-test</code></td>
-<td>集成测试</td>
-<td>执行真正的集成测试。</td>
-</tr>
-<tr>
-<td><code>post-integration-test</code></td>
-<td>后集成测试</td>
-<td>解除集成测试准备。这一步涉及测试环境重置或重新初始化。</td>
-</tr>
-<tr>
-<td><code>verify</code></td>
-<td>检验</td>
-<td>检验可部署归档的有效性和完整性。过了这个阶段，将安装该归档。</td>
-</tr>
-<tr>
-<td><code>install</code></td>
-<td>安装</td>
-<td>将该归档添加到本地 Maven 目录。这一步让其他可能依赖该归档的模块可以使用它。</td>
-</tr>
-<tr>
-<td><code>deploy</code></td>
-<td>部署</td>
-<td>将该归档添加到远程 Maven 目录。这一步让这个工件能为更多的人所用。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Maven环境隔离配置"><a href="#Maven环境隔离配置" class="headerlink" title="Maven环境隔离配置"></a>Maven环境隔离配置</h2><blockquote>
-<p>在<code>pom.xml</code>中的<code>&lt;build&gt;</code>节点下插入<code>&lt;resources&gt;</code>节点,在其中添加<code>&lt;resource&gt;</code>节点来声明要进行环境分离的<code>resource</code>目录.然后在<code>pom.xml</code>中<code>&lt;project&gt;</code>节点下(与<code>&lt;build&gt;</code>同级)增加<code>&lt;profiles&gt;</code>节点,通过添加<code>&lt;profile&gt;</code>节点来配置不同环境.</p>
-</blockquote>
-<ol>
-<li><p>在<code>&lt;build&gt;</code>节点下插入<code>&lt;resources&gt;</code>节点</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置resources资源文件夹目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources.$&#123;deploy.type&#125;<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 排除指定文件 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">excludes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclude</span>&gt;</span>*.jsp<span class="tag">&lt;/<span class="name">exclude</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">excludes</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置resources资源文件夹目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>&lt;project&gt;</code>节点下插入<code>&lt;profiles&gt;</code>节点,并配置各个环境的环境标识及其他属性</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- dev环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置默认使用该环境 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- beta环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>beta<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>beta<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- product环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>prod<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>prod<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建<code>resources.&lt;环境标识&gt;</code>目录,这样便可结合<code>&lt;resource&gt;</code>中定义的<code>${deploy.type}</code>和<code>&lt;profile&gt;</code>中定义的<code>&lt;properties&gt;</code>属性值来选择使用哪个环境</p>
-<p><img src="https://i.loli.net/2019/02/28/5c77e94283e08.png" alt="resources目录结构.png"></p>
-</li>
-</ol>
-<h2 id="Maven命令使用"><a href="#Maven命令使用" class="headerlink" title="Maven命令使用"></a>Maven命令使用</h2><blockquote>
-<p><code>-Dmaven.test.skip=true</code>:跳过测试</p>
-<p><code>-P${deploy.type}</code>:使用指定的环境.例如:<code>mvn package -Pdev</code>,使用<code>dev</code>环境</p>
-<p><code>mvn help:effective-settings</code>:查看生效的配置.这里的内容是<code>settings.xml</code>中生效的配置,可以用来查看<code>repository</code>地址和<code>mirror</code>的配置</p>
-</blockquote>
 
       
     </div>
@@ -969,7 +559,7 @@
   <li class="post-copyright-link">
     <strong>Post link: </strong>
     
-    <a href="http://vnaso.github.io/2019/02/04/JavaLearning/Maven/" title="Maven学习笔记">http://vnaso.github.io/2019/02/04/JavaLearning/Maven/</a>
+    <a href="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/toNote/">http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/toNote/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
@@ -980,12 +570,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Maven/" rel="tag"><i class="fa fa-tag"></i> Maven</a>
-          
-        </div>
-      
 
       
       
@@ -995,15 +579,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/" rel="next" title="Java 多线程">
+                <i class="fa fa-chevron-left"></i> Java 多线程
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/15/JavaLearning/logback/" rel="prev" title="Logback学习笔记">
-                Logback学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1075,7 +659,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1098,7 +682,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1121,7 +709,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1187,7 +787,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven使用"><span class="nav-text">Maven使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven安装与配置"><span class="nav-text">Maven安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载与安装"><span class="nav-text">下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建maven仓库"><span class="nav-text">创建maven仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改下载镜像地址"><span class="nav-text">修改下载镜像地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#针对Maven添加依赖时没有自动提示的解决方案"><span class="nav-text">针对Maven添加依赖时没有自动提示的解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在IDEA中配置Maven"><span class="nav-text">在IDEA中配置Maven</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven项目结构"><span class="nav-text">Maven项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven生命周期"><span class="nav-text">Maven生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clean生命周期"><span class="nav-text">clean生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#default生命周期"><span class="nav-text">default生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#site生命周期"><span class="nav-text">site生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Maven默认生命周期"><span class="nav-text">Maven默认生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven环境隔离配置"><span class="nav-text">Maven环境隔离配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven命令使用"><span class="nav-text">Maven命令使用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#记录需要了解的知识点"><span class="nav-text">记录需要了解的知识点</span></a></li></ol></div>
             
 
           </div>

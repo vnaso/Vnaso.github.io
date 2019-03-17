@@ -414,6 +414,1332 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/toNote/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/17/JavaLearning/JavaNote/toNote/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Untitled</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-17 23:17:48" itemprop="dateCreated datePublished" datetime="2019-03-17T23:17:48+08:00">2019-03-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-16 20:28:55" itemprop="dateModified" datetime="2019-03-16T20:28:55+08:00">2019-03-16</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          记录需要了解的知识点
+ Copy on Write
+
+
+          
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/17/JavaLearning/JavaNote/toNote/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Java 多线程</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-17 11:30:00 / Modified: 23:17:19" itemprop="dateCreated datePublished" datetime="2019-03-17T11:30:00+08:00">2019-03-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作. 
+并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”.
+多线程在单核 CPU 中是交替执行(并发), 在多核 CPU 中, 因为每个 CPU 有自己的运算器, 所以在多个 CPU 中可以同时运行(并行).
+高并发高并发互联网分布式系统架构设计中必须考虑的因素之一, 通常指设计保证系统能够同时并行处理大量请求.
+高并
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Java/Java集合/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/16/JavaLearning/JavaNote/Java/Java集合/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">ArrayList</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-16 20:14:00" itemprop="dateCreated datePublished" datetime="2019-03-16T20:14:00+08:00">2019-03-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-17 11:26:24" itemprop="dateModified" datetime="2019-03-17T11:26:24+08:00">2019-03-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          集合框架Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:
+
+Collection 是单列集合, Map 是双列集合
+Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一
+Collection 的数据结构是针对元素的, Map 的数据结构是针对键的
+
+CollectionCollection 主要分为 List 和 Set
+
+List: 存取有序, 有索引, 可以根据索引取值, 元素可以重复
+Set: 存取无序, 元素不可以重复
+
+List
+ArrayList: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 非线程安全
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/16/JavaLearning/JavaNote/Java/Java集合/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/Spring/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/16/JavaLearning/JavaNote/Framework/Spring/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Spring</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-16 15:27:00" itemprop="dateCreated datePublished" datetime="2019-03-16T15:27:00+08:00">2019-03-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-17 10:14:23" itemprop="dateModified" datetime="2019-03-17T10:14:23+08:00">2019-03-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Spring IOCIOC 和 DI 简介
+IOC(Inversion of Control)控制翻转, 包含了两个方面: 控制 和 反转
+简单理解:
+控制: 当前对象对内部成员的控制权
+反转:控制权不由当前对象管理, 由其他类 / 第三方容器来管理
+
+IOC 不够开门见山, 于是 Martin Fowler 提出了 DI(Dependency Injection)来替代 IOC. 即让调用类对某一个接口实现类的依赖关系由第三方(容器或协作类)注入, 以移除调用类对某一个接口实现类的依赖.
+
+通过 DI, 对象的依赖关系将有系统中负责协调各对象的第三方组件在创建对象的时候进行设定, 对象无须自
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/16/JavaLearning/JavaNote/Framework/Spring/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Framework/SpringMVC/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/16/JavaLearning/JavaNote/Framework/SpringMVC/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">SpringMVC</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-16 12:15:00" itemprop="dateCreated datePublished" datetime="2019-03-16T12:15:00+08:00">2019-03-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-17 10:14:37" itemprop="dateModified" datetime="2019-03-17T10:14:37+08:00">2019-03-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          SpringMVC 简介SpringMVC 框架是以请求为驱动, 围绕 Servlet 设计, 将请求发给控制器, 然后通过模型对象, 分析器来展示请求结果视图. 其中核心类是 DispatcherServlet, 它是一个 Servlet, 顶层是实现 Servlet 的接口.
+SpringMVC 使用XML 方式需要在 web.xml 中配置 DispatcherServlet, 并且需要配置 Spring 监听器 ContextLoaderListener.
+&lt;listener&gt;	&lt;listener-class&gt;org.springframework.web.co
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/16/JavaLearning/JavaNote/Framework/SpringMVC/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/16/JavaLearning/JavaNote/Java/HashMap/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/16/JavaLearning/JavaNote/Java/HashMap/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">HashMap</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-16 10:50:00" itemprop="dateCreated datePublished" datetime="2019-03-16T10:50:00+08:00">2019-03-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-17 10:13:40" itemprop="dateModified" datetime="2019-03-17T10:13:40+08:00">2019-03-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          HashMap 简介HashMap 主要用来存放键值对. 基于哈希表的 Map 接口实现.
+JDK8 之前 HashMap 由 数据+链表 组成, 数组是 HashMap 的主体, 链表则是主要为了解决哈希冲突而存在的. JDK8 之后, 当链表长度大于阀值(默认为8)时, 将链表转化为红黑树, 以减少搜索时间.
+底层数据结构分析JDK1.8 之前JDK1.8 之前 HashMap 底层是 数组和链表 结合在一起使用, 也就是 链表散列. HashMap 通过 key 的 hashCode 经过 扰动函数 处理过后得到 hash 值, 然后通过 (n - 1) &amp; hash 判断当前元
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/16/JavaLearning/JavaNote/Java/HashMap/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/13/JavaLearning/JavaNote/Java/JavaEE/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vnaso">
+      <meta itemprop="description" content="for everything">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vnaso">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/13/JavaLearning/JavaNote/Java/JavaEE/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">JavaEE</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-13 09:41:00" itemprop="dateCreated datePublished" datetime="2019-03-13T09:41:00+08:00">2019-03-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-17 10:13:25" itemprop="dateModified" datetime="2019-03-17T10:13:25+08:00">2019-03-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          1. Servlet
+在 Java Web 程序中, Servlet 主要负责接收用户请求 HttpServletRequest , 在 doGet() , doPost() 中做相应的处理, 并将回应 HttpServletResponse 返回给用户. Servlet 可以设置初始化参数, 供 Servlet 内部使用. 一个 Servlet 类中只会有有一个实例, 在它初始化时调用 init() 方法, 销毁时掉哦用 destroy() 方法. Servlet 需要在 web.xml 中配置. 一个 Servlet 可以设置多个 URL 访问.  
+Servlet 非线程安全, 多线程并
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/13/JavaLearning/JavaNote/Java/JavaEE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+    
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>  
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/13/JavaLearning/JavaNote/JavaEE/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -792,7 +2118,7 @@ JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/09/JavaLearning/Web/CORS跨域资源共享/">
+    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/11/JavaLearning/JavaNote/Java/Java基础/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -812,7 +2138,7 @@ JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/09/JavaLearning/Web/CORS跨域资源共享/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">CORS跨域资源共享</a>
+                <a href="/2019/03/11/JavaLearning/JavaNote/Java/Java基础/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Java基础笔记</a>
               
             
           </h1>
@@ -837,187 +2163,7 @@ JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
                 
               
 
-              <time title="Created: 2019-03-09 13:09:00 / Modified: 14:54:18" itemprop="dateCreated datePublished" datetime="2019-03-09T13:09:00+08:00">2019-03-09</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          简介
-跨域资源共享(CORS)标准新增了一组 HTTP 首部字段,允许服务器声明哪些源站有权限访问哪些资源.另外,规范要求,对那些可能对服务器数据产生副作用的HTTP 请求方法(特别是 GET 以外的 HTTP 请求,或者搭配某些 MIME 类型的 POST 请求),浏览器必须首先使用 OPTIONS 方法发起一个预检请求(preflight request),从而获知服务端是否允许该跨域请求.服务器确认允许之后,才发起实际的 HTTP 请求.在预检请求的返回中,服务器端也可以通知客户端,是否需要携带身份凭证(包括 Cookies 和 HTTP 认证相关数据).
-
-两种请求浏览器将CORS请求
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/09/JavaLearning/Web/CORS跨域资源共享/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/05/JavaLearning/Tools/ServerSetting/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/05/JavaLearning/Tools/ServerSetting/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Linux线上环境搭建</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-05 14:11:00" itemprop="dateCreated datePublished" datetime="2019-03-05T14:11:00+08:00">2019-03-05</time>
+              <time title="Created: 2019-03-11 21:34:00" itemprop="dateCreated datePublished" datetime="2019-03-11T21:34:00+08:00">2019-03-11</time>
             
 
             
@@ -1034,7 +2180,7 @@ JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-07 22:15:17" itemprop="dateModified" datetime="2019-03-07T22:15:17+08:00">2019-03-07</time>
+                <time title="Modified: 2019-03-17 10:12:57" itemprop="dateModified" datetime="2019-03-17T10:12:57+08:00">2019-03-17</time>
               
             
           </span>
@@ -1051,7 +2197,7 @@ JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -1087,841 +2233,19 @@ JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
       
         
           
-          服务器环境搭建
-Java安装
-到官网下载jdk.
-
-解压到tar -zxvf jdk_8u_201 -C /usr/java
-
-编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile
-export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport PATH=$PATH:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:
-
-检查是否安装成功:java -version
+          1. JVM JDK 和 JRE
+javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器.
+JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件.
+JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.
 
 
-My
+Java 是解释执行?
+这个说法不太准确, 我们开发的 Java 源代码, 首先通过 Javac 编译成为字节码, 然后在运行时, 通过 classloader 加载编译成功的字节码文件, 再通过 JVM 内嵌的解释器将字节码一行一行解释为机器码执行(解释执行). 但常见的 JVM, 如 Oracle JD
           ...
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/05/JavaLearning/Tools/ServerSetting/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/04/JavaLearning/Tools/Linux/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/04/JavaLearning/Tools/Linux/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Linux学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-04 15:24:00" itemprop="dateCreated datePublished" datetime="2019-03-04T15:24:00+08:00">2019-03-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:11:20" itemprop="dateModified" datetime="2019-03-07T22:11:20+08:00">2019-03-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Linux学习笔记系统命令tar解压解压到指定目录:tar -zxvf &lt;要解压的文件&gt; -C &lt;目的路径&gt;
-
-tar 命令参数
--x或–extract或–get:从备份文件中还原文件
--Z或–compress或–uncompress:通过compress指令处理备份文件
--f&lt;备份文件&gt;或–file=&lt;备份文件&gt;:指定备份文件
--v:显示操作过程
--C &lt;目录&gt;:这个选项用在解压缩,若要在特定目录解压缩,可以使用这个选项
-
-防火墙(使用firewalld)开启关闭重启:service firewalld start/stop/res
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/04/JavaLearning/Tools/Linux/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/03/04/JavaLearning/Tools/Nginx/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/04/JavaLearning/Tools/Nginx/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Nginx学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-04 15:24:00" itemprop="dateCreated datePublished" datetime="2019-03-04T15:24:00+08:00">2019-03-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-09 13:08:51" itemprop="dateModified" datetime="2019-03-09T13:08:51+08:00">2019-03-09</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Nginx使用Nginx配置
-在···/nginx/conf目录下的nginx.conf
-
-# 全局块...              # events块events &#123;            ...&#125;# http块http      &#123;    # http全局块    ...       # 虚拟主机server块    server            &#123;         # server全局块        ...               # location块        location [PATTERN]           &#12
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/04/JavaLearning/Tools/Nginx/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/02/15/JavaLearning/Tools/logback/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/15/JavaLearning/Tools/logback/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Logback学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-15 19:24:00" itemprop="dateCreated datePublished" datetime="2019-02-15T19:24:00+08:00">2019-02-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:14:27" itemprop="dateModified" datetime="2019-03-07T22:14:27+08:00">2019-03-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Logback/" itemprop="url" rel="index"><span itemprop="name">Logback</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Logback使用标签属性介绍根标签 - configuration属性
-scan:布尔值.表示是否自动扫描logback.xml的文本变化.
-
-scanPeriod:字符串.表示每间隔多长时间对logback.xml进行扫描.格式:数字 + 时间单位(如:seconds,minutes)
-
-debug:布尔值.表示是否打印logback内部的日志信息.
-
-
-常用配置为:&lt;configuration scan=&quot;true&quot; scanPeriod=&quot;60 seconds&quot; debug=&quot;false&quot;&gt;&lt;/configu
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/15/JavaLearning/Tools/logback/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-    <div>
-    
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>  
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vnaso.github.io/2019/02/04/JavaLearning/Tools/Maven/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="vnaso">
-      <meta itemprop="description" content="for everything">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Vnaso">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/04/JavaLearning/Tools/Maven/" class="post-title-link" itemprop="http://vnaso.github.io/index.html">Maven学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-04 17:26:00" itemprop="dateCreated datePublished" datetime="2019-02-04T17:26:00+08:00">2019-02-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-07 22:14:20" itemprop="dateModified" datetime="2019-03-07T22:14:20+08:00">2019-03-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Maven/" itemprop="url" rel="index"><span itemprop="name">Maven</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Maven使用Maven安装与配置下载与安装Maven官网下载地址
-
-在如下位置点击下载最新版本Maven的压缩包
-
-
-
-解压文件得到apache-maven-xxx文件夹.xxx为版本号
-
-新建环境变量MAVEN_HOME,变量值为maven根目录地址
-
-打开环境变量设置的步骤为:
-
-右击此电脑-&gt;属性-&gt;高级系统设置-&gt;高级-&gt;环境变量
-Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
-
-
-
-
-编辑环境变量path,添加%MAVEN_HOME%\bin\
-
-至此,maven安装完毕.打开命令提示符窗口(Win+R-&gt;cmd),输入mvn 
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/04/JavaLearning/Tools/Maven/#more" rel="contents">
+              <a class="btn" href="/2019/03/11/JavaLearning/JavaNote/Java/Java基础/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1978,6 +2302,10 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2020,7 +2348,7 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2076,7 +2404,13 @@ Win+R-&gt;sysdm.cpl-&gt;高级-&gt;环境变量
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
