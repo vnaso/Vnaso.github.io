@@ -115,13 +115,13 @@
 
 
 
-  <meta name="description" content="服务器环境搭建 Java安装 到官网下载jdk.  解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport">
+  <meta name="description" content="服务器环境搭建 Java安装 到官网下载jdk.  注意要使用带 Auth 的下载链接下载   解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JAVA_HOME/">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux线上环境搭建">
 <meta property="og:url" content="http://vnaso.github.io/2019/03/05/JavaLearning/Tools/ServerSetting/index.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载jdk.  解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport">
+<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载jdk.  注意要使用带 Auth 的下载链接下载   解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JAVA_HOME/">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/04/5c7d0e96800b4.png">
@@ -130,10 +130,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b8283e0357.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b83014f41b.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b96f1831a8.png">
-<meta property="og:updated_time" content="2019-03-07T14:15:17.929Z">
+<meta property="og:updated_time" content="2019-03-21T06:07:09.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux线上环境搭建">
-<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载jdk.  解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport">
+<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载jdk.  注意要使用带 Auth 的下载链接下载   解压到tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量vim /etc/profile,使环境变量生效source /etc/profile export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JAVA_HOME/">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
 
 
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-07 22:15:17" itemprop="dateModified" datetime="2019-03-07T22:15:17+08:00">2019-03-07</time>
+                <time title="Modified: 2019-03-21 14:07:09" itemprop="dateModified" datetime="2019-03-21T14:07:09+08:00">2019-03-21</time>
               
             
           </span>
@@ -535,16 +535,19 @@
         <p>服务器环境搭建</p>
 <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
 <li><p>到<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载<code>jdk</code>.</p>
+<blockquote>
+<p>注意要使用带 Auth 的下载链接下载</p>
+</blockquote>
 </li>
 <li><p>解压到<code>tar -zxvf jdk_8u_201 -C /usr/java</code></p>
 </li>
 <li><p>编辑环境变量<code>vim /etc/profile</code>,使环境变量生效<code>source /etc/profile</code></p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">export CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/<span class="selector-tag">dt</span><span class="selector-class">.jar</span>:<span class="variable">$JAVA_HOME</span>/lib/tools<span class="selector-class">.jar</span>:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$GIT_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin:</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk...</span><br><span class="line">export CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/<span class="selector-tag">dt</span><span class="selector-class">.jar</span>:<span class="variable">$JAVA_HOME</span>/lib/tools<span class="selector-class">.jar</span>:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$GIT_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin:</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>检查是否安装成功:<code>java -version</code></p>
 </li>
 </ol>
-<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="安装1T-e-gt-dle-reo"><a href="#安装1T-e-gt-dle-reo" class="headerlink" title="安装1T/e&gt;dle=reo"></a>安装1T/e&gt;dle=reo</h4><ol>
+<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><ol>
 <li>到<a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">官网Yum仓库</a>下载<code>rpm</code>包.</li>
 <li><code>rpm -ivh &lt;文件名&gt;</code>或者<code>yum localinstall &lt;文件名&gt;</code>安装刚才下载好的包</li>
 <li>此时便可以通过<code>yum</code>安装最新的<code>mysql</code>.使用指令<code>yum install mysql-community-server</code>安装</li>
@@ -568,7 +571,7 @@
 <li><p>创建用户<code>CREATE USER &#39;vnaso&#39;@&#39;%&#39; IDENTIFIED BY &#39;vnaso222&#39;;</code>,并授权:<code>GRANT ALL ON *.* TO &#39;vnaso&#39;@&#39;%&#39; WITH GRANT OPTION;</code></p>
 </li>
 <li><p>修改默认字符集.打开<code>/etc/my.cnf</code>,添加如下配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 对本地的mysql客户端的配置</span><br><span class="line">[client]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 对其他远程连接的mysql客户端的配置</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 本地mysql服务的配置</span><br><span class="line">[mysqld]</span><br><span class="line">character-set-client-handshake = FALSE</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">collation-server = utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 对本地的mysql客户端的配置</span><br><span class="line">[client]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 对其他远程连接的mysql客户端的配置</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 本地mysql服务的配置</span><br><span class="line">[mysqld]</span><br><span class="line">character-set-client-handshake = FALSE</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">collation-server = utf8mb4_unicode_ci</span><br><span class="line">default-time-zone = UTC</span><br></pre></td></tr></table></figure>
 <p>查看字符集:<code>SHOW VARIABLES WHERE Variable_name LIKE &#39;character\_set\_%&#39; OR Variable_name LIKE &#39;collation%&#39;;</code></p>
 </li>
 <li><p>查看时区:<code>show variables like &#39;%zone%&#39;;</code></p>
@@ -583,7 +586,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><ol>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><ol>
 <li><p>到<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">官网</a>获取下载链接.<code>wget &lt;url&gt;</code>下载</p>
 </li>
 <li><p>使用<code>tar -zxvf &lt;文件名&gt;</code>解压缩.</p>
@@ -610,14 +613,14 @@
 <li><p>在远程服务器中添加公钥:<code>cat ~/.ssh/id_rsa.pub</code></p>
 </li>
 </ol>
-<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><ol>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><ol>
 <li>到<a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">官网</a>下载压缩包,解压.</li>
 <li>安装<code>nginx</code>编译文件及库文件<code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel pcre pcre-devel</code></li>
 <li>进入解压后的目录进行安装:<code>./configure --prefix=/usr/local/nginx</code>-&gt;<code>make &amp;&amp; make install</code></li>
-<li>测试:<code>/usr/local/sbin/nginx -t</code></li>
+<li>测试:<code>/usr/local/nginx/sbin/nginx -t</code></li>
 </ol>
 <h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>参考<a href="./Nginx.md">Nginx配置文件说明</a></p>
-<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><ol>
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><h4 id="安装-4"><a href="#安装-4" class="headerlink" title="安装"></a>安装</h4><ol>
 <li>到<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">官网</a>下载压缩包,解压.一般选择<code>core</code>就行</li>
 <li>防火墙打开<code>8080</code>端口,启动tomcat:<code>$CATALINA_HOME/bin/startup.sh</code></li>
 <li>测试:访问<code>&lt;服务器地址&gt;:8080</code></li>
@@ -629,13 +632,25 @@
 <li><p>编辑环境变量.<code>vim /etc/profile</code>,添加<code>export CATALINA_HOME = /opt/apache-tomcat-9.0.1</code>.然后<code>source /etc/profile</code>使配置生效</p>
 </li>
 </ol>
-<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h4 id="安装-4"><a href="#安装-4" class="headerlink" title="安装"></a>安装</h4><ol>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h4 id="安装-5"><a href="#安装-5" class="headerlink" title="安装"></a>安装</h4><ol>
 <li>到<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">官网</a>下载压缩包,解压.</li>
 <li>添加环境变量:<code>vim /etc/profile</code>,添加<code>export $MAVEN_HOME=...</code>.并将<code>$MAVEN_HOME/bin</code>添加到<code>$PATH</code>中</li>
 <li><code>source /etc/profile</code>使配置生效</li>
 <li>测试:<code>mvn -v</code></li>
 </ol>
-<h2 id="Vstpd"><a href="#Vstpd" class="headerlink" title="Vstpd"></a>Vstpd</h2><h4 id="安装-5"><a href="#安装-5" class="headerlink" title="安装"></a>安装</h4><ol>
+<h4 id="配置-4"><a href="#配置-4" class="headerlink" title="配置"></a>配置</h4><blockquote>
+<p>将下载镜像更换为阿里云中央仓库,解决依赖从境外网站下载过慢的问题</p>
+</blockquote>
+<ol>
+<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
+</li>
+<li><p>在<code>&lt;settings&gt;</code>标签下找到<code>&lt;mirrors&gt;</code>标签,添加如下代码</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存即可</p>
+</li>
+</ol>
+<h2 id="Vstpd"><a href="#Vstpd" class="headerlink" title="Vstpd"></a>Vstpd</h2><h4 id="安装-6"><a href="#安装-6" class="headerlink" title="安装"></a>安装</h4><ol>
 <li><p>下载安装:<code>yum install vstpd</code></p>
 </li>
 <li><p>创建接收上传文件的文件夹:<code>mkdir /ftpfile</code></p>
@@ -779,8 +794,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/04/JavaLearning/Tools/Linux/" rel="next" title="Linux学习笔记">
-                <i class="fa fa-chevron-left"></i> Linux学习笔记
+              <a href="/2019/03/04/JavaLearning/Tools/Nginx/" rel="next" title="Nginx学习笔记">
+                <i class="fa fa-chevron-left"></i> Nginx学习笔记
               </a>
             
           </div>
@@ -925,7 +940,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -991,7 +1008,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装1T-e-gt-dle-reo"><span class="nav-text">安装1T/e&gt;dle=reo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-text">环境变量配置</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-4"><span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-6"><span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-text">环境变量配置</span></a></li></div>
             
 
           </div>

@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Vnaso">
 <meta property="og:description" content="1. Servlet 在 Java Web 程序中, Servlet 主要负责接收用户请求 HttpServletRequest , 在 doGet() , doPost() 中做相应的处理, 并将回应 HttpServletResponse 返回给用户. Servlet 可以设置初始化参数, 供 Servlet 内部使用. 一个 Servlet 类中只会有有一个实例, 在它初始化时调用 init">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-13T15:22:52.948Z">
+<meta property="og:updated_time" content="2019-03-24T10:37:45.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaEE">
 <meta name="twitter:description" content="1. Servlet 在 Java Web 程序中, Servlet 主要负责接收用户请求 HttpServletRequest , 在 doGet() , doPost() 中做相应的处理, 并将回应 HttpServletResponse 返回给用户. Servlet 可以设置初始化参数, 供 Servlet 内部使用. 一个 Servlet 类中只会有有一个实例, 在它初始化时调用 init">
@@ -456,12 +456,24 @@
                 
               
 
-              <time title="Created: 2019-03-13 09:41:00 / Modified: 23:22:52" itemprop="dateCreated datePublished" datetime="2019-03-13T09:41:00+08:00">2019-03-13</time>
+              <time title="Created: 2019-03-13 09:41:00" itemprop="dateCreated datePublished" datetime="2019-03-13T09:41:00+08:00">2019-03-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-24 18:37:45" itemprop="dateModified" datetime="2019-03-24T18:37:45+08:00">2019-03-24</time>
               
             
           </span>
@@ -629,6 +641,9 @@
 </tr>
 </tbody>
 </table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>JavaGuide: &lt;<a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">https://github.com/Snailclimb/JavaGuide</a></li>
+</ul>
 
       
     </div>
@@ -705,8 +720,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/11/JavaLearning/JavaNote/Java基础/" rel="next" title="Java基础笔记">
-                <i class="fa fa-chevron-left"></i> Java基础笔记
+              <a href="/2019/03/13/JavaLearning/JavaNote/Java/JavaEE/" rel="next" title="JavaEE">
+                <i class="fa fa-chevron-left"></i> JavaEE
               </a>
             
           </div>
@@ -715,8 +730,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/13/JavaLearning/JavaNote/Java/JavaEE/" rel="prev" title="JavaEE">
-                JavaEE <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/16/JavaLearning/JavaNote/Java/HashMap/" rel="prev" title="HashMap">
+                HashMap <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -851,7 +866,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -917,7 +934,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Servlet"><span class="nav-text">1. Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Servlet-和-CGI-区别"><span class="nav-text">1. Servlet 和 CGI 区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CGI-的不足"><span class="nav-text">CGI 的不足:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet-的优点"><span class="nav-text">Servlet 的优点:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Servlet-接口中的方法及生命周期"><span class="nav-text">2. Servlet 接口中的方法及生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期"><span class="nav-text">生命周期</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#3-转发-Forward-和重定向的区别-Redirect-的区别"><span class="nav-text">3. 转发(Forward)和重定向的区别(Redirect)的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-实现会话跟踪"><span class="nav-text">4. 实现会话跟踪</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Cookie"><span class="nav-text">使用Cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL-重写"><span class="nav-text">URL 重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏的表单"><span class="nav-text">隐藏的表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HttpSession"><span class="nav-text">HttpSession</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Get-和-Post-请求区别"><span class="nav-text">5. Get 和 Post 请求区别</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Servlet"><span class="nav-text">1. Servlet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Servlet-和-CGI-区别"><span class="nav-text">1. Servlet 和 CGI 区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CGI-的不足"><span class="nav-text">CGI 的不足:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Servlet-的优点"><span class="nav-text">Servlet 的优点:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Servlet-接口中的方法及生命周期"><span class="nav-text">2. Servlet 接口中的方法及生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期"><span class="nav-text">生命周期</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#3-转发-Forward-和重定向的区别-Redirect-的区别"><span class="nav-text">3. 转发(Forward)和重定向的区别(Redirect)的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-实现会话跟踪"><span class="nav-text">4. 实现会话跟踪</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Cookie"><span class="nav-text">使用Cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL-重写"><span class="nav-text">URL 重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏的表单"><span class="nav-text">隐藏的表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HttpSession"><span class="nav-text">HttpSession</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Get-和-Post-请求区别"><span class="nav-text">5. Get 和 Post 请求区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></div>
             
 
           </div>
