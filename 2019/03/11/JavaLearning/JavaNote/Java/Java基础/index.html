@@ -115,23 +115,23 @@
 
 
 
-  <meta name="description" content="1. JVM JDK 和 JRE javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器. JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件. JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.   Java 是解释执行? 这个说法不太准确, 我们开发的 Java 源代码, 首先通过 Javac 编译成为字">
+  <meta name="description" content="1. JVM JDK 和 JRE javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器. JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件. JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.  2. 字符型常量和字符串常量 形式上:字符型常量是单引号引起的一个字符.如&amp;#39;a&amp;#39;.  字符串常">
 <meta name="keywords" content="Note">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基础笔记">
 <meta property="og:url" content="http://vnaso.github.io/2019/03/11/JavaLearning/JavaNote/Java/Java基础/index.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="1. JVM JDK 和 JRE javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器. JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件. JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.   Java 是解释执行? 这个说法不太准确, 我们开发的 Java 源代码, 首先通过 Javac 编译成为字">
+<meta property="og:description" content="1. JVM JDK 和 JRE javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器. JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件. JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.  2. 字符型常量和字符串常量 形式上:字符型常量是单引号引起的一个字符.如&amp;#39;a&amp;#39;.  字符串常">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2019/03/12/5c8767e4c9af4.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/12/5c876847460dd.png">
 <meta property="og:image" content="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3/RUNNABLE-VS-RUNNING.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/12/5c8771edb9a8c.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/13/5c891fe08022f.png">
-<meta property="og:updated_time" content="2019-03-17T02:12:57.381Z">
+<meta property="og:updated_time" content="2019-03-29T13:39:47.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础笔记">
-<meta name="twitter:description" content="1. JVM JDK 和 JRE javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器. JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件. JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.   Java 是解释执行? 这个说法不太准确, 我们开发的 Java 源代码, 首先通过 Javac 编译成为字">
+<meta name="twitter:description" content="1. JVM JDK 和 JRE javac :包含于JDK中的将.java文件编译为字节码(.class)文件的编译器. JVM可以理解的代码就叫做字节码.  即扩展名为.class的文件. JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.  2. 字符型常量和字符串常量 形式上:字符型常量是单引号引起的一个字符.如&amp;#39;a&amp;#39;.  字符串常">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/12/5c8767e4c9af4.png">
 
 
@@ -479,7 +479,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-17 10:12:57" itemprop="dateModified" datetime="2019-03-17T10:12:57+08:00">2019-03-17</time>
+                <time title="Modified: 2019-03-29 21:39:47" itemprop="dateModified" datetime="2019-03-29T21:39:47+08:00">2019-03-29</time>
               
             
           </span>
@@ -535,10 +535,6 @@
 <li>JVM可以理解的代码就叫做<code>字节码</code>.  即扩展名为<code>.class</code>的文件.</li>
 <li>JSP 会被转换为 Java servlet.  并被 JDK 用 javac 编译器编译.</li>
 </ul>
-<blockquote>
-<p>Java 是解释执行?</p>
-<p>这个说法不太准确, 我们开发的 Java 源代码, 首先通过 Javac 编译成为字节码, 然后在运行时, 通过 classloader 加载编译成功的字节码文件, 再通过 JVM 内嵌的解释器将<strong>字节码一行一行解释为机器码执行</strong>(解释执行). 但常见的 JVM, 如 Oracle JDK 提供的 Hotspot JVM 都提供了 JIT(Just-In-Time) 编译器, 也就是常说的动态编译器. JIT 能够在运行时将热点代码(经常运行的代码)的<strong>字节码编译成机器码执行</strong>(编译执行), 这种情况下热点代码属于编译执行, 而不是解释执行.</p>
-</blockquote>
 <h2 id="2-字符型常量和字符串常量"><a href="#2-字符型常量和字符串常量" class="headerlink" title="2. 字符型常量和字符串常量"></a>2. 字符型常量和字符串常量</h2><ul>
 <li>形式上:字符型常量是单引号引起的一个字符.如<code>&#39;a&#39;</code>.  字符串常量是双引号引起的若干个字符如<code>&quot;Hello world&quot;</code>.</li>
 <li>含义上:字符型常量可以当做一个<strong>整形值</strong>(16位 Unicode 字符 0~65535)参与表达式运算.  字符串常量代表一个地址值(引用字符串常量池中的对象.  不会被垃圾回收)</li>
@@ -597,6 +593,7 @@
 <h5 id="对象相等比较"><a href="#对象相等比较" class="headerlink" title="对象相等比较"></a>对象相等比较</h5><p><code>==</code>可以用于基本类型进行比较.  也可以用于对象进行比较.  当用于对象与对象之间比较时.  比较的不是对象代表的值.  而是检查两个对象<strong>是否是同一对象</strong>.这个比较过程中没有自动装箱发生.进行对象值比较不应该使用<code>==</code>，而应该使用对象对应的<code>equals</code>方法.</p>
 <figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AutoboxingTest</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String args[]</span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Example 1: == comparison pure primitive – no autoboxing</span></span><br><span class="line">        <span class="keyword">int</span> i1 = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> i2 = <span class="number">1</span>;</span><br><span class="line">        System.<span class="keyword">out</span>.println(<span class="string">"i1==i2 : "</span> + (i1 == i2)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// Example 2: equality operator mixing object and primitive</span></span><br><span class="line">        Integer num1 = <span class="number">1</span>; <span class="comment">// autoboxing</span></span><br><span class="line">        <span class="keyword">int</span> num2 = <span class="number">1</span>;</span><br><span class="line">        System.<span class="keyword">out</span>.println(<span class="string">"num1 == num2 : "</span> + (num1 == num2)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// Example 3: special case - arises due to autoboxing in Java</span></span><br><span class="line">        Integer obj1 = <span class="number">1</span>; <span class="comment">// autoboxing will call Integer.valueOf()</span></span><br><span class="line">        Integer obj2 = <span class="number">1</span>; <span class="comment">// same call to Integer.valueOf() will return same</span></span><br><span class="line">                            <span class="comment">// cached Object  cache range(-128~127)</span></span><br><span class="line"></span><br><span class="line">        System.<span class="keyword">out</span>.println(<span class="string">"obj1 == obj2 : "</span> + (obj1 == obj2)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// Example 4: equality operator - pure object comparison</span></span><br><span class="line">        Integer one = <span class="keyword">new</span> Integer(<span class="number">1</span>); <span class="comment">// no autoboxing</span></span><br><span class="line">        Integer anotherOne = <span class="keyword">new</span> Integer(<span class="number">1</span>);</span><br><span class="line">        System.<span class="keyword">out</span>.println(<span class="string">"one == anotherOne : "</span> + (one == anotherOne)); <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">i1==i2 : <span class="literal">true</span></span><br><span class="line">num1 == num2 : <span class="literal">true</span></span><br><span class="line">obj1 == obj2 : <span class="literal">true</span></span><br><span class="line">one == anotherOne : <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <h5 id="缓存的对象"><a href="#缓存的对象" class="headerlink" title="缓存的对象"></a>缓存的对象</h5><p>在Java中. 会对-128到127的Integer对象进行缓存. 当创建新的Integer对象时. 如果符合这个这个范围. 并且已有存在的相同值的对象. 则返回这个对象 否则创建新的Integer对象.</p>
+<h2 id="静态方法内不能调用非静态成员"><a href="#静态方法内不能调用非静态成员" class="headerlink" title="静态方法内不能调用非静态成员"></a>静态方法内不能调用非静态成员</h2><p>静态方法可以不通过对象进行调用.  因此在静态方法里.  不能调用其他非静态变量.  也不可以访问费静态变量成员.</p>
 <h2 id="7-在-Java-中定义一个空的无参构造方法的作用"><a href="#7-在-Java-中定义一个空的无参构造方法的作用" class="headerlink" title="7. 在 Java 中定义一个空的无参构造方法的作用"></a>7. 在 Java 中定义一个空的无参构造方法的作用</h2><p>Java程序在执行子类的构造方法之前. 如果没有用<code>super()</code>来调用父类特定的构造方法. 就会<strong>调用父类的无参构造方法</strong>.因此. 如果父类中只定义了有参构造方法. 而子类的构造方法中没有用<code>super()</code>来调用父类中特定的构造方法. 则编译时将发生错误.</p>
 <h2 id="8-接口和抽象类的区别"><a href="#8-接口和抽象类的区别" class="headerlink" title="8. 接口和抽象类的区别"></a>8. 接口和抽象类的区别</h2><table>
 <thead>
@@ -670,7 +667,7 @@
 <p>线程与进程类似, 但线程是一个比进程更小的执行单位. 一个进程在其执行过程中可以产生多个线程. 同类的多个线程共享同一块内存和一组系统资源, 所以系统在产生一个线程, 或者在各个线程之间切换工作时, 负担要比进程小得多, 因此, 线程也被称为轻量级进程</p>
 </li>
 <li><p><strong>进程</strong></p>
-<p>进程是程序的一次执行过程,是系统运行程序的基本单位,因此进程是动态的. 系统运行一个程序即使一个进程从创建, 运行到消亡的过程. 一个正在执行的程序就是一个进程, 它在计算机中一个一个指令地执行者, 同时每个进程占有某些系统资源, 如 CPU 时间, 内存空间, 文件, 输入输出设备的使用权等. 当程序被执行时, 会被操作系统载入到内存中.</p>
+<p>进程是程序的一次执行过程,是系统运行程序的基本单位,因此进程是动态的. 系统运行一个程序即使一个进程从创建, 运行到消亡的过程. 一个正在执行的程序就是一个进程, 它在计算机中一个一个指令地执行者, 同时每个进程占有某些系统资源, 如CPU时间, 内存空间, 文件, 输入输出设备的使用权等. 当程序被执行时, 会被操作系统载入到内存中.</p>
 <p>线程和进程的最大的不同在于基本上各进程是独立的, 而同一进程中的各线程极有可能会相互影响.</p>
 </li>
 <li><p><strong>程序</strong></p>
@@ -688,13 +685,8 @@
 <p>当线程执行 <code>wait()</code> 方法之后, 线程进入 <strong>WAITING(等待)</strong> 状态. 进入等待状态的进程需要依靠其他线程的通知才能返回到运行状态. 而 <strong>TIME_WATING(超时等待)</strong> 状态相当于在等待状态的基础上增加了<strong>超时限制</strong>. 比如通过 <code>sleep(long millis)</code> 方法或 <code>wait(long millis)</code> 方法可以将 Java 线程置于 <strong>TIME_WATING(超时等待)</strong> 状态. 当超时时间到达后, Java 线程会返回到 <strong>RUNNABLE</strong> 状态. 当线程调用同步(synchronized)方法时, 在没有获取到锁的情况下, 线程将会进入到 <strong>BLOCKED(阻塞)</strong> 状态. 线程在执行 Runnable 的 <code>run()</code> 方法之后将会进入到 <strong>TERMINATED(终止)</strong> 状态</p>
 <h2 id="14-final-static-this-super-关键字"><a href="#14-final-static-this-super-关键字" class="headerlink" title="14. final static this super 关键字"></a>14. final static this super 关键字</h2><h3 id="final"><a href="#final" class="headerlink" title="final"></a>final</h3><p>final 关键字主要作用在三个地方: 变量 方法 类</p>
 <ol>
-<li><p>对于一个 final 变量, 如果是基本类型的变量, 则其一旦在初始化之后便不能修改. 如果是引用类型的变量, 则在对其进行初始化之后便不能在让其指向另一个对象.</p>
-<blockquote>
-<p>final 修饰的变量可以在定义时不赋初始值, 系统也不会赋默认值, 但必须保证之后对其赋值, 否则会在编译时报错, 因为这种情况下变量的值是未知的.</p>
-</blockquote>
-</li>
-<li><p>当用 final 修饰一个类时, 表明这个类不能被继承. final 类中的所有成员方法都会被隐式地指定为 final 方法.</p>
-</li>
+<li>对于一个 final 变量, 如果是基本类型的变量, 则其一旦在初始化之后便不能修改. 如果是引用类型的变量, 则在对其进行初始化之后便不能在让其指向另一个对象.</li>
+<li>当用 final 修饰一个类时, 表明这个类不能被继承. final 类中的所有成员方法都会被隐式地指定为 final 方法.</li>
 <li>使用 final 方法的原因是: 把方法锁定, 以防任何继承类修改它的含义.</li>
 </ol>
 <h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p>static 关键字主要有以下四种使用场景:</p>
@@ -706,14 +698,14 @@
 </li>
 <li><p><strong>静态代码块</strong>: 静态代码块定义在类中方法外, 静态代码块在非静态代码之前执行(静态代码块 -&gt; 非静态代码块 -&gt; 构造方法). 该类不管创建多少对象, 静态代码只执行一次. </p>
 <blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">static</span>&#123;</span><br><span class="line">&gt;     静态代码块;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">static</span>&#123;</span><br><span class="line">&gt;  静态代码块;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>一个类的静态代码块可以有多个, 位置任意. 它不处于任何方法体内, JVM 加载类时会执行这些静态的代码块, 如果静态代码块有多个, JVM 将按照他们在类中出现的先后顺序依次执行它们.</p>
 <p>静态代码块对于<strong>定义在它之后的静态变量</strong>, 可以赋值, 但是不能访问.</p>
 </blockquote>
 </li>
-<li><p><strong>静态内部类(static 修饰类的话只能修饰内部类)</strong>: 静态内部类与非静态内部类之间存在一个最大的区别: 非静态内部类在编译完成之后隐含地保存着一个强引用, 该引用是指向创建它的外围类(<code>外围类名.this</code>), 但是静态内部类却没有. </p>
+<li><p><strong>静态内部类(static 修饰类的话只能修饰内部类)</strong>: 静态内部类与非静态内部类之间存在一个最大的区别: 非静态内部类在编译完成之后隐含地保存着一个引用, 该引用是指向创建它的外围类(<code>外围类名.this</code>), 但是静态内部类却没有. </p>
 <blockquote>
 <ol>
 <li>静态内部类的创建是不需要依赖外围类的创建.</li>
@@ -725,7 +717,7 @@
 <p>当 Singleton 类加载时, 静态内部类 SingletonHolder 没有被加载进内存. 只有当调用 <code>getUniqueInstance()</code> 方法而触发 <code>Singleton.INSTANCE</code> 时 SingletonHolder 才会被加载, 此时初始化 INSTANCE 实例, 并且 JVM 能确保该实例只被实例化一次.</p>
 </li>
 <li><p><strong>静态导包(用来导入类中的静态资源)</strong>: 格式为: <code>import static</code> 这两个关键字连用可以导入某个类中的指定静态资源, 并且不需要使用类名调用类中的静态成员, 可以直接使用类中静态变量和成员方法.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// Math. --- 将Math中的所有静态资源导入, 这时候可以直接使用里面的静态方法, 而不用通过类名进行调用</span></span><br><span class="line"><span class="comment">// 如果只想导入单一某个静态方法，只需要将换成对应的方法名即可</span></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Math.;</span><br><span class="line"><span class="comment">// 换成import static java.lang.Math.max;具有一样的效果</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">int</span> max = max(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    System.out.println(max);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Math. --- 将Math中的所有静态资源导入, 这时候可以直接使用里面的静态方法, 而不用通过类名进行调用</span></span><br><span class="line"><span class="comment">// 如果只想导入单一某个静态方法，只需要将换成对应的方法名即可</span></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Math.;</span><br><span class="line"><span class="comment">// 换成import static java.lang.Math.max;具有一样的效果</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">int</span> max = max(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    System.out.println(max);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h4 id="static-静态代码块与-非静态代码块-构造代码块"><a href="#static-静态代码块与-非静态代码块-构造代码块" class="headerlink" title="static{} 静态代码块与 {} 非静态代码块(构造代码块)"></a>static{} 静态代码块与 {} 非静态代码块(构造代码块)</h4><p><strong>相同点</strong>: 都是在 JVM 加载类时且在构造方法执行之前执行, 在类中都可以定义多个, 定义多个时按定义的顺序执行, 一般在代码块中对一些 static 变量进行赋值.</p>
@@ -754,16 +746,11 @@
 <blockquote>
 <p>被 static 修饰的成员属于类, 不属于单个这个类的某个对象, 被类中所有对象共享. 而 this 代表对父类的引用, 指向父类对象. 所以, <strong>this 和 super 是属于对象范畴的东西, 而静态方法是属于类范畴的东西</strong></p>
 </blockquote>
-<h2 id="15-Java-中的异常-Exception-和-Error"><a href="#15-Java-中的异常-Exception-和-Error" class="headerlink" title="15. Java 中的异常 Exception 和 Error"></a>15. Java 中的异常 Exception 和 Error</h2><h4 id="Java-异常类层次结构图"><a href="#Java-异常类层次结构图" class="headerlink" title="Java 异常类层次结构图"></a>Java 异常类层次结构图</h4><p><img src="https://i.loli.net/2019/03/12/5c8771edb9a8c.png" alt="UTOOLS1552380396521.png"></p>
-<p>在 Java 中, 所有的异常都有一个共同的祖先 <code>java.lang.Throwable</code>类. 只有<code>Throwable</code> 类型的实例可以被抛出(throw)或捕获(catch). <code>Throwable</code>有两个重要的子类:<code>Exception(异常)</code>和<code>Error(错误)</code>. 二者都是 Java 异常处理的重要子类, 各自都包含大量的子类.</p>
+<h2 id="15-Java-中的异常处理"><a href="#15-Java-中的异常处理" class="headerlink" title="15. Java 中的异常处理"></a>15. Java 中的异常处理</h2><h4 id="Java-异常类层次结构图"><a href="#Java-异常类层次结构图" class="headerlink" title="Java 异常类层次结构图"></a>Java 异常类层次结构图</h4><p><img src="https://i.loli.net/2019/03/12/5c8771edb9a8c.png" alt="UTOOLS1552380396521.png"></p>
+<p>在 Java 中, 所有的异常都有一个共同的祖先 <code>java.lang.Throwable</code>类. <code>Throwable</code>有两个重要的子类:<code>Exception(异常)</code>和<code>Error(错误)</code>. 二者都是 Java 异常处理的重要子类, 各自都包含大量的子类.</p>
 <p><strong>Error</strong>: 是程序无法处理的错误, 表示运行程序中较严重的问题. 大多数错误是 JVM 出现的问题. 如: Java虚拟机运行错误(VritualMachineError), 当 JVM 没有足够的内存资源执行操作时, 将出现 OutOfMemoryError  . 这些异常发生时, JVM 一般会选择线程终止.</p>
 <p>这些错误表示故障发生于虚拟机自身, 或者发生在虚拟机试图执行应用时. 这些错误是不可查的, 错误通过 Error 的子类描述. </p>
-<p><strong>Exception</strong>: 是程序本身可以处理的异常. </p>
-<p>Exception 类有一个重要的子类: <strong>RuntimeException</strong>. 该类异常由虚拟机抛出, 线程不会被终止,通常是可以编码避免的逻辑错误. <em>NullPointerException</em>: 访问的变量没有任何引用对象时, 抛出该异常. <em>ArithmeticException</em>: 算数运算异常, 整数除以 0 时, 抛出该异常. <em>ArrayIndexOutOfBoundsException</em>: 数组下标越界时, 抛出该异常.</p>
-<blockquote>
-<p><code>Exception</code> 又分为<strong>检查型异常(checked)</strong>和<strong>非检查型异常(unchecked)</strong>. 可检查异常必须在源代码里显示地进行捕获处理, 这是编译期检查的一部分. </p>
-<p>除了 <code>Runtimeexception</code>, 其他异常都属于检查型异常.</p>
-</blockquote>
+<p><strong>Exception</strong>: 是程序本身可以处理的异常. Exception 类有一个重要的子类: <strong>RuntimeException</strong>. 该类异常由虚拟机抛出, 线程不会被终止. <strong>NullPointerException</strong>: 访问的变量没有任何引用对象时, 抛出该异常. <strong>ArithmeticException</strong>: 算数运算异常, 整数除以 0 时, 抛出该异常. <strong>ArrayIndexOutOfBoundsException</strong>: 数组下标越界时, 抛出该异常.</p>
 <h3 id="Throwable-类常用方法"><a href="#Throwable-类常用方法" class="headerlink" title="Throwable 类常用方法"></a>Throwable 类常用方法</h3><ul>
 <li><strong>public String getMessage()</strong>: 返回异常发生时的详细信息.</li>
 <li><strong>public String toString()</strong>: 返回异常发生时的简要描述.</li>
@@ -771,20 +758,9 @@
 <li><strong>public void printStackTrace()</strong>: 在控制台上打印 Throwable 对象封装的异常信息.</li>
 </ul>
 <h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h4 id="try-catch"><a href="#try-catch" class="headerlink" title="try catch"></a>try catch</h4><ul>
-<li><p><code>try</code>: 用于捕获异常. 其后可接任意个 <code>catch</code> 块. 如果没有 <code>catch</code> 块, 则必须跟一个 <code>finally</code> 块</p>
-</li>
-<li><p><code>catch</code>: 用于处理 <code>try</code> 捕获到的异常. 越具体的类必须越先捕获处理. </p>
-</li>
-<li><p><code>finally</code>: 无论是否捕获或处理异常, <strong>块中的语句都会被执行</strong>. 当在 <code>try</code> 块或 <code>catch</code> 块中遇到 <code>return</code> 或 <code>throw</code> 语句时, <code>finally</code> 语句块将在方法返回之前执行. </p>
-<blockquote>
-<ul>
-<li><p><code>try-catch</code> 代码段会产生额外的性能开销, 往往会影响 JVM 对代码进行优化, 所以建议仅捕获有必要的代码段. 利用异常控制代码流程, 也远比通常意义上的条件语句(if/else, switch)要低效.</p>
-</li>
-<li><p>Java 每实例化一个 Exception 都会对当时的栈进行快照, 这是一个相对较重的操作.</p>
-</li>
-</ul>
-</blockquote>
-</li>
+<li><code>try</code>: 用于捕获异常. 其后可接任意个 <code>catch</code> 块. 如果没有 <code>catch</code> 块, 则必须跟一个 <code>finally</code> 块</li>
+<li><code>catch</code>: 用于处理 <code>try</code> 捕获到的异常. 越具体的类必须越先捕获处理. </li>
+<li><code>finally</code>: 无论是否捕获或处理异常, <strong>块中的语句都会被执行</strong>. 当在 <code>try</code> 块或 <code>catch</code> 块中遇到 <code>return</code> 或 <code>throw</code> 语句时, <code>finally</code> 语句块将在方法返回之前执行. </li>
 </ul>
 <p><strong>以下 4 种特殊情况下, finally块不会被执行:</strong></p>
 <ol>
@@ -809,8 +785,7 @@
 <li>执行完 <code>finally</code> 语句后, 返回之前保存在局部变量中的值</li>
 <li>如果 <code>try</code> , <code>finally</code> 块中均有 <code>return</code> , 则忽略 <code>try</code> 中的 <code>return</code> , 而使用 <code>finally</code> 中的 <code>return</code></li>
 </ol>
-<h3 id="throw-与-throws-关键字"><a href="#throw-与-throws-关键字" class="headerlink" title="throw 与 throws 关键字"></a>throw 与 throws 关键字</h3><p><code>throw</code>: 在方法中使用, 抛出异常</p>
-<p><code>throws</code>: 在方法上声明, 表明该方法要抛出的异常</p>
+<h4 id="throw"><a href="#throw" class="headerlink" title="throw"></a>throw</h4><p>使用 <code>throw</code> 语句抛出异常, 在方法上声明 , 交由调用方法的对象来处理.</p>
 <h2 id="16-序列化"><a href="#16-序列化" class="headerlink" title="16. 序列化"></a>16. 序列化</h2><blockquote>
 <p>Java 序列化技术是将对象编码成字节流. 反之, 将字节流重新构建成对象, 称之为反序列化. 实现对象的持久化.</p>
 </blockquote>
@@ -845,10 +820,8 @@
 <li><code>Class.getDeclaredMethods()</code>: 获取当前类的所有成员方法, 不论访问权限</li>
 <li><code>Method.setAccessible(true)</code>: 获取当前方法的访问权限, 操作私有方法时必须设置, 否则会报异常 <code>IllegalAccessException</code></li>
 <li><code>Field.setAccessible(true)</code>: 获取当前变量的访问权限, 操作私有方法时必须设置, 否则会报异常 <code>IllegalAccessException</code></li>
-<li><p><code>Method.invoke()</code>: 调用当前方法</p>
-</li>
-<li><p><code>Field.set()</code>: 修改当前变量的值</p>
-</li>
+<li><code>Method.invoke()</code>: 调用当前方法</li>
+<li><code>Field.set()</code>: 修改当前变量的值</li>
 </ul>
 <h4 id="修改常量的特殊情况"><a href="#修改常量的特殊情况" class="headerlink" title="修改常量的特殊情况"></a>修改常量的特殊情况</h4><p>使用 static final 修饰的常量值, 在 JVM 编译时, 会在常量被使用的地方将<strong>常量名</strong>直接替换为<strong>常量值</strong>来优化代码. 而有些数据类型不会被优化.</p>
 <p>要想避免上面出现的特殊情况, 有两种方法来修改常量的值</p>
@@ -862,11 +835,11 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String FINAL_VALUE</span><br><span class="line">        = <span class="keyword">null</span> == <span class="keyword">null</span> ? <span class="string">"FINAL"</span> : <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
 <p>因为 <code>null == null ? &quot;FINAL&quot; : null</code> 是在运行时刻计算的, 在编译时刻不会计算, 也就不会被优化.</p>
 <h5 id="判断是否能修改"><a href="#判断是否能修改" class="headerlink" title="判断是否能修改"></a>判断是否能修改</h5><p><img src="https://i.loli.net/2019/03/13/5c891fe08022f.png" alt="UTOOLS1552490462913.png"></p>
+<h2 id="18-大数值"><a href="#18-大数值" class="headerlink" title="18. 大数值"></a>18. 大数值</h2><p>BigInteger 类实现了任意精度的整数运算, BigDecimal 类实现了任意精度的浮点数运算.</p>
+<p>应用在需要精确运算结果的场合, 如: 涉及金钱汇率以及不同表达式计算出的结果的比较</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><p>JavaGuide: <a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">https://github.com/Snailclimb/JavaGuide</a></p>
-</li>
-<li><p>Java 反射由浅入深: <a href="https://juejin.im/post/598ea9116fb9a03c335a99a4" target="_blank" rel="noopener">https://juejin.im/post/598ea9116fb9a03c335a99a4</a></p>
-</li>
+<li>JavaGuide: &lt;<a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">https://github.com/Snailclimb/JavaGuide</a></li>
+<li>Java 核心技术 第十版</li>
 </ul>
 
       
@@ -944,8 +917,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/11/JavaLearning/JavaNote/Java基础/" rel="next" title="Java基础笔记">
-                <i class="fa fa-chevron-left"></i> Java基础笔记
+              <a href="/2019/03/11/JavaLearning/JavaNote/toNote/" rel="next" title="toNote">
+                <i class="fa fa-chevron-left"></i> toNote
               </a>
             
           </div>
@@ -954,8 +927,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/11/JavaLearning/JavaNote/toNote/" rel="prev" title="toNote">
-                toNote <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/13/JavaLearning/JavaNote/Java/JavaEE/" rel="prev" title="JavaEE">
+                JavaEE <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1028,7 +1001,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1158,7 +1131,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-JVM-JDK-和-JRE"><span class="nav-text">1. JVM JDK 和 JRE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字符型常量和字符串常量"><span class="nav-text">2. 字符型常量和字符串常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重载-Overload-和重写-Override"><span class="nav-text">3. 重载(Overload)和重写(Override)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-封装-继承-多态"><span class="nav-text">4. 封装 继承 多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-text">多态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-String-StringBuffer-和-StringBuilder"><span class="nav-text">5. String StringBuffer 和 StringBuilder</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可变性"><span class="nav-text">可变性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuilder-与-StringBuffer"><span class="nav-text">StringBuilder 与 StringBuffer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全性"><span class="nav-text">线程安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String-1"><span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer-和-StringBuilder"><span class="nav-text">StringBuffer 和 StringBuilder</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#StringBuffer"><span class="nav-text">StringBuffer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#StringBuilder"><span class="nav-text">StringBuilder</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能"><span class="nav-text">性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自动装箱与拆箱"><span class="nav-text">6. 自动装箱与拆箱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#装箱"><span class="nav-text">装箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拆箱"><span class="nav-text">拆箱</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发生场景"><span class="nav-text">发生场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成无用对象增加GC压力"><span class="nav-text">生成无用对象增加GC压力</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对象相等比较"><span class="nav-text">对象相等比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缓存的对象"><span class="nav-text">缓存的对象</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-在-Java-中定义一个空的无参构造方法的作用"><span class="nav-text">7. 在 Java 中定义一个空的无参构造方法的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-接口和抽象类的区别"><span class="nav-text">8. 接口和抽象类的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么接口属性必须是-public-static-final"><span class="nav-text">为什么接口属性必须是 public static final</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的静态方法"><span class="nav-text">接口的静态方法</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#9-成员变量和局部变量的区别"><span class="nav-text">9. 成员变量和局部变量的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-与-equals"><span class="nav-text">10. == 与 equals</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-equals-与-hashCode"><span class="nav-text">11. equals 与 hashCode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hashCode"><span class="nav-text">hashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要有-hashCode"><span class="nav-text">为什么要有 hashCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashCode-与-equals-相关规定"><span class="nav-text">hashCode() 与 equals() 相关规定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-线程-进程-程序"><span class="nav-text">12. 线程 进程 程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-线程的基本状态"><span class="nav-text">13. 线程的基本状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-final-static-this-super-关键字"><span class="nav-text">14. final static this super 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-text">static</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#static-静态代码块与-非静态代码块-构造代码块"><span class="nav-text">static{} 静态代码块与 {} 非静态代码块(构造代码块)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-text">this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super"><span class="nav-text">super</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-Java-中的异常-Exception-和-Error"><span class="nav-text">15. Java 中的异常 Exception 和 Error</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-异常类层次结构图"><span class="nav-text">Java 异常类层次结构图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Throwable-类常用方法"><span class="nav-text">Throwable 类常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常处理"><span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#try-catch"><span class="nav-text">try catch</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#throw-与-throws-关键字"><span class="nav-text">throw 与 throws 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-序列化"><span class="nav-text">16. 序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-反射"><span class="nav-text">17. 反射</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要方法"><span class="nav-text">主要方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改常量的特殊情况"><span class="nav-text">修改常量的特殊情况</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#判断是否能修改"><span class="nav-text">判断是否能修改</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-JVM-JDK-和-JRE"><span class="nav-text">1. JVM JDK 和 JRE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字符型常量和字符串常量"><span class="nav-text">2. 字符型常量和字符串常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重载-Overload-和重写-Override"><span class="nav-text">3. 重载(Overload)和重写(Override)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-封装-继承-多态"><span class="nav-text">4. 封装 继承 多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-text">多态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-String-StringBuffer-和-StringBuilder"><span class="nav-text">5. String StringBuffer 和 StringBuilder</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可变性"><span class="nav-text">可变性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuilder-与-StringBuffer"><span class="nav-text">StringBuilder 与 StringBuffer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全性"><span class="nav-text">线程安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String-1"><span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer-和-StringBuilder"><span class="nav-text">StringBuffer 和 StringBuilder</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#StringBuffer"><span class="nav-text">StringBuffer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#StringBuilder"><span class="nav-text">StringBuilder</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能"><span class="nav-text">性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自动装箱与拆箱"><span class="nav-text">6. 自动装箱与拆箱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#装箱"><span class="nav-text">装箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拆箱"><span class="nav-text">拆箱</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发生场景"><span class="nav-text">发生场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成无用对象增加GC压力"><span class="nav-text">生成无用对象增加GC压力</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对象相等比较"><span class="nav-text">对象相等比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缓存的对象"><span class="nav-text">缓存的对象</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态方法内不能调用非静态成员"><span class="nav-text">静态方法内不能调用非静态成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-在-Java-中定义一个空的无参构造方法的作用"><span class="nav-text">7. 在 Java 中定义一个空的无参构造方法的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-接口和抽象类的区别"><span class="nav-text">8. 接口和抽象类的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么接口属性必须是-public-static-final"><span class="nav-text">为什么接口属性必须是 public static final</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的静态方法"><span class="nav-text">接口的静态方法</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#9-成员变量和局部变量的区别"><span class="nav-text">9. 成员变量和局部变量的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-与-equals"><span class="nav-text">10. == 与 equals</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-equals-与-hashCode"><span class="nav-text">11. equals 与 hashCode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hashCode"><span class="nav-text">hashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要有-hashCode"><span class="nav-text">为什么要有 hashCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashCode-与-equals-相关规定"><span class="nav-text">hashCode() 与 equals() 相关规定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-线程-进程-程序"><span class="nav-text">12. 线程 进程 程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-线程的基本状态"><span class="nav-text">13. 线程的基本状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-final-static-this-super-关键字"><span class="nav-text">14. final static this super 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-text">static</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#static-静态代码块与-非静态代码块-构造代码块"><span class="nav-text">static{} 静态代码块与 {} 非静态代码块(构造代码块)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-text">this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super"><span class="nav-text">super</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-Java-中的异常处理"><span class="nav-text">15. Java 中的异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-异常类层次结构图"><span class="nav-text">Java 异常类层次结构图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Throwable-类常用方法"><span class="nav-text">Throwable 类常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常处理"><span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#try-catch"><span class="nav-text">try catch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#throw"><span class="nav-text">throw</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-序列化"><span class="nav-text">16. 序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-反射"><span class="nav-text">17. 反射</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要方法"><span class="nav-text">主要方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改常量的特殊情况"><span class="nav-text">修改常量的特殊情况</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#判断是否能修改"><span class="nav-text">判断是否能修改</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-大数值"><span class="nav-text">18. 大数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></div>
             
 
           </div>
