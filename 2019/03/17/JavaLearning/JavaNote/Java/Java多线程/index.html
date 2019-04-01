@@ -126,16 +126,20 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e232a6ebb4.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e237a7b850.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e23af2cdc8.jpg">
+<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/0062LbXpgy1g1ncd4pnwuj30sg095afx.jpg">
+<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1f32088062.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e23df33d2b.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e23f6e5476.jpg">
+<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1edfd1783c.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e2416d122c.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e243340784.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24605e258.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e2474bf965.jpg">
+<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1f0b76b38e.png">
+<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1f0a760ea0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e248554755.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/18/5c8ef47a449f0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24a1d225f.jpg">
-<meta property="og:updated_time" content="2019-03-29T13:59:15.117Z">
+<meta property="og:updated_time" content="2019-04-01T11:33:14.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 多线程">
 <meta name="twitter:description" content="重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作.  并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”. 多线程在单核 CPU 中是交替执行(并发), 在多核 CPU">
@@ -486,7 +490,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 21:59:15" itemprop="dateModified" datetime="2019-03-29T21:59:15+08:00">2019-03-29</time>
+                <time title="Modified: 2019-04-01 19:33:14" itemprop="dateModified" datetime="2019-04-01T19:33:14+08:00">2019-04-01</time>
               
             
           </span>
@@ -616,11 +620,42 @@
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p><img src="https://i.loli.net/2019/03/29/5c9e23af2cdc8.jpg" alt="synchronized使用场景"></p>
 <h3 id="synchronized-锁重入"><a href="#synchronized-锁重入" class="headerlink" title="synchronized 锁重入"></a>synchronized 锁重入</h3><p><strong>可重入锁</strong> 含义是: 自己可以再次获取自己内部的锁. 比如一个线程获得了某个对象的锁, 此时这个对象还没有释放, 当其再次想要获取这个对象的锁时, 还是可以获取的, 如果不可重入的话, 就会造成死锁.</p>
 <p>可重入锁也支持在父子类继承的环境当中.</p>
+<h2 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h2><p><a href="#synchronized">synchronized</a> 用的锁是存在 Java 对象头中的. 如果对象是数组类型, 则虚拟机用 3 个字宽(Word)存储对象头, 如果对象是非数组类型, 则用 2 个字宽存储对象头.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">长度</th>
+<th style="text-align:center">内容</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">32/64bit</td>
+<td style="text-align:center">Mark Word</td>
+<td style="text-align:center">存储对象的 hashcode 或 锁信息</td>
+</tr>
+<tr>
+<td style="text-align:center">32/64bit</td>
+<td style="text-align:center">Class Metadata Address</td>
+<td style="text-align:center">存储到对象类型数据的指针</td>
+</tr>
+<tr>
+<td style="text-align:center">32/32bit</td>
+<td style="text-align:center">Array length</td>
+<td style="text-align:center">数组的长度(如果当前对象是数组)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>32位虚拟机对象头的存储结构</strong></p>
+<p><img src="images/0062LbXpgy1g1ncd4pnwuj30sg095afx.jpg" alt=""></p>
+<p><strong>64位虚拟机对象头的存储结构</strong></p>
+<p><img src="images/5ca1f32088062.png" alt="UTOOLS1554117408933.png"></p>
 <h2 id="对象监视器-monitor"><a href="#对象监视器-monitor" class="headerlink" title="对象监视器(monitor)"></a>对象监视器(monitor)</h2><p><img src="https://i.loli.net/2019/03/29/5c9e23df33d2b.jpg" alt="0062LbXpgy1g15vb674msj30jg079dfr.jpg"></p>
 <p>每个对象都有自己的监视器, 当这个对象由同步块或者这个对象的同步方法调用时, 执行方法的线程必须先获取该对象的监视器才能进入同步块和同步方法. 没有获取到监视器的进程将被阻塞在同步块和同步方法的入口处, 进入 BLOCKED 状态. </p>
 <p>任意线程对 Object 的访问, 首先要获得 Object 的监视器, 如果获取失败, 该线程就要进入同步队列, 线程变为 BLOCKED, 当 Object 的监视器占有者释放后, 在同步队列中的线程就有机会重新获取该监视器.</p>
 <p>Monitor 是线程私有的数据结构, 每个线程有一个可用的 monitor record 列表, 同时还有一个全局的可用列表. 每一个被锁住的对象都会和一个 monitor 关联(对象头的 Mark Word 中的 Lock Word 指向 Monitor 的起始地址), 同时 Monitor 中有一个 owner 字段存放拥有该锁的线程的唯一标识, 标识该锁被这个线程占用, 结构如下:</p>
-<p><img src="https://i.loli.net/2019/03/29/5c9e23f6e5476.jpg" alt="0062LbXpgy1g1669naxf3j306y0h9dfo-1552833800699.jpg"></p>
+<p><img src="images/5ca1edfd1783c.jpg" alt="0062LbXpgy1g1669naxf3j306y0h9dfo.jpg"></p>
 <ul>
 <li>Owner: 初始时为 Null, 表示当前没有任何现场拥有该 Monitor Record, 当线程成功拥有该锁后, 保存线程唯一表示, 当锁被释放时, 又设置为 Null.</li>
 <li>EntryQ: 关联一个系统互斥锁, 阻塞所有视图锁住 Monitor Record 失败的线程.</li>
@@ -637,12 +672,23 @@
 <p>相对于 synchronized 块的代码锁, volatile 提供了一个轻量级的针对共享变量的锁.当在多个线程间使用共享变量进行通信的时候, 需要考虑将共享变量用 volatile 修饰, 告知 JVM 这个变量是不稳定的, 每次都要到主存中进行读取, 避免数据不一致的问题出现.</p>
 <p><img src="https://i.loli.net/2019/03/29/5c9e243340784.jpg" alt="当今内存模型"></p>
 <h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3><p>volatile 修饰的成员变量在每次被线程访问时, 都强迫从主存中重读改成员变量的值, 而且当<strong>成员变量发生变化时, 强迫线程将变化值回写到主存</strong>. 这样在任何时刻, 不同线程看到的成员变量都是同一个值, 保证了同步数据的可见性.</p>
-<h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性?"></a>原子性?</h3><p>volatile 无法同时保证内存可见性和原子性, 加锁机制(同步机制)既可以确保可见性, 又可以确保原子性. volatile 只能确保可见性. 原因是: 声明为 volatile 的简单变量如果当前值与该变量以前的值相关, 那么 volatile 关键字不起作用, 比如: <code>count++</code>, <code>count = count + 1</code>, 都不是原子操作.</p>
+<h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性?"></a>原子性?</h3><p>volatile <strong>无法同时保证内存可见性和原子性</strong>, 加锁机制(同步机制)既可以确保可见性, 又可以确保原子性. volatile 只能确保可见性. 原因是: 声明为 volatile 的简单变量如果当前值与该变量以前的值相关, 那么 volatile 关键字不起作用, 比如: <code>count++</code>, <code>count = count + 1</code>, 都不是原子操作.</p>
 <p><strong>适合使用 volatile 的情况</strong>:</p>
 <ol>
-<li>对变量的写入操作不依赖变量的当前值, 或者能确保只有单个线程更新变量的值.</li>
-<li>该变量没有包含在具有其他变量的不变式中.</li>
-<li>只是需要解决变量在多个线程之间的可见性. 资源的同步性应交由 synchronized 关键字.</li>
+<li><p>对变量的写入操作不依赖变量的当前值, 或者能确保只有单个线程更新变量的值.</p>
+</li>
+<li><p>该变量没有包含在具有其他变量的不变式中.</p>
+<blockquote>
+<p>如:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> flag;</span><br><span class="line">&gt; <span class="keyword">while</span>(!flag)&#123;</span><br><span class="line">&gt;     <span class="comment">// do something...</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="function"><span class="keyword">public</span> <span class="title">setFlag</span><span class="params">()</span></span>&#123;</span><br><span class="line">&gt;     flag = <span class="keyword">false</span>;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>不适用示例:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">int</span> count;</span><br><span class="line">&gt; <span class="comment">// ...</span></span><br><span class="line">&gt; run() &#123;</span><br><span class="line">&gt;     count++; <span class="comment">// 不能保证原子性</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>只是需要解决变量在多个线程之间的可见性. 资源的同步性应交由 synchronized 关键字.</p>
+</li>
 </ol>
 <h2 id="等待-通知-wait-notify-机制"><a href="#等待-通知-wait-notify-机制" class="headerlink" title="等待/通知(wait/notify)机制"></a>等待/通知(wait/notify)机制</h2><p>等待通知机制: 指一个线程 A 调用了对象 O 的 <code>wait()</code> 方法进入该对象的等待池中, 而另一个线程 B 调用了对象 O 的 <code>notify()/notifyAll()</code> 方法, 线程 A 收到通知后退出等待池而进入该对象的锁池中, 等待锁竞争.</p>
 <h3 id="相关方法"><a href="#相关方法" class="headerlink" title="相关方法"></a>相关方法</h3><table>
@@ -966,7 +1012,9 @@
 <p>偏向锁的目标是: 减少无竞争且只有一个线程使用锁的情况下, 使用轻量级锁产生的性能消耗. 轻量级锁每次申请, 释放锁都至少需要一次 <a href="#CAS">CAS</a>, 但偏向锁只有初始化时需要一次 CAS. “偏向”的意思是, 偏向锁假定将来只有<strong>第一个申请锁的线程会使用锁</strong>(不会有任何线程再来申请锁), 因此, 只需要在 Mark Word 中 CAS 记录 owner(本质上也是更新, 但初始值为空). 如果记录成功, 则偏向锁获取成功, 记录锁状态为偏向锁, 以后当前线程等于 owner 就可以零成本直接获得锁; 否则, 说明有其他线程竞争, 膨胀为轻量级锁.</p>
 <p><strong>偏向锁无法使用自旋锁优化</strong>, 因为一旦有其他线程申请锁, 就破坏了偏向锁的假定.</p>
 <h3 id="轻量级锁"><a href="#轻量级锁" class="headerlink" title="轻量级锁"></a>轻量级锁</h3><p>轻量级锁时有偏向锁升级来的, 偏向锁运行在一个线程进入同步块的情况下, 当第二个线程加入锁争用的时候, 偏向锁就会升级为轻量级锁. </p>
+<p><img src="images/5ca1f0b76b38e.png" alt="UTOOLS1554116792119.png"></p>
 <p>轻量级锁是在没有多线程竞争的前提下, 减少传统的重量级锁使用产生的性能消耗. 轻量级锁所适应的场景是线程交替执行同步块的情况, 如果存在同一时间访问同一锁的情况, 就会导致轻量级锁升级为重量级锁. 使用轻量级锁时, 不需要申请互斥量, 仅仅将 Mark Word 中的部分直接 CAS 更新子项线程栈中的 Lock Record, 如果更新成功, 则轻量级锁获取成功, 记录锁的状态为轻量级锁; 否则, 说明已经有线程获得了轻量级锁, 目前发生了锁竞争, 接下来就膨胀为重量级锁.</p>
+<p><img src="images/5ca1f0a760ea0.png" alt="UTOOLS1554116775863.png"></p>
 <h3 id="重量级锁"><a href="#重量级锁" class="headerlink" title="重量级锁"></a>重量级锁</h3><p>重量级锁在 JVM 中又叫对象监视器(Monitor), 至少包含一个竞争锁队列, 和一个信号阻塞队列(wait 队列), 前者负责做互斥, 后者用于做线程同步.</p>
 <h3 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h3><p>自旋锁原理十分简单, 如果持有锁的线程能在很短时间释放锁资源, 那么那些等待竞争锁的线程就不需要做内核态和用户态之间的切换进入阻塞挂起状态, 它们只需要等一等(自旋), 等待有锁的线程释放锁后即可立即获取锁. 这样就避免用户线程和内核的切换的消耗. 但是线程自旋需要消耗 CPU, 如果一直获取不到锁, 那线程也不能一直占用 CPU 自旋做无用功, 所以需要设定一个自旋等待的最大时间. 如果持有锁的线程执行的时间超过自旋等待的最大时间仍没有释放锁, 就会导致其他争用锁的线程在最大等待时间内获取不到锁, 这时争用线程会停止自旋进入阻塞状态.</p>
 <h3 id="自适应自旋锁"><a href="#自适应自旋锁" class="headerlink" title="自适应自旋锁"></a>自适应自旋锁</h3><p>自适应意味着<strong>自旋的时间不在固定</strong>, 而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定:</p>
@@ -984,6 +1032,36 @@
 <p>如果锁竞争时间段, 可以使用自旋锁进一步优化轻量级锁, 重量级锁的性能力, 减少线程切换. 如果锁竞争程度逐渐提高, 那么偏向锁逐步膨胀到重量级锁, 能够提高系统整体性能.</p>
 </blockquote>
 <p><strong>锁膨胀的过程</strong>: 只有一个线程进入临界区(偏向锁), 多个线程交替进入临界区(轻量级锁), 多线程同时进入临界区(重量级锁).</p>
+<h3 id="优缺点对比"><a href="#优缺点对比" class="headerlink" title="优缺点对比"></a>优缺点对比</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">锁</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+<th style="text-align:center">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">偏向锁</td>
+<td style="text-align:center">加锁和解锁不需要额外消耗, 和执行非同步方法相比较仅存在纳秒级的差距</td>
+<td style="text-align:center">如果线程间存在锁竞争, 会带来额外的锁撤销的消耗</td>
+<td style="text-align:center">适用于只有一个线程访问同步块的场景</td>
+</tr>
+<tr>
+<td style="text-align:center">轻量级锁</td>
+<td style="text-align:center">竞争的线程不会阻塞, 提高了程序的响应速度</td>
+<td style="text-align:center">如果始终得不到锁竞争的线程, 使用自旋会消耗 CPU</td>
+<td style="text-align:center">追求响应时间<br>同步块执行速度非常快</td>
+</tr>
+<tr>
+<td style="text-align:center">重量级锁</td>
+<td style="text-align:center">线程竞争不使用自旋, 不会消耗 CPU</td>
+<td style="text-align:center">线程阻塞, 响应时间缓慢</td>
+<td style="text-align:center">追求吞吐量<br>同步块执行速度较慢</td>
+</tr>
+</tbody>
+</table>
 <h2 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h2><h3 id="CAS-Compare-and-swap-简介"><a href="#CAS-Compare-and-swap-简介" class="headerlink" title="CAS(Compare and swap) 简介"></a>CAS(Compare and swap) 简介</h3><p>使用锁时, 线程获取锁是一种<strong>悲观锁策略</strong>, 即假设每一次执行临界区代码都会产生冲突, 所以当前线程获取到锁的时候同时也会阻塞其他线程获取该锁. synchronized 关键字的实现就是悲观锁.</p>
 <p>而 CAS 操作(又称为无锁操作), 是一种<strong>乐观锁策略</strong>. 它假设所有线程访问共享资源的时候不会出现冲突, 既然不会出现冲突, 自然而然就不会阻塞其他线程的操作. 因此, 线程就不会出现阻塞停顿的状态.</p>
 <p>如果出现冲突怎么办? 无锁操作是使用 CAS 又叫做比较交换来<strong>鉴别线程是否出现冲突</strong>, 在更新的时候去判断此期间有没有人更新数据, 如果因为冲突失败, 就重试.</p>
@@ -1010,7 +1088,7 @@
 </li>
 <li><p>只能保证一个共享变量的原子操作</p>
 <blockquote>
-<p>当对一个共享变量执行操作时, 我们可以使用循环 CAS 的方式保证原子操作, 但是对多个共享变量操作室, 循环 CAS 就无法保证操作的原子性, 这个时候可以用锁来保证原子性.</p>
+<p>当对一个共享变量执行操作时, 我们可以使用循环 CAS 的方式保证原子操作, 但是对多个共享变量操作室, 循环 CAS 就无法保证操作的原子性, 这个时候可以用锁来保证原子性. 或者将多个共享变量存储在一个对象中.</p>
 </blockquote>
 </li>
 </ol>
@@ -1408,7 +1486,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重要概念"><span class="nav-text">重要概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步和同步"><span class="nav-text">异步和同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发和并行"><span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发"><span class="nav-text">高并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#临界区"><span class="nav-text">临界区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-text">阻塞和非阻塞</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程使用的常见三种方式"><span class="nav-text">多线程使用的常见三种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程生命周期"><span class="nav-text">线程生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程状态"><span class="nav-text">线程状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程控制"><span class="nav-text">线程控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例变量和线程安全"><span class="nav-text">实例变量和线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程分类"><span class="nav-text">多线程分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized-关键字"><span class="nav-text">synchronized 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全"><span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized-锁重入"><span class="nav-text">synchronized 锁重入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象监视器-monitor"><span class="nav-text">对象监视器(monitor)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile-关键字"><span class="nav-text">volatile 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性"><span class="nav-text">可见性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原子性"><span class="nav-text">原子性?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等待-通知-wait-notify-机制"><span class="nav-text">等待/通知(wait/notify)机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关方法"><span class="nav-text">相关方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和-wait-区别"><span class="nav-text">sleep() 和 wait() 区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ThreadLocal"><span class="nav-text">ThreadLocal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#InheritableThreadLocal"><span class="nav-text">InheritableThreadLocal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock-接口"><span class="nav-text">Lock 接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lock-接口简介"><span class="nav-text">Lock 接口简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性和方法"><span class="nav-text">特性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantLock"><span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Condition"><span class="nav-text">Condition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公平锁与非公平锁"><span class="nav-text">公平锁与非公平锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantReadWriteLock"><span class="nav-text">ReentrantReadWriteLock</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特性与方法"><span class="nav-text">特性与方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的状态"><span class="nav-text">锁的状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#偏向锁"><span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轻量级锁"><span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重量级锁"><span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自旋锁"><span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自适应自旋锁"><span class="nav-text">自适应自旋锁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAS"><span class="nav-text">CAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-Compare-and-swap-简介"><span class="nav-text">CAS(Compare and swap) 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乐观锁的实现方式-CAS"><span class="nav-text">乐观锁的实现方式 CAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-的缺点"><span class="nav-text">CAS 的缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下文切换"><span class="nav-text">上下文切换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少上下文切换"><span class="nav-text">减少上下文切换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池"><span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用线程池的好处"><span class="nav-text">使用线程池的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor-框架"><span class="nav-text">Executor 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor-框架流程图"><span class="nav-text">Executor 框架流程图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ThreadPoolExecutor"><span class="nav-text">ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建-ThreadPoolExecutor"><span class="nav-text">创建 ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方式一-通过构造方法实现"><span class="nav-text">方式一: 通过构造方法实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方式二-通过-Executors-工具类创建-常见的有-4-种"><span class="nav-text">方式二: 通过 Executors 工具类创建, 常见的有 4 种:</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重要概念"><span class="nav-text">重要概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步和同步"><span class="nav-text">异步和同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发和并行"><span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发"><span class="nav-text">高并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#临界区"><span class="nav-text">临界区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-text">阻塞和非阻塞</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程使用的常见三种方式"><span class="nav-text">多线程使用的常见三种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程生命周期"><span class="nav-text">线程生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程状态"><span class="nav-text">线程状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程控制"><span class="nav-text">线程控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例变量和线程安全"><span class="nav-text">实例变量和线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程分类"><span class="nav-text">多线程分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized-关键字"><span class="nav-text">synchronized 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全"><span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized-锁重入"><span class="nav-text">synchronized 锁重入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象头"><span class="nav-text">对象头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象监视器-monitor"><span class="nav-text">对象监视器(monitor)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile-关键字"><span class="nav-text">volatile 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性"><span class="nav-text">可见性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原子性"><span class="nav-text">原子性?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等待-通知-wait-notify-机制"><span class="nav-text">等待/通知(wait/notify)机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关方法"><span class="nav-text">相关方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和-wait-区别"><span class="nav-text">sleep() 和 wait() 区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ThreadLocal"><span class="nav-text">ThreadLocal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#InheritableThreadLocal"><span class="nav-text">InheritableThreadLocal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock-接口"><span class="nav-text">Lock 接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lock-接口简介"><span class="nav-text">Lock 接口简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性和方法"><span class="nav-text">特性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantLock"><span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Condition"><span class="nav-text">Condition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公平锁与非公平锁"><span class="nav-text">公平锁与非公平锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantReadWriteLock"><span class="nav-text">ReentrantReadWriteLock</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特性与方法"><span class="nav-text">特性与方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的状态"><span class="nav-text">锁的状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#偏向锁"><span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轻量级锁"><span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重量级锁"><span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自旋锁"><span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自适应自旋锁"><span class="nav-text">自适应自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点对比"><span class="nav-text">优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAS"><span class="nav-text">CAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-Compare-and-swap-简介"><span class="nav-text">CAS(Compare and swap) 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乐观锁的实现方式-CAS"><span class="nav-text">乐观锁的实现方式 CAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-的缺点"><span class="nav-text">CAS 的缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下文切换"><span class="nav-text">上下文切换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少上下文切换"><span class="nav-text">减少上下文切换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池"><span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用线程池的好处"><span class="nav-text">使用线程池的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor-框架"><span class="nav-text">Executor 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor-框架流程图"><span class="nav-text">Executor 框架流程图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ThreadPoolExecutor"><span class="nav-text">ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建-ThreadPoolExecutor"><span class="nav-text">创建 ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方式一-通过构造方法实现"><span class="nav-text">方式一: 通过构造方法实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方式二-通过-Executors-工具类创建-常见的有-4-种"><span class="nav-text">方式二: 通过 Executors 工具类创建, 常见的有 4 种:</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
