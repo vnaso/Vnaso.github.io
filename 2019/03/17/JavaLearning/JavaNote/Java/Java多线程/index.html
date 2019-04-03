@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e248554755.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/18/5c8ef47a449f0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24a1d225f.jpg">
-<meta property="og:updated_time" content="2019-04-03T01:26:43.193Z">
+<meta property="og:updated_time" content="2019-04-03T14:45:57.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 多线程">
 <meta name="twitter:description" content="重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作.  并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”. 多线程在单核 CPU 中是交替执行(并发), 在多核 CPU">
@@ -472,7 +472,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-03 09:26:43" itemprop="dateModified" datetime="2019-04-03T09:26:43+08:00">2019-04-03</time>
+                <time title="修改时间：2019-04-03 22:45:57" itemprop="dateModified" datetime="2019-04-03T22:45:57+08:00">2019-04-03</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1:33</span>
+                <span title="阅读时长">1:32</span>
               
             </div>
           
@@ -594,7 +594,6 @@
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.Callable;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutionException;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.FutureTask;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CallableThreadTest</span> <span class="keyword">implements</span> <span class="title">Callable</span>&lt;<span class="title">Integer</span>&gt;</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">			System.out.println(Thread.currentThread().getName()+<span class="string">" "</span>+i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		CallableThreadTest ctt = <span class="keyword">new</span> CallableThreadTest();</span><br><span class="line">		FutureTask&lt;Integer&gt; ft = <span class="keyword">new</span> FutureTask&lt;&gt;(ctt);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">100</span>;i++)&#123;</span><br><span class="line">			System.out.println(Thread.currentThread().getName()+<span class="string">" 的循环变量i的值"</span>+i);</span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">20</span>)&#123;</span><br><span class="line">				<span class="keyword">new</span> Thread(ft,<span class="string">"有返回值的线程"</span>).start();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			System.out.println(<span class="string">"子线程的返回值："</span>+ft.get());</span><br><span class="line">		&#125; <span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (ExecutionException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<blockquote>
 <p><strong>Runnable 和 Callable 的对比</strong></p>
 <ol>
 <li>Callable 规定重写 <code>call()</code>, Runnable 规定重写 <code>run()</code>.</li>
@@ -602,7 +601,6 @@
 <li><code>call()</code> 方法可以抛出异常, <code>run()</code> 方法不可以</li>
 <li>运行 Callable 任务可以得到一个 Future 对象, 表示异步计算的结果, 提供了检查计算是否完成的方法, 以等待计算的完成, 并检查计算的结果. 通过 Future 对象还可以了解任务的执行情况, 可以取消任务的执行, 还可以获取执行结果.</li>
 </ol>
-</blockquote>
 <h2 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h2><p><img src="https://i.loli.net/2019/03/29/5c9e232a6ebb4.jpg" alt="0062LbXpgy1g15xzlyojyj30oc0domy4.jpg"></p>
 <p><img src="https://i.loli.net/2019/03/29/5c9e237a7b850.jpg" alt="线程生命周期"></p>
 <h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3><ul>
@@ -713,14 +711,10 @@
 <li><p>对变量的写入操作不依赖变量的当前值, 或者能确保只有单个线程更新变量的值.</p>
 </li>
 <li><p>该变量没有包含在具有其他变量的不变式中.</p>
-<blockquote>
 <p>如:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> flag;</span><br><span class="line">&gt; <span class="keyword">while</span>(!flag)&#123;</span><br><span class="line">&gt;     <span class="comment">// do something...</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="function"><span class="keyword">public</span> <span class="title">setFlag</span><span class="params">()</span></span>&#123;</span><br><span class="line">&gt;     flag = <span class="keyword">false</span>;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> flag;</span><br><span class="line"><span class="keyword">while</span>(!flag)&#123;</span><br><span class="line"> <span class="comment">// do something...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">setFlag</span><span class="params">()</span></span>&#123;</span><br><span class="line"> flag = <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>不适用示例:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">int</span> count;</span><br><span class="line">&gt; <span class="comment">// ...</span></span><br><span class="line">&gt; run() &#123;</span><br><span class="line">&gt;     count++; <span class="comment">// 不能保证原子性</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">volatile</span> <span class="keyword">int</span> count;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">run() &#123;</span><br><span class="line"> count++; <span class="comment">// 不能保证原子性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>只是需要解决变量在多个线程之间的可见性. 资源的同步性应交由 synchronized 关键字.</p>
 </li>
@@ -1560,7 +1554,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:18</span>
+    <span title="站点阅读时长">7:17</span>
   
 </div>
 

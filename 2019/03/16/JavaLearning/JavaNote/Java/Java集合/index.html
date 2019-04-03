@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Vnaso">
 <meta property="og:description" content="集合框架Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:  Collection 是单列集合, Map 是双列集合 Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一 Collection 的数据结构是针对元素的, Map 的数据结构是针对键的  CollectionCollection 主要分为 List 和 Set  Li">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T09:31:17.620Z">
+<meta property="og:updated_time" content="2019-04-03T14:44:39.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集合框架">
 <meta name="twitter:description" content="集合框架Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:  Collection 是单列集合, Map 是双列集合 Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一 Collection 的数据结构是针对元素的, Map 的数据结构是针对键的  CollectionCollection 主要分为 List 和 Set  Li">
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-03 17:31:17" itemprop="dateModified" datetime="2019-04-03T17:31:17+08:00">2019-04-03</time>
+                <time title="修改时间：2019-04-03 22:44:39" itemprop="dateModified" datetime="2019-04-03T22:44:39+08:00">2019-04-03</time>
               
             
           </span>
@@ -525,7 +525,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.7k</span>
+                <span title="本文字数">3.6k</span>
               
 
               
@@ -571,71 +571,51 @@
 <li><strong>Set</strong>: 存取无序, 元素不可以重复</li>
 </ul>
 <h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
-<li><p><strong>ArrayList</strong>: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 非线程安全.</p>
-</li>
-<li><p><strong>LinkedList</strong>: 底层数据结构是链表, 所以查询慢, 增删快. 非线程安全.</p>
-</li>
-<li><p><strong>Vector(已过时)</strong>: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 线程安全.</p>
-</li>
+<li><strong>ArrayList</strong>: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 非线程安全.</li>
+<li><strong>LinkedList</strong>: 底层数据结构是链表, 所以查询慢, 增删快. 非线程安全.</li>
+<li><strong>Vector(已过时)</strong>: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 线程安全.</li>
 </ul>
-<blockquote>
 <p><strong>ArrayList 和 LinkedList 的异同</strong></p>
 <ol>
-<li><p><strong>是否线程安全</strong>: ArrayList 和 LinkedList 都是不同步的, 非线程安全</p>
-</li>
-<li><p><strong>底层数据结构</strong>: </p>
-<ul>
-<li><p>ArrayList 底层使用的是 Object 数组.</p>
-</li>
-<li><p>LinkedList 底层使用的是双向链表数据结构.</p>
-</li>
+<li><strong>是否线程安全</strong>: ArrayList 和 LinkedList 都是不同步的, 非线程安全</li>
+<li><strong>底层数据结构</strong>: <ul>
+<li>ArrayList 底层使用的是 Object 数组.</li>
+<li>LinkedList 底层使用的是双向链表数据结构.</li>
 </ul>
 </li>
-<li><p><strong>插入和删除是否受元素位置的影响</strong>:</p>
-<ul>
+<li><strong>插入和删除是否受元素位置的影响</strong>:<ul>
 <li>ArrayList 采用数组存储, 所以插入和删除元素的时间复杂度受元素位置的影响.</li>
 <li>LinkedList 采用链表存储, 所以插入, 删除元素时间复杂度不受元素位置影响.</li>
 </ul>
 </li>
-<li><p><strong>是否支持快速随机访问</strong>: </p>
-<ul>
+<li><strong>是否支持快速随机访问</strong>: <ul>
 <li>LinkedList 不支持高效的随机元素访问</li>
 <li>ArrayList 支持, 通过元素的索引快速获取元素对象</li>
 </ul>
 </li>
-<li><p><strong>内存空间占用</strong>:</p>
-<ul>
+<li><strong>内存空间占用</strong>:<ul>
 <li>ArrayList 的空间浪费主要体现在在 List 列表的结尾会预留一定的容量空间.</li>
 <li>LinkedList 的空间花费则体现在它的每一个元素都需要消耗比 ArrayList 更多的空间(因为要存放前前驱, 后继节点以及数据)</li>
 </ul>
 </li>
-<li><p><strong>RandomAccess接口</strong>:</p>
-</li>
+<li><strong>RandomAccess接口</strong>:</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">RandomAccess</span></span>&#123;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">RandomAccess</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>RandomAccess 接口中什么都没有定义. 也就是说, 这个接口充当一个标识的作用, 标识实现这个接口的类具有随机访问功能.</p>
 <p>在 <code>binarySearch()</code> 方法中, 它要判断传入的 List 是否是 RandomAccess 的实例.</p>
 <ul>
-<li><p>如果是, 调用 <code>indexedBinarySearch()</code> 方法.</p>
-</li>
-<li><p>如果不是, 调用 <code>iteratorBinarySearch()</code> 方法.</p>
-</li>
+<li>如果是, 调用 <code>indexedBinarySearch()</code> 方法.</li>
+<li>如果不是, 调用 <code>iteratorBinarySearch()</code> 方法.</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;  <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt;</span><br><span class="line">&gt;  <span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(List&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; list, T key)</span> </span>&#123;</span><br><span class="line">&gt;      <span class="keyword">if</span> (list <span class="keyword">instanceof</span> RandomAccess || list.size()&lt;BINARYSEARCH_THRESHOLD)</span><br><span class="line">&gt;          <span class="keyword">return</span> Collections.indexedBinarySearch(list, key);</span><br><span class="line">&gt;      <span class="keyword">else</span></span><br><span class="line">&gt;          <span class="keyword">return</span> Collections.iteratorBinarySearch(list, key);</span><br><span class="line">&gt;  &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(List&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; list, T key)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (list <span class="keyword">instanceof</span> RandomAccess || list.size()&lt;BINARYSEARCH_THRESHOLD)</span><br><span class="line">      <span class="keyword">return</span> Collections.indexedBinarySearch(list, key);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">return</span> Collections.iteratorBinarySearch(list, key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>ArrayList 实现了 RandomAccess 接口, 而 LinkedList 没有实现. 因为 ArrayList 底层数据结构是数组, 而 LinkedList 底层数据结构是双向链表. 它们实现随机访问的时间复杂度分别为 O(1) 和 O(n).</p>
 <ol start="7">
-<li><p><strong>List 遍历方式的选择</strong></p>
-<ul>
+<li><strong>List 遍历方式的选择</strong><ul>
 <li>实现了 RandomAccess 接口的 List: 优先选择普通 for 循环, 其次 foreach.</li>
 <li>未实现 RandomAccess 接口的 List: 优先选择 Iterator 遍历(foreach 遍历底层实现也是通过 Iterator), size 大的数据, 不要使用普通 for 循环.</li>
 </ul>
 </li>
 </ol>
-</blockquote>
 <h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><ul>
 <li><p><strong>HashSet</strong>: 底层实际上是一个 HashMap 实例, 不保证迭代顺序, 非线程安全, 允许元素为 Null, 初始容量非常影响迭代性能.</p>
 <blockquote>
@@ -668,9 +648,6 @@
 <blockquote>
 <p>如果 Comparator 为 Null, 则使用 Key 作为比较器进行比较, 并且 key 必须实现 Comparable 接口.</p>
 </blockquote>
-</li>
-</ul>
-<blockquote>
 <p><strong>HashMap 和 HashTable 的区别</strong></p>
 <ol>
 <li>HashMap 是非线程安全的, HashTable 是线程安全的. HashTable 内部的方法基本都经过 synchronized 修饰.</li>
@@ -679,7 +656,8 @@
 </ol>
 <p>如果想要线程安全, 可以使用 ConcurrentHashMap.</p>
 <p>ConcurrentHashMap 对整个桶数组进行了分割分段(Segment), 然后在每一个分段上都用 lock 锁进行保护, 相对于 HashTable 的 synchronized 锁的粒度更精细, 并发性能更好. (JDK1.8 之后 ConcurrentHashMap 启用了一种全新的方式实现, 利用 CAS 算法). ConcurrentHashMap 不允许 Null.</p>
-</blockquote>
+</li>
+</ul>
 <h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><ul>
 <li><p><strong>PriorityQueue</strong>: 不允许 Null, 按元素大小进行重新排序, 底层数据结构是最小堆, 非线程安全.</p>
 <blockquote>
@@ -1040,7 +1018,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">7:18</span>
+    <span title="站点阅读时长">7:17</span>
   
 </div>
 
