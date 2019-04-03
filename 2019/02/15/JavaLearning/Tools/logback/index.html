@@ -693,9 +693,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Logback/" rel="tag"><i class="fa fa-tag"></i> Logback</a>
+            <a href="/tags/Logback/" rel="tag"># Logback</a>
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
         </div>
       
@@ -1185,15 +1185,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + '')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-                'X-LC-Key': 'guStzHNvDHlTGtL46Ow1MKfL',
+                'X-LC-Id': '',
+                'X-LC-Key': '',
                 'Content-Type': 'application/json',
               },
               data: data
