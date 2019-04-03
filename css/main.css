@@ -1779,7 +1779,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff41f7;
+  background: #25d2f9;
 }
 .feed-link,
 .chat {
@@ -2819,4 +2819,31 @@ ul.breadcrumb li+li:last-child {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+blockquote {
+  border-left: 4px solid #42b983;
+  padding: 10px 15px;
+  color: #777;
+  background-color: rgba(66,185,131,0.1);
+}
+.pace .pace-progress {
+  background: #1e92fb; /*进度条颜色*/
+  height: 3px;
+}
+.pace .pace-progress-inner {
+  box-shadow: 0 0 10px #1e92fb, 0 0 5px #1e92fb; /*阴影颜色*/
+}
+.pace .pace-activity {
+  border-top-color: #1e92fb; /*上边框颜色*/
+  border-left-color: #1e92fb; /*左边框颜色*/
+}
+.headband {
+  background: transparent;
 }
