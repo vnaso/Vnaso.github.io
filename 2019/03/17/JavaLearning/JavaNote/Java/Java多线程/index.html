@@ -126,20 +126,20 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e232a6ebb4.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e237a7b850.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e23af2cdc8.jpg">
-<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/0062LbXpgy1g1ncd4pnwuj30sg095afx.jpg">
-<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1f32088062.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/03/5ca40b770eeca.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1f32088062.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e23df33d2b.jpg">
-<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1edfd1783c.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1edfd1783c.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e2416d122c.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e243340784.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24605e258.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e2474bf965.jpg">
-<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1f0b76b38e.png">
-<meta property="og:image" content="http://vnaso.github.io/2019/03/17/JavaLearning/JavaNote/Java/Java多线程/images/5ca1f0a760ea0.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1f0b76b38e.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1f0a760ea0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e248554755.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/18/5c8ef47a449f0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24a1d225f.jpg">
-<meta property="og:updated_time" content="2019-04-01T11:33:14.482Z">
+<meta property="og:updated_time" content="2019-04-03T01:26:43.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 多线程">
 <meta name="twitter:description" content="重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作.  并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”. 多线程在单核 CPU 中是交替执行(并发), 在多核 CPU">
@@ -490,7 +490,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-01 19:33:14" itemprop="dateModified" datetime="2019-04-01T19:33:14+08:00">2019-04-01</time>
+                <time title="Modified: 2019-04-03 09:26:43" itemprop="dateModified" datetime="2019-04-03T09:26:43+08:00">2019-04-03</time>
               
             
           </span>
@@ -648,14 +648,14 @@
 </tbody>
 </table>
 <p><strong>32位虚拟机对象头的存储结构</strong></p>
-<p><img src="images/0062LbXpgy1g1ncd4pnwuj30sg095afx.jpg" alt=""></p>
+<p><img src="https://i.loli.net/2019/04/03/5ca40b770eeca.jpg" alt="0062LbXpgy1g1ncd4pnwuj30sg095afx.jpg"></p>
 <p><strong>64位虚拟机对象头的存储结构</strong></p>
-<p><img src="images/5ca1f32088062.png" alt="UTOOLS1554117408933.png"></p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1f32088062.png" alt="UTOOLS1554117408933.png"></p>
 <h2 id="对象监视器-monitor"><a href="#对象监视器-monitor" class="headerlink" title="对象监视器(monitor)"></a>对象监视器(monitor)</h2><p><img src="https://i.loli.net/2019/03/29/5c9e23df33d2b.jpg" alt="0062LbXpgy1g15vb674msj30jg079dfr.jpg"></p>
 <p>每个对象都有自己的监视器, 当这个对象由同步块或者这个对象的同步方法调用时, 执行方法的线程必须先获取该对象的监视器才能进入同步块和同步方法. 没有获取到监视器的进程将被阻塞在同步块和同步方法的入口处, 进入 BLOCKED 状态. </p>
 <p>任意线程对 Object 的访问, 首先要获得 Object 的监视器, 如果获取失败, 该线程就要进入同步队列, 线程变为 BLOCKED, 当 Object 的监视器占有者释放后, 在同步队列中的线程就有机会重新获取该监视器.</p>
 <p>Monitor 是线程私有的数据结构, 每个线程有一个可用的 monitor record 列表, 同时还有一个全局的可用列表. 每一个被锁住的对象都会和一个 monitor 关联(对象头的 Mark Word 中的 Lock Word 指向 Monitor 的起始地址), 同时 Monitor 中有一个 owner 字段存放拥有该锁的线程的唯一标识, 标识该锁被这个线程占用, 结构如下:</p>
-<p><img src="images/5ca1edfd1783c.jpg" alt="0062LbXpgy1g1669naxf3j306y0h9dfo.jpg"></p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1edfd1783c.jpg" alt="0062LbXpgy1g1669naxf3j306y0h9dfo.jpg"></p>
 <ul>
 <li>Owner: 初始时为 Null, 表示当前没有任何现场拥有该 Monitor Record, 当线程成功拥有该锁后, 保存线程唯一表示, 当锁被释放时, 又设置为 Null.</li>
 <li>EntryQ: 关联一个系统互斥锁, 阻塞所有视图锁住 Monitor Record 失败的线程.</li>
@@ -1012,9 +1012,9 @@
 <p>偏向锁的目标是: 减少无竞争且只有一个线程使用锁的情况下, 使用轻量级锁产生的性能消耗. 轻量级锁每次申请, 释放锁都至少需要一次 <a href="#CAS">CAS</a>, 但偏向锁只有初始化时需要一次 CAS. “偏向”的意思是, 偏向锁假定将来只有<strong>第一个申请锁的线程会使用锁</strong>(不会有任何线程再来申请锁), 因此, 只需要在 Mark Word 中 CAS 记录 owner(本质上也是更新, 但初始值为空). 如果记录成功, 则偏向锁获取成功, 记录锁状态为偏向锁, 以后当前线程等于 owner 就可以零成本直接获得锁; 否则, 说明有其他线程竞争, 膨胀为轻量级锁.</p>
 <p><strong>偏向锁无法使用自旋锁优化</strong>, 因为一旦有其他线程申请锁, 就破坏了偏向锁的假定.</p>
 <h3 id="轻量级锁"><a href="#轻量级锁" class="headerlink" title="轻量级锁"></a>轻量级锁</h3><p>轻量级锁时有偏向锁升级来的, 偏向锁运行在一个线程进入同步块的情况下, 当第二个线程加入锁争用的时候, 偏向锁就会升级为轻量级锁. </p>
-<p><img src="images/5ca1f0b76b38e.png" alt="UTOOLS1554116792119.png"></p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1f0b76b38e.png" alt="UTOOLS1554116792119.png"></p>
 <p>轻量级锁是在没有多线程竞争的前提下, 减少传统的重量级锁使用产生的性能消耗. 轻量级锁所适应的场景是线程交替执行同步块的情况, 如果存在同一时间访问同一锁的情况, 就会导致轻量级锁升级为重量级锁. 使用轻量级锁时, 不需要申请互斥量, 仅仅将 Mark Word 中的部分直接 CAS 更新子项线程栈中的 Lock Record, 如果更新成功, 则轻量级锁获取成功, 记录锁的状态为轻量级锁; 否则, 说明已经有线程获得了轻量级锁, 目前发生了锁竞争, 接下来就膨胀为重量级锁.</p>
-<p><img src="images/5ca1f0a760ea0.png" alt="UTOOLS1554116775863.png"></p>
+<p><img src="https://i.loli.net/2019/04/01/5ca1f0a760ea0.png" alt="UTOOLS1554116775863.png"></p>
 <h3 id="重量级锁"><a href="#重量级锁" class="headerlink" title="重量级锁"></a>重量级锁</h3><p>重量级锁在 JVM 中又叫对象监视器(Monitor), 至少包含一个竞争锁队列, 和一个信号阻塞队列(wait 队列), 前者负责做互斥, 后者用于做线程同步.</p>
 <h3 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h3><p>自旋锁原理十分简单, 如果持有锁的线程能在很短时间释放锁资源, 那么那些等待竞争锁的线程就不需要做内核态和用户态之间的切换进入阻塞挂起状态, 它们只需要等一等(自旋), 等待有锁的线程释放锁后即可立即获取锁. 这样就避免用户线程和内核的切换的消耗. 但是线程自旋需要消耗 CPU, 如果一直获取不到锁, 那线程也不能一直占用 CPU 自旋做无用功, 所以需要设定一个自旋等待的最大时间. 如果持有锁的线程执行的时间超过自旋等待的最大时间仍没有释放锁, 就会导致其他争用锁的线程在最大等待时间内获取不到锁, 这时争用线程会停止自旋进入阻塞状态.</p>
 <h3 id="自适应自旋锁"><a href="#自适应自旋锁" class="headerlink" title="自适应自旋锁"></a>自适应自旋锁</h3><p>自适应意味着<strong>自旋的时间不在固定</strong>, 而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定:</p>
@@ -1276,8 +1276,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/16/JavaLearning/JavaNote/Java/Java集合/" rel="next" title="ArrayList">
-                <i class="fa fa-chevron-left"></i> ArrayList
+              <a href="/2019/03/16/JavaLearning/JavaNote/Java/Java集合/" rel="next" title="集合框架">
+                <i class="fa fa-chevron-left"></i> 集合框架
               </a>
             
           </div>
