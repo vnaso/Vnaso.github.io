@@ -2017,7 +2017,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff26b5;
+  background: #ee24cd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3164,4 +3164,55 @@ ul.breadcrumb li+li:last-child {
   height: 2px;
   background: #ccc;
   text-align: center;
+}
+.posts-expand blockquote {
+  border-left: 4px solid #42b983;
+  padding: 10px 15px;
+  color: #777;
+  background-color: rgba(66,185,131,0.1);
+}
+.posts-expand code,
+.posts-expand tt {
+  margin: 0 2px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 0.92rem;
+  color: #e96900;
+  background-color: #f8f8f8;
+}
+.posts-expand #write .md-fences {
+  border: 1px solid #f4f4f4;
+  -webkit-font-smoothing: initial;
+  margin: 0.8rem 0 !important;
+  padding: 0.3rem 0 !important;
+  line-height: 1.43rem;
+  background-color: #f8f8f8 !important;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.posts-expand #write .CodeMirror-wrap .CodeMirror-code pre {
+  padding-left: 12px;
+}
+.posts-expand #write mark {
+  background-color: #ebffeb;
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin: 0 2px;
+  color: #222;
+  font-weight: 500;
+}
+.posts-expand #write pre.md-meta-block {
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 3px;
+  color: #777;
+  margin-top: 0 !important;
+}
+.posts-expand .on-focus-mode blockquote {
+  border-left-color: rgba(85,85,85,0.12);
 }
