@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/Redis.html</loc>
-    <lastmod>2019-04-15</lastmod>
+    <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/Redis.html</loc>
+    <lastmod>2019-04-16</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8.html</loc>
+    <lastmod>2019-04-16</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E5%9F%BA%E7%A1%80.html</loc>
+    <lastmod>2019-04-16</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%20IO.html</loc>
     <lastmod>2019-04-15</lastmod>
@@ -17,9 +23,6 @@
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E9%9B%86%E5%90%88.html</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E5%9F%BA%E7%A1%80.html</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/JavaEE.html</loc>
