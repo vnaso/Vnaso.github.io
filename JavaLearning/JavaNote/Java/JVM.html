@@ -98,13 +98,13 @@
 
 
 
-  <meta name="description" content="简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据, 也就是调用类的 &amp;lt;clinit&amp;gt;() 方法.  运行时数据区  堆: 线程共享. 存放对象及数组实例, 也就是运行期">
-<meta name="keywords" content="Java,JVM">
+  <meta name="description" content="title: JVMdate: 2019/05/01 11:39categories:  Javatags: Java JVM  简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据,">
+<meta name="keywords" content="coding vnaso">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JVM">
+<meta property="og:title" content="Vnaso">
 <meta property="og:url" content="http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据, 也就是调用类的 &amp;lt;clinit&amp;gt;() 方法.  运行时数据区  堆: 线程共享. 存放对象及数组实例, 也就是运行期">
+<meta property="og:description" content="title: JVMdate: 2019/05/01 11:39categories:  Javatags: Java JVM  简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据,">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/05/01/5cc91f6a9de2f.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/01/5cc9388438f90.png">
@@ -115,10 +115,27 @@
 <meta property="og:image" content="https://i.loli.net/2019/05/02/5ccb02e0a67fb.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/02/5ccaf40c711e8.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/02/5ccafa829033b.png">
-<meta property="og:updated_time" content="2019-05-02T14:54:53.995Z">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccbaf8ca0346.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccbafabb0ec2.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccbb121808a7.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccbf8fa17f40.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccbf6faca0cb.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccbfac15a819.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc00b68a62b.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc00f6b8a4b.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc046d06fb1.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0101f0ee2.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc010b382e4.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc079c2a81f.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0bce87f1a.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0c185b18c.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0c0c8e67f.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0f22344f5.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc12684a9b3.png">
+<meta property="og:updated_time" content="2019-05-03T10:12:29.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JVM">
-<meta name="twitter:description" content="简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据, 也就是调用类的 &amp;lt;clinit&amp;gt;() 方法.  运行时数据区  堆: 线程共享. 存放对象及数组实例, 也就是运行期">
+<meta name="twitter:title" content="Vnaso">
+<meta name="twitter:description" content="title: JVMdate: 2019/05/01 11:39categories:  Javatags: Java JVM  简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据,">
 <meta name="twitter:image" content="https://i.loli.net/2019/05/01/5cc91f6a9de2f.png">
 
 
@@ -137,7 +154,7 @@
   };
 </script>
 
-  <title>JVM | Vnaso</title>
+  <title> | Vnaso</title>
   
 
 
@@ -423,7 +440,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JVM
+          <h1 class="post-title" itemprop="name headline">
 
               
             
@@ -449,7 +466,7 @@
                 
               
 
-              <time title="创建时间：2019-05-01 11:39:00" itemprop="dateCreated datePublished" datetime="2019-05-01T11:39:00+08:00">2019-05-01</time>
+              <time title="创建时间：2019-05-01 11:12:35" itemprop="dateCreated datePublished" datetime="2019-05-01T11:12:35+08:00">2019-05-01</time>
             
 
             
@@ -466,29 +483,11 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-02 22:54:53" itemprop="dateModified" datetime="2019-05-02T22:54:53+08:00">2019-05-02</time>
+                <time title="修改时间：2019-05-03 18:12:29" itemprop="dateModified" datetime="2019-05-03T18:12:29+08:00">2019-05-03</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -511,7 +510,7 @@
 
           
           
-            <span id="/JavaLearning/JavaNote/Java/JVM.html" class="leancloud_visitors" data-flag-title="JVM">
+            <span id="/JavaLearning/JavaNote/Java/JVM.html" class="leancloud_visitors" data-flag-title="">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -536,7 +535,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">13k</span>
+                <span title="本文字数">21k</span>
               
 
               
@@ -550,7 +549,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">56 分钟</span>
+                <span title="阅读时长">1:32</span>
               
             </div>
           
@@ -570,7 +569,13 @@
       
 
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="JVM-组成架构"><a href="#JVM-组成架构" class="headerlink" title="JVM 组成架构"></a>JVM 组成架构</h3><p><img src="https://i.loli.net/2019/05/01/5cc91f6a9de2f.png" alt="UTOOLS1556684648062.png"></p>
+        <p>title: JVM<br>date: 2019/05/01 11:39<br>categories:</p>
+<ul>
+<li>Java<br>tags:</li>
+<li>Java</li>
+<li>JVM</li>
+</ul>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="JVM-组成架构"><a href="#JVM-组成架构" class="headerlink" title="JVM 组成架构"></a>JVM 组成架构</h3><p><img src="https://i.loli.net/2019/05/01/5cc91f6a9de2f.png" alt="UTOOLS1556684648062.png"></p>
 <ol>
 <li><p>类加载器</p>
 <p>类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据, 也就是调用类的 <code>&lt;clinit&gt;()</code> 方法.</p>
@@ -742,7 +747,7 @@
 <li>如果 <code>BootstrapClassLoader</code> 加载失败(例如在 <code>$JAVA_HOME/jre/lib</code> 中未查找到该 Class), 会让 <code>ExtClassLoader</code> 来尝试加载.</li>
 <li>如果 <code>ExtClassLoader</code> 加载失败, 则会使用 <code>AppClassLoader</code> 来加载, 如果 <code>AppClassLoader</code> 也加载失败, 则会报异常 <code>ClassNotFoundException</code>.</li>
 </ol>
-<h2 id="JVM-内存结构"><a href="#JVM-内存结构" class="headerlink" title="JVM 内存结构"></a>JVM 内存结构</h2><p>Java 虚拟机在执行 Java 程序的过程中会把它管理的内存区域划分为若干个不同的数据区域. 根据<em>《Java虚拟机规范》</em>的规定, Java 虚拟机所管理的内存包括的运行时数据区域分为: <em>方法区</em>, <em>堆</em>, <em>栈</em>, <em>程序计数器</em>, <em>本地方法栈</em>. 其中<em>堆</em>是 JVM 中最大的一块, 可以进一步分为<em>年轻代</em>和<em>老年代</em>, <em>年轻代</em>又可进一步分为<em>Eden(伊甸区)</em>和2个<em>Survivor(幸存区)</em>[^1]. 可参考下图进行理解:</p>
+<h2 id="JVM-内存结构"><a href="#JVM-内存结构" class="headerlink" title="JVM 内存结构"></a>JVM 内存结构</h2><p>Java 虚拟机在执行 Java 程序的过程中会把它管理的内存区域划分为若干个不同的数据区域. 根据<em>《Java虚拟机规范》</em>的规定, Java 虚拟机所管理的内存包括的运行时数据区域分为: <em>方法区</em>, <em>堆</em>, <em>栈</em>, <em>程序计数器</em>, <em>本地方法栈</em>. 其中<em>堆</em>是 JVM 中最大的一块, 可以进一步分为<em>新生代</em>和<em>老年代</em>, <em>新生代</em>又可进一步分为<em>Eden(伊甸区)</em>和2个<em>Survivor(幸存区)</em>[^1]. 可参考下图进行理解:</p>
 <p><img src="https://i.loli.net/2019/05/02/5ccae4c3c50ca.png" alt="UTOOLS1556800707127.png"></p>
 <h3 id="栈-Java-Stack"><a href="#栈-Java-Stack" class="headerlink" title="栈(Java Stack)"></a>栈(Java Stack)</h3><p><em>栈</em>是线程私有的内存区域, 它的生命周期与线程相同. </p>
 <p><em>栈</em>描述的是 Java 方法执行的内存模型, 每个方法执行的同时都会创建一个<em>栈帧(Stack Frame)</em>用于存储<em>局部变量表</em>, <em>操作数栈</em>, <em>动态链接</em>和<em>方法出口</em>等信息. 每一个方法被调用直至执行完成的过程, 就对应着一个<em>栈帧</em>在<em>栈</em>中从入栈到出栈的过程.</p>
@@ -773,7 +778,205 @@
 <p>使用 <code>new String(&quot;xxx&quot;)</code> 是在堆中创建一个 <code>String</code> 对象实例, 所以两个 <code>new String(&quot;hello&quot;)</code> 使用 <code>==</code> 时返回 <code>false</code>. 而使用 <code>new String(&quot;hello&quot;).intern()</code> 则为 <code>true</code>.</p>
 </blockquote>
 <h3 id="直接内存-Direct-Memory"><a href="#直接内存-Direct-Memory" class="headerlink" title="直接内存(Direct Memory)"></a>直接内存(Direct Memory)</h3><p><em>直接内存</em>并不是虚拟机<em>运行时数据区</em>的一部分, 也不是 Java 虚拟机规范中定义的内存区域. 但这部分内存也被频繁地使用, 而且也可能导致 <code>OutOfMemoryError</code> 异常出现. 在 JDK 中最直观的表现就是 <strong>NIO</strong>, 基于<em>Channel(通道)</em>与<em>Buffer(缓冲区)</em>的 I/O 方式, 它可以使用 Native 函数库<strong>直接分配堆外内存</strong>, 然后通过一个存储在<em>堆</em>中的 <code>DirectByteBuffer</code> 对象作为这块内存的引用进行操作. 这样能在一些场景中显著提高性能, 因为避免了在<em>堆</em>和<em>Native堆</em>中来回复制数据.</p>
-<h2 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h2><h2 id="JVM-常用参数"><a href="#JVM-常用参数" class="headerlink" title="JVM 常用参数"></a>JVM 常用参数</h2><ul>
+<h2 id="垃圾回收-GC"><a href="#垃圾回收-GC" class="headerlink" title="垃圾回收(GC)"></a>垃圾回收(GC)</h2><blockquote>
+<p><em>垃圾回收(Garbage Collection)</em>简称<em>GC</em>. 在 JVM 中, <em>程序计数器</em>, <em>栈</em>, <em>本地方法栈</em>都是随线程而生随线程而灭, <em>栈帧</em>随着方法的进入和退出做入栈和出栈操作, 实现了自动的内存清理. 而<em>堆</em>和<em>方法区</em>则不同, 一个接口中的多个实现类需要的内存可能不一样, 一个方法中的多个分支需要的内存也可能不一样, 我们只有在程序处于运行期才知道哪些对象会创建, 这部分的内存的分配和回收都是动态的. <em>垃圾回收</em>所关注的就是这部分内存.</p>
+</blockquote>
+<h3 id="对象存活判断"><a href="#对象存活判断" class="headerlink" title="对象存活判断"></a>对象存活判断</h3><p>判断对象是否存活一般有两种方式:</p>
+<ol>
+<li><p><strong>引用计数</strong>: 每个对象有一个引用计数属性, 新增一个引用时计数加 1; 引用释放时计数减 1. 计数为 0 时可以回收. 此方法比较简单, 但无法解决对象相互循环引用的问题.</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccbaf8ca0346.png" alt="UTOOLS1556852622302.png"></p>
+<p>从图中可以看出, 如果直接把 Obj1-reference 和 Obj2-reference 置为 <code>null</code>, 在<em>堆</em>当中的两块内存依然保持着互相引用无法回收.</p>
+</li>
+<li><p><strong>可达性分析(Reachability Analysis)</strong>: 从 GC Roots 开始向下搜索, 搜索所走过的路径称为<em>引用链</em>. 当一个对象到 GC Roots 没有任何<em>引用链</em>相连时, 则证明此对象是不可用的, 即不可达对象.</p>
+<p>在 Java 中, GC Roots 包括: </p>
+<ul>
+<li><em>栈</em>(<em>栈帧</em>中的本地变量表)中引用的对象.</li>
+<li><em>方法区</em>中类静态属性引用的对象.</li>
+<li><em>方法区</em>中常量引用的对象.</li>
+<li><em>本地方法栈</em>中 JNI(即 Native 方法) 引用的对象.</li>
+</ul>
+<p><img src="https://i.loli.net/2019/05/03/5ccbafabb0ec2.png" alt="UTOOLS1556852653375.png"></p>
+</li>
+</ol>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>从 JDK1.2 开始, 对象的引用被划分为 4 个级别, 从而使程序能够更加灵活地控制<strong>对象的生命周期</strong>. 这 4 种级别<strong>由高到低</strong>依次为: <em>强引用</em>, <em>软引用</em>, <em>弱引用</em>和<em>虚引用</em>.</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccbb121808a7.png" alt="UTOOLS1556853027254.png"></p>
+<h4 id="强引用-Strong-Reference"><a href="#强引用-Strong-Reference" class="headerlink" title="强引用(Strong Reference)"></a>强引用(Strong Reference)</h4><p><em>强引用</em>是最简单, 使用最普遍的引用. 如果一个对象具有强引用, 那么垃圾回收器就绝不会回收它. 当<strong>内存空间不足</strong>时, Java 虚拟机宁愿抛出 <code>OutOfMemoryError</code> 异常, 也不会通过回收具有<em>强引用</em>的对象来解决内存不足的问题. 如果<em>强引用</em>对象不使用时, 需要弱化从而使 <em>GC</em> 能够回收, 如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建强引用对象</span></span><br><span class="line">Object strongReference = <span class="keyword">new</span> Object();</span><br><span class="line"><span class="comment">// 弱化方便 GC 回收</span></span><br><span class="line">strongReference = <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+<p>如果在一个<em>局部变量</em>是<em>强引用</em>, 这个引用保存在<em>栈</em>中, 而真正的引用内容保存在<em>堆</em>中. 当<em>局部变量</em>所在的方法执行完成后, 就会退出方法栈, 则引用对象的引用数为 0, 这个对象会被回收.</p>
+<h3 id="软引用-SoftReference"><a href="#软引用-SoftReference" class="headerlink" title="软引用(SoftReference)"></a>软引用(SoftReference)</h3><p>如果一个对象只具有<em>软引用</em>, 则<strong>内存空间充足</strong>时, 垃圾回收器<strong>不会</strong>回收它. 如果<strong>内存空间不足</strong>时, 就会<strong>回收</strong>这些对象.</p>
+<blockquote>
+<p><em>软引用</em>可以用来实现内存敏感的高速缓存.</p>
+</blockquote>
+<p><em>软引用</em>可以和一个<em>引用队列(ReferenceQueue)</em>结合使用, 如果<em>软引用</em>所引用对象被垃圾回收, Java 虚拟机就会把这个<em>软引用</em>加入到与之关联的<em>引用队列</em>中.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建引用队列</span></span><br><span class="line">ReferenceQueue&lt;String&gt; refQueue = <span class="keyword">new</span> ReferenceQueue&lt;&gt;();</span><br><span class="line"><span class="comment">// 创建软引用对象</span></span><br><span class="line">String string = <span class="keyword">new</span> String(<span class="string">"soft"</span>);</span><br><span class="line">SoftReference&lt;String&gt; softReference = <span class="keyword">new</span> SoftReference(string,refQueue);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当软引用被垃圾回收后, 调用 poll() 方法可以获得该对象</span></span><br><span class="line">Reference&lt; ? extends String&gt; ref = refQueue.poll();</span><br></pre></td></tr></table></figure>
+<h3 id="弱引用-WeakReference"><a href="#弱引用-WeakReference" class="headerlink" title="弱引用(WeakReference)"></a>弱引用(WeakReference)</h3><p><em>弱引用</em>与<em>软引用</em>的区别在于: 只具有<em>弱引用</em>的对象拥有更短暂的生命周期. 一旦进行垃圾回收, 无论当前内存空间足够与否, <em>弱引用</em>对象都会被回收. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建弱引用对象</span></span><br><span class="line">String string = <span class="keyword">new</span> String(<span class="string">"weak"</span>);</span><br><span class="line">WeakReference&lt;String&gt; weakReference = <span class="keyword">new</span> WeakReference&lt;&gt;(string);</span><br><span class="line"><span class="comment">// 获取弱引用所引用的对象</span></span><br><span class="line">String res = weakReference.get();</span><br></pre></td></tr></table></figure>
+<p><em>弱引用</em>也可以和<em>引用队列</em>结合使用.</p>
+<h3 id="虚引用-PhantomReference"><a href="#虚引用-PhantomReference" class="headerlink" title="虚引用(PhantomReference)"></a>虚引用(PhantomReference)</h3><p><em>虚引用</em>与其他引用不同, <em>虚引用</em>不会决定对象的声明周期. <em>虚引用</em>在任何时候都可能被垃圾回收.</p>
+<p><strong>注意</strong>: <em>虚引用</em>必须和<em>引用队列</em>结合使用, 当垃圾回收器准备回收一个对象时, 如果发现它还有<em>虚引用</em>, 就会在回收对象的内存之前, 把这个<em>虚引用</em>加入到与之关联的<em>引用队列</em>中.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建引用队列</span></span><br><span class="line">ReferenceQueue&lt;String&gt; refQueue = <span class="keyword">new</span> ReferenceQueue&lt;&gt;();</span><br><span class="line"><span class="comment">// 创建虚引用</span></span><br><span class="line">String str = <span class="keyword">new</span> String(<span class="string">"PhantomReference"</span>);</span><br><span class="line"><span class="function">PhantomReference&lt;String&gt;  <span class="title">phantomReference</span><span class="params">(str,refQueue)</span></span>;</span><br><span class="line"></span><br><span class="line">System.out.println(phantomReference.get()); <span class="comment">// 获取的结果为 null</span></span><br><span class="line"><span class="comment">// 触发 GC</span></span><br><span class="line">System.gc();</span><br><span class="line"><span class="comment">// 此时虚引用对象被加入到引用队列</span></span><br><span class="line">System.out.println(refQueue.poll().get()); <span class="comment">// 获取到 "PhantomReference"</span></span><br></pre></td></tr></table></figure>
+<p>程序可以通过判断<em>引用队列</em>中是否已经加入了<em>虚引用</em>来了解被引用的对象是否将要进行垃圾回收. 如果程序发现某个<em>虚引用</em>已经被加入到<em>引用队列</em>, 那么就可以在所引用的对象的被回收之前采取最后的收尾工作. 比如<strong>资源清理和释放</strong>, 它比 finalize 更灵活, 可以基于<em>虚引用</em>做更安全可靠的对象关联的资源回收.</p>
+<h3 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h3><h4 id="标记-清除算法-Mark-Sweep"><a href="#标记-清除算法-Mark-Sweep" class="headerlink" title="标记-清除算法(Mark-Sweep)"></a>标记-清除算法(Mark-Sweep)</h4><p><em>标记-清除算法</em>分为<strong>标记</strong>和<strong>清除</strong>两个阶段: 首先<strong>标记</strong>出所有需要回收的对象, 在标记完成后统一回<strong>清除</strong>回收掉所有被<strong>标记</strong>的对象. 之所以说它是最基础的收集算法, 是因为后续的收集算法都是基于这种思路并对其缺点进行改进而得到的.</p>
+<p>主要的缺点有两个: 一个是<strong>效率问题</strong>, 标记和清除过程的效率都不高; 另外一个是<strong>空间问题</strong>, 标记清除之后会产生大量的内存碎片, 内存碎片太多可能会导致当程序在以后的运行过程中需要分配较大对象时无法找到足够的连续内存而不得不提前触发另一次垃圾回收.</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccbf8fa17f40.png" alt="UTOOLS1556871419286.png"></p>
+<h4 id="复制收集算法-Copying"><a href="#复制收集算法-Copying" class="headerlink" title="复制收集算法(Copying)"></a>复制收集算法(Copying)</h4><p><em>复制收集算法</em>将可用内存按容量划分为大小相等的两块, 每次只使用其中的一块. 当这一个块的内存用完时, 就将还存活着的对象复制到另一块内存上, 然后再把已使用的内存空间一次清理掉.</p>
+<p>这样使得每次都是对其中的一块内存进行回收, 内存分配时也就不用考虑内存碎片等复杂情况, 只要移动堆顶指针, 按顺序分配内存即可, 实现简单, 运行高效. 这种算法的代价是将可用内存缩小为原来的一半, 持续复制长生存期的对象则导致效率降低.</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccbf6faca0cb.png" alt="UTOOLS1556870907145.png"></p>
+<h4 id="标记-压缩算法-Mark-Compact"><a href="#标记-压缩算法-Mark-Compact" class="headerlink" title="标记-压缩算法(Mark-Compact)"></a>标记-压缩算法(Mark-Compact)</h4><p><em>复制收集算法</em>在对象存活率较高时就要频繁执行复制操作, 效率将会变低. 更关键的是, 如果不想浪费 50% 的空间, 就需要有额外的空间进行分配担保, 以应对被使用的内存中所有对象都 100% 存活的极端情况, 所以在老年代一般不能直接选用这种算法.</p>
+<p>根据老年代存活期长的特点, 有人提出了另外一种<em>标记-整理算法</em>, 标记过程仍然与<em>标记-清除算法</em>相同, 但后续步骤不是直接对可回收对象进行整理, 而是让所有存活的对象都向一端移动, 然后直接清理掉端边界以外的内存.</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccbfac15a819.png" alt="UTOOLS1556871873581.png"></p>
+<h4 id="分代收集算法-Generation-Collection"><a href="#分代收集算法-Generation-Collection" class="headerlink" title="分代收集算法(Generation Collection)"></a>分代收集算法(Generation Collection)</h4><p><em>分代回收算法</em>的基本思想是: 根据垃圾回收对象的特性, 对不同阶段使用最合适的算法用于本阶段的垃圾回收. 它将内存区间根据对象的特点分成几块, 根据每块内存区间的特点, 使用不同的回收算法, 以提高垃圾回收的效率. </p>
+<p>以 Hot Spot 虚拟机为例, 它将所有的新建对象都放入<em>新生代</em>的内存区域, <em>新生代</em>的特点是对象会很快被回收. 因此, 在<em>新生代</em>就选择效率较高的<em>复制算法</em>. 当一个对象经过一次回收后依然存活, 它的年龄就加 1, 如果对象的年龄大于阈值(默认为 15, 通过 <code>-XXMaxTenuringThreshold</code> 参数设置, 最大为 15), 就会被放入<em>老年代</em>的内存空间. 在<em>老年代</em>中, 几乎所有的对象都是数次回收后依然得以幸存的, 因此, 可以认为这些对象在一段时期内, 甚至在应用程序的整个生命周期中, 将是常驻内存.  如果依然使用<em>复制算法</em>收集<em>老年代</em>, 将需要复制大量对象. 再加上<em>老年代</em>回收性价比要低于<em>新生代</em>, 因此这种做法也是不可取的. 根据<strong>分代</strong>的思想, 可以对<em>老年代</em>的回收使用与<em>新生代</em>不同的<em>标记-压缩算法</em>, 以提高垃圾回收效率.</p>
+<h3 id="垃圾收集器"><a href="#垃圾收集器" class="headerlink" title="垃圾收集器"></a>垃圾收集器</h3><blockquote>
+<p>如果说收集算法是内存回收的方法论, 垃圾收集器就是内存回收的具体实现.</p>
+</blockquote>
+<h4 id="Serial-收集器"><a href="#Serial-收集器" class="headerlink" title="Serial 收集器"></a>Serial 收集器</h4><p><em>Serial 收集器</em>是最古老的以及效率最高的收集器, 只使用一个线程去回收, 但可能会产生较长的停顿.</p>
+<p><em>新生代</em>和<em>老年代</em>使用串行回收. <em>新生代</em>使用<em>复制算法</em>, <em>老年代</em>使用<em>标记-压缩算法</em>. 垃圾回收的过程中会<em>Stop The World(服务暂停)</em>.</p>
+<p>参数控制:</p>
+<ul>
+<li><code>-XX:+UseSerialGC</code>: Serial 收集器</li>
+</ul>
+<p><img src="https://i.loli.net/2019/05/03/5ccc00b68a62b.png" alt="UTOOLS1556873397966.png"></p>
+<h4 id="ParNew-收集器"><a href="#ParNew-收集器" class="headerlink" title="ParNew 收集器"></a>ParNew 收集器</h4><p><em>ParNew 收集器</em>其实就是 <em>Serial 收集器</em>的多线程版本.</p>
+<p><em>新生代</em>并行, <em>老年代</em>串行. <em>新生代</em>使用<em>复制算法</em>, <em>老年代</em>使用<em>标记-压缩算法</em>. 垃圾回收的过程中同样会<em>Stop The World(服务暂停)</em>.</p>
+<p>参数控制: </p>
+<ul>
+<li><code>-XX:+UseParNewGC</code>: ParNew 收集器</li>
+<li><code>-XX:ParallelGCThreads</code>: 限制线程数量</li>
+</ul>
+<p><img src="https://i.loli.net/2019/05/03/5ccc00f6b8a4b.png" alt="UTOOLS1556873463849.png"></p>
+<h4 id="Parallel-Scavenge-收集器"><a href="#Parallel-Scavenge-收集器" class="headerlink" title="Parallel Scavenge 收集器"></a>Parallel Scavenge 收集器</h4><p><em>Parallel Scavenge 收集器</em>类似 <em>ParNew 收集器</em>, 其更关注系统的<em>吞吐量</em>. 可以通过参数来打开自适应调节策略, 虚拟机会根据当前系统的运行情况收集性能监控信息, 动态调整这些参数以提供最合适的<em>停顿时间</em>或最大的<em>吞吐量</em>; 也可以通过参数控制 <em>GC</em> 的时间不大于多少毫秒或者比例.</p>
+<p><em>新生代</em>使用<em>复制算法</em>, <em>老年代</em>使用<em>标记-压缩</em>算法. <em>新生代</em>并行, <em>老年代</em>串行.</p>
+<p>参数控制:</p>
+<ul>
+<li><code>-XX:+UseParallelGC</code>: 使用 Parallel 收集器</li>
+</ul>
+<p><img src="https://i.loli.net/2019/05/03/5ccc046d06fb1.png" alt="UTOOLS1556874349353.png"></p>
+<h4 id="Serial-Old-收集器"><a href="#Serial-Old-收集器" class="headerlink" title="Serial Old 收集器"></a>Serial Old 收集器</h4><p><img src="https://i.loli.net/2019/05/03/5ccc0101f0ee2.png" alt="UTOOLS1556873475381.png"></p>
+<h4 id="Paralle-Old-收集器"><a href="#Paralle-Old-收集器" class="headerlink" title="Paralle Old 收集器"></a>Paralle Old 收集器</h4><p><em>Parallel Old 收集器</em>是<em>Paralle Scavenge 收集器</em>的<em>老年代</em>版本, 使用多线程和<em>标记-压缩算法</em>. 这个收集器是在 JDK1.6 才开始提供.</p>
+<p><em>新生代</em>使用<em>复制算法</em>, <em>老年代</em>使用<em>标记-压缩算法</em>. <em>新生代</em>和<em>老年代</em>并行.</p>
+<p>参数控制:</p>
+<ul>
+<li><code>-XX:+UseParallelOldGc</code>: 使用 <em>Parallel 收集器</em></li>
+</ul>
+<p><img src="https://i.loli.net/2019/05/03/5ccc010b382e4.png" alt="UTOOLS1556873484636.png"></p>
+<h4 id="CMS-收集器"><a href="#CMS-收集器" class="headerlink" title="CMS 收集器"></a>CMS 收集器</h4><p><em>CMS(Concurrent Mark Sweep)收集器</em>是一种以获取最短回收停顿时间为目标的收集器. 目前很大一部分的 Java 引用都集中在互联网站或 B/S 系统的服务端上, 这类引用尤其中是服务的响应速度, 希望系统停顿时间最短, 以给用户带来较好的体验.</p>
+<p><em>CMS GC</em> 采用了<em>标记-清除算法</em>, 它的运作过程相对于前面几种收集器来说要更加复杂一些, 整个过程分为以下步骤:</p>
+<ol>
+<li><p>初始标记(STW initial mark)</p>
+<p>需要 <em>Stop The World</em>. 这个过程从垃圾回收的 GC Roots 开始, 只扫描能够和 GC Roots 直接关联的对象, 并作标记. 所以这个过程虽然暂停了整个 JVM, 但是很快就完成了.</p>
+</li>
+<li><p>并发标记(Concurrent marking)</p>
+<p>这个阶段紧随<em>初始标记</em>阶段, 在<em>初始标记</em>的基础上继续向下追溯标记. 此阶段, 引用程序的线程和<em>并发标记</em>的线程并发执行, 所以用于不会感受到停顿.</p>
+</li>
+<li><p>并发预清理(Concurrent precleanig)</p>
+<p><em>并发预清理</em>阶段仍是并发的. 这个阶段, 虚拟机查找在执行<em>并发标记</em>阶段新进入<em>老年代</em>的对象(可能会有一些对象从<em>新生代</em>晋升到<em>老年代</em>, 或者有一些对象被分配到<em>老年代</em>). 通过重新扫描, 减少下一个阶段<em>重新标记</em>的工作, 因为下一个阶段会 <em>STW</em>.</p>
+</li>
+<li><p>重新标记(STW remark)</p>
+<p>需要 <em>Stop The World</em>, 时间较<em>初始标记</em>阶段要长一些. 为了修正<em>并发标记</em>期间, 因用于程序继续运作而导致标记产生变动的那一部分对象的标记记录. </p>
+</li>
+<li><p>并发清除(Concurrent sweeping)</p>
+<p>清理垃圾对象, 与应用程序线程并发执行.</p>
+</li>
+<li><p>并发重置(Concurrent reset)</p>
+<p>这个阶段, 重置 <em>CMS 收集器</em>的数据结构, 等待下一次垃圾回收.</p>
+</li>
+</ol>
+<p>参数控制:</p>
+<ul>
+<li><code>-XX:+UseConcMarkSweepGC</code>: 使用CMS收集器</li>
+<li><code>-XX:+ UseCMSCompactAtFullCollection</code>: Full GC 后, 进行一次碎片整理; 整理过程是独占的, 会引起停顿时间变长</li>
+<li><code>-XX:+CMSFullGCsBeforeCompaction</code>: 设置进行几次 Full GC  后, 进行一次碎片整理</li>
+<li><code>-XX:ParallelCMSThreads</code>: 设定CMS的线程数量(一般情况约等于可用CPU数量)</li>
+</ul>
+<p><img src="https://i.loli.net/2019/05/03/5ccc079c2a81f.png" alt="UTOOLS1556875164774.png"></p>
+<h4 id="G1-收集器"><a href="#G1-收集器" class="headerlink" title="G1 收集器"></a>G1 收集器</h4><p><em>G1 收集器</em>是 JDK1.7 中正式投入使用的用于取代 CMS 的压缩回收器, 它虽然没有物理上隔断<em>新生代</em>与<em>老年代</em>, 但是仍然属于分代垃圾回收器. <em>G1 GC</em> 仍然会区分<em>新生代</em>与<em>老年代</em>, <em>新生代</em>依然有 <em>Eden区</em>与 <em>Survivor区</em>. <em>G1 GC</em> 首先将堆分为大小相等的 <em>Region</em>, 避免全区域的垃圾收集, 然后追踪每个 <em>Region</em> 垃圾堆积的价值大小, 在后台维护一个优先列表, 根据允许的手机时间优先回收价值最大的 <em>Region</em>; 同时 <em>G1 GC</em> 采用 Remembered Set 来存放 <em>Region</em> 之间的对象引用以及其他回收器中的<em>新生代</em>与<em>老年代</em>之间的对象引用, 从而避免全堆扫描.</p>
+<p>G1 内存分布</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccc0bce87f1a.png" alt="UTOOLS1556876238766.png"></p>
+<p>一次 Young GC</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccc0c185b18c.png" alt="UTOOLS1556876313762.png"></p>
+<p><img src="https://i.loli.net/2019/05/03/5ccc0c0c8e67f.png" alt="UTOOLS1556876301977.png"></p>
+<p>随着 <em>G1 GC</em>的出现, Java 垃圾回收器通过引入 <em>Region</em> 概念, 从传统的连续堆内存布局设计, 逐步走向了<strong>物理上不连续但逻辑上依旧连续的内存块</strong>. 这样我们能够将某个 <em>Region</em> 动态地分配给 <em>Eden</em>, <em>Survivor</em>, <em>老年代</em>, <em>大对象空间</em>和<em>空闲区间</em>等任意一个. 每个 <em>Region</em> 都有一个关联的 Remembered Set(简称 RS), RS 的数据结构是 Hash 表, 里面的数据是 Card Table(堆中每 512byte 映射在 Card Table 1 byte). 简单地说 RS 里面存在的是 <em>Region</em> 中存活对象的指针. 当 <em>Region</em> 中数据发生变化时, 首先反映到 Card Table 中的一个或多个 Card 上, RS 通过扫描内部的 Card Table 得知 <em>Region</em> 中内存使用情况和存活对象. 在使用 <em>Region</em> 过程中, 如果 <em>Region</em> 被填满了, 分配内存的线程会重新选择一个新 <em>Region</em>, 空闲 <em>Region</em> 被组织到一个基于链表的组织结构(Linkedlist)中, 这样可以快速找到新的 <em>Region</em>.</p>
+<p>总结 <em>G1 GC</em> 的特性如下:</p>
+<ul>
+<li>并行性: <em>G1</em> 在回收期间, 可以有多个 GC 线程同时工作, 有效利用多核计算能力.</li>
+<li>并发性: <em>G1</em> 拥有与应用程序交替执行的能力, 部分工作可以和应用程序同时执行, 因此, 一般来说, <strong>不会再整个回收阶段发生阻塞应用程序的情况</strong>.</li>
+<li>分代 GC: <em>G1</em> 依然是一个分代回收器, 但是和之前的各类回收器不同, 它同时兼顾<em>年轻代</em>和<em>老年代.</em> 对比其他回收器, 或者工作在<em>年轻代</em>, 或者工作在<em>老年代</em>.</li>
+<li>空间整理: <em>G1</em> 在回收过程中, 会进行适当的对象移动, 不像 <em>CMS</em> 只是简单地标记清理对象. 在若干次 GC 后, CMS 必须进行一次碎片整理. 而 <em>G1</em> butong , 它每次回收都会有效地复制对象, 减少空间碎片, 进而提升内部循环速度.</li>
+<li>可预见性: 为了缩短停顿时间, <em>G1</em> 建立可预存停顿的模型, 这样在用户设置的停顿时间范围内, <em>G1</em> 会适当选择恰当的区域进行收集, 确保停顿时间不超过用户指定时间.</li>
+</ul>
+<p><em>G1 GC</em> 的工作步骤如下所示:</p>
+<p><img src="https://i.loli.net/2019/05/03/5ccc0f22344f5.png" alt="UTOOLS1556877090244.png"></p>
+<ul>
+<li>初始标记: 标记一下 GC Roots 能直接关联的对象并修改 TAMS 值, 需要 STW 但耗时很短.</li>
+<li>并发标记: 从 GC Roots 从堆中对象进行可达性分析寻找存活的对象, 耗时较长, 但可以与用户线程并发执行.</li>
+<li>最终标记: 为了修正并发标记期间产生变动的那一部分标记记录, 这一期间的变化记录在 Remembered Set Log 里, 然后合并到 Remembered Set 里, 该阶段需要 STW 但是可并行执行.</li>
+<li>筛选回收: 对各个 <em>Region</em> 回收价值排序, 根据用户期望的 GC 停顿时间制定回收计划来回收.</li>
+</ul>
+<p>参数设置:</p>
+<ul>
+<li><code>--XX:+UseG1GC</code> 使用 G1 收集器</li>
+<li><code>-XX:MaxGCPauseMillis=n</code>: 设置最大GC停顿时间(GC pause time)指标(target). 这是一个软性指标(soft goal), JVM 会尽量去达成这个目标.</li>
+<li><code>-XX:G1HeapRegionSize=n</code>: 此参数指定每个 <em>Region</em> 的大小. 默认值将根据 heap size 算出最优解. 最小值为 1Mb, 最大值为 32Mb.</li>
+<li><code>-XX:ConcGCThreads=n</code>: 并发垃圾收集器使用的线程数量. 默认值随 JVM 运行的平台不同而不同.</li>
+</ul>
+<h3 id="常用的收集器组合"><a href="#常用的收集器组合" class="headerlink" title="常用的收集器组合"></a>常用的收集器组合</h3><p>不同垃圾收集器适用的范围. </p>
+<p><img src="https://i.loli.net/2019/05/03/5ccc12684a9b3.png" alt="UTOOLS1556877928882.png"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">新生代GC策略</th>
+<th style="text-align:center">老年代GC策略</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Serial</td>
+<td style="text-align:center">Serial Old</td>
+<td style="text-align:left">Serial 和 Serial Old 都是单线程进行 GC. 特点就是 GC 时暂停所有应用线程.</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Serial</td>
+<td style="text-align:center">CMS+Serial Old</td>
+<td style="text-align:left">CMS(Concurrent Mark Sweep)是并发 GC, 实现 GC 线程和应用线程并发工作, 不需要暂停所有应用线程. 另外, 当 CMS 进行 GC 失败时, 会自动使用 Serial Old 策略进行 GC.</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">ParNew</td>
+<td style="text-align:center">CMS</td>
+<td style="text-align:left">使用 <code>-XX:+UseParNewGC</code>选项来开启. ParNew 是 Serial 的并行版本, 可以指定 GC 线程数, 默认 GC 线程数为 CPU 的数量. 可以使用 <code></code>-XX:ParallelGCThreads<code>选项指定 GC 的线程数. 如果指定了选项</code>-XX:+UseConcMarkSweepGC` 选项, 则新生代默认使用ParNew GC 策略.</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">ParNew</td>
+<td style="text-align:center">Serial Old</td>
+<td style="text-align:left">使用 <code>-XX:+UseParNewGC</code> 选项来开启. 新生代使用 ParNew GC 策略, 年老代默认使用 Serial Old 策略.</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">Parallel Scavenge</td>
+<td style="text-align:center">Serial Old</td>
+<td style="text-align:left">Parallel Scavenge 策略主要是关注一个可控的吞吐量: <code>应用程序运行时间 / (应用程序运行时间 + GC 时间)</code>, 可见这会使得 CPU 的利用率尽可能的高, 适用于后台持久运行的应用程序, 而不适用于交互较多的应用程序.</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">Parallel Scavenge</td>
+<td style="text-align:center">Parallel Old</td>
+<td style="text-align:left">Parallel Old 是 Serial Old 的并行版本.</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">G1</td>
+<td style="text-align:center">G1</td>
+<td style="text-align:left"><code>-XX:+UnlockExperimentalVMOptions</code> <code>-XX:+UseG1GC</code> 开启<br><code>-XX:MaxGCPauseMillis =50</code> 暂停时间目标<br><code>-XX:GCPauseIntervalMillis =200</code> 暂停间隔目标<br><code>-XX:+G1YoungGenSize=512m</code> 年轻代大小<br><code>-XX:SurvivorRatio=6</code> 幸存区比例</td>
+</tr>
+</tbody>
+</table>
+<h2 id="JVM-常用参数"><a href="#JVM-常用参数" class="headerlink" title="JVM 常用参数"></a>JVM 常用参数</h2><ul>
 <li><code>-Xms</code>: 初始堆大小, 默认物理内存的 1/64</li>
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a><strong>参考</strong></h2><ul>
@@ -852,7 +1055,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html" title="JVM">http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html">http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -862,14 +1065,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
-            <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
-          
-        </div>
       
 
       
@@ -1055,9 +1250,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1126,7 +1319,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM-组成架构"><span class="nav-number">1.1.</span> <span class="nav-text">JVM 组成架构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-类的加载机制"><span class="nav-number">2.</span> <span class="nav-text">Java 类的加载机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类的生命周期"><span class="nav-number">2.1.</span> <span class="nav-text">类的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类的加载过程"><span class="nav-number">2.1.1.</span> <span class="nav-text">类的加载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#加载"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#连接"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">连接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#验证"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">验证</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#准备"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解析"><span class="nav-number">2.1.1.5.</span> <span class="nav-text">解析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#初始化"><span class="nav-number">2.1.1.6.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结束生命周期"><span class="nav-number">2.1.1.7.</span> <span class="nav-text">结束生命周期:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载器"><span class="nav-number">2.2.</span> <span class="nav-text">类加载器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM-类加载机制"><span class="nav-number">2.2.1.</span> <span class="nav-text">JVM 类加载机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的加载"><span class="nav-number">2.2.2.</span> <span class="nav-text">类的加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双亲委派模型"><span class="nav-number">2.2.3.</span> <span class="nav-text">双亲委派模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM-内存结构"><span class="nav-number">3.</span> <span class="nav-text">JVM 内存结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#栈-Java-Stack"><span class="nav-number">3.1.</span> <span class="nav-text">栈(Java Stack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地方法栈-Native-Method-Stacks"><span class="nav-number">3.2.</span> <span class="nav-text">本地方法栈(Native Method Stacks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器-Program-Counter-Register"><span class="nav-number">3.3.</span> <span class="nav-text">程序计数器(Program Counter Register)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆-Heap"><span class="nav-number">3.4.</span> <span class="nav-text">堆(Heap)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区-Method-Area"><span class="nav-number">3.5.</span> <span class="nav-text">方法区(Method Area)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时常量池-Runtime-Constant-Pool"><span class="nav-number">3.6.</span> <span class="nav-text">运行时常量池(Runtime Constant Pool)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接内存-Direct-Memory"><span class="nav-number">3.7.</span> <span class="nav-text">直接内存(Direct Memory)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GC"><span class="nav-number">4.</span> <span class="nav-text">GC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM-常用参数"><span class="nav-number">5.</span> <span class="nav-text">JVM 常用参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM-组成架构"><span class="nav-number">1.1.</span> <span class="nav-text">JVM 组成架构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-类的加载机制"><span class="nav-number">2.</span> <span class="nav-text">Java 类的加载机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类的生命周期"><span class="nav-number">2.1.</span> <span class="nav-text">类的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类的加载过程"><span class="nav-number">2.1.1.</span> <span class="nav-text">类的加载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#加载"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#连接"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">连接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#验证"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">验证</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#准备"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解析"><span class="nav-number">2.1.1.5.</span> <span class="nav-text">解析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#初始化"><span class="nav-number">2.1.1.6.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结束生命周期"><span class="nav-number">2.1.1.7.</span> <span class="nav-text">结束生命周期:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类加载器"><span class="nav-number">2.2.</span> <span class="nav-text">类加载器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM-类加载机制"><span class="nav-number">2.2.1.</span> <span class="nav-text">JVM 类加载机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的加载"><span class="nav-number">2.2.2.</span> <span class="nav-text">类的加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双亲委派模型"><span class="nav-number">2.2.3.</span> <span class="nav-text">双亲委派模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM-内存结构"><span class="nav-number">3.</span> <span class="nav-text">JVM 内存结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#栈-Java-Stack"><span class="nav-number">3.1.</span> <span class="nav-text">栈(Java Stack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地方法栈-Native-Method-Stacks"><span class="nav-number">3.2.</span> <span class="nav-text">本地方法栈(Native Method Stacks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序计数器-Program-Counter-Register"><span class="nav-number">3.3.</span> <span class="nav-text">程序计数器(Program Counter Register)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆-Heap"><span class="nav-number">3.4.</span> <span class="nav-text">堆(Heap)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区-Method-Area"><span class="nav-number">3.5.</span> <span class="nav-text">方法区(Method Area)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时常量池-Runtime-Constant-Pool"><span class="nav-number">3.6.</span> <span class="nav-text">运行时常量池(Runtime Constant Pool)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接内存-Direct-Memory"><span class="nav-number">3.7.</span> <span class="nav-text">直接内存(Direct Memory)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾回收-GC"><span class="nav-number">4.</span> <span class="nav-text">垃圾回收(GC)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象存活判断"><span class="nav-number">4.1.</span> <span class="nav-text">对象存活判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">4.2.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强引用-Strong-Reference"><span class="nav-number">4.2.1.</span> <span class="nav-text">强引用(Strong Reference)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软引用-SoftReference"><span class="nav-number">4.3.</span> <span class="nav-text">软引用(SoftReference)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弱引用-WeakReference"><span class="nav-number">4.4.</span> <span class="nav-text">弱引用(WeakReference)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚引用-PhantomReference"><span class="nav-number">4.5.</span> <span class="nav-text">虚引用(PhantomReference)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾收集算法"><span class="nav-number">4.6.</span> <span class="nav-text">垃圾收集算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记-清除算法-Mark-Sweep"><span class="nav-number">4.6.1.</span> <span class="nav-text">标记-清除算法(Mark-Sweep)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制收集算法-Copying"><span class="nav-number">4.6.2.</span> <span class="nav-text">复制收集算法(Copying)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标记-压缩算法-Mark-Compact"><span class="nav-number">4.6.3.</span> <span class="nav-text">标记-压缩算法(Mark-Compact)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分代收集算法-Generation-Collection"><span class="nav-number">4.6.4.</span> <span class="nav-text">分代收集算法(Generation Collection)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾收集器"><span class="nav-number">4.7.</span> <span class="nav-text">垃圾收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Serial-收集器"><span class="nav-number">4.7.1.</span> <span class="nav-text">Serial 收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ParNew-收集器"><span class="nav-number">4.7.2.</span> <span class="nav-text">ParNew 收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parallel-Scavenge-收集器"><span class="nav-number">4.7.3.</span> <span class="nav-text">Parallel Scavenge 收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Serial-Old-收集器"><span class="nav-number">4.7.4.</span> <span class="nav-text">Serial Old 收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Paralle-Old-收集器"><span class="nav-number">4.7.5.</span> <span class="nav-text">Paralle Old 收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CMS-收集器"><span class="nav-number">4.7.6.</span> <span class="nav-text">CMS 收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G1-收集器"><span class="nav-number">4.7.7.</span> <span class="nav-text">G1 收集器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的收集器组合"><span class="nav-number">4.8.</span> <span class="nav-text">常用的收集器组合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM-常用参数"><span class="nav-number">5.</span> <span class="nav-text">JVM 常用参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -1160,7 +1353,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">169k</span>
+    <span title="站点总字数">178k</span>
   
 
   
@@ -1169,7 +1362,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">12:16</span>
+    <span title="站点阅读时长">12:53</span>
   
 </div>
 
