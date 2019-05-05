@@ -98,22 +98,26 @@
 
 
 
-  <meta name="description" content="为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.  数字签名数字签名, 即通过提供 可鉴别 的 数字信息 来验证 自身身份 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 签名, 另一个用于 验证. 分别由 发送方 持有能够代表自己身份的 私钥">
-<meta name="keywords" content="加密算法">
+  <meta name="description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="加密算法">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Tools/加密算法.html">
+<meta property="og:title" content="Linux线上环境搭建">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.  数字签名数字签名, 即通过提供 可鉴别 的 数字信息 来验证 自身身份 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 签名, 另一个用于 验证. 分别由 发送方 持有能够代表自己身份的 私钥">
+<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qefot2c6j30sg0lcwf3.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qg9chgbmj30k706s745.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qgbkh3n3j30kg05yglh.jpg">
-<meta property="og:updated_time" content="2019-04-04T10:31:09.245Z">
+<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/04/5c7d0e96800b4.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b93f19dc78.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b807a8ab63.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b8283e0357.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b83014f41b.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b96f1831a8.png">
+<meta property="og:updated_time" content="2019-04-30T03:48:06.214Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="加密算法">
-<meta name="twitter:description" content="为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.  数字签名数字签名, 即通过提供 可鉴别 的 数字信息 来验证 自身身份 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 签名, 另一个用于 验证. 分别由 发送方 持有能够代表自己身份的 私钥">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qefot2c6j30sg0lcwf3.jpg">
+<meta name="twitter:title" content="Linux线上环境搭建">
+<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
 
 
 
@@ -121,7 +125,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Tools/加密算法">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Ops/ServerSetting">
 
 
 
@@ -131,7 +135,7 @@
   };
 </script>
 
-  <title>加密算法 | Vnaso</title>
+  <title>Linux线上环境搭建 | Vnaso</title>
   
 
 
@@ -400,7 +404,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Tools/加密算法.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -417,7 +421,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">加密算法
+          <h1 class="post-title" itemprop="name headline">Linux线上环境搭建
 
               
             
@@ -443,12 +447,24 @@
                 
               
 
-              <time title="创建时间：2019-04-04 09:53:00 / 修改时间：18:31:09" itemprop="dateCreated datePublished" datetime="2019-04-04T09:53:00+08:00">2019-04-04</time>
+              <time title="创建时间：2019-03-05 14:11:00" itemprop="dateCreated datePublished" datetime="2019-03-05T14:11:00+08:00">2019-03-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-30 11:48:06" itemprop="dateModified" datetime="2019-04-30T11:48:06+08:00">2019-04-30</time>
               
             
           </span>
@@ -465,7 +481,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
 
                 
                 
@@ -484,8 +500,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/Tools/加密算法.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Tools/加密算法.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Ops/ServerSetting.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Ops/ServerSetting.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -493,7 +509,7 @@
 
           
           
-            <span id="/JavaLearning/Tools/加密算法.html" class="leancloud_visitors" data-flag-title="加密算法">
+            <span id="/JavaLearning/Ops/ServerSetting.html" class="leancloud_visitors" data-flag-title="Linux线上环境搭建">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -518,7 +534,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">5.9k</span>
               
 
               
@@ -532,7 +548,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">16 分钟</span>
+                <span title="阅读时长">26 分钟</span>
               
             </div>
           
@@ -552,149 +568,192 @@
       
 
       
-        <blockquote>
-<p>为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.</p>
-</blockquote>
-<h2 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h2><p>数字签名, 即通过提供 <strong>可鉴别</strong> 的 <strong>数字信息</strong> 来验证 <strong>自身身份</strong> 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 <strong>签名</strong>, 另一个用于 <strong>验证.</strong> 分别由 <strong>发送方</strong> 持有能够代表自己身份的 <strong>私钥</strong>, 由 <strong>接收方</strong> 持有与私钥对应的 <strong>公钥</strong>, 用于验证发送者发送的信息是否被篡改过.</p>
-<p>发送方使用 摘要算法[^1] 提取出源文件的摘要后, 用私钥对摘要进行加密, 接收方接收到数据后, 用与发送方私钥对应的公钥对加密过的摘要进行解密, 并使用摘要算法获得文件内容的摘要, 最后将解密后的摘要和计算出的摘要进行比对, 如果一致则说明内容没有被篡改.</p>
-<p>到此为止, 数字签名提供了较强的安全性保障, 但唯一的风险就是: 接收方无法确定自己使用的公钥就是发送发提供的[^2]. 数字证书可以完美解决这个问题.</p>
-<h3 id="数字证书-Certificate-Authority"><a href="#数字证书-Certificate-Authority" class="headerlink" title="数字证书(Certificate Authority)"></a>数字证书(Certificate Authority)</h3><p>数字证书(CA)是一个由权威机构颁发的一种认可凭证. 这个机构用<a href="#非对称加密">非对称加密</a>产生一对密钥(公钥和私钥), 用私钥对公钥进行签名, 生成数字证书, 证书包含明文和密文两个部分, 明文中包含了: 签名证书的机构名, 颁发给谁, 有效期, 序列号等信息. 然后使用哈希算法对这些信息进行计算, 得到一个 hash 值, 再用私钥对这个 hash值进行加密, 这就得到了 CA 的数字签名. 将这两部分放入到数字证书的文件中, 就是一个数字证书.</p>
-<p>接收方通过使用公钥解密密文来验证数字证书的正确性. 解密得到 hash 值后, 使用相同的哈希算法对明文数据进行计算, 将计算结果与解密得到的相比对, 如果一致则说明证书是正确的. 接收方就可以使用这个公钥对数据进行解密验证.</p>
+        <p>服务器环境搭建</p>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
+<li><p>到<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载 <code>jdk</code>.</p>
 <blockquote>
-<p>数字证书的公钥是公开的, 可以通过签发这个证书的机构获取其公钥. 即, 权威的证书颁发机构来保证公钥的正确性. 这些机构的证书被各个厂商设置为 <strong>可信任的根证书</strong>, 这些根证书可以去证明其他的证书. 如果一个根证书失效, 结果将是灾难性的.</p>
+<p>注意要使用带 Auth 的下载链接下载</p>
 </blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qefot2c6j30sg0lcwf3.jpg" alt="数字签名过程"></p>
-<blockquote>
-<p>签名最根本的用途就是 <strong>验证发送方的身份</strong>, 防止 <strong>中间人攻击</strong>, <strong>CSRF跨域身份伪造</strong>. 基于这一点, 在诸如设备认证, 用户认证, 第三方认证等认证体系中, 都会用到签名算法.</p>
-</blockquote>
-<h2 id="加密和解密"><a href="#加密和解密" class="headerlink" title="加密和解密"></a>加密和解密</h2><p>数据加密是将原来为 <strong>明文</strong> 的数据内容按照某种 <strong>算法</strong> 进行处理, 使其成为 <strong>不可读</strong> 的数据, 通常称为 <strong>密文</strong>. 以达到 <strong>保护数据安全</strong> 的目的.</p>
-<p><strong>加密</strong> 的逆过程称为 <strong>解密</strong>. 即将经过处理的数据还原为原来数据的过程.</p>
-<p>加密分为 <strong>对称加密</strong> 和 <strong>非对称加密</strong> 两类.</p>
-<h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p><strong>对称加密算法</strong> 是应用较早的加密算法, 在对称加密算法中, 使用的密钥只有 1 个. 发送方和接收方都使用这个密钥来对数据进行加密和解密. 这要求双方都必须知道 <strong>加密的密钥</strong>.</p>
-<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qg9chgbmj30k706s745.jpg" alt="对称加密"></p>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>加密和解密数据使用同一个密钥, 适合对大量数据进行加密解密.</p>
-<h4 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h4><p>关键是密钥的保存方式, 任何一方泄露密钥, 都会导致信息泄露.</p>
-<h4 id="代表算法"><a href="#代表算法" class="headerlink" title="代表算法"></a>代表算法</h4><p>DES 3DES Blowfish RC4 RC5 AES</p>
-<h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><p><strong>非对称加密算法</strong> 需要两个密钥, 一个称为 <strong>公开密钥(public key)</strong>, 另一个称为 <strong>私有密钥(private key)</strong>.</p>
-<p>因为加密和解密的过程中使用的是两个不同的密钥, 所以这种算法称为非对称加密. </p>
-<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qgbkh3n3j30kg05yglh.jpg" alt="非对称加密"></p>
-<h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>使用两个密钥:  <strong>公开密钥(public key)</strong>, <strong>私有密钥(private key)</strong>. 使用其中一个密钥作为加密密钥后, 只能用相对应的另一个密钥才能解密.</p>
-<p><strong>密钥长度</strong>: 通常是 1024, 2048 位. 密钥长度增长一倍, 公钥操作所需时间增加约 4 倍. 私钥操作所需时间增加约 8 倍, 公钥生成时间增加约 16 倍.</p>
-<p><strong>加密的明文长度</strong>: 加密的明文长度不能超过 RSA 密钥的长度减去 11byte. 如密钥长度为 1024, 则明文长度不能超过 117byte(1024/8 - 11 = 117byte). 如果长度超过该值, 将会抛出异常.  <strong>加密后的密文长度为密钥长度</strong>. 如密钥长度为 1024bit, 最后生成的密文长度 <strong>固定为 1024bit</strong>.</p>
-<h4 id="安全性-1"><a href="#安全性-1" class="headerlink" title="安全性"></a>安全性</h4><p>公钥可以被任何人知道, 但是私钥泄露就会导致信息泄露.</p>
-<h4 id="代表算法-1"><a href="#代表算法-1" class="headerlink" title="代表算法"></a>代表算法</h4><p>RSA</p>
-<h3 id="哈希散列算法"><a href="#哈希散列算法" class="headerlink" title="哈希散列算法"></a>哈希散列算法</h3><p><strong>哈希散列算法</strong> 不能称作加密算法, 只是将明文的数据通过计算得出对应的一个值, 使数据 <strong>不可读</strong>, 且无法通过值来逆推出明文</p>
-<h4 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h4><p>采用某种散列函数, 输入不同长度的明文, 得出固定长度的密文. 明文的微小变化都能引起密文的巨大变化.</p>
-<h4 id="安全性-2"><a href="#安全性-2" class="headerlink" title="安全性"></a>安全性</h4><p>不能通过密文反推明文, 通常作为数据完整性校验.</p>
-<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>生成信息摘要, 验证信息完整性.</p>
-<p>不使用明文存储密码, 使用通过算法处理后的值来存储密码和验证密码.</p>
-<h4 id="代表算法-2"><a href="#代表算法-2" class="headerlink" title="代表算法"></a>代表算法</h4><p>MD5 SHA-1 SHA-2(SHA-224, SHA-256, SHA-384, SHA-512)</p>
-<h2 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h2><h3 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h3><p>MD5 用的是 <strong>哈希函数</strong>, 典型应用是对数据产生信息摘要, 以验证数据是否完整. MD5 是一种摘要算法, 对于任何的输入, 都会输出长度为 128bit 的值(通常用 <strong>16进制</strong> 表示为 <strong>32个字符</strong>).</p>
-<h3 id="SHA-1"><a href="#SHA-1" class="headerlink" title="SHA-1"></a>SHA-1</h3><p>SHA-1 是和 MD5 一样流行的 <strong>消息摘要算法</strong>. 然而 SHA-1 比 MD5 的安全性更强. 对于长度小于 <code>2^64bit</code> 的消息, SHA-1 会产生一个 160bit 的消息摘要. 基于 MD5, SHA-1 的消息摘要特性以及 <strong>不可逆</strong>, 可以被应用在检查文件完整性和数字签名等场景.</p>
-<h3 id="HMAC"><a href="#HMAC" class="headerlink" title="HMAC"></a>HMAC</h3><p>HMAC 是密钥相关的 <strong>哈希运算消息认证码</strong>(Hash-based Message Authentication Code). HMAC 运算利用 <strong>哈希算法</strong>(MD5, SHA-1等), 以 <strong>一个密钥</strong> 和 <strong>一个消息</strong> 为输入, 生成一个 <strong>消息摘要</strong> 作为输出.</p>
-<p>发送方和接受方持有一个公共密钥, 一方发送 <strong>消息和数据摘要</strong>, 另一方使用 HMAC 用 <strong>接收的数据和公共密钥</strong> 作为输入, 将得到的数据摘要与接收的相比对, 如果匹配则说明数据在传输过程中未经篡改.</p>
-<h3 id="AES-DES-3DES"><a href="#AES-DES-3DES" class="headerlink" title="AES/DES/3DES"></a>AES/DES/3DES</h3><p>三者都是对称的块加密算法, 加解密的过程是 <strong>可逆的</strong>. 常用的有 AES128, AES192, AES256.</p>
-<h4 id="DES"><a href="#DES" class="headerlink" title="DES"></a>DES</h4><p>DES 加密算法是一种分组密码[^3]. 每块数据的长度为 64bit, 使用密钥来自定义变换过程, 因此算法认为只有持有加密所用的密钥的用户才能解密密文. 密钥表面上是 64位 的, 然后只有其中的 56位 被实际用于算法, 其余 8位 可以用于奇偶校验, 并在算法中被丢弃. 因此 <strong>DES的有效密钥长度仅为56位</strong>.</p>
-<blockquote>
-<p>对于 56位 长度的密钥来说, 如果使用穷举法来进行搜索, 运算次数为 2^56 次.</p>
-</blockquote>
-<h4 id="3DES"><a href="#3DES" class="headerlink" title="3DES"></a>3DES</h4><p>是基于 DES 的对称算法, 对 <strong>一块数据</strong> 用 <strong>三个不同的密钥</strong> 进行 <strong>三次加密</strong>, 强度更高.</p>
-<h4 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h4><p>AES 加密算法是密码学中的 <strong>高级加密标准</strong>. 该加密算法采用 <strong>对称分组密码体制</strong>, 密钥长度可以为 128位, 192位, 256位. 同样是将明文分块, 每块的长度只能是 128位, 每次加密一组数据, 直到加密完整个明文. 密钥的长度不同, 加密的轮数也不同.</p>
-<p>AES 本身就是为了取代 DES 的, AES 具有更好的安全性, 效率和灵活性.</p>
-<h3 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h3><p>RSA 加密算法是目前最有影响力的 <strong>公钥加密算法</strong>, 并且被普遍认为是目前最优秀的公钥方案之一. RSA 是第一个能同时用于 <strong>加密</strong> 和 <strong>数字签名</strong> 的算法, 它能够抵抗到目前为止已知的所有密码攻击, 已被 ISO 推荐位公钥数据加密标准.</p>
-<blockquote>
-<p>RSA加密算法 基于一个十分简单的数论事实: 将两个大 <strong>素数</strong> 相乘十分容易, 但是想要对其进乘积进行因式分解却及其苦难, 因此可以将 <strong>乘积</strong> 公开作为 <strong>加密密钥</strong>.</p>
-</blockquote>
-<h4 id="对称加密算法"><a href="#对称加密算法" class="headerlink" title="对称加密算法"></a>对称加密算法</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">密钥名称</th>
-<th style="text-align:center">运行速度</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">资源消耗</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">DES</td>
-<td style="text-align:center">56位</td>
-<td style="text-align:center">较快</td>
-<td style="text-align:center">低</td>
-<td style="text-align:center">中</td>
-</tr>
-<tr>
-<td style="text-align:center">3DES</td>
-<td style="text-align:center">112位或168位</td>
-<td style="text-align:center">慢</td>
-<td style="text-align:center">中</td>
-<td style="text-align:center">高</td>
-</tr>
-<tr>
-<td style="text-align:center">AES</td>
-<td style="text-align:center">128、192、256位</td>
-<td style="text-align:center">快</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">低</td>
-</tr>
-</tbody>
-</table>
-<h4 id="非对称加密算法"><a href="#非对称加密算法" class="headerlink" title="非对称加密算法"></a>非对称加密算法</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">成熟度</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">运算速度</th>
-<th style="text-align:center">资源消耗</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">RSA</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">中</td>
-<td style="text-align:center">中</td>
-</tr>
-<tr>
-<td style="text-align:center">ECC</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">慢</td>
-<td style="text-align:center">高</td>
-</tr>
-</tbody>
-</table>
-<h4 id="哈希散列算法-1"><a href="#哈希散列算法-1" class="headerlink" title="哈希散列算法"></a>哈希散列算法</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">速度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">SHA-1</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">慢</td>
-</tr>
-<tr>
-<td style="text-align:center">MD5</td>
-<td style="text-align:center">中</td>
-<td style="text-align:center">快</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>浅谈常见的七种加密算法及实现: <a href="https://juejin.im/post/5b48b0d7e51d4519962ea383" target="_blank" rel="noopener">https://juejin.im/post/5b48b0d7e51d4519962ea383</a></li>
-<li><p>互联网安全之数字签名、数字证书与PKI系统: <a href="https://juejin.im/post/584b753b2f301e00572314dc" target="_blank" rel="noopener">https://juejin.im/post/584b753b2f301e00572314dc</a></p>
 </li>
-<li><p>公钥私钥</p>
+<li><p>解压到 <code>tar -zxvf jdk_8u_201 -C /usr/java</code></p>
+</li>
+<li><p>编辑环境变量 <code>vim /etc/profile</code>, 使环境变量生效 <code>source /etc/profile</code></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk...</span><br><span class="line">export CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/<span class="selector-tag">dt</span><span class="selector-class">.jar</span>:<span class="variable">$JAVA_HOME</span>/lib/tools<span class="selector-class">.jar</span>:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$GIT_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查是否安装成功: <code>java -version</code></p>
+</li>
+</ol>
+<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>到<a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">官网Yum仓库</a>下载 <code>rpm</code> 包.</li>
+<li><code>rpm -ivh &lt;文件名&gt;</code>或者 <code>yum localinstall &lt;文件名&gt;</code>安装刚才下载好的包</li>
+<li>此时便可以通过 <code>yum</code>安装最新的 <code>mysql</code>. 使用指令 <code>yum install mysql-community-server</code>安装</li>
+</ol>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ul>
+<li>启动 mysql: <code>service mysqld start</code></li>
+<li>关闭 mysql: <code>service mysqld stop</code></li>
+</ul>
+<ol>
+<li><p>查看 mysql 提供的初始 root 密码: <code>cat /var/log/mysqld.log | grep password</code></p>
+<p><img src="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png" alt="mysql_pwd.png"></p>
+</li>
+<li><p>登录 mysql, 若出现提示 <code>Access denied for user &#39;root&#39;@&#39;localhost&#39;</code>, 可能是密码错了.</p>
+</li>
+<li><p>修改 root 密码: <code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;vnaso943983&#39;;</code></p>
+<blockquote>
+<p>如果不想使用强密码,需要先降低密码策略等级:</p>
+<p><code>SET GLOBAL validate_password.policy=0;</code></p>
+</blockquote>
+</li>
+<li><p>创建用户 <code>CREATE USER &#39;vnaso&#39;@&#39;%&#39; IDENTIFIED BY &#39;vnaso222&#39;;</code>, 并授权: <code>GRANT ALL ON *.* TO &#39;vnaso&#39;@&#39;%&#39; WITH GRANT OPTION;</code></p>
+</li>
+<li><p>修改默认字符集. 打开 <code>/etc/my.cnf</code>, 添加如下配置:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 对本地的mysql客户端的配置</span><br><span class="line">[client]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 对其他远程连接的mysql客户端的配置</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 本地mysql服务的配置</span><br><span class="line">[mysqld]</span><br><span class="line">character-set-client-handshake = FALSE</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">collation-server = utf8mb4_unicode_ci</span><br><span class="line">default-time-zone = UTC</span><br></pre></td></tr></table></figure>
+<p>查看字符集: <code>SHOW VARIABLES WHERE Variable_name LIKE &#39;character\_set\_%&#39; OR Variable_name LIKE &#39;collation%&#39;;</code></p>
+</li>
+<li><p>查看时区: <code>show variables like &#39;%zone%&#39;;</code></p>
+<p><img src="https://i.loli.net/2019/03/04/5c7d0e96800b4.png" alt="mysql_timezone.png"></p>
+</li>
+<li><p>修改时区为 UTC: <code>set time_zone = &#39;utc&#39;;flush privileges;</code>修改时区并刷新.</p>
+<ul>
+<li><p>如果报错 <code>Unknown or incorrect time zone: &#39;UTC&#39;</code>, 在<code>shell</code>执行:  <code>mysql_tzinfo_to_sql /usr/share/zoneinfo |mysql -u root mysql -p</code>, 有warning提示 <code>Unable to load xxx</code> 是正常的.</p>
+</li>
+<li><p>如果修改了之后, 再次查询还是 <code>System</code>, 修改配置文件 <code>/etc/my.cnf</code>, 在 <code>[mysqld]</code> 下添加 <code>default-time-zone = UTC</code></p>
 </li>
 </ul>
-<p>[^1]:摘要算法指通过散列算法计算得到唯一的固定长度的哈希值, 无法逆向还原出源数据.<br>[^2]:公钥和私钥都由发送方生成, 发送方通过把公钥提供给接收方, 使其能够对数据进行校验.<br>[^3]:一种将固定长度的明文通过一系列复杂的操作变成同样长度的密文算法.</p>
+</li>
+</ol>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><ol>
+<li><p>到<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">官网</a>获取下载链接. <code>wget &lt;url&gt;</code> 下载</p>
+</li>
+<li><p>使用 <code>tar -zxvf &lt;文件名&gt;</code> 解压缩.</p>
+</li>
+<li><p>安装 <code>git</code> 前置依赖: <code>yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel curl-devel perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></p>
+</li>
+<li><p>进入 <code>git</code>安装目录下, 进行安装: <code>./configure --prefix=/usr/local/git</code>-&gt; <code>make &amp;&amp; make install</code></p>
+<p>如果报错 <code>no such file or directory</code>. 使用: <code>yum install autoconf</code>然后在目录中键入 <code>autoconf</code>, 再次进行安装即可.</p>
+</li>
+<li><p>添加环境变量. <code>vim /etc/profile</code>, 使环境变量生效<code>source /etc/profile</code></p>
+</li>
+<li><p>检查是否安装成功: <code>git --version</code></p>
+</li>
+</ol>
+<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><ol>
+<li><p>生成私钥: <code>ssh-keygen -t rsa -C &quot;XXX@outlook.com&quot;</code> 密钥名称可自定义</p>
+</li>
+<li><p>告知系统来管理生成的密钥: <code>ssh-add ~/.ssh/id_rsa</code></p>
+<blockquote>
+<p> 如果报错 <code>could not open a connection to your authentication agent</code></p>
+<p>执行命令: eval `ssh-agent`(是 <code>~</code>, 而不是单引号). 然后再执行:<code>ssh-add ~/.ssh/id_rsa</code></p>
+</blockquote>
+</li>
+<li><p>在远程服务器中添加公钥: <code>cat ~/.ssh/id_rsa.pub</code></p>
+</li>
+</ol>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>到<a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">官网</a>下载压缩包并解压.</li>
+<li>安装 <code>nginx</code>编译文件及库文件 <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel pcre pcre-devel</code></li>
+<li>进入解压后的目录进行安装: <code>./configure --prefix=/usr/local/nginx</code>-&gt;<code>make &amp;&amp; make install</code></li>
+<li>测试: <code>/usr/local/nginx/sbin/nginx -t</code></li>
+</ol>
+<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>参考<a href="./Nginx.md">Nginx配置文件说明</a></p>
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><h4 id="安装-4"><a href="#安装-4" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>到<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">官网</a>下载压缩包, 解压. 一般选择 <code>core</code> 就行</li>
+<li>防火墙打开 <code>8080</code> 端口, 启动 tomcat: <code>$CATALINA_HOME/bin/startup.sh</code></li>
+<li>测试: 访问 <code>&lt;服务器地址&gt;:8080</code></li>
+</ol>
+<h4 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h4><ol>
+<li><p>修改默认编码. <code>vim /opt/Develop/apache-tomcat-9.0.16/conf/server.xml</code>. 搜索<code>8080</code>, 在 <code>&lt;Connector&gt;</code>节点中添加 <code>URIEncoding=&quot;UTF-8&quot;</code></p>
+<p><img src="https://i.loli.net/2019/03/03/5c7b93f19dc78.png" alt="tomcatEncoding.png"></p>
+</li>
+<li><p>编辑环境变量.<code>vim /etc/profile</code>,添加<code>export CATALINA_HOME = /opt/apache-tomcat-9.0.1</code>.然后<code>source /etc/profile</code>使配置生效</p>
+</li>
+</ol>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h4 id="安装-5"><a href="#安装-5" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>到<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">官网</a>下载压缩包,解压.</li>
+<li>添加环境变量:<code>vim /etc/profile</code>,添加<code>export $MAVEN_HOME=...</code>.并将<code>$MAVEN_HOME/bin</code>添加到<code>$PATH</code>中</li>
+<li><code>source /etc/profile</code>使配置生效</li>
+<li>测试:<code>mvn -v</code></li>
+</ol>
+<h4 id="配置-4"><a href="#配置-4" class="headerlink" title="配置"></a>配置</h4><blockquote>
+<p>将下载镜像更换为阿里云中央仓库,解决依赖从境外网站下载过慢的问题</p>
+</blockquote>
+<ol>
+<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
+</li>
+<li><p>在<code>&lt;settings&gt;</code>标签下找到<code>&lt;mirrors&gt;</code>标签,添加如下代码</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存即可</p>
+</li>
+</ol>
+<h2 id="Vstpd"><a href="#Vstpd" class="headerlink" title="Vstpd"></a>Vstpd</h2><h4 id="安装-6"><a href="#安装-6" class="headerlink" title="安装"></a>安装</h4><ol>
+<li><p>下载安装:<code>yum install vstpd</code></p>
+</li>
+<li><p>创建接收上传文件的文件夹:<code>mkdir /ftpfile</code></p>
+</li>
+<li><p>创建只有上传权限不能登录的用户:<code>useradd ftpuser -d /ftpfile/ -s /sbin/nologin</code></p>
+</li>
+<li><p>给创建的<code>ftpuser</code>此用户赋予<code>/ftpfile</code>的权限:<code>chown -R ftpuser.ftpuser /ftpfile/</code>.此时用户名和用户组都是<code>ftpuser</code></p>
+<p><img src="https://i.loli.net/2019/03/03/5c7b807a8ab63.png" alt="ftpuser.png"></p>
+</li>
+<li><p>给<code>ftpuser</code>设置密码:<code>passwd ftpuser</code></p>
+</li>
+<li><p>编辑配置文件,让上传目录指向之前创建的目录:<code>vim /etc/vsftpd/vsftpd.conf</code></p>
+<blockquote>
+<p>搜索<code>banner</code>节点,此处配置<code>ftp</code>的欢迎信息.<code>ftpd_banner=xxxxx</code></p>
+<p><img src="https://i.loli.net/2019/03/03/5c7b8283e0357.png" alt="ftp_banner.png"></p>
+<p>可以选择添加<code>use_localtime=yes</code>表示使用服务器时间</p>
+<p><img src="https://i.loli.net/2019/03/03/5c7b83014f41b.png" alt="ftp_root.png"></p>
+<p>添加<code>anonymous_enable=NO</code>关闭匿名用户访问</p>
+<p>配置FTP被动模式的端口</p>
+<p><code>pasv_min_port=30000</code><br><code>pasv_max_port=30000</code></p>
+</blockquote>
+</li>
+<li><p>ftp配置</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改为NO，关闭匿名用户访问</span></span><br><span class="line"><span class="attr">anonymous_enable</span>=<span class="literal">NO</span></span><br><span class="line"><span class="comment"># 将所有本地用户限制在自家目录中。</span></span><br><span class="line"><span class="attr">chroot_local_user</span>=<span class="literal">YES</span> </span><br><span class="line"><span class="comment"># 设置系统用户FTP主目录</span></span><br><span class="line"><span class="attr">local_root</span>=/data</span><br><span class="line"><span class="comment"># 开启charoot写权限</span></span><br><span class="line"><span class="attr">allow_writeable_chroot</span>=<span class="literal">YES</span></span><br><span class="line"><span class="comment">#配置可以登录ftp的用户目录</span></span><br><span class="line"><span class="attr">userlist_deny</span>=<span class="literal">NO</span></span><br><span class="line"><span class="attr">userlist_file</span>=/etc/vsftpd/user_list</span><br><span class="line"><span class="comment">#配置ftp用户访问目录配置目录</span></span><br><span class="line"><span class="attr">user_config_dir</span>=/etc/vsftpd/userconfig</span><br><span class="line"><span class="comment"># 配置FTP被动模式的端口</span></span><br><span class="line"><span class="attr">pasv_min_port</span>=<span class="number">30000</span></span><br><span class="line"><span class="attr">pasv_max_port</span>=<span class="number">30000</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<code>ftp</code>用户登录后访问的目录</p>
+<blockquote>
+<p>在<code>/etc/vsftpd</code>目录下新建<code>userconfig</code>目录</p>
+<p>在目录下配置用户的登录目录,文件名即对应的用户名</p>
+<p><code>vim /etc/vsftpd/userconfig/ftpuser</code></p>
+<p>在创建的文件中添加<code>local_root=/ftpfile/ftpuser</code>  <code>/ftpfile</code>表示对应用户登录ftp时的根目录</p>
+<p><strong>注意</strong>:路径前不能有空格,否则不识别!!!!会报错<code>unrecognised variable in config file: local_root</code></p>
+</blockquote>
+</li>
+<li><p>重启<code>vsftpd</code></p>
+<blockquote>
+<p>启动:<code>systemctl start vsftpd.service(service vsftpd start)</code></p>
+<p>停止:<code>systemctl stop vsftpd.service(service vsftpd stop)</code></p>
+<p>重启:<code>systemctl restart vsftpd.service(service vsftpd restart)</code></p>
+</blockquote>
+</li>
+<li><p>打开防火墙,添加<code>21</code>端口和<code>30000</code>端口.</p>
+<blockquote>
+<p>添加端口:<code>firewall-cmd --add-port=21/tcp --permanent</code>,<code>firewall-cmd --add-port=21/tcp --permanent</code></p>
+<p>重启防火墙:<code>firewall-cmd --reload</code></p>
+</blockquote>
+</li>
+<li><p>测试.浏览器打开<code>ftp://服务器地址</code>登录.如果只能下载不能上传,请查阅<code>开启关闭SELinux</code>相关信息</p>
+</li>
+</ol>
+<h2 id="swap交换缓存"><a href="#swap交换缓存" class="headerlink" title="swap交换缓存"></a>swap交换缓存</h2><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><ol>
+<li>创建<code>swap</code>文件:<code>sudo fallocate -l 4G /swapfile</code>(在<code>/</code>下创建一个大小为4G的文件<code>swapfile</code>)</li>
+<li>授权<code>swap</code>文件:<code>chmod 600 /swapfile</code>(该文件的读写只能<code>root</code>操作)</li>
+<li>告知系统将文件用于<code>swap</code>:<code>mkswap /swapfile</code></li>
+<li>启用<code>swap</code>文件:<code>swapon /swapfile</code></li>
+<li>确认:<code>free</code></li>
+</ol>
+<blockquote>
+<p>至此已经在系统中启用了<code>swap</code>交换缓存,但是一旦系统重启后,服务器还不能自动启用该文件.</p>
+</blockquote>
+<h4 id="使swap永久生效"><a href="#使swap永久生效" class="headerlink" title="使swap永久生效"></a>使swap永久生效</h4><ol>
+<li>打开文件<code>nano /etc/fstab</code>,在文件末尾添加<code>/swapfile   swap    swap    sw  0   0</code></li>
+<li><code>^X</code>表示<code>Ctrl + X</code>,按下选择<code>yes</code>保存退出.</li>
+</ol>
+<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><p>在腾讯云服务器中的配置</p>
+<p><img src="https://i.loli.net/2019/03/03/5c7b96f1831a8.png" alt="profile.png"></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">CLASS_PATH</span>=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">GIT_HOME</span>=/usr/local/git</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">MAVEN_HOME</span>=/opt/Develop/apache-maven-3.6.0</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/usr/java/jdk1.8.0_201</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JRE_HOME</span>=/usr/java/jdk1.8.0_201/jre</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">CATALINA_HOME</span>=/opt/Develop/apache-tomcat-9.0.16</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -762,7 +821,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/Tools/加密算法.html" title="加密算法">http://blog.vnaso.live/JavaLearning/Tools/加密算法.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html" title="Linux线上环境搭建">http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -775,7 +834,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/加密算法/" rel="tag"><i class="fa fa-tag"></i> 加密算法</a>
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
           
         </div>
       
@@ -788,8 +847,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Java/Java多线程.html" rel="next" title="Java 多线程">
-                <i class="fa fa-chevron-left"></i> Java 多线程
+              <a href="/JavaLearning/Ops/Linux.html" rel="next" title="Linux学习笔记">
+                <i class="fa fa-chevron-left"></i> Linux学习笔记
               </a>
             
           </div>
@@ -798,8 +857,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Java/Java IO.html" rel="prev" title="Java IO">
-                Java IO <i class="fa fa-chevron-right"></i>
+              <a href="/JavaLearning/Web/CORS跨域资源共享.html" rel="prev" title="CORS跨域资源共享">
+                CORS跨域资源共享 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -875,7 +934,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -918,7 +977,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -967,7 +1028,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1036,7 +1101,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数字签名"><span class="nav-number">1.</span> <span class="nav-text">数字签名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字证书-Certificate-Authority"><span class="nav-number">1.1.</span> <span class="nav-text">数字证书(Certificate Authority)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密和解密"><span class="nav-number">2.</span> <span class="nav-text">加密和解密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密"><span class="nav-number">2.1.</span> <span class="nav-text">对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">2.1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全性"><span class="nav-number">2.1.2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代表算法"><span class="nav-number">2.1.3.</span> <span class="nav-text">代表算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密"><span class="nav-number">2.2.</span> <span class="nav-text">非对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全性-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代表算法-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">代表算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哈希散列算法"><span class="nav-number">2.3.</span> <span class="nav-text">哈希散列算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全性-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用场景"><span class="nav-number">2.3.3.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代表算法-2"><span class="nav-number">2.3.4.</span> <span class="nav-text">代表算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见算法"><span class="nav-number">3.</span> <span class="nav-text">常见算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5"><span class="nav-number">3.1.</span> <span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHA-1"><span class="nav-number">3.2.</span> <span class="nav-text">SHA-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HMAC"><span class="nav-number">3.3.</span> <span class="nav-text">HMAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AES-DES-3DES"><span class="nav-number">3.4.</span> <span class="nav-text">AES/DES/3DES</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DES"><span class="nav-number">3.4.1.</span> <span class="nav-text">DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3DES"><span class="nav-number">3.4.2.</span> <span class="nav-text">3DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AES"><span class="nav-number">3.4.3.</span> <span class="nav-text">AES</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA"><span class="nav-number">3.5.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对称加密算法"><span class="nav-number">3.5.1.</span> <span class="nav-text">对称加密算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非对称加密算法"><span class="nav-number">3.5.2.</span> <span class="nav-text">非对称加密算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希散列算法-1"><span class="nav-number">3.5.3.</span> <span class="nav-text">哈希散列算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-number">2.</span> <span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">3.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">4.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-number">4.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-number">4.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">5.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-number">5.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-number">5.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-number">6.</span> <span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-number">6.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-4"><span class="nav-number">6.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-number">7.</span> <span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-6"><span class="nav-number">7.0.1.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-number">8.</span> <span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-number">8.0.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-number">8.0.2.</span> <span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-number">9.</span> <span class="nav-text">环境变量配置</span></a></li></div>
             
 
           </div>
@@ -1070,7 +1135,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">178k</span>
+    <span title="站点总字数">190k</span>
   
 
   
@@ -1079,7 +1144,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">12:53</span>
+    <span title="站点阅读时长">13:46</span>
   
 </div>
 

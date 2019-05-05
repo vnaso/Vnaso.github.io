@@ -98,26 +98,18 @@
 
 
 
-  <meta name="description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+  <meta name="description" content="Linux学习笔记系统命令tar 解压解压到指定目录:tar -zxvf 要解压的文件 -C 目的路径  tar 命令参数 -x或–extract或–get:从备份文件中还原文件 -Z或–compress或–uncompress:通过compress指令处理备份文件 -f&amp;lt;备份文件&amp;gt;或–file=&amp;lt;备份文件&amp;gt;:指定备份文件 -v:显示操作过程 -C &amp;lt;目录&amp;gt;:这">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux线上环境搭建">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Tools/ServerSetting.html">
+<meta property="og:title" content="Linux学习笔记">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Ops/Linux.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+<meta property="og:description" content="Linux学习笔记系统命令tar 解压解压到指定目录:tar -zxvf 要解压的文件 -C 目的路径  tar 命令参数 -x或–extract或–get:从备份文件中还原文件 -Z或–compress或–uncompress:通过compress指令处理备份文件 -f&amp;lt;备份文件&amp;gt;或–file=&amp;lt;备份文件&amp;gt;:指定备份文件 -v:显示操作过程 -C &amp;lt;目录&amp;gt;:这">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/04/5c7d0e96800b4.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b93f19dc78.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b807a8ab63.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b8283e0357.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b83014f41b.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b96f1831a8.png">
-<meta property="og:updated_time" content="2019-04-30T03:48:06.214Z">
+<meta property="og:updated_time" content="2019-04-30T03:42:51.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux线上环境搭建">
-<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
-<meta name="twitter:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
+<meta name="twitter:title" content="Linux学习笔记">
+<meta name="twitter:description" content="Linux学习笔记系统命令tar 解压解压到指定目录:tar -zxvf 要解压的文件 -C 目的路径  tar 命令参数 -x或–extract或–get:从备份文件中还原文件 -Z或–compress或–uncompress:通过compress指令处理备份文件 -f&amp;lt;备份文件&amp;gt;或–file=&amp;lt;备份文件&amp;gt;:指定备份文件 -v:显示操作过程 -C &amp;lt;目录&amp;gt;:这">
 
 
 
@@ -125,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Tools/ServerSetting">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Ops/Linux">
 
 
 
@@ -135,7 +127,7 @@
   };
 </script>
 
-  <title>Linux线上环境搭建 | Vnaso</title>
+  <title>Linux学习笔记 | Vnaso</title>
   
 
 
@@ -404,7 +396,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Tools/ServerSetting.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Ops/Linux.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -421,7 +413,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux线上环境搭建
+          <h1 class="post-title" itemprop="name headline">Linux学习笔记
 
               
             
@@ -447,7 +439,7 @@
                 
               
 
-              <time title="创建时间：2019-03-05 14:11:00" itemprop="dateCreated datePublished" datetime="2019-03-05T14:11:00+08:00">2019-03-05</time>
+              <time title="创建时间：2019-03-04 15:24:00" itemprop="dateCreated datePublished" datetime="2019-03-04T15:24:00+08:00">2019-03-04</time>
             
 
             
@@ -464,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-30 11:48:06" itemprop="dateModified" datetime="2019-04-30T11:48:06+08:00">2019-04-30</time>
+                <time title="修改时间：2019-04-30 11:42:51" itemprop="dateModified" datetime="2019-04-30T11:42:51+08:00">2019-04-30</time>
               
             
           </span>
@@ -500,8 +492,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/Tools/ServerSetting.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Tools/ServerSetting.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Ops/Linux.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Ops/Linux.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -509,7 +501,7 @@
 
           
           
-            <span id="/JavaLearning/Tools/ServerSetting.html" class="leancloud_visitors" data-flag-title="Linux线上环境搭建">
+            <span id="/JavaLearning/Ops/Linux.html" class="leancloud_visitors" data-flag-title="Linux学习笔记">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -534,7 +526,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.9k</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -548,7 +540,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">26 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -568,192 +560,64 @@
       
 
       
-        <p>服务器环境搭建</p>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>到<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载 <code>jdk</code>.</p>
+        <h1 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h1><h2 id="系统命令"><a href="#系统命令" class="headerlink" title="系统命令"></a>系统命令</h2><h4 id="tar-解压"><a href="#tar-解压" class="headerlink" title="tar 解压"></a>tar 解压</h4><p>解压到指定目录:<code>tar -zxvf 要解压的文件 -C 目的路径</code></p>
 <blockquote>
-<p>注意要使用带 Auth 的下载链接下载</p>
+<p>tar 命令参数</p>
+<p>-x或–extract或–get:从备份文件中还原文件</p>
+<p>-Z或–compress或–uncompress:通过compress指令处理备份文件</p>
+<p>-f&lt;备份文件&gt;或–file=&lt;备份文件&gt;:指定备份文件</p>
+<p>-v:显示操作过程</p>
+<p>-C &lt;目录&gt;:这个选项用在解压缩,若要在特定目录解压缩,可以使用这个选项</p>
 </blockquote>
-</li>
-<li><p>解压到 <code>tar -zxvf jdk_8u_201 -C /usr/java</code></p>
-</li>
-<li><p>编辑环境变量 <code>vim /etc/profile</code>, 使环境变量生效 <code>source /etc/profile</code></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk...</span><br><span class="line">export CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/<span class="selector-tag">dt</span><span class="selector-class">.jar</span>:<span class="variable">$JAVA_HOME</span>/lib/tools<span class="selector-class">.jar</span>:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$GIT_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin:</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否安装成功: <code>java -version</code></p>
-</li>
-</ol>
-<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">官网Yum仓库</a>下载 <code>rpm</code> 包.</li>
-<li><code>rpm -ivh &lt;文件名&gt;</code>或者 <code>yum localinstall &lt;文件名&gt;</code>安装刚才下载好的包</li>
-<li>此时便可以通过 <code>yum</code>安装最新的 <code>mysql</code>. 使用指令 <code>yum install mysql-community-server</code>安装</li>
-</ol>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ul>
-<li>启动 mysql: <code>service mysqld start</code></li>
-<li>关闭 mysql: <code>service mysqld stop</code></li>
-</ul>
-<ol>
-<li><p>查看 mysql 提供的初始 root 密码: <code>cat /var/log/mysqld.log | grep password</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png" alt="mysql_pwd.png"></p>
-</li>
-<li><p>登录 mysql, 若出现提示 <code>Access denied for user &#39;root&#39;@&#39;localhost&#39;</code>, 可能是密码错了.</p>
-</li>
-<li><p>修改 root 密码: <code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;vnaso943983&#39;;</code></p>
+<h4 id="防火墙-使用firewalld"><a href="#防火墙-使用firewalld" class="headerlink" title="防火墙(使用firewalld)"></a>防火墙(使用<code>firewalld</code>)</h4><p>开启关闭重启:<code>service firewalld start/stop/restart</code></p>
+<p>查看运行状态:<code>service firewalld status</code>/<code>sudo firewall-cmd --state</code></p>
+<p>查看防火墙开放的端口:<code>sudo firewall-cmd --list-ports</code></p>
+<p>删除端口:<code>firewall-cmd --zone=分区名 --remove-port=端口号/通讯协议 --permanent</code></p>
+<p>为防火墙添加端口:<code>sudo firewall-cmd --zone=分区名 --add-port=端口号/通讯协议 --permanent(永久生效)</code></p>
 <blockquote>
-<p>如果不想使用强密码,需要先降低密码策略等级:</p>
-<p><code>SET GLOBAL validate_password.policy=0;</code></p>
-</blockquote>
-</li>
-<li><p>创建用户 <code>CREATE USER &#39;vnaso&#39;@&#39;%&#39; IDENTIFIED BY &#39;vnaso222&#39;;</code>, 并授权: <code>GRANT ALL ON *.* TO &#39;vnaso&#39;@&#39;%&#39; WITH GRANT OPTION;</code></p>
-</li>
-<li><p>修改默认字符集. 打开 <code>/etc/my.cnf</code>, 添加如下配置:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 对本地的mysql客户端的配置</span><br><span class="line">[client]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 对其他远程连接的mysql客户端的配置</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line"></span><br><span class="line"># 本地mysql服务的配置</span><br><span class="line">[mysqld]</span><br><span class="line">character-set-client-handshake = FALSE</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">collation-server = utf8mb4_unicode_ci</span><br><span class="line">default-time-zone = UTC</span><br></pre></td></tr></table></figure>
-<p>查看字符集: <code>SHOW VARIABLES WHERE Variable_name LIKE &#39;character\_set\_%&#39; OR Variable_name LIKE &#39;collation%&#39;;</code></p>
-</li>
-<li><p>查看时区: <code>show variables like &#39;%zone%&#39;;</code></p>
-<p><img src="https://i.loli.net/2019/03/04/5c7d0e96800b4.png" alt="mysql_timezone.png"></p>
-</li>
-<li><p>修改时区为 UTC: <code>set time_zone = &#39;utc&#39;;flush privileges;</code>修改时区并刷新.</p>
 <ul>
-<li><p>如果报错 <code>Unknown or incorrect time zone: &#39;UTC&#39;</code>, 在<code>shell</code>执行:  <code>mysql_tzinfo_to_sql /usr/share/zoneinfo |mysql -u root mysql -p</code>, 有warning提示 <code>Unable to load xxx</code> 是正常的.</p>
+<li>防火墙分为多个区域,可用<code>sudo firewall-cmd --get-zones</code>查看,默认是<code>public</code></li>
+</ul>
+</blockquote>
+<h4 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h4><p>查看软件是否安装: <code>rom -qa | grep 软件名&gt;</code></p>
+<p>下载安装软件: <code>yum install 软件名1,2,3...</code>/<code>yum -y install 软件名1,2,3...</code></p>
+<p>安装<code>rpm</code>软件包: <code>rpm -ivh 软件包名</code></p>
+<p>卸载软件: <code>rpm -e 软件包名</code>/<code>yum remove 软件包名</code></p>
+<blockquote>
+<p>rpm 命令参数</p>
+<p>-i: 安装过程中显示正在安装的文件信息</p>
+<p>-h: 安装过程中显示安装进度</p>
+</blockquote>
+<h4 id="服务进程"><a href="#服务进程" class="headerlink" title="服务进程"></a>服务进程</h4><p>查看服务进程: <code>ps -ef | grep &lt;进程名&gt;</code></p>
+<h4 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h4><p>为文件添加可执行权限: <code>chmod +x file.name</code>,可以用通配符<code>*.后缀名</code></p>
+<h4 id="查看文件"><a href="#查看文件" class="headerlink" title="查看文件"></a>查看文件</h4><p>查看文件最后n行: <code>tail -n &lt;行数&gt; &lt;文件名&gt;</code></p>
+<p>动态查看文件最后n行: <code>tail -n &lt;行数&gt; -f &lt;文件名&gt;</code>,使用<code>ctrl+c</code>来结束</p>
+<h4 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h4><p>创建指定大小文件: <code>fallocate -l &lt;文件大小&gt; &lt;文件名&gt;</code></p>
+<blockquote>
+<p>例:<code>sudo fallocate -l 4G /swapfile</code>(在<code>/</code>下创建一个大小为4G的文件<code>swapfile</code>)</p>
+</blockquote>
+<h4 id="查看系统状态"><a href="#查看系统状态" class="headerlink" title="查看系统状态"></a>查看系统状态</h4><p>查看内存使用情况: <code>free</code></p>
+<blockquote>
+<p>free 命令参数</p>
+<p><code>-m</code>:以<code>MB</code>为单位显示.默认单位为<code>KB</code>.向下取整</p>
+</blockquote>
+<h4 id="用户操作"><a href="#用户操作" class="headerlink" title="用户操作"></a>用户操作</h4><p>创建用户: <code>useradd 用户名</code>或<code>adduser 用户名</code>.后者创建的用户会自动创建主目录,系统shell版本和创建时输入密码,而前者没有.</p>
+<p>修改用户密码: <code>passwd 用户名</code></p>
+<p>删除用户: <code>userdel 用户名</code></p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>下载: <code>wget 下载地址</code></p>
+<p>下载并指定名称: <code>wget -O 文件名称 下载地址</code></p>
+<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><ul>
+<li>搜索</li>
+</ul>
+<p>在 <code>normal</code> 模式下按下 <code>/</code> 即可进入查找模式, 输入要查找的字符串并按下回车. Vim 会跳转到第一个匹配. 按下 <code>n</code>查找下一个, 按下 <code>N</code>查找上一个.</p>
+<blockquote>
+<ul>
+<li><p>注意查找回车应当用 <code>\n</code>,替换回车应当用 <code>\r</code></p>
 </li>
-<li><p>如果修改了之后, 再次查询还是 <code>System</code>, 修改配置文件 <code>/etc/my.cnf</code>, 在 <code>[mysqld]</code> 下添加 <code>default-time-zone = UTC</code></p>
+<li><p>vim默认采用大小写敏感.在查找模式中加入 <code>\c</code> 表示大小写不敏感 ,<code>\C</code>敏感.</p>
 </li>
 </ul>
-</li>
-</ol>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>到<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">官网</a>获取下载链接. <code>wget &lt;url&gt;</code> 下载</p>
-</li>
-<li><p>使用 <code>tar -zxvf &lt;文件名&gt;</code> 解压缩.</p>
-</li>
-<li><p>安装 <code>git</code> 前置依赖: <code>yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel curl-devel perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></p>
-</li>
-<li><p>进入 <code>git</code>安装目录下, 进行安装: <code>./configure --prefix=/usr/local/git</code>-&gt; <code>make &amp;&amp; make install</code></p>
-<p>如果报错 <code>no such file or directory</code>. 使用: <code>yum install autoconf</code>然后在目录中键入 <code>autoconf</code>, 再次进行安装即可.</p>
-</li>
-<li><p>添加环境变量. <code>vim /etc/profile</code>, 使环境变量生效<code>source /etc/profile</code></p>
-</li>
-<li><p>检查是否安装成功: <code>git --version</code></p>
-</li>
-</ol>
-<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><ol>
-<li><p>生成私钥: <code>ssh-keygen -t rsa -C &quot;XXX@outlook.com&quot;</code> 密钥名称可自定义</p>
-</li>
-<li><p>告知系统来管理生成的密钥: <code>ssh-add ~/.ssh/id_rsa</code></p>
-<blockquote>
-<p> 如果报错 <code>could not open a connection to your authentication agent</code></p>
-<p>执行命令: eval `ssh-agent`(是 <code>~</code>, 而不是单引号). 然后再执行:<code>ssh-add ~/.ssh/id_rsa</code></p>
 </blockquote>
-</li>
-<li><p>在远程服务器中添加公钥: <code>cat ~/.ssh/id_rsa.pub</code></p>
-</li>
-</ol>
-<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">官网</a>下载压缩包并解压.</li>
-<li>安装 <code>nginx</code>编译文件及库文件 <code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel pcre pcre-devel</code></li>
-<li>进入解压后的目录进行安装: <code>./configure --prefix=/usr/local/nginx</code>-&gt;<code>make &amp;&amp; make install</code></li>
-<li>测试: <code>/usr/local/nginx/sbin/nginx -t</code></li>
-</ol>
-<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>参考<a href="./Nginx.md">Nginx配置文件说明</a></p>
-<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><h4 id="安装-4"><a href="#安装-4" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">官网</a>下载压缩包, 解压. 一般选择 <code>core</code> 就行</li>
-<li>防火墙打开 <code>8080</code> 端口, 启动 tomcat: <code>$CATALINA_HOME/bin/startup.sh</code></li>
-<li>测试: 访问 <code>&lt;服务器地址&gt;:8080</code></li>
-</ol>
-<h4 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h4><ol>
-<li><p>修改默认编码. <code>vim /opt/Develop/apache-tomcat-9.0.16/conf/server.xml</code>. 搜索<code>8080</code>, 在 <code>&lt;Connector&gt;</code>节点中添加 <code>URIEncoding=&quot;UTF-8&quot;</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b93f19dc78.png" alt="tomcatEncoding.png"></p>
-</li>
-<li><p>编辑环境变量.<code>vim /etc/profile</code>,添加<code>export CATALINA_HOME = /opt/apache-tomcat-9.0.1</code>.然后<code>source /etc/profile</code>使配置生效</p>
-</li>
-</ol>
-<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h4 id="安装-5"><a href="#安装-5" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>到<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">官网</a>下载压缩包,解压.</li>
-<li>添加环境变量:<code>vim /etc/profile</code>,添加<code>export $MAVEN_HOME=...</code>.并将<code>$MAVEN_HOME/bin</code>添加到<code>$PATH</code>中</li>
-<li><code>source /etc/profile</code>使配置生效</li>
-<li>测试:<code>mvn -v</code></li>
-</ol>
-<h4 id="配置-4"><a href="#配置-4" class="headerlink" title="配置"></a>配置</h4><blockquote>
-<p>将下载镜像更换为阿里云中央仓库,解决依赖从境外网站下载过慢的问题</p>
-</blockquote>
-<ol>
-<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
-</li>
-<li><p>在<code>&lt;settings&gt;</code>标签下找到<code>&lt;mirrors&gt;</code>标签,添加如下代码</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存即可</p>
-</li>
-</ol>
-<h2 id="Vstpd"><a href="#Vstpd" class="headerlink" title="Vstpd"></a>Vstpd</h2><h4 id="安装-6"><a href="#安装-6" class="headerlink" title="安装"></a>安装</h4><ol>
-<li><p>下载安装:<code>yum install vstpd</code></p>
-</li>
-<li><p>创建接收上传文件的文件夹:<code>mkdir /ftpfile</code></p>
-</li>
-<li><p>创建只有上传权限不能登录的用户:<code>useradd ftpuser -d /ftpfile/ -s /sbin/nologin</code></p>
-</li>
-<li><p>给创建的<code>ftpuser</code>此用户赋予<code>/ftpfile</code>的权限:<code>chown -R ftpuser.ftpuser /ftpfile/</code>.此时用户名和用户组都是<code>ftpuser</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b807a8ab63.png" alt="ftpuser.png"></p>
-</li>
-<li><p>给<code>ftpuser</code>设置密码:<code>passwd ftpuser</code></p>
-</li>
-<li><p>编辑配置文件,让上传目录指向之前创建的目录:<code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<blockquote>
-<p>搜索<code>banner</code>节点,此处配置<code>ftp</code>的欢迎信息.<code>ftpd_banner=xxxxx</code></p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b8283e0357.png" alt="ftp_banner.png"></p>
-<p>可以选择添加<code>use_localtime=yes</code>表示使用服务器时间</p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b83014f41b.png" alt="ftp_root.png"></p>
-<p>添加<code>anonymous_enable=NO</code>关闭匿名用户访问</p>
-<p>配置FTP被动模式的端口</p>
-<p><code>pasv_min_port=30000</code><br><code>pasv_max_port=30000</code></p>
-</blockquote>
-</li>
-<li><p>ftp配置</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改为NO，关闭匿名用户访问</span></span><br><span class="line"><span class="attr">anonymous_enable</span>=<span class="literal">NO</span></span><br><span class="line"><span class="comment"># 将所有本地用户限制在自家目录中。</span></span><br><span class="line"><span class="attr">chroot_local_user</span>=<span class="literal">YES</span> </span><br><span class="line"><span class="comment"># 设置系统用户FTP主目录</span></span><br><span class="line"><span class="attr">local_root</span>=/data</span><br><span class="line"><span class="comment"># 开启charoot写权限</span></span><br><span class="line"><span class="attr">allow_writeable_chroot</span>=<span class="literal">YES</span></span><br><span class="line"><span class="comment">#配置可以登录ftp的用户目录</span></span><br><span class="line"><span class="attr">userlist_deny</span>=<span class="literal">NO</span></span><br><span class="line"><span class="attr">userlist_file</span>=/etc/vsftpd/user_list</span><br><span class="line"><span class="comment">#配置ftp用户访问目录配置目录</span></span><br><span class="line"><span class="attr">user_config_dir</span>=/etc/vsftpd/userconfig</span><br><span class="line"><span class="comment"># 配置FTP被动模式的端口</span></span><br><span class="line"><span class="attr">pasv_min_port</span>=<span class="number">30000</span></span><br><span class="line"><span class="attr">pasv_max_port</span>=<span class="number">30000</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置<code>ftp</code>用户登录后访问的目录</p>
-<blockquote>
-<p>在<code>/etc/vsftpd</code>目录下新建<code>userconfig</code>目录</p>
-<p>在目录下配置用户的登录目录,文件名即对应的用户名</p>
-<p><code>vim /etc/vsftpd/userconfig/ftpuser</code></p>
-<p>在创建的文件中添加<code>local_root=/ftpfile/ftpuser</code>  <code>/ftpfile</code>表示对应用户登录ftp时的根目录</p>
-<p><strong>注意</strong>:路径前不能有空格,否则不识别!!!!会报错<code>unrecognised variable in config file: local_root</code></p>
-</blockquote>
-</li>
-<li><p>重启<code>vsftpd</code></p>
-<blockquote>
-<p>启动:<code>systemctl start vsftpd.service(service vsftpd start)</code></p>
-<p>停止:<code>systemctl stop vsftpd.service(service vsftpd stop)</code></p>
-<p>重启:<code>systemctl restart vsftpd.service(service vsftpd restart)</code></p>
-</blockquote>
-</li>
-<li><p>打开防火墙,添加<code>21</code>端口和<code>30000</code>端口.</p>
-<blockquote>
-<p>添加端口:<code>firewall-cmd --add-port=21/tcp --permanent</code>,<code>firewall-cmd --add-port=21/tcp --permanent</code></p>
-<p>重启防火墙:<code>firewall-cmd --reload</code></p>
-</blockquote>
-</li>
-<li><p>测试.浏览器打开<code>ftp://服务器地址</code>登录.如果只能下载不能上传,请查阅<code>开启关闭SELinux</code>相关信息</p>
-</li>
-</ol>
-<h2 id="swap交换缓存"><a href="#swap交换缓存" class="headerlink" title="swap交换缓存"></a>swap交换缓存</h2><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><ol>
-<li>创建<code>swap</code>文件:<code>sudo fallocate -l 4G /swapfile</code>(在<code>/</code>下创建一个大小为4G的文件<code>swapfile</code>)</li>
-<li>授权<code>swap</code>文件:<code>chmod 600 /swapfile</code>(该文件的读写只能<code>root</code>操作)</li>
-<li>告知系统将文件用于<code>swap</code>:<code>mkswap /swapfile</code></li>
-<li>启用<code>swap</code>文件:<code>swapon /swapfile</code></li>
-<li>确认:<code>free</code></li>
-</ol>
-<blockquote>
-<p>至此已经在系统中启用了<code>swap</code>交换缓存,但是一旦系统重启后,服务器还不能自动启用该文件.</p>
-</blockquote>
-<h4 id="使swap永久生效"><a href="#使swap永久生效" class="headerlink" title="使swap永久生效"></a>使swap永久生效</h4><ol>
-<li>打开文件<code>nano /etc/fstab</code>,在文件末尾添加<code>/swapfile   swap    swap    sw  0   0</code></li>
-<li><code>^X</code>表示<code>Ctrl + X</code>,按下选择<code>yes</code>保存退出.</li>
-</ol>
-<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><p>在腾讯云服务器中的配置</p>
-<p><img src="https://i.loli.net/2019/03/03/5c7b96f1831a8.png" alt="profile.png"></p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">CLASS_PATH</span>=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">GIT_HOME</span>=/usr/local/git</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">MAVEN_HOME</span>=/opt/Develop/apache-maven-3.6.0</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/usr/java/jdk1.8.0_201</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JRE_HOME</span>=/usr/java/jdk1.8.0_201/jre</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">CATALINA_HOME</span>=/opt/Develop/apache-tomcat-9.0.16</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -821,7 +685,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/Tools/ServerSetting.html" title="Linux线上环境搭建">http://blog.vnaso.live/JavaLearning/Tools/ServerSetting.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Ops/Linux.html" title="Linux学习笔记">http://blog.vnaso.live/JavaLearning/Ops/Linux.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -847,7 +711,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/Tools/Nginx.html" rel="next" title="Nginx学习笔记">
+              <a href="/JavaLearning/Ops/Nginx.html" rel="next" title="Nginx学习笔记">
                 <i class="fa fa-chevron-left"></i> Nginx学习笔记
               </a>
             
@@ -857,8 +721,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/Web/CORS跨域资源共享.html" rel="prev" title="CORS跨域资源共享">
-                CORS跨域资源共享 <i class="fa fa-chevron-right"></i>
+              <a href="/JavaLearning/Ops/ServerSetting.html" rel="prev" title="Linux线上环境搭建">
+                Linux线上环境搭建 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -934,7 +798,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -977,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1026,7 +892,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1095,7 +965,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-number">2.</span> <span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">3.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">4.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-number">4.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-number">4.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">5.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-number">5.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-number">5.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-number">6.</span> <span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-number">6.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-4"><span class="nav-number">6.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-number">7.</span> <span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-6"><span class="nav-number">7.0.1.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-number">8.</span> <span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-number">8.0.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-number">8.0.2.</span> <span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-number">9.</span> <span class="nav-text">环境变量配置</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux学习笔记"><span class="nav-number">1.</span> <span class="nav-text">Linux学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统命令"><span class="nav-number">1.1.</span> <span class="nav-text">系统命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tar-解压"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">tar 解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防火墙-使用firewalld"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">防火墙(使用firewalld)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件安装"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">软件安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#服务进程"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">服务进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改权限"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">修改权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看文件"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">查看文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建文件"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">创建文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看系统状态"><span class="nav-number">1.1.0.8.</span> <span class="nav-text">查看系统状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户操作"><span class="nav-number">1.1.0.9.</span> <span class="nav-text">用户操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载"><span class="nav-number">1.1.0.10.</span> <span class="nav-text">下载</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">1.2.</span> <span class="nav-text">vim</span></a></li></ol></div>
             
 
           </div>
@@ -1129,7 +999,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">178k</span>
+    <span title="站点总字数">190k</span>
   
 
   
@@ -1138,7 +1008,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">12:53</span>
+    <span title="站点阅读时长">13:46</span>
   
 </div>
 

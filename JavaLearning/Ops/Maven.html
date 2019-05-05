@@ -98,22 +98,23 @@
 
 
 
-  <meta name="description" content="SpringMVC 简介SpringMVC 框架是以请求为驱动, 围绕 Servlet 设计, 将请求发给控制器, 然后通过模型对象, 分析器来展示请求结果视图. 其中核心类是 DispatcherServlet, 它是一个 Servlet, 顶层是实现 Servlet 的接口. SpringMVC 使用XML 方式需要在 web.xml 中配置 DispatcherServlet, 并且需要配置">
-<meta name="keywords" content="Java,SpringMVC">
+  <meta name="description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
+<meta name="keywords" content="Maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringMVC">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC.html">
+<meta property="og:title" content="Maven学习笔记">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Ops/Maven.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="SpringMVC 简介SpringMVC 框架是以请求为驱动, 围绕 Servlet 设计, 将请求发给控制器, 然后通过模型对象, 分析器来展示请求结果视图. 其中核心类是 DispatcherServlet, 它是一个 Servlet, 顶层是实现 Servlet 的接口. SpringMVC 使用XML 方式需要在 web.xml 中配置 DispatcherServlet, 并且需要配置">
+<meta property="og:description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/03/16/5c8c890a061ff.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/16/5c8c9cac81708.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/16/5c8c9da455e1c.png">
-<meta property="og:updated_time" content="2019-05-01T03:14:34.355Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34zwb8dnj30tx0iota7.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx358arq3ij30qo0dcmx6.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/02/28/5c77e94283e08.png">
+<meta property="og:updated_time" content="2019-03-21T02:33:28.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringMVC">
-<meta name="twitter:description" content="SpringMVC 简介SpringMVC 框架是以请求为驱动, 围绕 Servlet 设计, 将请求发给控制器, 然后通过模型对象, 分析器来展示请求结果视图. 其中核心类是 DispatcherServlet, 它是一个 Servlet, 顶层是实现 Servlet 的接口. SpringMVC 使用XML 方式需要在 web.xml 中配置 DispatcherServlet, 并且需要配置">
-<meta name="twitter:image" content="https://i.loli.net/2019/03/16/5c8c890a061ff.png">
+<meta name="twitter:title" content="Maven学习笔记">
+<meta name="twitter:description" content="Maven使用Maven安装与配置下载与安装Maven官网下载地址  在如下位置点击下载最新版本Maven的压缩包    解压文件得到apache-maven-xxx文件夹.xxx为版本号  新建环境变量MAVEN_HOME,变量值为maven根目录地址  打开环境变量设置的步骤为:  右击此电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;高级-&amp;gt;环境变量 Win+R-&amp;gt;sysdm.">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg">
 
 
 
@@ -121,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Ops/Maven">
 
 
 
@@ -131,7 +132,7 @@
   };
 </script>
 
-  <title>SpringMVC | Vnaso</title>
+  <title>Maven学习笔记 | Vnaso</title>
   
 
 
@@ -400,7 +401,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Ops/Maven.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -417,7 +418,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringMVC
+          <h1 class="post-title" itemprop="name headline">Maven学习笔记
 
               
             
@@ -443,7 +444,7 @@
                 
               
 
-              <time title="创建时间：2019-03-16 12:15:00" itemprop="dateCreated datePublished" datetime="2019-03-16T12:15:00+08:00">2019-03-16</time>
+              <time title="创建时间：2019-02-04 17:26:00" itemprop="dateCreated datePublished" datetime="2019-02-04T17:26:00+08:00">2019-02-04</time>
             
 
             
@@ -460,7 +461,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-01 11:14:34" itemprop="dateModified" datetime="2019-05-01T11:14:34+08:00">2019-05-01</time>
+                <time title="修改时间：2019-03-21 10:33:28" itemprop="dateModified" datetime="2019-03-21T10:33:28+08:00">2019-03-21</time>
               
             
           </span>
@@ -477,7 +478,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tool/Maven/" itemprop="url" rel="index"><span itemprop="name">Maven</span></a></span>
 
                 
                 
@@ -496,8 +504,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/JavaNote/Framework/SpringMVC.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/JavaNote/Framework/SpringMVC.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Ops/Maven.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Ops/Maven.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -505,7 +513,7 @@
 
           
           
-            <span id="/JavaLearning/JavaNote/Framework/SpringMVC.html" class="leancloud_visitors" data-flag-title="SpringMVC">
+            <span id="/JavaLearning/Ops/Maven.html" class="leancloud_visitors" data-flag-title="Maven学习笔记">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -530,7 +538,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">8.8k</span>
+                <span title="本文字数">6.7k</span>
               
 
               
@@ -544,7 +552,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">38 分钟</span>
+                <span title="阅读时长">29 分钟</span>
               
             </div>
           
@@ -564,81 +572,389 @@
       
 
       
-        <h2 id="SpringMVC-简介"><a href="#SpringMVC-简介" class="headerlink" title="SpringMVC 简介"></a>SpringMVC 简介</h2><p>SpringMVC 框架是以请求为驱动, 围绕 Servlet 设计, 将请求发给控制器, 然后通过模型对象, 分析器来展示请求结果视图. 其中核心类是 <strong>DispatcherServlet</strong>, 它是一个 Servlet, 顶层是实现 Servlet 的接口.</p>
-<h2 id="SpringMVC-使用"><a href="#SpringMVC-使用" class="headerlink" title="SpringMVC 使用"></a>SpringMVC 使用</h2><p>XML 方式需要在 web.xml 中配置 DispatcherServlet, 并且需要配置 Spring 监听器 ContextLoaderListener.</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener</span><br><span class="line">	<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springmvc<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet</span><br><span class="line">	<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 如果不设置init-param标签，则必须在/WEB-INF/下创建xxx-servlet.xml文件，其中xxx是servlet-name中配置的名称。 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:spring/springmvc-servlet.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springmvc<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="SpringMVC-工作原理"><a href="#SpringMVC-工作原理" class="headerlink" title="SpringMVC 工作原理"></a>SpringMVC 工作原理</h2><p><strong>基本流程</strong>:</p>
-<p>客户端发送请求 -&gt; 前端控制器 DispatcherServlet 接收客户端请求 -&gt; 找到处理器映射 HandlerMapping 解析请求对应的 Handler -&gt; HandlerAdapter 根据 Handler 来调用具体的处理器来处理请求, 并处理响应的业务逻辑. -&gt; 处理器返回一个模型视图 ModelAndView -&gt; 视图解析器进行解析 -&gt; 返回一个视图对象 -&gt; 前端控制器 DispatcherServlet 渲染数据 -&gt; 将得到的视图对象返回给用户</p>
-<p><strong>如图所示</strong>:</p>
-<p><img src="https://i.loli.net/2019/03/16/5c8c890a061ff.png" alt="UTOOLS1552713992515.png"></p>
-<p><strong>流程说明</strong>:</p>
+        <h1 id="Maven使用"><a href="#Maven使用" class="headerlink" title="Maven使用"></a>Maven使用</h1><h2 id="Maven安装与配置"><a href="#Maven安装与配置" class="headerlink" title="Maven安装与配置"></a>Maven安装与配置</h2><h3 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h3><p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Maven官网下载地址</a></p>
 <ol>
-<li>客户端发送请求, 请求交由 DispatcherServlet 处理.</li>
-<li>DispatcherServlet 根据请求信息调用 HandlerMapping, 解析请求对应的 Handler.</li>
-<li>解析到对应的 Handler (也就是平常所说的 Controller 控制器)后, 开始有 HandlerAdapter 适配器处理.</li>
-<li>HandlerAdapter 会根据 Handler 来调用具体的处理器来处理请求, 并处理相应的处理逻辑.</li>
-<li>处理器处理完业务后, 会返回一个 ModelAndView 对象, Model 是返回的数据对象, View 是个逻辑上的 View.</li>
-<li>ViewResolver 会根据逻辑 View 查找实际的 View.</li>
-<li>DispatcherServlet 把返回的 Model 传给 View(视图渲染).</li>
-<li>把 View 返回给客户端</li>
+<li>在如下位置点击下载最新版本<code>Maven</code>的压缩包</li>
 </ol>
-<h3 id="SpringMVC-重要组件说明"><a href="#SpringMVC-重要组件说明" class="headerlink" title="SpringMVC 重要组件说明"></a>SpringMVC 重要组件说明</h3><h4 id="前端控制器-DispatcherServlet"><a href="#前端控制器-DispatcherServlet" class="headerlink" title="前端控制器 DispatcherServlet"></a>前端控制器 DispatcherServlet</h4><p><strong>作用</strong>: </p>
-<p>SpringMVC 的入口, 接收请求, 响应结果, 相当于转发器, 中央处理器. 有了 DispatcherServlet, 减少了其他组件之间的耦合度. 用户请求到达前端控制器, 它就相当于 MVC 模式中的 C, DispatcherServlet 是整个流程控制的中心. 由它来调用其他组件处理用户的请求, DispatcherServlet 的存在降低了组件之间的耦合度.</p>
-<h4 id="处理映射器-HandlerMapping"><a href="#处理映射器-HandlerMapping" class="headerlink" title="处理映射器 HandlerMapping"></a>处理映射器 HandlerMapping</h4><p><strong>作用</strong>:</p>
-<p>根据请求的 URL 查找 Handler. HandlerMapping 负责根据用户请求寻找能够处理请求的 Handler(处理器 Controller). SrpingMVC 提供了不同的映射器实现不同的映射方式, 例如: 配置文件方式 - <code>web.xml</code> , 实现接口方式 - <code>implements Controller</code>, 注解方式 - <code>@RequestMapping</code> (常用).</p>
-<h4 id="处理适配器-HandlerAdapter"><a href="#处理适配器-HandlerAdapter" class="headerlink" title="处理适配器 HandlerAdapter"></a>处理适配器 HandlerAdapter</h4><p><strong>作用</strong>:</p>
-<p>按照特定的规则去执行 Handler.</p>
-<p>通过 HandlerAdapter 对处理器进行执行, 这是适配器模式的应用, 通过扩展适配器, 可以对更多类型的处理器进行执行.</p>
-<h4 id="处理器-Handler-Controller"><a href="#处理器-Handler-Controller" class="headerlink" title="处理器 Handler (Controller)"></a>处理器 Handler (Controller)</h4><p>编写 Handler 时需要遵循 HandlerAdapter 的要求, 这样适配器才能正确执行 Handler</p>
-<p>Handler 是继 DispatcherServlet 前端控制器的后端控制器, 在 DispatcherServlet 的控制下, Handler对具体的用户请求进行处理. </p>
-<p>由于 Handler 涉及到具体的业务请求, 所以一般情况下需要工程师根据业务需求开发 Handler</p>
-<h4 id="视图解析器-View-Resolver"><a href="#视图解析器-View-Resolver" class="headerlink" title="视图解析器 View Resolver"></a>视图解析器 View Resolver</h4><p><strong>作用:</strong></p>
-<p>进行视图解析, 根据逻辑视图名解析成真正的视图(View)</p>
-<p>View Resolver 负责将处理结果生成 View 视图, View Resolver 首先根据逻辑视图名解析成物理视图名, 即具体的页面地址, 再生成 View 视图对象, 最后对 View 进行渲染并将处理结果通过页面展示给用户. </p>
-<h4 id="视图-View"><a href="#视图-View" class="headerlink" title="视图 View"></a>视图 View</h4><p>View 是一个接口, 实现类支持不同的 View 类型. 如: JSP, Freemaker, pdf, excel…</p>
-<p><strong>注意</strong>: 处理器 Handler 以及视图层 View 都是需要我们自己手动开发的, 其他的一些组件比如: DispatcherServlet, HandlerMapping, HandlerAdapter 等等都是</p>
-<h3 id="DispatcherServlet-详细解析"><a href="#DispatcherServlet-详细解析" class="headerlink" title="DispatcherServlet 详细解析"></a>DispatcherServlet 详细解析</h3><p><strong>源码</strong>:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.springframework.web.servlet;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"serial"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DispatcherServlet</span> <span class="keyword">extends</span> <span class="title">FrameworkServlet</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String MULTIPART_RESOLVER_BEAN_NAME = <span class="string">"multipartResolver"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LOCALE_RESOLVER_BEAN_NAME = <span class="string">"localeResolver"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String THEME_RESOLVER_BEAN_NAME = <span class="string">"themeResolver"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String HANDLER_MAPPING_BEAN_NAME = <span class="string">"handlerMapping"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String HANDLER_ADAPTER_BEAN_NAME = <span class="string">"handlerAdapter"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String HANDLER_EXCEPTION_RESOLVER_BEAN_NAME = <span class="string">"handlerExceptionResolver"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String REQUEST_TO_VIEW_NAME_TRANSLATOR_BEAN_NAME = <span class="string">"viewNameTranslator"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String VIEW_RESOLVER_BEAN_NAME = <span class="string">"viewResolver"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String FLASH_MAP_MANAGER_BEAN_NAME = <span class="string">"flashMapManager"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String WEB_APPLICATION_CONTEXT_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".CONTEXT"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LOCALE_RESOLVER_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".LOCALE_RESOLVER"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String THEME_RESOLVER_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".THEME_RESOLVER"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String THEME_SOURCE_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".THEME_SOURCE"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String INPUT_FLASH_MAP_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".INPUT_FLASH_MAP"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String OUTPUT_FLASH_MAP_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".OUTPUT_FLASH_MAP"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String FLASH_MAP_MANAGER_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".FLASH_MAP_MANAGER"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String EXCEPTION_ATTRIBUTE = DispatcherServlet.class.getName() + <span class="string">".EXCEPTION"</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PAGE_NOT_FOUND_LOG_CATEGORY = <span class="string">"org.springframework.web.servlet.PageNotFound"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DEFAULT_STRATEGIES_PATH = <span class="string">"DispatcherServlet.properties"</span>;</span><br><span class="line">	<span class="keyword">protected</span> <span class="keyword">static</span> <span class="keyword">final</span> Log pageNotFoundLogger = LogFactory.getLog(PAGE_NOT_FOUND_LOG_CATEGORY);</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Properties defaultStrategies;</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			ClassPathResource resource = <span class="keyword">new</span> ClassPathResource(DEFAULT_STRATEGIES_PATH, DispatcherServlet.class);</span><br><span class="line">			defaultStrategies = PropertiesLoaderUtils.loadProperties(resource);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (IOException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Could not load 'DispatcherServlet.properties': "</span> + ex.getMessage());</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** Detect all HandlerMappings or just expect "handlerMapping" bean? */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> detectAllHandlerMappings = <span class="keyword">true</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** Detect all HandlerAdapters or just expect "handlerAdapter" bean? */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> detectAllHandlerAdapters = <span class="keyword">true</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** Detect all HandlerExceptionResolvers or just expect "handlerExceptionResolver" bean? */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> detectAllHandlerExceptionResolvers = <span class="keyword">true</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** Detect all ViewResolvers or just expect "viewResolver" bean? */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> detectAllViewResolvers = <span class="keyword">true</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** Throw a NoHandlerFoundException if no Handler was found to process this request? **/</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> throwExceptionIfNoHandlerFound = <span class="keyword">false</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** Perform cleanup of request attributes after include request? */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> cleanupAfterInclude = <span class="keyword">true</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** MultipartResolver used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> MultipartResolver multipartResolver;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** LocaleResolver used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> LocaleResolver localeResolver;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** ThemeResolver used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> ThemeResolver themeResolver;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** List of HandlerMappings used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;HandlerMapping&gt; handlerMappings;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** List of HandlerAdapters used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;HandlerAdapter&gt; handlerAdapters;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** List of HandlerExceptionResolvers used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;HandlerExceptionResolver&gt; handlerExceptionResolvers;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** RequestToViewNameTranslator used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> RequestToViewNameTranslator viewNameTranslator;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">private</span> FlashMapManager flashMapManager;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/** List of ViewResolvers used by this servlet */</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;ViewResolver&gt; viewResolvers;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">DispatcherServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>();</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">DispatcherServlet</span><span class="params">(WebApplicationContext webApplicationContext)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>(webApplicationContext);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onRefresh</span><span class="params">(ApplicationContext context)</span> </span>&#123;</span><br><span class="line">		initStrategies(context);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initStrategies</span><span class="params">(ApplicationContext context)</span> </span>&#123;</span><br><span class="line">		initMultipartResolver(context);</span><br><span class="line">		initLocaleResolver(context);</span><br><span class="line">		initThemeResolver(context);</span><br><span class="line">		initHandlerMappings(context);</span><br><span class="line">		initHandlerAdapters(context);</span><br><span class="line">		initHandlerExceptionResolvers(context);</span><br><span class="line">		initRequestToViewNameTranslator(context);</span><br><span class="line">		initViewResolvers(context);</span><br><span class="line">		initFlashMapManager(context);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>DispatcherServlet 类中的属性 beans</strong>:</p>
-<ul>
-<li><p>HandlerMapping: 定义请求和处理程序对象之间的映射. 用于 Handlers 映射请求和一系列的对于拦截器的前处理和后处理, 大部分用 <code>@Controlelr</code> 注解.</p>
-<ul>
-<li>SimpleUrlHandlerMapping: 通过配置文件把 URL 映射到 Controller 类.</li>
-<li>DefaultAnnotationHandlerMapping: 通过注解把 URL 映射到 Controller 类.</li>
-</ul>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34oirwlfj31890lndi3.jpg" alt="Maven下载"></p>
+<ol start="2">
+<li><p>解压文件得到<code>apache-maven-xxx</code>文件夹.<code>xxx</code>为版本号</p>
 </li>
-<li><p>HandlerAdapter: 帮助 DispatcherServlet 处理映射请求的处理程序的适配器.</p>
-<ul>
-<li>AnnotationMethodHandlerAdapter: 通过注解把 URL 映射到 Controller 类的方法上.</li>
-</ul>
-</li>
-<li><p>ViewResolver: 根据配置解析实际的 View 类型.</p>
-<ul>
-<li>UrlBaseViewResolver: 通过配置文件, 提供一种拼接 URL 的方式来解析视图.</li>
-</ul>
-</li>
-<li><p>ThemeResolver: 解决 Web 应用程序可以使用的主题, 例如提供个性化布局.</p>
-</li>
-<li><p>MultipartResolver: 解析多部分请求, 以支持从 HTML 表单上传文件.</p>
-</li>
-<li><p>FlashMapManager: 存储并检索可用于将一个请求属性传递到另一个请求的 input 和 output 的 .FlashMap, 通常应用于重定向. </p>
+<li><p>新建环境变量<code>MAVEN_HOME</code>,变量值为maven根目录地址</p>
 <blockquote>
-<p>通过方法将会话中的数据发送为 flash attribute, flash 属性会一直携带这些数据直到下一次请求, 然后才会消失. 解决了重定向时会话数据丢失的问题.</p>
+<p>打开环境变量设置的步骤为:</p>
+<ul>
+<li>右击<code>此电脑</code>-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>高级</code>-&gt;<code>环境变量</code></li>
+<li><code>Win+R</code>-&gt;<code>sysdm.cpl</code>-&gt;<code>高级</code>-&gt;<code>环境变量</code></li>
+</ul>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx34zwb8dnj30tx0iota7.jpg" alt="maven环境变量"></p>
+</li>
+<li><p>编辑环境变量<code>path</code>,添加<code>%MAVEN_HOME%\bin\</code></p>
+</li>
+<li><p>至此,maven安装完毕.打开命令提示符窗口(<code>Win+R</code>-&gt;<code>cmd</code>),输入<code>mvn -v</code>查询maven版本,检查maven是否成功安装.成功如图所示<img src="http://ww1.sinaimg.cn/large/0062LbXpgy1fx358arq3ij30qo0dcmx6.jpg" alt="maven成功安装"></p>
+</li>
+</ol>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="创建maven仓库"><a href="#创建maven仓库" class="headerlink" title="创建maven仓库"></a>创建maven仓库</h4><blockquote>
+<p> 如果不自行创建,maven将默认使用<code>Default: ${user.home}/.m2/repository</code>作为本地仓库</p>
+</blockquote>
+<ol>
+<li><p>在想要作为maven仓库的地方创建文件夹<code>maven-repository</code>作为maven的本地仓库</p>
+</li>
+<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
+</li>
+<li><p>在<code>&lt;settings&gt;</code>标签下,找到<code>&lt;localRepository&gt;</code>标签.如果没有则自行添加.</p>
+<p>修改值为本地仓库的地址,如<code>&lt;localRepository&gt;C:\Maven\apache-maven-3.6.0\maven-repository&lt;/localRepository&gt;</code></p>
+</li>
+</ol>
+<h4 id="修改下载镜像地址"><a href="#修改下载镜像地址" class="headerlink" title="修改下载镜像地址"></a>修改下载镜像地址</h4><blockquote>
+<p>将下载镜像更换为阿里云中央仓库,解决依赖从境外网站下载过慢的问题</p>
+</blockquote>
+<ol>
+<li><p>打开<code>maven安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></p>
+</li>
+<li><p>在<code>&lt;settings&gt;</code>标签下找到<code>&lt;mirrors&gt;</code>标签,添加如下代码</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存即可</p>
+</li>
+</ol>
+<h4 id="针对Maven添加依赖时没有自动提示的解决方案"><a href="#针对Maven添加依赖时没有自动提示的解决方案" class="headerlink" title="针对Maven添加依赖时没有自动提示的解决方案"></a>针对Maven添加依赖时没有自动提示的解决方案</h4><ol>
+<li><p>到Maven仓库官网搜索,点击需要添加的依赖.复制<code>&lt;dependency&gt;</code>标签即可.</p>
+<blockquote>
+<p><a href="https://mvnrepository.com/" target="_blank" rel="noopener">Maven仓库官网</a></p>
 </blockquote>
 </li>
-<li><p>HandlerExceptionResolver: 异常处理的接口.</p>
-<ul>
-<li>SimpleMappingExceptionResolver: 通过配置文件进行异常处理.</li>
-<li>AnnotationMethodHandlerExceptionResolver: 通过注解进行异常处理.</li>
-</ul>
+</ol>
+<h4 id="在IDEA中配置Maven"><a href="#在IDEA中配置Maven" class="headerlink" title="在IDEA中配置Maven"></a>在IDEA中配置Maven</h4><ol>
+<li>打开IDEA,<code>settings</code>-&gt;<code>Build,Execution,Deployment</code>-&gt;<code>Build Tools</code>-&gt;<code>Maven</code></li>
+<li>修改<code>Maven home directory</code>为maven安装根目录</li>
+<li>勾选<code>User settings file</code>后的<code>Override</code>,然后修改为<code>安装根目录</code>-&gt;<code>conf</code>-&gt;<code>settings.xml</code></li>
+<li>勾选<code>Local repository</code>后的<code>Override</code>,然后修改为本地的repository地址</li>
+</ol>
+<h2 id="Maven项目结构"><a href="#Maven项目结构" class="headerlink" title="Maven项目结构"></a>Maven项目结构</h2><table>
+<thead>
+<tr>
+<th>项目根目录/</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src/</td>
+<td></td>
+</tr>
+<tr>
+<td>main/</td>
+<td>项目主体根目录</td>
+</tr>
+<tr>
+<td>java</td>
+<td>源代码目录</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>所需资源目录</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>资源过滤文件目录</td>
+</tr>
+<tr>
+<td>assembly</td>
+<td>组件的描述配置(如何打包)</td>
+</tr>
+<tr>
+<td>config</td>
+<td>配置文件</td>
+</tr>
+<tr>
+<td>wepapp</td>
+<td>web应用的目录.<br>WEB-INF,css,js等</td>
+</tr>
+<tr>
+<td>test/</td>
+<td>项目测试目录根</td>
+</tr>
+<tr>
+<td>java</td>
+<td>单元测试java源代码文件</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>测试需要用的资源库</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>c测试资源过滤库</td>
+</tr>
+<tr>
+<td>site</td>
+<td>Site一些文档</td>
+</tr>
+<tr>
+<td>target/</td>
+<td>存放项目构建后的文件和目录.<br>jar,war,编译的class文件等</td>
+</tr>
+<tr>
+<td>pom.xml</td>
+<td>MMaven的pom文件</td>
+</tr>
+<tr>
+<td>LICENSE.TXT</td>
+<td>项目的LISENCE</td>
+</tr>
+<tr>
+<td>README.TXT</td>
+<td>项目的README</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Maven生命周期"><a href="#Maven生命周期" class="headerlink" title="Maven生命周期"></a>Maven生命周期</h2><blockquote>
+<p>Maven生命周期执行顺序从上至下</p>
+<p><strong>每执行当前指令之前,会把之前(上方)的指令都执行一次</strong></p>
+<p><strong>每执行当前周期之前会执行之前的生命周期</strong></p>
+</blockquote>
+<h3 id="clean生命周期"><a href="#clean生命周期" class="headerlink" title="clean生命周期"></a>clean生命周期</h3><blockquote>
+<p> 清理项目</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">clean</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>pre-clean</code></td>
+<td style="text-align:left">执行清理前需要完成的工作<br>execute processes needed prior to the actual project cleaning</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>clean</code></td>
+<td style="text-align:left">清理上一次构建生成的文件<br>remove all files generated by the previous build</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>post-clean</code></td>
+<td style="text-align:left">执行清理后需要完成的工作<br>execute processes needed to finalize the project cleaning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default生命周期"><a href="#default生命周期" class="headerlink" title="default生命周期"></a>default生命周期</h3><blockquote>
+<p>构建项目</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">default</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>validate</code></td>
+<td>验证工程是否正确,所需要的资源是否可用<br>validate the project is correct and all necessary information is available</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>compile</code></td>
+<td>编译项目的源代码<br>compile the source code of the project</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>test</code></td>
+<td>使用已编译的测试代码,测试已编译的源代码<br>test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>package</code></td>
+<td>采用编译的代码,并以其可分配格式(如JAR)进行打包<br>take the compiled code and package it in its distributable format, such as a JAR.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>verify</code></td>
+<td>运行所有检查,验证包是否有效且达到质量标准<br>run any checks on results of integration tests to ensure quality criteria are met</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>install</code></td>
+<td>把包安装在本地的repository中,可以被其他工程作为依赖来使用<br>install the package into the local repository, for use as a dependency in other projects locally</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>deploy</code></td>
+<td>在整合或者发布环境下执行,将最终版本的包拷贝到远程的repository,使得其他的开发者或者工程可以共享<br>done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="site生命周期"><a href="#site生命周期" class="headerlink" title="site生命周期"></a>site生命周期</h3><blockquote>
+<p> 建立和发布项目站点</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>site</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pre-site</code></td>
+<td>生成项目站点之前需要完成的工作<br>execute processes needed prior to the actual project site generation</td>
+</tr>
+<tr>
+<td><code>site</code></td>
+<td>生成项目站点文档<br>generate the project’s site documentation</td>
+</tr>
+<tr>
+<td><code>post-site</code></td>
+<td>生成项目站点之后需要完成的工作<br>execute processes needed to finalize the site generation, and to prepare for site deployment</td>
+</tr>
+<tr>
+<td><code>site-deploy</code></td>
+<td>将项目站点发布到服务器<br>deploy the generated site documentation to the specified web server</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Maven默认生命周期"><a href="#Maven默认生命周期" class="headerlink" title="Maven默认生命周期"></a>Maven默认生命周期</h3><table>
+<thead>
+<tr>
+<th>Default Lifecycle</th>
+<th>生命周期阶段</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>validate</code></td>
+<td>验证</td>
+<td>确保当前配置和 POM 的内容是有效的。这包含对 pom.xml 文件树的验证。</td>
+</tr>
+<tr>
+<td><code>initialize</code></td>
+<td>初始化</td>
+<td>在执行构建生命周期的主任务之前可以进行初始化。</td>
+</tr>
+<tr>
+<td><code>generate-sources</code></td>
+<td>生成源码</td>
+<td>代码生成器可以开始生成在以后阶段中处理或编译的源代码。</td>
+</tr>
+<tr>
+<td><code>process-sources</code></td>
+<td>处理源码</td>
+<td>提供解析、修改和转换源码。常规源码和生成的源码都可以在这里处理。</td>
+</tr>
+<tr>
+<td><code>generate-resources</code></td>
+<td>生成资源</td>
+<td>可以生成非源码资源。通常包括元数据文件和配置文件。</td>
+</tr>
+<tr>
+<td><code>process-resources</code></td>
+<td>处理资源</td>
+<td>处理非源码资源。修改、转换和重定位资源都能在这阶段发生。</td>
+</tr>
+<tr>
+<td><code>compile</code></td>
+<td>编译</td>
+<td>编译源码。编译过的类被放到目标目录树中。</td>
+</tr>
+<tr>
+<td><code>process-classes</code></td>
+<td>处理类</td>
+<td>处理类文件转换和增强步骤。字节码交织器和常用工具常在这一阶段操作。</td>
+</tr>
+<tr>
+<td><code>generate-test-sources</code></td>
+<td>生成测试源码</td>
+<td>mojo 可以生成要操作的单元测试代码。</td>
+</tr>
+<tr>
+<td><code>process-test-sources</code></td>
+<td>处理测试源码</td>
+<td>在编译前对测试源码执行任何必要的处理。在这一阶段，可以修改、转换或复制源代码。</td>
+</tr>
+<tr>
+<td><code>generate-test-resources</code></td>
+<td>生成测试资源</td>
+<td>允许生成与测试相关的（非源码）资源。</td>
+</tr>
+<tr>
+<td><code>process-test-resources</code></td>
+<td>处理测试资源</td>
+<td>可以处理、转换和重新定位与测试相关的资源。</td>
+</tr>
+<tr>
+<td><code>test-compile</code></td>
+<td>测试编译</td>
+<td>编译单元测试的源码。</td>
+</tr>
+<tr>
+<td><code>process-test-classes</code></td>
+<td></td>
+<td>对测试编译生成的文件做后期处理(需Maven2.0.5及以上)</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>测试</td>
+<td>运行编译过的单元测试并累计结果。</td>
+</tr>
+<tr>
+<td><code>prepare-package</code></td>
+<td></td>
+<td>执行打包前的所有操作(需Maven2.1及以上)</td>
+</tr>
+<tr>
+<td><code>package</code></td>
+<td>打包</td>
+<td>将可执行的二进制文件打包到一个分布式归档文件中，如 JAR 或 WAR。</td>
+</tr>
+<tr>
+<td><code>pre-integration-test</code></td>
+<td>前集成测试</td>
+<td>准备集成测试。这种情况下的集成测试是指在一个受到一定控制的模拟的真 实部署环境中测试代码。这一步能将归档文件部署到一个服务器上执行。</td>
+</tr>
+<tr>
+<td><code>integration-test</code></td>
+<td>集成测试</td>
+<td>执行真正的集成测试。</td>
+</tr>
+<tr>
+<td><code>post-integration-test</code></td>
+<td>后集成测试</td>
+<td>解除集成测试准备。这一步涉及测试环境重置或重新初始化。</td>
+</tr>
+<tr>
+<td><code>verify</code></td>
+<td>检验</td>
+<td>检验可部署归档的有效性和完整性。过了这个阶段，将安装该归档。</td>
+</tr>
+<tr>
+<td><code>install</code></td>
+<td>安装</td>
+<td>将该归档添加到本地 Maven 目录。这一步让其他可能依赖该归档的模块可以使用它。</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>部署</td>
+<td>将该归档添加到远程 Maven 目录。这一步让这个工件能为更多的人所用。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Maven环境隔离配置"><a href="#Maven环境隔离配置" class="headerlink" title="Maven环境隔离配置"></a>Maven环境隔离配置</h2><blockquote>
+<p>在<code>pom.xml</code>中的<code>&lt;build&gt;</code>节点下插入<code>&lt;resources&gt;</code>节点,在其中添加<code>&lt;resource&gt;</code>节点来声明要进行环境分离的<code>resource</code>目录.然后在<code>pom.xml</code>中<code>&lt;project&gt;</code>节点下(与<code>&lt;build&gt;</code>同级)增加<code>&lt;profiles&gt;</code>节点,通过添加<code>&lt;profile&gt;</code>节点来配置不同环境.</p>
+</blockquote>
+<ol>
+<li><p>在<code>&lt;build&gt;</code>节点下插入<code>&lt;resources&gt;</code>节点</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置resources资源文件夹目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources.$&#123;deploy.type&#125;<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 排除指定文件 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">excludes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclude</span>&gt;</span>*.jsp<span class="tag">&lt;/<span class="name">exclude</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">excludes</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置resources资源文件夹目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<p>在 Web MVC 框架中, 每个 DispatcherServlet 都拥有自己的 WebApplicationcontext, 它继承了 ApplicationContext. WebApplicationContext 包含了其上下文和 Servlet 实例之间共享的所有的基础框架 beans.</p>
-<h4 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h4><p><img src="https://i.loli.net/2019/03/16/5c8c9cac81708.png" alt="UTOOLS1552719017735.png"></p>
-<p><img src="https://i.loli.net/2019/03/16/5c8c9da455e1c.png" alt="UTOOLS1552719267990.png"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>JavaGuide: <a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">https://github.com/Snailclimb/JavaGuide</a></li>
-</ul>
+<li><p>在<code>&lt;project&gt;</code>节点下插入<code>&lt;profiles&gt;</code>节点,并配置各个环境的环境标识及其他属性</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- dev环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置默认使用该环境 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- beta环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>beta<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>beta<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- product环境 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>prod<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 设置环境标识 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deploy.type</span>&gt;</span>prod<span class="tag">&lt;/<span class="name">deploy.type</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建<code>resources.&lt;环境标识&gt;</code>目录,这样便可结合<code>&lt;resource&gt;</code>中定义的<code>${deploy.type}</code>和<code>&lt;profile&gt;</code>中定义的<code>&lt;properties&gt;</code>属性值来选择使用哪个环境</p>
+<p><img src="https://i.loli.net/2019/02/28/5c77e94283e08.png" alt="resources目录结构.png"></p>
+</li>
+</ol>
+<h2 id="Maven命令使用"><a href="#Maven命令使用" class="headerlink" title="Maven命令使用"></a>Maven命令使用</h2><blockquote>
+<p><code>-Dmaven.test.skip=true</code>:跳过测试</p>
+<p><code>-P${deploy.type}</code>:使用指定的环境.例如:<code>mvn package -Pdev</code>,使用<code>dev</code>环境</p>
+<p><code>mvn help:effective-settings</code>:查看生效的配置.这里的内容是<code>settings.xml</code>中生效的配置,可以用来查看<code>repository</code>地址和<code>mirror</code>的配置</p>
+</blockquote>
 
       
     </div>
@@ -706,7 +1022,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC.html" title="SpringMVC">http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Ops/Maven.html" title="Maven学习笔记">http://blog.vnaso.live/JavaLearning/Ops/Maven.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -719,9 +1035,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
-            <a href="/tags/SpringMVC/" rel="tag"><i class="fa fa-tag"></i> SpringMVC</a>
+            <a href="/tags/Maven/" rel="tag"><i class="fa fa-tag"></i> Maven</a>
           
         </div>
       
@@ -734,18 +1048,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Java/HashMap.html" rel="next" title="HashMap">
-                <i class="fa fa-chevron-left"></i> HashMap
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Framework/Spring.html" rel="prev" title="Spring">
-                Spring <i class="fa fa-chevron-right"></i>
+              <a href="/JavaLearning/JavaNote/Framework/logback.html" rel="prev" title="Logback学习笔记">
+                Logback学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -988,7 +1298,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMVC-简介"><span class="nav-number">1.</span> <span class="nav-text">SpringMVC 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMVC-使用"><span class="nav-number">2.</span> <span class="nav-text">SpringMVC 使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMVC-工作原理"><span class="nav-number">3.</span> <span class="nav-text">SpringMVC 工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringMVC-重要组件说明"><span class="nav-number">3.1.</span> <span class="nav-text">SpringMVC 重要组件说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前端控制器-DispatcherServlet"><span class="nav-number">3.1.1.</span> <span class="nav-text">前端控制器 DispatcherServlet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理映射器-HandlerMapping"><span class="nav-number">3.1.2.</span> <span class="nav-text">处理映射器 HandlerMapping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理适配器-HandlerAdapter"><span class="nav-number">3.1.3.</span> <span class="nav-text">处理适配器 HandlerAdapter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理器-Handler-Controller"><span class="nav-number">3.1.4.</span> <span class="nav-text">处理器 Handler (Controller)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视图解析器-View-Resolver"><span class="nav-number">3.1.5.</span> <span class="nav-text">视图解析器 View Resolver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视图-View"><span class="nav-number">3.1.6.</span> <span class="nav-text">视图 View</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DispatcherServlet-详细解析"><span class="nav-number">3.2.</span> <span class="nav-text">DispatcherServlet 详细解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时序图"><span class="nav-number">3.2.1.</span> <span class="nav-text">时序图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven使用"><span class="nav-number">1.</span> <span class="nav-text">Maven使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven安装与配置"><span class="nav-number">1.1.</span> <span class="nav-text">Maven安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载与安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.1.2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建maven仓库"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">创建maven仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改下载镜像地址"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">修改下载镜像地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#针对Maven添加依赖时没有自动提示的解决方案"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">针对Maven添加依赖时没有自动提示的解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在IDEA中配置Maven"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">在IDEA中配置Maven</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven项目结构"><span class="nav-number">1.2.</span> <span class="nav-text">Maven项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven生命周期"><span class="nav-number">1.3.</span> <span class="nav-text">Maven生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clean生命周期"><span class="nav-number">1.3.1.</span> <span class="nav-text">clean生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#default生命周期"><span class="nav-number">1.3.2.</span> <span class="nav-text">default生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#site生命周期"><span class="nav-number">1.3.3.</span> <span class="nav-text">site生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Maven默认生命周期"><span class="nav-number">1.3.4.</span> <span class="nav-text">Maven默认生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven环境隔离配置"><span class="nav-number">1.4.</span> <span class="nav-text">Maven环境隔离配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven命令使用"><span class="nav-number">1.5.</span> <span class="nav-text">Maven命令使用</span></a></li></ol></li></ol></div>
             
 
           </div>

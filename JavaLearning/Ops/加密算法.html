@@ -98,23 +98,22 @@
 
 
 
-  <meta name="description" content="远程仓库解除与远程仓库的关联首先获取远程的仓库名, 然后删除 1234# 获取仓库名git remote# 解除关联git remote remove &amp;lt;name&amp;gt; 关联远程仓库1git remote add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt; 撤销修改撤销修改工作区使用 HEAD 中的最新内容替换工作区中的文件 1234# 单个文件/文件夹git checkout --">
-<meta name="keywords" content="Git">
+  <meta name="description" content="为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.  数字签名数字签名, 即通过提供 可鉴别 的 数字信息 来验证 自身身份 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 签名, 另一个用于 验证. 分别由 发送方 持有能够代表自己身份的 私钥">
+<meta name="keywords" content="加密算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Tools/Git命令.html">
+<meta property="og:title" content="加密算法">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Ops/加密算法.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="远程仓库解除与远程仓库的关联首先获取远程的仓库名, 然后删除 1234# 获取仓库名git remote# 解除关联git remote remove &amp;lt;name&amp;gt; 关联远程仓库1git remote add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt; 撤销修改撤销修改工作区使用 HEAD 中的最新内容替换工作区中的文件 1234# 单个文件/文件夹git checkout --">
+<meta property="og:description" content="为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.  数字签名数字签名, 即通过提供 可鉴别 的 数字信息 来验证 自身身份 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 签名, 另一个用于 验证. 分别由 发送方 持有能够代表自己身份的 私钥">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://git-scm.com/book/en/v2/images/reset-start.png">
-<meta property="og:image" content="https://git-scm.com/book/en/v2/images/reset-soft.png">
-<meta property="og:image" content="https://git-scm.com/book/en/v2/images/reset-mixed.png">
-<meta property="og:image" content="https://git-scm.com/book/en/v2/images/reset-hard.png">
-<meta property="og:updated_time" content="2019-04-29T04:11:50.672Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qefot2c6j30sg0lcwf3.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qg9chgbmj30k706s745.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qgbkh3n3j30kg05yglh.jpg">
+<meta property="og:updated_time" content="2019-04-04T10:31:09.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git常用命令">
-<meta name="twitter:description" content="远程仓库解除与远程仓库的关联首先获取远程的仓库名, 然后删除 1234# 获取仓库名git remote# 解除关联git remote remove &amp;lt;name&amp;gt; 关联远程仓库1git remote add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt; 撤销修改撤销修改工作区使用 HEAD 中的最新内容替换工作区中的文件 1234# 单个文件/文件夹git checkout --">
-<meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/reset-start.png">
+<meta name="twitter:title" content="加密算法">
+<meta name="twitter:description" content="为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.  数字签名数字签名, 即通过提供 可鉴别 的 数字信息 来验证 自身身份 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 签名, 另一个用于 验证. 分别由 发送方 持有能够代表自己身份的 私钥">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qefot2c6j30sg0lcwf3.jpg">
 
 
 
@@ -122,7 +121,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Tools/Git命令">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Ops/加密算法">
 
 
 
@@ -132,7 +131,7 @@
   };
 </script>
 
-  <title>Git常用命令 | Vnaso</title>
+  <title>加密算法 | Vnaso</title>
   
 
 
@@ -401,7 +400,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Tools/Git命令.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Ops/加密算法.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -418,7 +417,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git常用命令
+          <h1 class="post-title" itemprop="name headline">加密算法
 
               
             
@@ -444,24 +443,12 @@
                 
               
 
-              <time title="创建时间：2019-04-27 09:58:00" itemprop="dateCreated datePublished" datetime="2019-04-27T09:58:00+08:00">2019-04-27</time>
+              <time title="创建时间：2019-04-04 09:53:00 / 修改时间：18:31:09" itemprop="dateCreated datePublished" datetime="2019-04-04T09:53:00+08:00">2019-04-04</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-29 12:11:50" itemprop="dateModified" datetime="2019-04-29T12:11:50+08:00">2019-04-29</time>
               
             
           </span>
@@ -478,7 +465,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a></span>
 
                 
                 
@@ -497,8 +484,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/Tools/Git命令.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Tools/Git命令.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Ops/加密算法.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Ops/加密算法.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -506,7 +493,7 @@
 
           
           
-            <span id="/JavaLearning/Tools/Git命令.html" class="leancloud_visitors" data-flag-title="Git常用命令">
+            <span id="/JavaLearning/Ops/加密算法.html" class="leancloud_visitors" data-flag-title="加密算法">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -531,7 +518,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.3k</span>
+                <span title="本文字数">3.8k</span>
               
 
               
@@ -545,7 +532,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">10 分钟</span>
+                <span title="阅读时长">16 分钟</span>
               
             </div>
           
@@ -565,53 +552,149 @@
       
 
       
-        <h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="解除与远程仓库的关联"><a href="#解除与远程仓库的关联" class="headerlink" title="解除与远程仓库的关联"></a>解除与远程仓库的关联</h3><p>首先获取远程的仓库名, 然后删除</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取仓库名</span></span><br><span class="line">git remote</span><br><span class="line"><span class="comment"># 解除关联</span></span><br><span class="line">git remote remove &lt;name&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="关联远程仓库"><a href="#关联远程仓库" class="headerlink" title="关联远程仓库"></a>关联远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;name&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><h3 id="撤销修改-1"><a href="#撤销修改-1" class="headerlink" title="撤销修改"></a>撤销修改</h3><h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>使用 HEAD 中的最新内容替换工作区中的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单个文件/文件夹</span></span><br><span class="line">git checkout --&lt;filename&gt;</span><br><span class="line"><span class="comment"># 所有文件/文件夹</span></span><br><span class="line">git checkout .</span><br></pre></td></tr></table></figure>
-<h4 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h4><p>使用 <code>&lt;commit-id&gt;</code> 中的内容更新暂存区中的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单个文件/文件夹</span></span><br><span class="line">git reset &lt;commit-id&gt; &lt;filename&gt;</span><br><span class="line"><span class="comment"># 所有文件/文件夹</span></span><br><span class="line">git reset &lt;commit-id&gt; .</span><br><span class="line"><span class="comment"># git reset --mixed HEAD &lt;filename&gt; 的简写</span></span><br><span class="line">git reset filename</span><br><span class="line">git reset .</span><br></pre></td></tr></table></figure>
-<h3 id="回到某个-commit"><a href="#回到某个-commit" class="headerlink" title="回到某个 commit"></a>回到某个 commit</h3><p>会抹去某个 commit-id 后面的所有 commit.</p>
-<h4 id="工作区-1"><a href="#工作区-1" class="headerlink" title="工作区"></a>工作区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 回到某个 commit-id 版本, 不保留工作区修改.</span></span><br><span class="line">git reset --hard &lt;commit-id&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="暂存区-1"><a href="#暂存区-1" class="headerlink" title="暂存区"></a>暂存区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新 HEAD 和 暂存区, 会保留工作区.</span></span><br><span class="line">git reset &lt;commit-id&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h4 id="VS"><a href="#VS" class="headerlink" title="^ VS ~"></a>^ VS ~</h4><p><code>^</code>: Git 将 <code>^</code> 解析为该引用的父提交. </p>
-<p>但加上数字时, <code>HEAD^n</code> 代表 <code>HEAD</code> 的第 n 个父提交. 这个语法只适用于合并(merge)的提交, 因为提交合并会有多个父提交, 所以第一个父提交是你合并时所在的分支, 而第二个父提交是你说合并的分支.</p>
-<p>多个 <code>^</code> 连用, 如 <code>HEAD^^^</code> 表示 <code>HEAD</code> 的父提交的父提交的父提交.</p>
-<p><code>~</code>: Git 将 <code>~</code> 解析为该引用的第一个父提交. 第一个父提交 = 合并时所在分支的提交.</p>
-<p>但加上数字时, 意义与 <code>^</code> 不同. <code>HEAD~2</code> 代表 <code>HEAD</code> 的第一个父提交的第一个父提交, 即”祖父提交”.</p>
-<p>多个 <code>~</code> 连, 如 <code>HEAD~~~</code> 表示 <code>HEAD</code> 的第一个父提交的第一个父提交的第一个父提交, 与加数字的作用相同.</p>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p><code>^</code> 与 <code>~</code> 在不加数字时, 含义相同, 均指当前引用的 <code>^</code>或 <code>~</code>个数 的第一个父提交.</p>
-<p><code>^n</code> 表示当前引用的第 n 个父提交, 即 parent.</p>
-<p><code>~n</code> 表示当前引用的向前第 n 辈父提交, 即 ancestor.</p>
-<h4 id="reset-流程"><a href="#reset-流程" class="headerlink" title="reset 流程"></a>reset 流程</h4><p>初始状态:</p>
-<p><img src="https://git-scm.com/book/en/v2/images/reset-start.png" alt="初始状态"></p>
-<ol>
-<li><p>移动 HEAD</p>
-<p><img src="https://git-scm.com/book/en/v2/images/reset-soft.png" alt="移动HEAd"></p>
-<p><code>reset</code> 做的第一件事是移动 HEAD 的指向.  这与改变 HEAD 自身不同(<code>checkout</code> 所做的); <code>reset</code> 移动 HEAD 指向的分支. 这意味着如果 HEAD 设置为 <code>master</code> 分支(例如, 你正在 <code>master</code> 分支上), 运行 <code>git reset 9e5e64a</code> 将会使 <code>master</code> 指向 <code>9e5e64a</code>.</p>
-<p>它本质上是撤销了上一次 <code>git commit</code> 命令. 当你在运行 <code>git commit</code> 时，Git 会创建一个新的提交, 并移动 HEAD 所指向的分支来使其指向该提交. 当你将它 <code>reset</code>回 <code>HEAD~</code>(HEAD 的父结点)时, 其实就是把该分支移动回原来的位置, 而不会改变索引和工作目录. 现在你可以更新索引并再次运行 <code>git commit</code> 来完成 <code>git commit --amend</code> 所要做的事情了(见 <a href="https://git-scm.com/book/zh/v2/ch00/r_git_amend" target="_blank" rel="noopener">修改最后一次提交</a>).</p>
+        <blockquote>
+<p>为了保证业务的安全, 就需要对权限和信息提供安全保障, 数字签名和信息加密是提供这类保障的核心技术. 不同业务需求会使用到不同的签名加密算法, 有时也会结合多种不同的签名加密算法实现目标.</p>
+</blockquote>
+<h2 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h2><p>数字签名, 即通过提供 <strong>可鉴别</strong> 的 <strong>数字信息</strong> 来验证 <strong>自身身份</strong> 的一种方式. 一套数字签名通常定义两种互补的运算, 一个用于 <strong>签名</strong>, 另一个用于 <strong>验证.</strong> 分别由 <strong>发送方</strong> 持有能够代表自己身份的 <strong>私钥</strong>, 由 <strong>接收方</strong> 持有与私钥对应的 <strong>公钥</strong>, 用于验证发送者发送的信息是否被篡改过.</p>
+<p>发送方使用 摘要算法[^1] 提取出源文件的摘要后, 用私钥对摘要进行加密, 接收方接收到数据后, 用与发送方私钥对应的公钥对加密过的摘要进行解密, 并使用摘要算法获得文件内容的摘要, 最后将解密后的摘要和计算出的摘要进行比对, 如果一致则说明内容没有被篡改.</p>
+<p>到此为止, 数字签名提供了较强的安全性保障, 但唯一的风险就是: 接收方无法确定自己使用的公钥就是发送发提供的[^2]. 数字证书可以完美解决这个问题.</p>
+<h3 id="数字证书-Certificate-Authority"><a href="#数字证书-Certificate-Authority" class="headerlink" title="数字证书(Certificate Authority)"></a>数字证书(Certificate Authority)</h3><p>数字证书(CA)是一个由权威机构颁发的一种认可凭证. 这个机构用<a href="#非对称加密">非对称加密</a>产生一对密钥(公钥和私钥), 用私钥对公钥进行签名, 生成数字证书, 证书包含明文和密文两个部分, 明文中包含了: 签名证书的机构名, 颁发给谁, 有效期, 序列号等信息. 然后使用哈希算法对这些信息进行计算, 得到一个 hash 值, 再用私钥对这个 hash值进行加密, 这就得到了 CA 的数字签名. 将这两部分放入到数字证书的文件中, 就是一个数字证书.</p>
+<p>接收方通过使用公钥解密密文来验证数字证书的正确性. 解密得到 hash 值后, 使用相同的哈希算法对明文数据进行计算, 将计算结果与解密得到的相比对, 如果一致则说明证书是正确的. 接收方就可以使用这个公钥对数据进行解密验证.</p>
+<blockquote>
+<p>数字证书的公钥是公开的, 可以通过签发这个证书的机构获取其公钥. 即, 权威的证书颁发机构来保证公钥的正确性. 这些机构的证书被各个厂商设置为 <strong>可信任的根证书</strong>, 这些根证书可以去证明其他的证书. 如果一个根证书失效, 结果将是灾难性的.</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qefot2c6j30sg0lcwf3.jpg" alt="数字签名过程"></p>
+<blockquote>
+<p>签名最根本的用途就是 <strong>验证发送方的身份</strong>, 防止 <strong>中间人攻击</strong>, <strong>CSRF跨域身份伪造</strong>. 基于这一点, 在诸如设备认证, 用户认证, 第三方认证等认证体系中, 都会用到签名算法.</p>
+</blockquote>
+<h2 id="加密和解密"><a href="#加密和解密" class="headerlink" title="加密和解密"></a>加密和解密</h2><p>数据加密是将原来为 <strong>明文</strong> 的数据内容按照某种 <strong>算法</strong> 进行处理, 使其成为 <strong>不可读</strong> 的数据, 通常称为 <strong>密文</strong>. 以达到 <strong>保护数据安全</strong> 的目的.</p>
+<p><strong>加密</strong> 的逆过程称为 <strong>解密</strong>. 即将经过处理的数据还原为原来数据的过程.</p>
+<p>加密分为 <strong>对称加密</strong> 和 <strong>非对称加密</strong> 两类.</p>
+<h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p><strong>对称加密算法</strong> 是应用较早的加密算法, 在对称加密算法中, 使用的密钥只有 1 个. 发送方和接收方都使用这个密钥来对数据进行加密和解密. 这要求双方都必须知道 <strong>加密的密钥</strong>.</p>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qg9chgbmj30k706s745.jpg" alt="对称加密"></p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>加密和解密数据使用同一个密钥, 适合对大量数据进行加密解密.</p>
+<h4 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h4><p>关键是密钥的保存方式, 任何一方泄露密钥, 都会导致信息泄露.</p>
+<h4 id="代表算法"><a href="#代表算法" class="headerlink" title="代表算法"></a>代表算法</h4><p>DES 3DES Blowfish RC4 RC5 AES</p>
+<h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><p><strong>非对称加密算法</strong> 需要两个密钥, 一个称为 <strong>公开密钥(public key)</strong>, 另一个称为 <strong>私有密钥(private key)</strong>.</p>
+<p>因为加密和解密的过程中使用的是两个不同的密钥, 所以这种算法称为非对称加密. </p>
+<p><img src="http://ww1.sinaimg.cn/large/0062LbXpgy1g1qgbkh3n3j30kg05yglh.jpg" alt="非对称加密"></p>
+<h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>使用两个密钥:  <strong>公开密钥(public key)</strong>, <strong>私有密钥(private key)</strong>. 使用其中一个密钥作为加密密钥后, 只能用相对应的另一个密钥才能解密.</p>
+<p><strong>密钥长度</strong>: 通常是 1024, 2048 位. 密钥长度增长一倍, 公钥操作所需时间增加约 4 倍. 私钥操作所需时间增加约 8 倍, 公钥生成时间增加约 16 倍.</p>
+<p><strong>加密的明文长度</strong>: 加密的明文长度不能超过 RSA 密钥的长度减去 11byte. 如密钥长度为 1024, 则明文长度不能超过 117byte(1024/8 - 11 = 117byte). 如果长度超过该值, 将会抛出异常.  <strong>加密后的密文长度为密钥长度</strong>. 如密钥长度为 1024bit, 最后生成的密文长度 <strong>固定为 1024bit</strong>.</p>
+<h4 id="安全性-1"><a href="#安全性-1" class="headerlink" title="安全性"></a>安全性</h4><p>公钥可以被任何人知道, 但是私钥泄露就会导致信息泄露.</p>
+<h4 id="代表算法-1"><a href="#代表算法-1" class="headerlink" title="代表算法"></a>代表算法</h4><p>RSA</p>
+<h3 id="哈希散列算法"><a href="#哈希散列算法" class="headerlink" title="哈希散列算法"></a>哈希散列算法</h3><p><strong>哈希散列算法</strong> 不能称作加密算法, 只是将明文的数据通过计算得出对应的一个值, 使数据 <strong>不可读</strong>, 且无法通过值来逆推出明文</p>
+<h4 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h4><p>采用某种散列函数, 输入不同长度的明文, 得出固定长度的密文. 明文的微小变化都能引起密文的巨大变化.</p>
+<h4 id="安全性-2"><a href="#安全性-2" class="headerlink" title="安全性"></a>安全性</h4><p>不能通过密文反推明文, 通常作为数据完整性校验.</p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>生成信息摘要, 验证信息完整性.</p>
+<p>不使用明文存储密码, 使用通过算法处理后的值来存储密码和验证密码.</p>
+<h4 id="代表算法-2"><a href="#代表算法-2" class="headerlink" title="代表算法"></a>代表算法</h4><p>MD5 SHA-1 SHA-2(SHA-224, SHA-256, SHA-384, SHA-512)</p>
+<h2 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h2><h3 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h3><p>MD5 用的是 <strong>哈希函数</strong>, 典型应用是对数据产生信息摘要, 以验证数据是否完整. MD5 是一种摘要算法, 对于任何的输入, 都会输出长度为 128bit 的值(通常用 <strong>16进制</strong> 表示为 <strong>32个字符</strong>).</p>
+<h3 id="SHA-1"><a href="#SHA-1" class="headerlink" title="SHA-1"></a>SHA-1</h3><p>SHA-1 是和 MD5 一样流行的 <strong>消息摘要算法</strong>. 然而 SHA-1 比 MD5 的安全性更强. 对于长度小于 <code>2^64bit</code> 的消息, SHA-1 会产生一个 160bit 的消息摘要. 基于 MD5, SHA-1 的消息摘要特性以及 <strong>不可逆</strong>, 可以被应用在检查文件完整性和数字签名等场景.</p>
+<h3 id="HMAC"><a href="#HMAC" class="headerlink" title="HMAC"></a>HMAC</h3><p>HMAC 是密钥相关的 <strong>哈希运算消息认证码</strong>(Hash-based Message Authentication Code). HMAC 运算利用 <strong>哈希算法</strong>(MD5, SHA-1等), 以 <strong>一个密钥</strong> 和 <strong>一个消息</strong> 为输入, 生成一个 <strong>消息摘要</strong> 作为输出.</p>
+<p>发送方和接受方持有一个公共密钥, 一方发送 <strong>消息和数据摘要</strong>, 另一方使用 HMAC 用 <strong>接收的数据和公共密钥</strong> 作为输入, 将得到的数据摘要与接收的相比对, 如果匹配则说明数据在传输过程中未经篡改.</p>
+<h3 id="AES-DES-3DES"><a href="#AES-DES-3DES" class="headerlink" title="AES/DES/3DES"></a>AES/DES/3DES</h3><p>三者都是对称的块加密算法, 加解密的过程是 <strong>可逆的</strong>. 常用的有 AES128, AES192, AES256.</p>
+<h4 id="DES"><a href="#DES" class="headerlink" title="DES"></a>DES</h4><p>DES 加密算法是一种分组密码[^3]. 每块数据的长度为 64bit, 使用密钥来自定义变换过程, 因此算法认为只有持有加密所用的密钥的用户才能解密密文. 密钥表面上是 64位 的, 然后只有其中的 56位 被实际用于算法, 其余 8位 可以用于奇偶校验, 并在算法中被丢弃. 因此 <strong>DES的有效密钥长度仅为56位</strong>.</p>
+<blockquote>
+<p>对于 56位 长度的密钥来说, 如果使用穷举法来进行搜索, 运算次数为 2^56 次.</p>
+</blockquote>
+<h4 id="3DES"><a href="#3DES" class="headerlink" title="3DES"></a>3DES</h4><p>是基于 DES 的对称算法, 对 <strong>一块数据</strong> 用 <strong>三个不同的密钥</strong> 进行 <strong>三次加密</strong>, 强度更高.</p>
+<h4 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h4><p>AES 加密算法是密码学中的 <strong>高级加密标准</strong>. 该加密算法采用 <strong>对称分组密码体制</strong>, 密钥长度可以为 128位, 192位, 256位. 同样是将明文分块, 每块的长度只能是 128位, 每次加密一组数据, 直到加密完整个明文. 密钥的长度不同, 加密的轮数也不同.</p>
+<p>AES 本身就是为了取代 DES 的, AES 具有更好的安全性, 效率和灵活性.</p>
+<h3 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h3><p>RSA 加密算法是目前最有影响力的 <strong>公钥加密算法</strong>, 并且被普遍认为是目前最优秀的公钥方案之一. RSA 是第一个能同时用于 <strong>加密</strong> 和 <strong>数字签名</strong> 的算法, 它能够抵抗到目前为止已知的所有密码攻击, 已被 ISO 推荐位公钥数据加密标准.</p>
+<blockquote>
+<p>RSA加密算法 基于一个十分简单的数论事实: 将两个大 <strong>素数</strong> 相乘十分容易, 但是想要对其进乘积进行因式分解却及其苦难, 因此可以将 <strong>乘积</strong> 公开作为 <strong>加密密钥</strong>.</p>
+</blockquote>
+<h4 id="对称加密算法"><a href="#对称加密算法" class="headerlink" title="对称加密算法"></a>对称加密算法</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">密钥名称</th>
+<th style="text-align:center">运行速度</th>
+<th style="text-align:center">安全性</th>
+<th style="text-align:center">资源消耗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">DES</td>
+<td style="text-align:center">56位</td>
+<td style="text-align:center">较快</td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">中</td>
+</tr>
+<tr>
+<td style="text-align:center">3DES</td>
+<td style="text-align:center">112位或168位</td>
+<td style="text-align:center">慢</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">高</td>
+</tr>
+<tr>
+<td style="text-align:center">AES</td>
+<td style="text-align:center">128、192、256位</td>
+<td style="text-align:center">快</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">低</td>
+</tr>
+</tbody>
+</table>
+<h4 id="非对称加密算法"><a href="#非对称加密算法" class="headerlink" title="非对称加密算法"></a>非对称加密算法</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">成熟度</th>
+<th style="text-align:center">安全性</th>
+<th style="text-align:center">运算速度</th>
+<th style="text-align:center">资源消耗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">RSA</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">中</td>
+</tr>
+<tr>
+<td style="text-align:center">ECC</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">慢</td>
+<td style="text-align:center">高</td>
+</tr>
+</tbody>
+</table>
+<h4 id="哈希散列算法-1"><a href="#哈希散列算法-1" class="headerlink" title="哈希散列算法"></a>哈希散列算法</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">安全性</th>
+<th style="text-align:center">速度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">SHA-1</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">慢</td>
+</tr>
+<tr>
+<td style="text-align:center">MD5</td>
+<td style="text-align:center">中</td>
+<td style="text-align:center">快</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>浅谈常见的七种加密算法及实现: <a href="https://juejin.im/post/5b48b0d7e51d4519962ea383" target="_blank" rel="noopener">https://juejin.im/post/5b48b0d7e51d4519962ea383</a></li>
+<li><p>互联网安全之数字签名、数字证书与PKI系统: <a href="https://juejin.im/post/584b753b2f301e00572314dc" target="_blank" rel="noopener">https://juejin.im/post/584b753b2f301e00572314dc</a></p>
 </li>
-<li><p>更新索引(–mixed)</p>
-<p><img src="https://git-scm.com/book/en/v2/images/reset-mixed.png" alt="更新索引"></p>
-<p><code>reset</code> 这时会用 HEAD 指向的当前快照的内容来更新索引(暂存区).</p>
-<p>如果指定 <code>--mixed</code> 选项, <code>reset</code> 将会在这时停止. 这也是默认行为, 所以如果没有指定任何选项(在本例中只是 <code>git reset HEAD~</code>), 这就是命令将会停止的地方.</p>
-<p>它依然会撤销一上次 <code>commit</code>，但还会 <em>取消暂存</em> 的所有东西. 于是, 我们回滚到了所有 <code>git add</code> 和 <code>git commit</code> 的命令执行之前.</p>
-</li>
-<li><p>更新工作目录(–hard)</p>
-<p><img src="https://git-scm.com/book/en/v2/images/reset-hard.png" alt="更新工作区"></p>
-<p><code>reset</code> 这时会让工作目录看起来像索引. 如果使用 <code>--hard</code> 选项, 它将会执行这一步.</p>
-<p>须注意, <code>--hard</code> 标记是 <code>reset</code> 命令唯一的危险用法, 它也是 Git 会真正地销毁数据的仅有的几个操作之一. 其他任何形式的 <code>reset</code> 调用都可以轻松撤消, 但是 <code>--hard</code> 选项不能，因为它强制覆盖了工作目录中的文件. 在这种特殊情况下，我们的 Git 数据库中的一个提交内还留有该文件的 <strong>v3</strong> 版本，我们可以通过 <code>reflog</code> 来找回它. 但是若该文件还未提交, Git 仍会覆盖它从而导致无法恢复.</p>
-</li>
-</ol>
-<h5 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h5><ul>
-<li><p><code>reset --soft</code>: 执行步骤 1. 只回退 <code>commit</code> 的信息, 暂存区和工作区没有发生变化, 与回退之前保持一致. 如果要继续提交, 直接 <code>git commit</code> 即可.</p>
-</li>
-<li><p><code>reset [--mixed]</code>: 执行步骤 1,2, 默认. 将 HEAD 重置到另外一个 commit, 且更新索引(暂存区)和 HEAD 相同. 工作区不会被更改.</p>
-</li>
-<li><p><code>reset --hard</code>: 执行步骤 1,2,3. 彻底回到指定的 commit-id, 暂存区和工作区都会变为指定 commit-id 版本的内容.</p>
+<li><p>公钥私钥</p>
 </li>
 </ul>
+<p>[^1]:摘要算法指通过散列算法计算得到唯一的固定长度的哈希值, 无法逆向还原出源数据.<br>[^2]:公钥和私钥都由发送方生成, 发送方通过把公钥提供给接收方, 使其能够对数据进行校验.<br>[^3]:一种将固定长度的明文通过一系列复杂的操作变成同样长度的密文算法.</p>
 
       
     </div>
@@ -679,7 +762,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/Tools/Git命令.html" title="Git常用命令">http://blog.vnaso.live/JavaLearning/Tools/Git命令.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Ops/加密算法.html" title="加密算法">http://blog.vnaso.live/JavaLearning/Ops/加密算法.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -692,7 +775,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+            <a href="/tags/加密算法/" rel="tag"><i class="fa fa-tag"></i> 加密算法</a>
           
         </div>
       
@@ -705,8 +788,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/数据结构与算法/链表.html" rel="next" title="链表">
-                <i class="fa fa-chevron-left"></i> 链表
+              <a href="/JavaLearning/JavaNote/Java/Java多线程.html" rel="next" title="Java 多线程">
+                <i class="fa fa-chevron-left"></i> Java 多线程
               </a>
             
           </div>
@@ -715,8 +798,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Java/JVM.html" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/JavaLearning/JavaNote/Java/Java IO.html" rel="prev" title="Java IO">
+                Java IO <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -792,7 +875,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -835,7 +918,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -884,7 +969,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -953,7 +1042,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">1.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解除与远程仓库的关联"><span class="nav-number">1.1.</span> <span class="nav-text">解除与远程仓库的关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关联远程仓库"><span class="nav-number">1.2.</span> <span class="nav-text">关联远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改-1"><span class="nav-number">2.1.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区"><span class="nav-number">2.1.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区"><span class="nav-number">2.1.2.</span> <span class="nav-text">暂存区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到某个-commit"><span class="nav-number">2.2.</span> <span class="nav-text">回到某个 commit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">暂存区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">3.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VS"><span class="nav-number">3.0.1.</span> <span class="nav-text">^ VS ~</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">3.0.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reset-流程"><span class="nav-number">3.0.2.</span> <span class="nav-text">reset 流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结-1"><span class="nav-number">3.0.2.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数字签名"><span class="nav-number">1.</span> <span class="nav-text">数字签名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字证书-Certificate-Authority"><span class="nav-number">1.1.</span> <span class="nav-text">数字证书(Certificate Authority)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密和解密"><span class="nav-number">2.</span> <span class="nav-text">加密和解密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密"><span class="nav-number">2.1.</span> <span class="nav-text">对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">2.1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全性"><span class="nav-number">2.1.2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代表算法"><span class="nav-number">2.1.3.</span> <span class="nav-text">代表算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密"><span class="nav-number">2.2.</span> <span class="nav-text">非对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全性-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代表算法-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">代表算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哈希散列算法"><span class="nav-number">2.3.</span> <span class="nav-text">哈希散列算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全性-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用场景"><span class="nav-number">2.3.3.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代表算法-2"><span class="nav-number">2.3.4.</span> <span class="nav-text">代表算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见算法"><span class="nav-number">3.</span> <span class="nav-text">常见算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5"><span class="nav-number">3.1.</span> <span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHA-1"><span class="nav-number">3.2.</span> <span class="nav-text">SHA-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HMAC"><span class="nav-number">3.3.</span> <span class="nav-text">HMAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AES-DES-3DES"><span class="nav-number">3.4.</span> <span class="nav-text">AES/DES/3DES</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DES"><span class="nav-number">3.4.1.</span> <span class="nav-text">DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3DES"><span class="nav-number">3.4.2.</span> <span class="nav-text">3DES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AES"><span class="nav-number">3.4.3.</span> <span class="nav-text">AES</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA"><span class="nav-number">3.5.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对称加密算法"><span class="nav-number">3.5.1.</span> <span class="nav-text">对称加密算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非对称加密算法"><span class="nav-number">3.5.2.</span> <span class="nav-text">非对称加密算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希散列算法-1"><span class="nav-number">3.5.3.</span> <span class="nav-text">哈希散列算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -987,7 +1076,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">178k</span>
+    <span title="站点总字数">190k</span>
   
 
   
@@ -996,7 +1085,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">12:53</span>
+    <span title="站点阅读时长">13:46</span>
   
 </div>
 

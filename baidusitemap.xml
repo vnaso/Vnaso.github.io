@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html</loc>
-    <lastmod>2019-05-03</lastmod>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Docker%E4%BB%8B%E7%BB%8D.html</loc>
+    <lastmod>2019-05-05</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Framework/logback.html</loc>
+    <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Framework/Spring.html</loc>
-    <lastmod>2019-05-01</lastmod>
+    <lastmod>2019-05-05</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html</loc>
+    <lastmod>2019-05-03</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/HashMap.html</loc>
     <lastmod>2019-05-01</lastmod>
@@ -28,16 +34,16 @@
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%20IO.html</loc>
     <lastmod>2019-05-01</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/ServerSetting.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html</loc>
     <lastmod>2019-04-30</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/Linux.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Linux.html</loc>
     <lastmod>2019-04-30</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Web/CORS%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB.html</loc>
     <lastmod>2019-04-30</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/Git%E5%91%BD%E4%BB%A4.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Git%E5%91%BD%E4%BB%A4.html</loc>
     <lastmod>2019-04-29</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/Redis.html</loc>
@@ -46,16 +52,13 @@
     <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8.html</loc>
     <lastmod>2019-04-16</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95.html</loc>
     <lastmod>2019-04-04</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/Maven.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Maven.html</loc>
     <lastmod>2019-03-21</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/Nginx.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Nginx.html</loc>
     <lastmod>2019-03-09</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Tools/logback.html</loc>
-    <lastmod>2019-03-07</lastmod>
   </url>
 </urlset>
