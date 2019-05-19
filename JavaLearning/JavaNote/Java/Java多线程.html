@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e248554755.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/18/5c8ef47a449f0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24a1d225f.jpg">
-<meta property="og:updated_time" content="2019-05-01T05:49:35.508Z">
+<meta property="og:updated_time" content="2019-05-15T11:59:09.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 多线程">
 <meta name="twitter:description" content="重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作.  并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”. 多线程在单核 CPU 中是交替执行(并发), 在多核 CPU">
@@ -474,7 +474,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-01 13:49:35" itemprop="dateModified" datetime="2019-05-01T13:49:35+08:00">2019-05-01</time>
+                <time title="修改时间：2019-05-15 19:59:09" itemprop="dateModified" datetime="2019-05-15T19:59:09+08:00">2019-05-15</time>
               
             
           </span>
@@ -653,8 +653,8 @@
 <h3 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h3><p><strong>非线程安全</strong> 问题存在于 <strong>实例变量中</strong>, 如果是方法内部私有成员变量, 则不存在 <strong>非线程安全</strong> 问题.</p>
 <p>如果连个线程同时操作对象中的实例变量, 则会出现 <strong>非线程安全</strong>, 解决办法就是在方法前加上 synchronized 关键字即可.</p>
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p><img src="https://i.loli.net/2019/03/29/5c9e23af2cdc8.jpg" alt="synchronized使用场景"></p>
-<p><strong>注意</strong>: <strong>类锁</strong> 和 <strong>对象锁</strong> 之间不互斥. 即, 一个线程可以同时获得 类锁 和 对象锁.</p>
-<h3 id="synchronized-锁重入"><a href="#synchronized-锁重入" class="headerlink" title="synchronized 锁重入"></a>synchronized 锁重入</h3><p><strong>可重入锁</strong> 含义是: 自己可以再次获取自己内部的锁. 比如一个线程获得了某个对象的锁, 此时这个对象还没有释放, 当其再次想要获取这个对象的锁时, 还是可以获取的, 如果不可重入的话, 就会造成死锁.</p>
+<p><strong>注意</strong>: <strong>类锁</strong>和<strong>对象锁</strong>之间不互斥. 即一个线程可以同时获得<em>类锁</em>和<em>对象锁</em>.</p>
+<h3 id="synchronized-锁重入"><a href="#synchronized-锁重入" class="headerlink" title="synchronized 锁重入"></a>synchronized 锁重入</h3><p><strong>可重入锁</strong>的含义是: 自己可以再次获取自己内部的锁. 比如一个线程获得了某个对象的锁, 此时这个对象还没有释放, 当其再次想要获取这个对象的锁时, 还是可以获取的, 如果不可重入的话, 就会造成死锁.</p>
 <p>可重入锁也支持在父子类继承的环境当中.</p>
 <h2 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h2><p><a href="#synchronized">synchronized</a> 用的锁是存在 Java 对象头中的. 如果对象是数组类型, 则虚拟机用 3 个字宽(Word)存储对象头, 如果对象是非数组类型, 则用 2 个字宽存储对象头.</p>
 <table>
@@ -1518,7 +1518,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1621,7 +1623,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">190k</span>
+    <span title="站点总字数">231k</span>
   
 
   
@@ -1630,7 +1632,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">13:46</span>
+    <span title="站点阅读时长">16:46</span>
   
 </div>
 

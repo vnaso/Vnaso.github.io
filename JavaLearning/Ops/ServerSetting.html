@@ -98,13 +98,13 @@
 
 
 
-  <meta name="description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+  <meta name="description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 1234export JAVA_HOME=/usr/java/jdk...export JRE_HOME=/usr/j">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux线上环境搭建">
 <meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+<meta property="og:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 1234export JAVA_HOME=/usr/java/jdk...export JRE_HOME=/usr/j">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/04/5c7d0e96800b4.png">
@@ -113,10 +113,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b8283e0357.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b83014f41b.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b96f1831a8.png">
-<meta property="og:updated_time" content="2019-04-30T03:48:06.214Z">
+<meta property="og:updated_time" content="2019-05-13T00:53:20.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux线上环境搭建">
-<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 123export JAVA_HOME=/usr/java/jdk...export CLASS_PATH=.:$JA">
+<meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 1234export JAVA_HOME=/usr/java/jdk...export JRE_HOME=/usr/j">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/03/5c7b6d28c8abf.png">
 
 
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-30 11:48:06" itemprop="dateModified" datetime="2019-04-30T11:48:06+08:00">2019-04-30</time>
+                <time title="修改时间：2019-05-13 08:53:20" itemprop="dateModified" datetime="2019-05-13T08:53:20+08:00">2019-05-13</time>
               
             
           </span>
@@ -578,7 +578,7 @@
 <li><p>解压到 <code>tar -zxvf jdk_8u_201 -C /usr/java</code></p>
 </li>
 <li><p>编辑环境变量 <code>vim /etc/profile</code>, 使环境变量生效 <code>source /etc/profile</code></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk...</span><br><span class="line">export CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/<span class="selector-tag">dt</span><span class="selector-class">.jar</span>:<span class="variable">$JAVA_HOME</span>/lib/tools<span class="selector-class">.jar</span>:<span class="variable">$JRE_HOME</span>/lib</span><br><span class="line">export PATH=<span class="variable">$PATH</span>:<span class="variable">$GIT_HOME</span>/bin:<span class="variable">$MAVEN_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin:</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/usr/java/jdk...</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JRE_HOME</span>=/usr/java/jdk.../jre</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">CLASS_PATH</span>=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>检查是否安装成功: <code>java -version</code></p>
 </li>
@@ -1032,7 +1032,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1135,7 +1137,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">190k</span>
+    <span title="站点总字数">231k</span>
   
 
   
@@ -1144,7 +1146,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">13:46</span>
+    <span title="站点阅读时长">16:46</span>
   
 </div>
 
