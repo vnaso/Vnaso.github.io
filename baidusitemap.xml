@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html</loc>
+    <lastmod>2019-06-09</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Solutions/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html</loc>
+    <lastmod>2019-06-09</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Git%E5%91%BD%E4%BB%A4.html</loc>
+    <lastmod>2019-06-08</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Linux.html</loc>
+    <lastmod>2019-06-07</lastmod>
+  </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/HashMap%20%E5%92%8C%20ConcurrentHashMap.html</loc>
-    <lastmod>2019-05-19</lastmod>
+    <lastmod>2019-06-04</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/Redis.html</loc>
+    <lastmod>2019-05-23</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8.html</loc>
     <lastmod>2019-05-15</lastmod>
@@ -22,17 +37,8 @@
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E5%9F%BA%E7%A1%80.html</loc>
     <lastmod>2019-05-13</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html</loc>
-    <lastmod>2019-05-13</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Ops/Linux.html</loc>
-    <lastmod>2019-05-11</lastmod>
-  </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/Nginx.html</loc>
     <lastmod>2019-05-09</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Ops/Git%E5%91%BD%E4%BB%A4.html</loc>
-    <lastmod>2019-05-08</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/Docker%E4%BB%8B%E7%BB%8D.html</loc>
     <lastmod>2019-05-05</lastmod>
@@ -51,9 +57,6 @@
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%20IO.html</loc>
     <lastmod>2019-05-01</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/Redis.html</loc>
-    <lastmod>2019-04-28</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95.html</loc>
     <lastmod>2019-04-04</lastmod>

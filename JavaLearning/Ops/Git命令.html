@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/05/08/5cd26337006e3.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/08/5cd25ab10fe58.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/08/5cd2631c0292a.png">
-<meta property="og:updated_time" content="2019-05-08T05:06:54.091Z">
+<meta property="og:updated_time" content="2019-06-08T03:20:45.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令">
 <meta name="twitter:description" content="初始化初始化一个已经有内容了的目录如果本地已经有了内容, 但是还没有使用 Git 管理, 现在先在 Github 上创建了 Repository. 把项目同步到仓库的连招如下: 123456789101112131415161718192021222324252627# 1 初始化git init# 2 暂存并提交git add .git commit -m &quot;init&quot;# 3 设置远程仓库git">
@@ -465,7 +465,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-08 13:06:54" itemprop="dateModified" datetime="2019-05-08T13:06:54+08:00">2019-05-08</time>
+                <time title="修改时间：2019-06-08 11:20:45" itemprop="dateModified" datetime="2019-06-08T11:20:45+08:00">2019-06-08</time>
               
             
           </span>
@@ -535,7 +535,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.9k</span>
+                <span title="本文字数">4k</span>
               
 
               
@@ -584,6 +584,8 @@
 <h4 id="工作区-1"><a href="#工作区-1" class="headerlink" title="工作区"></a>工作区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 回到某个 commit-id 版本, 不保留工作区修改.</span></span><br><span class="line">git reset --hard &lt;commit-id&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="暂存区-1"><a href="#暂存区-1" class="headerlink" title="暂存区"></a>暂存区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新 HEAD 和 暂存区, 会保留工作区.</span></span><br><span class="line">git reset &lt;commit-id&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><h3 id="查看某次-commit-的信息"><a href="#查看某次-commit-的信息" class="headerlink" title="查看某次 commit 的信息"></a>查看某次 commit 的信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show &lt;commmit-id&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><h3 id="修改某次-commit-的注释"><a href="#修改某次-commit-的注释" class="headerlink" title="修改某次 commit 的注释"></a>修改某次 commit 的注释</h3><p>执行该命令后, 会出现交互界面让你修改最近一次尚未 push 的 commit 的注释.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h4 id="VS"><a href="#VS" class="headerlink" title="^ VS ~"></a>^ VS ~</h4><p><code>^</code>: Git 将 <code>^</code> 解析为该引用的父提交. </p>
 <p>但加上数字时, <code>HEAD^n</code> 代表 <code>HEAD</code> 的第 n 个父提交. 这个语法只适用于合并(merge)的提交, 因为提交合并会有多个父提交, 所以第一个父提交是你合并时所在的分支, 而第二个父提交是你说合并的分支.</p>
 <p>多个 <code>^</code> 连用, 如 <code>HEAD^^^</code> 表示 <code>HEAD</code> 的父提交的父提交的父提交.</p>
@@ -812,7 +814,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -857,7 +859,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -912,7 +916,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -981,7 +987,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化一个已经有内容了的目录"><span class="nav-number">1.1.</span> <span class="nav-text">初始化一个已经有内容了的目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解除与远程仓库的关联"><span class="nav-number">2.1.</span> <span class="nav-text">解除与远程仓库的关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关联远程仓库"><span class="nav-number">2.2.</span> <span class="nav-text">关联远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">3.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#合并分支并保留目标分支的提交记录"><span class="nav-number">3.1.</span> <span class="nav-text">合并分支并保留目标分支的提交记录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">4.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改-1"><span class="nav-number">4.1.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区"><span class="nav-number">4.1.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区"><span class="nav-number">4.1.2.</span> <span class="nav-text">暂存区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到某个-commit"><span class="nav-number">4.2.</span> <span class="nav-text">回到某个 commit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">暂存区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看"><span class="nav-number">5.</span> <span class="nav-text">查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看某次-commit-的信息"><span class="nav-number">5.1.</span> <span class="nav-text">查看某次 commit 的信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">6.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VS"><span class="nav-number">6.0.1.</span> <span class="nav-text">^ VS ~</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">6.0.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reset-流程"><span class="nav-number">6.0.2.</span> <span class="nav-text">reset 流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结-1"><span class="nav-number">6.0.2.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fast-Forward-模式"><span class="nav-number">6.1.</span> <span class="nav-text">Fast-Forward 模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">6.1.1.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化一个已经有内容了的目录"><span class="nav-number">1.1.</span> <span class="nav-text">初始化一个已经有内容了的目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解除与远程仓库的关联"><span class="nav-number">2.1.</span> <span class="nav-text">解除与远程仓库的关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关联远程仓库"><span class="nav-number">2.2.</span> <span class="nav-text">关联远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">3.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#合并分支并保留目标分支的提交记录"><span class="nav-number">3.1.</span> <span class="nav-text">合并分支并保留目标分支的提交记录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">4.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改-1"><span class="nav-number">4.1.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区"><span class="nav-number">4.1.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区"><span class="nav-number">4.1.2.</span> <span class="nav-text">暂存区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到某个-commit"><span class="nav-number">4.2.</span> <span class="nav-text">回到某个 commit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂存区-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">暂存区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看"><span class="nav-number">5.</span> <span class="nav-text">查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看某次-commit-的信息"><span class="nav-number">5.1.</span> <span class="nav-text">查看某次 commit 的信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改"><span class="nav-number">6.</span> <span class="nav-text">修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改某次-commit-的注释"><span class="nav-number">6.1.</span> <span class="nav-text">修改某次 commit 的注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">7.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VS"><span class="nav-number">7.0.1.</span> <span class="nav-text">^ VS ~</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">7.0.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reset-流程"><span class="nav-number">7.0.2.</span> <span class="nav-text">reset 流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结-1"><span class="nav-number">7.0.2.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fast-Forward-模式"><span class="nav-number">7.1.</span> <span class="nav-text">Fast-Forward 模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">7.1.1.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1015,7 +1021,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">231k</span>
+    <span title="站点总字数">236k</span>
   
 
   
@@ -1024,7 +1030,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">16:46</span>
+    <span title="站点阅读时长">17:06</span>
   
 </div>
 
