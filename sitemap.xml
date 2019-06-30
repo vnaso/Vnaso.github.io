@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Ops/Nginx.html</loc>
+    
+    <lastmod>2019-06-30T12:44:52.013Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html</loc>
     
-    <lastmod>2019-06-09T10:14:55.019Z</lastmod>
+    <lastmod>2019-06-27T11:19:06.294Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%20IO.html</loc>
+    
+    <lastmod>2019-06-18T04:02:45.545Z</lastmod>
     
   </url>
   
@@ -86,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Ops/Nginx.html</loc>
-    
-    <lastmod>2019-05-09T02:52:06.854Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/Docker%E4%BB%8B%E7%BB%8D.html</loc>
     
     <lastmod>2019-05-05T12:01:35.436Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC.html</loc>
     
     <lastmod>2019-05-01T03:14:34.355Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%20IO.html</loc>
-    
-    <lastmod>2019-05-01T03:14:17.368Z</lastmod>
     
   </url>
   
