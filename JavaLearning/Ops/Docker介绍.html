@@ -705,27 +705,27 @@
 <h5 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h5><p>指定 base image.</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> &lt;image&gt;:&lt;tag&gt;</span><br><span class="line"><span class="keyword">FROM</span> scratch   <span class="comment"># 制作base image</span></span><br><span class="line"><span class="keyword">FROM</span> centos    <span class="comment"># 使用base images</span></span><br></pre></td></tr></table></figure>
 <h5 id="LABEL"><a href="#LABEL" class="headerlink" title="LABEL"></a>LABEL</h5><p>元数据</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">LABEL</span> &lt;key&gt;=&lt;value&gt; ...</span><br><span class="line">LABEL maintainer = "vnaso@live.com"</span><br><span class="line">LABEL version = "1.0"</span><br><span class="line">LABEL description = "hello world"</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">LABEL</span><span class="bash"> &lt;key&gt;=&lt;value&gt; ...</span></span><br><span class="line"><span class="bash">LABEL maintainer = <span class="string">"vnaso@live.com"</span></span></span><br><span class="line"><span class="bash">LABEL version = <span class="string">"1.0"</span></span></span><br><span class="line"><span class="bash">LABEL description = <span class="string">"hello world"</span></span></span><br></pre></td></tr></table></figure>
 <h5 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h5><p>在镜像的构建过程中执行特定的命令或安装软件, 并生成一个中间镜像.</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span> &lt;command&gt; # shell 格式</span><br><span class="line">RUN ["excutable", "param1","param2"] # exec 格式</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> &lt;<span class="built_in">command</span>&gt; <span class="comment"># shell 格式</span></span></span><br><span class="line"><span class="bash">RUN [<span class="string">"excutable"</span>, <span class="string">"param1"</span>,<span class="string">"param2"</span>] <span class="comment"># exec 格式</span></span></span><br></pre></td></tr></table></figure>
 <h5 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h5><p>为接下来的 DockerFile 指令指定当前工作目录, 可多次使用, 如果使用的是相对路径, 则相对的是上一个工作目录. 类似于 shell 中的 <code>cd</code> 命令.</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">WORKDIR</span> /path/to/workdir</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /path/to/workdir</span></span><br></pre></td></tr></table></figure>
 <h5 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h5><p>在构建的镜像中设置环境变量, 在后续的 DockerFile 指令中可以直接使用, 也可以固化在镜像里, 在容器运行时依然有效.</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> &lt;key&gt; &lt;value&gt; <span class="comment"># 无法再一行内设置多个变量</span></span><br><span class="line">ENY &lt;key&gt;=&lt;value&gt; <span class="comment"># 可以设置多个环境变量 如果 &lt;value&gt; 中存在空格, 需要转义或用引号 "" 括起来</span></span><br><span class="line"><span class="keyword">ENV</span> JAVA_HOME=/usr/java/jdk...\			CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib \</span><br><span class="line">PATH=$PATH:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:</span><br></pre></td></tr></table></figure>
 <p>可以在运行时指定环境变量, <code>docker run --env &lt;key&gt;=&lt;value&gt;</code>.</p>
 <p>使用 <code>ENV</code> 可能会对后续的 DockerFile 指令造成影响, 如果只需要对一条指令设置环境变量, 可以使用: <code>RUN &lt;key&gt;=&lt;value&gt; &lt;command&gt;</code>.</p>
 <h5 id="ADD-amp-COPY"><a href="#ADD-amp-COPY" class="headerlink" title="ADD &amp; COPY"></a>ADD &amp; COPY</h5><p><code>ADD</code>: 在构建镜像时, 复制上下文的文件到镜像内.</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD</span> &lt;src&gt; ... &lt;dest&gt;</span><br><span class="line">ADD ["&lt;src&gt;",..."&lt;dest&gt;"]</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD</span><span class="bash"> &lt;src&gt; ... &lt;dest&gt;</span></span><br><span class="line"><span class="bash">ADD [<span class="string">"&lt;src&gt;"</span>,...<span class="string">"&lt;dest&gt;"</span>]</span></span><br></pre></td></tr></table></figure>
 <p><code>&lt;src&gt;</code> 可以是文件, 目录, 也可以是文件 URL. 可以使用模糊匹配(wildcards, 类似 shell 的匹配), 可以指定多个 <code>&lt;src&gt;</code>, 必<strong>须是在上下文目录和子目录中</strong>, 无法添加形如 <code>../a.txt</code> 这样的文件. 如果 <code>&lt;src&gt;</code> 是目录, 则<strong>复制的是目录下所有的内容, 但不包括该目录</strong>; 如果是压缩包, 则会以 <code>tar -x</code> 的方式解压后将内容复制到 <code>&lt;dest&gt;</code>. <code>&lt;dest&gt;</code> 可以是绝对路径, 也可以是相对 <code>WORKDIR</code> 目录的相对路径. 所有文件的 UID 和 GID 都是 0.</p>
 <p><code>COPY</code>: 与 <code>ADD</code> 类似, 只是将上下文内的文件复制到镜像内, <code>COPY</code> 是在镜像内的复制, 格式与 <code>ADD</code> 一致.</p>
 <h5 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h5><p>为构建的镜像设置监听端口, 使容器在运行时监听.</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPOSE</span> &lt;port&gt; [&lt;port&gt; ...]</span><br></pre></td></tr></table></figure>
 <p><code>EXPOSE</code> 指令并不会让容器监听 host 的端口, 如果需要, 需要在 <code>docker run</code> 时使用 <code>-p</code>, <code>-P</code> 参数来发布容器端口到 host 某个端口上.</p>
 <h5 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h5><p>指定容器运行时的默认参数, 如果出现多次, 以最后一次为准.</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span> ["executable", "param1", "param2"] # exec 格式</span><br><span class="line">CMD command param1 param2 # shell 格式</span><br><span class="line">CMD ["param1", "param2"] # 省略可自行文件的 exec 格式, 这种写法使 CMD 中的参数当做 ENTRYPOINT 的默认参数, 此时 ENTRYPOINT 也应该是 exec 格式.</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"executable"</span>, <span class="string">"param1"</span>, <span class="string">"param2"</span>] <span class="comment"># exec 格式</span></span></span><br><span class="line"><span class="bash">CMD <span class="built_in">command</span> param1 param2 <span class="comment"># shell 格式</span></span></span><br><span class="line"><span class="bash">CMD [<span class="string">"param1"</span>, <span class="string">"param2"</span>] <span class="comment"># 省略可自行文件的 exec 格式, 这种写法使 CMD 中的参数当做 ENTRYPOINT 的默认参数, 此时 ENTRYPOINT 也应该是 exec 格式.</span></span></span><br></pre></td></tr></table></figure>
 <p>与 <code>RUN</code> 指令的区别: <code>RUN</code> 在构建的时候执行, 并生成一个新的镜像, <code>CMD</code> 在容器运行的时候执行, 在构建时不进行任何操作.</p>
 <h5 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h5><p>指定镜像的执行程序, 只有最后一条 <code>ENTRYPOINT</code> 指令有效.</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span> &lt;command&gt; &lt;param1&gt; &lt;param2&gt; # shell 格式, PID 不为 1, 也接收不到 Unix 信号. 需要使用 exex 或 gosu 命令处理.</span><br><span class="line">ENTRYPOINT ["&lt;executable&gt;","&lt;param1&gt;","&lt;param2&gt;"] # exec 格式 PID 为1</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> &lt;<span class="built_in">command</span>&gt; &lt;param1&gt; &lt;param2&gt; <span class="comment"># shell 格式, PID 不为 1, 也接收不到 Unix 信号. 需要使用 exex 或 gosu 命令处理.</span></span></span><br><span class="line"><span class="bash">ENTRYPOINT [<span class="string">"&lt;executable&gt;"</span>,<span class="string">"&lt;param1&gt;"</span>,<span class="string">"&lt;param2&gt;"</span>] <span class="comment"># exec 格式 PID 为1</span></span></span><br></pre></td></tr></table></figure>
 <p><code>CMD</code> 和 <code>ENTRYPOINT</code> 至少得使用一个, <code>ENTRYPOINT</code> 应该被当做 Docker 的可执行程序, <code>CMD</code> 应该被当做 <code>ENTRYPOINT</code> 的默认参数.</p>
 <p><code>docker run &lt;image&gt; &lt;arg1&gt; &lt;arg2&gt; ...</code> 会把之后的参数传递给 <code>ENTRYPOINT</code>, 覆盖 <code>CMD</code> 指定的参数. 可以用 <code>docker run --entrypoint</code> 来重置默认的 <code>ENTRYPOINT</code>.</p>
 <p><code>ENTRYPOINT</code> 和 <code>CMD</code> 的关系:</p>
@@ -766,11 +766,11 @@
 </tbody>
 </table>
 <h5 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h5><p>指定镜像内的目录为数据卷</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">VOLUME</span> ["/path/to/volume"]</span><br><span class="line">VOLUME /path/to/volume1 /path/to/volume2</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">VOLUME</span><span class="bash"> [<span class="string">"/path/to/volume"</span>]</span></span><br><span class="line"><span class="bash">VOLUME /path/to/volume1 /path/to/volume2</span></span><br></pre></td></tr></table></figure>
 <p>在容器运行的时候, Docker 会把镜像中的数据卷内容复制到容器的数据卷中去.</p>
 <p>如果在接下来的 DockerFile 指令中修改了数据卷中的内容, 则修改无效.</p>
 <h5 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h5><p>向镜像中添加一个<em>触发器(Trigger)</em>, 当以该镜像为 base image 再次构建新的镜像时, 会触发并执行其中的指令.</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ONBUILD</span> [INSTRUCTION]</span><br><span class="line"><span class="comment"># 在下一次以此镜像为base image的构建中，执行 ADD . /app/src, 将项目代目添加到新镜像中去</span></span><br><span class="line"><span class="keyword">ONBUILD</span> <span class="keyword">ADD</span> . /app/src</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ONBUILD</span> [INSTRUCTION]</span><br><span class="line"><span class="comment"># 在下一次以此镜像为base image的构建中，执行 ADD . /app/src, 将项目代目添加到新镜像中去</span></span><br><span class="line"><span class="keyword">ONBUILD</span> <span class="keyword">ADD</span><span class="bash"> . /app/src</span></span><br></pre></td></tr></table></figure>
 <h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p><img src="https://i.loli.net/2019/05/05/5ccec72ee31fa.png" alt="UTOOLS1557055279042.png"></p>
 <h4 id="DockerFile-构建过程解析"><a href="#DockerFile-构建过程解析" class="headerlink" title="DockerFile 构建过程解析"></a>DockerFile 构建过程解析</h4><p><img src="https://i.loli.net/2019/05/05/5cceb884c1aab.png" alt="UTOOLS1557051524735.png"></p>
 <ol>
@@ -969,7 +969,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Java/JVM.html" rel="next" title="JVM">
+              <a href="/JavaLearning/Java/Basic/JVM.html" rel="next" title="JVM">
                 <i class="fa fa-chevron-left"></i> JVM
               </a>
             
@@ -979,8 +979,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/Solutions/踩坑记录.html" rel="prev" title="工具踩坑记录">
-                工具踩坑记录 <i class="fa fa-chevron-right"></i>
+              <a href="/JavaLearning/Notes/DevNote.html" rel="prev" title="Dev Note">
+                Dev Note <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1056,7 +1056,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1160,7 +1160,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">20</span>
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1263,7 +1265,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">236k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1272,7 +1274,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17:08</span>
+    <span title="站点阅读时长">17:22</span>
   
 </div>
 

@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/JavaEE.html</loc>
+    
+    <lastmod>2019-07-31T06:28:13.538Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Notes/DevNote.html</loc>
+    
+    <lastmod>2019-07-31T05:00:57.678Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Notes/Solutions.html</loc>
+    
+    <lastmod>2019-07-31T05:00:45.942Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/HashMap%20%E5%92%8C%20ConcurrentHashMap.html</loc>
+    
+    <lastmod>2019-07-31T04:59:28.327Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%E5%9F%BA%E7%A1%80.html</loc>
+    
+    <lastmod>2019-07-27T07:41:03.987Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html</loc>
+    
+    <lastmod>2019-07-10T15:57:22.952Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/Nginx.html</loc>
     
-    <lastmod>2019-06-30T12:44:52.013Z</lastmod>
+    <lastmod>2019-07-06T13:50:05.640Z</lastmod>
     
   </url>
   
@@ -16,16 +58,9 @@
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%20IO.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%20IO.html</loc>
     
     <lastmod>2019-06-18T04:02:45.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Solutions/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.html</loc>
-    
-    <lastmod>2019-06-09T01:20:08.985Z</lastmod>
     
   </url>
   
@@ -44,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/HashMap%20%E5%92%8C%20ConcurrentHashMap.html</loc>
-    
-    <lastmod>2019-06-04T12:50:21.509Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/Redis.html</loc>
     
     <lastmod>2019-05-23T01:50:05.943Z</lastmod>
@@ -65,21 +93,21 @@
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</loc>
     
     <lastmod>2019-05-15T11:59:09.126Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E9%9B%86%E5%90%88.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%E9%9B%86%E5%90%88.html</loc>
     
     <lastmod>2019-05-15T10:08:33.488Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/JVM.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/JVM.html</loc>
     
     <lastmod>2019-05-15T02:41:40.019Z</lastmod>
     
@@ -93,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java%E5%9F%BA%E7%A1%80.html</loc>
-    
-    <lastmod>2019-05-13T14:00:54.715Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/Docker%E4%BB%8B%E7%BB%8D.html</loc>
     
     <lastmod>2019-05-05T12:01:35.436Z</lastmod>
@@ -107,28 +128,14 @@
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Framework/logback.html</loc>
-    
-    <lastmod>2019-05-05T09:16:08.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Framework/Spring.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Framework/Spring.html</loc>
     
     <lastmod>2019-05-05T09:15:56.026Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Java/JavaEE.html</loc>
-    
-    <lastmod>2019-05-01T03:14:47.906Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/JavaNote/Framework/SpringMVC.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Framework/SpringMVC.html</loc>
     
     <lastmod>2019-05-01T03:14:34.355Z</lastmod>
     

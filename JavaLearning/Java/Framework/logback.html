@@ -98,18 +98,21 @@
 
 
 
-  <meta name="description" content="集合框架Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:  Collection 是单列集合, Map 是双列集合 Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一 Collection 的数据结构是针对元素的, Map 的数据结构是针对键的  CollectionCollection 主要分为 List 和 Set  Li">
-<meta name="keywords" content="Java">
+  <meta name="description" content="Logback使用标签属性介绍根标签 - configuration属性 scan:布尔值.表示是否自动扫描logback.xml的文本变化.  scanPeriod:字符串.表示每间隔多长时间对logback.xml进行扫描.格式:数字 + 时间单位(如:seconds,minutes)  debug:布尔值.表示是否打印logback内部的日志信息.   常用配置为:&amp;lt;configura">
+<meta name="keywords" content="Java,Logback">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集合框架">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java集合.html">
+<meta property="og:title" content="Logback学习笔记">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html">
 <meta property="og:site_name" content="Vnaso">
-<meta property="og:description" content="集合框架Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:  Collection 是单列集合, Map 是双列集合 Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一 Collection 的数据结构是针对元素的, Map 的数据结构是针对键的  CollectionCollection 主要分为 List 和 Set  Li">
+<meta property="og:description" content="Logback使用标签属性介绍根标签 - configuration属性 scan:布尔值.表示是否自动扫描logback.xml的文本变化.  scanPeriod:字符串.表示每间隔多长时间对logback.xml进行扫描.格式:数字 + 时间单位(如:seconds,minutes)  debug:布尔值.表示是否打印logback内部的日志信息.   常用配置为:&amp;lt;configura">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-15T10:08:33.488Z">
+<meta property="og:image" content="https://i.loli.net/2019/03/01/5c78dbb03a3dc.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/01/5c78dbf1107a0.png">
+<meta property="og:updated_time" content="2019-07-10T15:57:22.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="集合框架">
-<meta name="twitter:description" content="集合框架Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:  Collection 是单列集合, Map 是双列集合 Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一 Collection 的数据结构是针对元素的, Map 的数据结构是针对键的  CollectionCollection 主要分为 List 和 Set  Li">
+<meta name="twitter:title" content="Logback学习笔记">
+<meta name="twitter:description" content="Logback使用标签属性介绍根标签 - configuration属性 scan:布尔值.表示是否自动扫描logback.xml的文本变化.  scanPeriod:字符串.表示每间隔多长时间对logback.xml进行扫描.格式:数字 + 时间单位(如:seconds,minutes)  debug:布尔值.表示是否打印logback内部的日志信息.   常用配置为:&amp;lt;configura">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/01/5c78dbb03a3dc.png">
 
 
 
@@ -117,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java集合">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Java/Framework/logback">
 
 
 
@@ -127,7 +130,7 @@
   };
 </script>
 
-  <title>集合框架 | Vnaso</title>
+  <title>Logback学习笔记 | Vnaso</title>
   
 
 
@@ -396,7 +399,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java集合.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -413,7 +416,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">集合框架
+          <h1 class="post-title" itemprop="name headline">Logback学习笔记
 
               
             
@@ -439,7 +442,7 @@
                 
               
 
-              <time title="创建时间：2019-03-16 20:14:00" itemprop="dateCreated datePublished" datetime="2019-03-16T20:14:00+08:00">2019-03-16</time>
+              <time title="创建时间：2019-02-15 19:24:00" itemprop="dateCreated datePublished" datetime="2019-02-15T19:24:00+08:00">2019-02-15</time>
             
 
             
@@ -456,7 +459,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-15 18:08:33" itemprop="dateModified" datetime="2019-05-15T18:08:33+08:00">2019-05-15</time>
+                <time title="修改时间：2019-07-10 23:57:22" itemprop="dateModified" datetime="2019-07-10T23:57:22+08:00">2019-07-10</time>
               
             
           </span>
@@ -477,6 +480,13 @@
 
                 
                 
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/Framework/" itemprop="url" rel="index"><span itemprop="name">Framework</span></a></span>
+
+                
+                
               
             </span>
           
@@ -492,8 +502,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/JavaNote/Java/Java集合.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/JavaNote/Java/Java集合.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Java/Framework/logback.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Java/Framework/logback.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -501,7 +511,7 @@
 
           
           
-            <span id="/JavaLearning/JavaNote/Java/Java集合.html" class="leancloud_visitors" data-flag-title="集合框架">
+            <span id="/JavaLearning/Java/Framework/logback.html" class="leancloud_visitors" data-flag-title="Logback学习笔记">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -526,7 +536,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.6k</span>
+                <span title="本文字数">4.1k</span>
               
 
               
@@ -540,7 +550,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">16 分钟</span>
+                <span title="阅读时长">18 分钟</span>
               
             </div>
           
@@ -560,136 +570,140 @@
       
 
       
-        <h2 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h2><p>Java 中的集合框架分为两大类: Collection 和 Map, 两者区别在于:</p>
-<ol>
-<li>Collection 是单列集合, Map 是双列集合</li>
-<li>Collection 中只有 Set 要求元素唯一, Map 中键(key)需要唯一</li>
-<li>Collection 的数据结构是针对元素的, Map 的数据结构是针对键的</li>
-</ol>
-<h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><p>Collection 主要分为 List 和 Set</p>
+        <h1 id="Logback使用"><a href="#Logback使用" class="headerlink" title="Logback使用"></a>Logback使用</h1><h2 id="标签属性介绍"><a href="#标签属性介绍" class="headerlink" title="标签属性介绍"></a>标签属性介绍</h2><h3 id="根标签-configuration"><a href="#根标签-configuration" class="headerlink" title="根标签 - configuration"></a>根标签 - configuration</h3><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><p><code>scan</code>:布尔值.表示是否自动扫描<code>logback.xml</code>的文本变化.</p>
+</li>
+<li><p><code>scanPeriod</code>:字符串.表示每间隔多长时间对<code>logback.xml</code>进行扫描.格式:<code>数字 + 时间单位(如:seconds,minutes)</code></p>
+</li>
+<li><code>debug</code>:布尔值.表示是否打印<code>logback</code>内部的日志信息.</li>
+</ul>
+<blockquote>
+<p>常用配置为:<code>&lt;configuration scan=&quot;true&quot; scanPeriod=&quot;60 seconds&quot; debug=&quot;false&quot;&gt;&lt;/configuration&gt;</code></p>
+<p>表示自动每60秒扫描一次<code>logback.xml</code>的配置有无变化,如果有就更新,且不打印<code>logback</code>的内部日志.这样可以热更新<code>logback</code>配置文件</p>
+</blockquote>
+<h4 id="子标签"><a href="#子标签" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><code>&lt;property&gt;</code>:定义参数常量</li>
+<li><code>&lt;appender</code>:</li>
+<li><code>&lt;root&gt;</code>:</li>
+</ul>
+<h3 id="configuration-property"><a href="#configuration-property" class="headerlink" title="configuration - property"></a>configuration - property</h3><h4 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><code>name</code>:变量名</li>
+<li><code>value</code>:变量值</li>
+</ul>
+<blockquote>
+<p>常用来设置一些配置文件中需要使用的常量值,如默认日志等级,最大保存天数,日志存储位置等.</p>
+</blockquote>
+<h3 id="configuration-appender"><a href="#configuration-appender" class="headerlink" title="configuration - appender"></a>configuration - appender</h3><h4 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><code>name</code>:变量名</li>
+<li><code>class</code>:具体的实现类的全限定类名</li>
+</ul>
+<blockquote>
+<p>用来定义日志的输出源的配置</p>
+<p><code>class</code>的取值一般有两个:<code>ch.qos.logback.core.ConsoleAppender</code>和<code>ch.qos.logback.core.rolling.RollingFileAppender</code></p>
+<p>前者的功能是在输出到控制台,后者功能可以按时间分卷输出到文件</p>
+</blockquote>
+<h4 id="子标签-1"><a href="#子标签-1" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><p><code>&lt;encoder&gt;</code>:把日志转为字符串并将其输出到文件中</p>
+</li>
+<li><p><code>&lt;encoding&gt;</code>:编码方式</p>
+</li>
+<li><code>&lt;filter&gt;</code>:过滤器</li>
+<li><code>&lt;file&gt;</code>:日志文件输出储存位置</li>
+<li><code>&lt;rollingPolicy&gt;</code>:分卷模式</li>
+</ul>
+<h3 id="configuration-appender-encoder"><a href="#configuration-appender-encoder" class="headerlink" title="configuration - appender - encoder"></a>configuration - appender - encoder</h3><h4 id="子标签-2"><a href="#子标签-2" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><code>&lt;pattern&gt;</code>:日志格式</li>
+</ul>
+<h3 id="configuration-appender-rollingPolicy"><a href="#configuration-appender-rollingPolicy" class="headerlink" title="configuration - appender - rollingPolicy"></a>configuration - appender - rollingPolicy</h3><h4 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><code>class</code>:分卷模式的全限定类名</li>
+<li><code>&lt;append&gt;</code>:布尔值.日志被追加到文件结尾.如果是<code>false</code>,清空现存文件,默认是<code>true</code></li>
+</ul>
+<blockquote>
+<p>用来定义日志的分卷模式</p>
+<p><code>class</code>常用的类是<code>ch.qos.logback.core.rolling.TimeBasedRollingPolicy</code></p>
+<p>可以按照时间进行分卷</p>
+</blockquote>
+<h4 id="子标签-3"><a href="#子标签-3" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><code>&lt;filenamePattern&gt;</code>:分卷日志文件名格式</li>
+<li><code>&lt;MaxHistory&gt;</code>:日志最大保存天数</li>
+</ul>
+<h3 id="configuration-appender-filter"><a href="#configuration-appender-filter" class="headerlink" title="configuration - appender - filter"></a>configuration - appender - filter</h3><h4 id="属性-4"><a href="#属性-4" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><code>class</code>:实现过滤规则的类的全限定类名</li>
+</ul>
+<h4 id="子标签-4"><a href="#子标签-4" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><code>&lt;level&gt;</code>:要进行过滤的级别</li>
+<li><code>&lt;onMatch&gt;</code>:等于<code>level</code>属性值时的操作.有<code>NEUTRAL</code>(有序列表里的下个过滤器过接着处理日志),<code>ACCEPT</code>和<code>DENY</code>可选</li>
+<li><code>&lt;onMismatch&gt;</code>:不等于时的操作,类上</li>
+</ul>
+<blockquote>
+<p>用来定义输出源要过滤的日志等级</p>
+<p>示例:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;      <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.filter.LevelFilter"</span>&gt;</span></span><br><span class="line">&gt;          <span class="tag">&lt;<span class="name">level</span>&gt;</span>ERROR<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">&gt;          <span class="tag">&lt;<span class="name">onMatch</span>&gt;</span>ACCEPT<span class="tag">&lt;/<span class="name">onMatch</span>&gt;</span></span><br><span class="line">&gt;          <span class="tag">&lt;<span class="name">onMismatch</span>&gt;</span>DENY<span class="tag">&lt;/<span class="name">onMismatch</span>&gt;</span></span><br><span class="line">&gt;      <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>以上配置表示只保留<code>Error</code>等级的日志信息</p>
+<p><code>ch.qos.logback.classic.filter.ThresholdFilter</code>: 临界值过滤器, 过滤掉低于指定临界值的日志. 当日志级别高于或等于临界值时, 过滤器返回 NEUTRAL, 否则拒绝.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;      <span class="tag">&lt;<span class="name">filter</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.filter.ThresholdFilter"</span>&gt;</span></span><br><span class="line">&gt;          <span class="tag">&lt;<span class="name">level</span>&gt;</span>INFO<span class="tag">&lt;/<span class="name">level</span>&gt;</span></span><br><span class="line">&gt;      <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="configuration-logger"><a href="#configuration-logger" class="headerlink" title="configuration - logger"></a>configuration - logger</h3><h4 id="属性-5"><a href="#属性-5" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><code>name</code>:指定为哪个包或类添加<code>appender</code></li>
+<li><code>level</code>:指定为<strong>哪个级别及以上</strong>记录日志,如果不指定,<strong>则默认继承<code>&lt;root&gt;</code>下的<code>level</code></strong></li>
+<li><code>additivity</code>:是否向上级传递打印信息.默认值为<code>true</code></li>
+</ul>
+<h4 id="子标签-5"><a href="#子标签-5" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><code>&lt;appender-ref&gt;</code>:为<code>name</code>表示的包或类指定<code>appender</code>.用属性<code>ref</code>来指定</li>
+</ul>
+<blockquote>
+<p>用来定义包或类的日志打印级别及指定<code>appender</code></p>
+<p>示例:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"com.vnaso"</span> <span class="attr">additivity</span>=<span class="string">"false"</span> <span class="attr">level</span>=<span class="string">"INFO"</span>&gt;</span></span><br><span class="line">&gt;     <span class="comment">&lt;!-- 设置日志输出 --&gt;</span></span><br><span class="line">&gt;     <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"vnasoRss"</span>/&gt;</span></span><br><span class="line">&gt;     <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"console"</span>/&gt;</span></span><br><span class="line">&gt; <span class="tag">&lt;/<span class="name">logger</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>表示为<code>com.vnaso</code>这个包及下面所有类指定<code>name</code>为<code>vnasoRss</code>和<code>console</code>的<code>appender</code>来记录<code>INFO</code>及以上的日志,且不向上继承.</p>
+<p><code>Appender</code>是绑定在<code>logger</code>上的,而<code>logger</code>又<strong>有继承关系</strong>,因此一个<code>logger</code>打印信息时的目的地<code>Appender</code>需要参考它的父亲和祖先.在<code>logback</code>中,默认情况下,如果一个<code>logger</code>打印一条信息,那么这条信息首先会打印至它自己的<code>Appender</code>,然后打印至它的父亲和父亲以上的祖先的<code>Appender</code>,但如果它的父亲设置了 <code>additivity = false</code>,那么这个<code>logger</code>除了打印至它自己的<code>Appender</code>外,只会打印至其父亲的<code>Appender</code>,因为它的父亲的<code>additivity</code> 属性置为了<code>false</code>,开始变得忘祖忘宗了,所以这个<code>logger</code>只认它父亲的<code>Appender</code>;此外,对于这个<code>logger</code>的父亲来说,如果父亲的<code>logger</code>打印一条信息,那么它只会打印至自己的<code>Appender</code>中(如果有的话),因为父亲已经忘记了爷爷及爷爷以上的那些父辈了.</p>
+</blockquote>
+<h3 id="configuration-root"><a href="#configuration-root" class="headerlink" title="configuration - root"></a>configuration - root</h3><h4 id="属性-6"><a href="#属性-6" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><code>level</code>(only):指定为<strong>哪个级别及以上</strong>记录日志</li>
+</ul>
+<h4 id="子标签-6"><a href="#子标签-6" class="headerlink" title="子标签"></a>子标签</h4><ul>
+<li><code>&lt;appender-ref&gt;</code>:为<code>name</code>表示的包或类指定<code>appender</code>.用属性<code>ref</code>来指定</li>
+</ul>
+<blockquote>
+<p><code>&lt;root&gt;</code>标签是一种特殊的<code>logger</code>,但是它不能特别指定包或类.也就是说,它只能够接收继承了它且<code>additivity</code>值为<code>true</code>的<code>logger</code>传来的打印信息,具体查看继承关系</p>
+</blockquote>
+<h2 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h2><blockquote>
+<p>继承关系是通过<code>logger</code>的<code>name</code>属性来实现的.</p>
+<p>示例</p>
+<p><code>&lt;root&gt;</code>&gt;<code>com.vnaso</code>&gt;<code>com.vnaso.controller</code>&gt;<code>com.vnaso.controller.UserController.java</code></p>
+<p>以上对应继承关系:祖&gt;爷&gt;父&gt;子</p>
+</blockquote>
+<h3 id="level-继承关系"><a href="#level-继承关系" class="headerlink" title="level 继承关系"></a>level 继承关系</h3><p><img src="https://i.loli.net/2019/03/01/5c78dbb03a3dc.png" alt="UTOOLS1551424430122.png"></p>
+<h3 id="appender-继承关系"><a href="#appender-继承关系" class="headerlink" title="appender 继承关系"></a>appender 继承关系</h3><p><img src="https://i.loli.net/2019/03/01/5c78dbf1107a0.png" alt="UTOOLS1551424496592.png"></p>
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><p>如果程序运行在 Tomcat 服务器上, 可以利用 <code>${catalina.base}</code> 来设置 log 文件持久化的根目录, 如: <code>&lt;property name=&quot;log.filePath&quot; value=&quot;${catalina.base}/...&quot;/&gt;</code>.</p>
+<blockquote>
+<p>Tomcat 有 <code>${catalina.base}</code> 和 <code>${catalina.home}</code> 两个变量, 容易混淆, 这里说一下区别. </p>
 <ul>
-<li><strong>List</strong>: 存取有序, 有索引, 可以根据索引取值, 元素可以重复</li>
-<li><strong>Set</strong>: 存取无序, 元素不可以重复</li>
-</ul>
-<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
-<li><strong>ArrayList</strong>: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 非线程安全.</li>
-<li><strong>LinkedList</strong>: 底层数据结构是链表, 所以查询慢, 增删快. 非线程安全.</li>
-<li><strong>Vector(已过时)</strong>: 底层数据结构是数组, 所以查询速度快, 增删速度慢. 线程安全.</li>
-</ul>
-<p><strong>ArrayList 和 LinkedList 的异同</strong></p>
-<ol>
-<li><strong>是否线程安全</strong>: ArrayList 和 LinkedList 都是不同步的, 非线程安全</li>
-<li><strong>底层数据结构</strong>: <ul>
-<li>ArrayList 底层使用的是 Object 数组.</li>
-<li>LinkedList 底层使用的是双向链表数据结构.</li>
-</ul>
+<li><p><code>${catalina.home}</code></p>
+<p>home 一般指的是 Tomcat 的<strong>安装目录</strong>, 即存放 bin 和 lib 这些包含创建 Tomcat 实例所必要的文件的目录.</p>
 </li>
-<li><strong>插入和删除是否受元素位置的影响</strong>:<ul>
-<li>ArrayList 采用数组存储, 所以插入和删除元素的时间复杂度受元素位置的影响.</li>
-<li>LinkedList 采用链表存储, 所以插入, 删除元素时间复杂度不受元素位置影响.</li>
-</ul>
+<li><p><code>${catalina.base}</code></p>
+<p>base 一般指的是 Tomcat 的<strong>工作目录</strong>, 即存放 <code>conf</code>, <code>logs</code>, <code>temp</code>, <code>webapps</code>, <code>work</code> 这些保存和运行程序有关的文件的目录.</p>
 </li>
-<li><strong>是否支持快速随机访问</strong>: <ul>
-<li>LinkedList 不支持高效的随机元素访问</li>
-<li>ArrayList 支持, 通过元素的索引快速获取元素对象</li>
 </ul>
-</li>
-<li><strong>内存空间占用</strong>:<ul>
-<li>ArrayList 的空间浪费主要体现在在 List 列表的结尾会预留一定的容量空间.</li>
-<li>LinkedList 的空间花费则体现在它的每一个元素都需要消耗比 ArrayList 更多的空间(因为要存放前前驱, 后继节点以及数据)</li>
-</ul>
-</li>
-<li><strong>RandomAccess接口</strong>:</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">RandomAccess</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>RandomAccess 接口中什么都没有定义. 也就是说, 这个接口充当一个标识的作用, 标识实现这个接口的类具有随机访问功能.</p>
-<p>在 <code>binarySearch()</code> 方法中, 它要判断传入的 List 是否是 RandomAccess 的实例.</p>
+<p>一般来说, 在普通<em>单实例单应用</em>的情况下, 这两者是没有区别的. 但如果启动多个实例时, home 相同, 但是 base 是根据实例而不同的. 因此, 可以通过设置多个 base 目录, 包含必要的那些文件夹, 修改监听的端口, 就可以启动多个 Tomcat. 详见: <a href="https://www.cnblogs.com/mafly/p/tomcat.html" target="_blank" rel="noopener">https://www.cnblogs.com/mafly/p/tomcat.html</a>.</p>
+<p>Tomcat 安装目录下有:</p>
 <ul>
-<li>如果是, 调用 <code>indexedBinarySearch()</code> 方法.</li>
-<li>如果不是, 调用 <code>iteratorBinarySearch()</code> 方法.</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(List&lt;? extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; list, T key)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (list <span class="keyword">instanceof</span> RandomAccess || list.size()&lt;BINARYSEARCH_THRESHOLD)</span><br><span class="line">      <span class="keyword">return</span> Collections.indexedBinarySearch(list, key);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">      <span class="keyword">return</span> Collections.iteratorBinarySearch(list, key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ArrayList 实现了 RandomAccess 接口, 而 LinkedList 没有实现. 因为 ArrayList 底层数据结构是数组, 而 LinkedList 底层数据结构是双向链表. 它们实现随机访问的时间复杂度分别为 O(1) 和 O(n).</p>
-<ol start="7">
-<li><strong>List 遍历方式的选择</strong><ul>
-<li>实现了 RandomAccess 接口的 List: 优先选择普通 for 循环, 其次 foreach.</li>
-<li>未实现 RandomAccess 接口的 List: 优先选择 Iterator 遍历(foreach 遍历底层实现也是通过 Iterator), size 大的数据, 不要使用普通 for 循环.</li>
-</ul>
+<li><p><code>bin</code>: 存放一些脚本文件, 比如: <code>startup.sh</code> 和 <code>shutdown.sh</code>.</p>
 </li>
-</ol>
-<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><ul>
-<li><p><strong>HashSet</strong>: 底层实际上是一个 HashMap 实例, 不保证迭代顺序, 非线程安全, 允许元素为 Null, 初始容量非常影响迭代性能.</p>
-<blockquote>
-<p>HashMap 中 key 的值就是 HashSet 的值, 而 value 是 <code>final Object PRESENT = new Object()</code> , 操作 HashSet 元素实际上就是操作 HashMap.</p>
+<li><p><code>conf</code>: 存放配置文件, 比如: <code>server.xml</code> 和 <code>web.xml</code>.</p>
+</li>
+<li><code>lib</code>: 存放 Tomcat 依赖的包.</li>
+<li><code>logs</code>: 存放运行时产生的日志文件.</li>
+<li><code>temp</code>: 存放运行时产生的临时文件.</li>
+<li><code>webapps</code>: 部署 Web 应用程序的默认目录, 也就是 war 包所在默认目录.</li>
+<li><code>work</code>: 存放由 JSP 文件生成的 servlet.</li>
+</ul>
 </blockquote>
-</li>
-<li><p><strong>LinkedHashSet</strong>: 迭代有序, 允许元素为 Null, 底层实际上是一个 HashMap + 双向链表实例(即 LinkedHashMap), 非线程安全, 初始容量不影响迭代性能.</p>
-</li>
-<li><p><strong>TreeSet</strong>: 可以实现排序功能(添加时排序), 底层实际上是 TreeMap 实例, 非线程安全.</p>
-<blockquote>
-<p>保证 TreeSet 元素唯一性方法:</p>
-<ol>
-<li>自定义对象实现 Comparable 接口, 重写 <code>compareTo()</code> 方法.</li>
-<li>创建 TreeSet 时, 向构造器中传入比较器 Comparator 接口实现类对象, 实现 Comparator 接口重写 <code>compare()</code> 方法(用匿名类方式).</li>
-</ol>
-<p>向 TreeSet 存入自定义对象, 如果自定义类没有实现 Comparable 接口, 或者没有传入 Comparator 比较器时, 会报 ClassCastException 异常.</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p><strong>特点</strong>: 保存的是键值对, 键唯一, 值可以重复.</p>
-<ul>
-<li><p><strong>HashMap</strong>: 底层数据结构为散列表, 无序, 允许为 Null, 非线程安全, 初始容量和装载因子对 HashMap 影响较大.</p>
-<blockquote>
-<p>具体了解: <a href="./HashMap.md">HashMap</a></p>
-</blockquote>
-</li>
-<li><p><strong>LinkedHashMap</strong>:存取有序, 底层数据结构为散列表和双向链表, 允许为 Null, 非线程安全, 初始容量和装载因子对 HashMap 影响较大.</p>
-</li>
-<li><p><strong>TreeMap</strong>: 有序, 底层数据结构是红黑树, 非线程安全, 使用 Comparator 或 Comparable 来比较是否相等以及排序. </p>
-<blockquote>
-<p>如果 Comparator 为 Null, 则使用 Key 作为比较器进行比较, 并且 key 必须实现 Comparable 接口.</p>
-</blockquote>
-<p><strong>HashMap 和 HashTable 的区别</strong></p>
-<ol>
-<li>HashMap 是非线程安全的, HashTable 是线程安全的. HashTable 内部的方法基本都经过 synchronized 修饰.</li>
-<li>因为线程安全的问题, HashMap 比 HashTable 效率高.</li>
-<li>HashMap 允许有 Null 存在, 而在 HashTable 中不允许 Null.</li>
-</ol>
-<p>如果想要线程安全, 可以使用 ConcurrentHashMap.</p>
-<p>ConcurrentHashMap 对整个桶数组进行了分割分段(Segment), 然后在每一个分段上都用 lock 锁进行保护, 相对于 HashTable 的 synchronized 锁的粒度更精细, 并发性能更好. (JDK1.8 之后 ConcurrentHashMap 启用了一种全新的方式实现, 利用 CAS 算法). ConcurrentHashMap 不允许 Null.</p>
-</li>
-</ul>
-<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><ul>
-<li><p><strong>PriorityQueue</strong>: 不允许 Null, 按元素大小进行重新排序, 底层数据结构是最小堆, 非线程安全.</p>
-<blockquote>
-<p>在遍历时, 如果不需要删除元素, 以 peek 的方式遍历每个元素.</p>
-<p><code>Iterator()</code> 中提供的迭代器并不保证以有序的方式遍历其中的元素.</p>
-</blockquote>
-</li>
-<li><p><strong>Deque</strong>: 是一个双端队列, 还可以当做栈使用.</p>
-<ul>
-<li><strong>ArrayQueue</strong>: 底层数据结构是数组, 是循环队列, 通过 head 和 tail 两个游标来实现. 非线程安全, </li>
-</ul>
-</li>
-</ul>
-<h3 id="集合的选用"><a href="#集合的选用" class="headerlink" title="集合的选用"></a>集合的选用</h3><ul>
-<li>需要根据键值来获取元素值: Map<ul>
-<li>需要排序: TreeMap</li>
-<li>不需要排序: HashMap</li>
-<li>保证线程安全: ConcurrentHashMap</li>
-</ul>
-</li>
-<li>只需要存放元素值: Collection<ul>
-<li>需要保证元素唯一: TreeSet 或 HashSet</li>
-<li>不要要元素唯一: ArrayList 或 LinkedList</li>
-</ul>
-</li>
-</ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>Java集合总结: <a href="https://juejin.im/post/5ad40593f265da23750759ad" target="_blank" rel="noopener">https://juejin.im/post/5ad40593f265da23750759ad</a></li>
-<li>Java集合入门和深入学习: <a href="https://juejin.im/post/5ad82dbef265da503825b240" target="_blank" rel="noopener">https://juejin.im/post/5ad82dbef265da503825b240</a></li>
-<li>Java集合（七） Queue详解: <a href="https://juejin.im/post/5a3763ed51882506a463b740" target="_blank" rel="noopener">https://juejin.im/post/5a3763ed51882506a463b740</a></li>
-</ul>
 
       
     </div>
@@ -757,7 +771,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java集合.html" title="集合框架">http://blog.vnaso.live/JavaLearning/JavaNote/Java/Java集合.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html" title="Logback学习笔记">http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -772,6 +786,8 @@
           
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
+            <a href="/tags/Logback/" rel="tag"><i class="fa fa-tag"></i> Logback</a>
+          
         </div>
       
 
@@ -783,8 +799,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Framework/Spring.html" rel="next" title="Spring">
-                <i class="fa fa-chevron-left"></i> Spring
+              <a href="/JavaLearning/Ops/Maven.html" rel="next" title="Maven学习笔记">
+                <i class="fa fa-chevron-left"></i> Maven学习笔记
               </a>
             
           </div>
@@ -793,8 +809,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/JavaNote/Java/Java多线程.html" rel="prev" title="Java 多线程">
-                Java 多线程 <i class="fa fa-chevron-right"></i>
+              <a href="/JavaLearning/Ops/Linux.html" rel="prev" title="Linux学习笔记">
+                Linux学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -870,7 +886,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -974,7 +990,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">20</span>
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1043,7 +1061,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合框架"><span class="nav-number">1.</span> <span class="nav-text">集合框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection"><span class="nav-number">1.1.</span> <span class="nav-text">Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">1.1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set"><span class="nav-number">1.1.2.</span> <span class="nav-text">Set</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">1.2.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Queue"><span class="nav-number">1.3.</span> <span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合的选用"><span class="nav-number">1.4.</span> <span class="nav-text">集合的选用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Logback使用"><span class="nav-number">1.</span> <span class="nav-text">Logback使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标签属性介绍"><span class="nav-number">1.1.</span> <span class="nav-text">标签属性介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根标签-configuration"><span class="nav-number">1.1.1.</span> <span class="nav-text">根标签 - configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">子标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-property"><span class="nav-number">1.1.2.</span> <span class="nav-text">configuration - property</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-appender"><span class="nav-number">1.1.3.</span> <span class="nav-text">configuration - appender</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签-1"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">子标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-appender-encoder"><span class="nav-number">1.1.4.</span> <span class="nav-text">configuration - appender - encoder</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签-2"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">子标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-appender-rollingPolicy"><span class="nav-number">1.1.5.</span> <span class="nav-text">configuration - appender - rollingPolicy</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性-3"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签-3"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">子标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-appender-filter"><span class="nav-number">1.1.6.</span> <span class="nav-text">configuration - appender - filter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性-4"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签-4"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">子标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-logger"><span class="nav-number">1.1.7.</span> <span class="nav-text">configuration - logger</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性-5"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签-5"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">子标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configuration-root"><span class="nav-number">1.1.8.</span> <span class="nav-text">configuration - root</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性-6"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子标签-6"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">子标签</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承关系"><span class="nav-number">1.2.</span> <span class="nav-text">继承关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#level-继承关系"><span class="nav-number">1.2.1.</span> <span class="nav-text">level 继承关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#appender-继承关系"><span class="nav-number">1.2.2.</span> <span class="nav-text">appender 继承关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关知识"><span class="nav-number">1.3.</span> <span class="nav-text">相关知识</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1077,7 +1095,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">236k</span>
+    <span title="站点总字数">240k</span>
   
 
   
@@ -1086,7 +1104,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17:08</span>
+    <span title="站点阅读时长">17:22</span>
   
 </div>
 
