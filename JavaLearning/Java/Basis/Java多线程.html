@@ -102,12 +102,13 @@
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 多线程">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Java/Basic/Java多线程.html">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Java/Basis/Java多线程.html">
 <meta property="og:site_name" content="Vnaso">
 <meta property="og:description" content="重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作.  并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”. 多线程在单核 CPU 中是交替执行(并发), 在多核 CPU">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e232a6ebb4.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e237a7b850.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/08/07/Truv4foPsNKXUF8.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e23af2cdc8.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/04/03/5ca40b770eeca.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1f32088062.png">
@@ -123,7 +124,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e248554755.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/18/5c8ef47a449f0.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/29/5c9e24a1d225f.jpg">
-<meta property="og:updated_time" content="2019-05-15T11:59:09.126Z">
+<meta property="og:updated_time" content="2019-08-12T06:51:09.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 多线程">
 <meta name="twitter:description" content="重要概念异步和同步同步和异步通常用来形容一次方法的调用, 同步方法调用一旦开始, 调用者必须在调用返回后才能继续后续的行为. 异步方法调用更像一个消息传递, 一旦开始, 方法调用就会立即返回, 调用者可以继续后续的工作.  并发和并行它们都可以表示两个或以上任务一起执行, 但并发偏重多个任务交替执行, 而并行是真正意义上的”同时执行”. 多线程在单核 CPU 中是交替执行(并发), 在多核 CPU">
@@ -135,7 +136,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Java/Basic/Java多线程">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Java/Basis/Java多线程">
 
 
 
@@ -414,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Java/Basic/Java多线程.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Java/Basis/Java多线程.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -474,7 +475,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-15 19:59:09" itemprop="dateModified" datetime="2019-05-15T19:59:09+08:00">2019-05-15</time>
+                <time title="修改时间：2019-08-12 14:51:09" itemprop="dateModified" datetime="2019-08-12T14:51:09+08:00">2019-08-12</time>
               
             
           </span>
@@ -510,8 +511,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/Java/Basic/Java多线程.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Java/Basic/Java多线程.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Java/Basis/Java多线程.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Java/Basis/Java多线程.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -519,7 +520,7 @@
 
           
           
-            <span id="/JavaLearning/Java/Basic/Java多线程.html" class="leancloud_visitors" data-flag-title="Java 多线程">
+            <span id="/JavaLearning/Java/Basis/Java多线程.html" class="leancloud_visitors" data-flag-title="Java 多线程">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -544,7 +545,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">22k</span>
+                <span title="本文字数">23k</span>
               
 
               
@@ -558,7 +559,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1:34</span>
+                <span title="阅读时长">1:41</span>
               
             </div>
           
@@ -605,6 +606,7 @@
 </ol>
 <h2 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h2><p><img src="https://i.loli.net/2019/03/29/5c9e232a6ebb4.jpg" alt="0062LbXpgy1g15xzlyojyj30oc0domy4.jpg"></p>
 <p><img src="https://i.loli.net/2019/03/29/5c9e237a7b850.jpg" alt="线程生命周期"></p>
+<p><img src="https://i.loli.net/2019/08/07/Truv4foPsNKXUF8.png" alt="UTOOLS1565186959823.png"></p>
 <h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3><ul>
 <li><strong>新建状态</strong>: 新建线程对象, 没有调用 <code>start()</code> 之前.</li>
 <li><strong>就绪状态</strong>: 调用 <code>start()</code> 方法之后线程就进入就绪状态, 但是并不是说只要调用 <code>start()</code> 方法, 线程就马上变为当前线程, 在变为当前线程之前都是为就绪状态.</li>
@@ -629,6 +631,13 @@
 <li>在守护线程中产生的新线程也是守护线程.</li>
 <li>不是所有的任务都可以分配给守护线程来执行, 如: 读写操作或计算逻辑.</li>
 </ol>
+</li>
+<li><p><code>interrupt()</code>: 中断线程, 但不是真正意义上的中断, 而是给线程一个通知信号, 会改变这个线程内部维护的一个中断标识位, 而不会改变线程本身的状态(如阻塞, 终止等).</p>
+<p>在线程因调用 <code>sleep()</code> 而处于 <code>TIMED_WAITING</code> 状态时, 调用 <code>interrupt()</code> 会抛出 InterruptedException, 从而使线程提前结束 <code>TIMED_WAITING</code> 状态.</p>
+</li>
+<li><p><code>interrupted()</code>: 检查当前线程是否中断, 并隐式将中断状态重置为 false.</p>
+</li>
+<li><p><code>isInterrupted()</code>: 判断线程是否被中断, 可以用来在 <code>run()</code> 中优雅地终止线程.</p>
 </li>
 </ul>
 <h2 id="实例变量和线程安全"><a href="#实例变量和线程安全" class="headerlink" title="实例变量和线程安全"></a>实例变量和线程安全</h2><blockquote>
@@ -656,7 +665,14 @@
 <p><strong>注意</strong>: <strong>类锁</strong>和<strong>对象锁</strong>之间不互斥. 即一个线程可以同时获得<em>类锁</em>和<em>对象锁</em>.</p>
 <h3 id="synchronized-锁重入"><a href="#synchronized-锁重入" class="headerlink" title="synchronized 锁重入"></a>synchronized 锁重入</h3><p><strong>可重入锁</strong>的含义是: 自己可以再次获取自己内部的锁. 比如一个线程获得了某个对象的锁, 此时这个对象还没有释放, 当其再次想要获取这个对象的锁时, 还是可以获取的, 如果不可重入的话, 就会造成死锁.</p>
 <p>可重入锁也支持在父子类继承的环境当中.</p>
-<h2 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h2><p><a href="#synchronized">synchronized</a> 用的锁是存在 Java 对象头中的. 如果对象是数组类型, 则虚拟机用 3 个字宽(Word)存储对象头, 如果对象是非数组类型, 则用 2 个字宽存储对象头.</p>
+<h2 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h2><blockquote>
+<p>在 HotSpot 虚拟机中, 对象在内存中存储的布局可以分为 3 块区域: 对象头(Header), 实例数据(Instance Data) 和对其填充(Padding).</p>
+<p>HotSpot 虚拟机的对象头包括两部分信息, 第一部分用于存储对象自身的运行时数据, 如哈希码(HashCode), GC 分代年龄, 锁状态标志, 线程持有的锁, 偏向线程 ID, 偏向时间戳等, 这部分数据的长度在 32 位和 64 位的虚拟机中(未开启压缩指针)分别为 32bit 和 64bit, 官方称它为 <code>Mark Word</code>.</p>
+<p>对象头的另外一部分是类型指针, 即对象指向它的类元数据的指针, 虚拟机通过这个指针来确定这个对象是哪个类的实例. 并不是所有的虚拟机实现都必须在对象数据上保留类型指针. 另外, 如果对象是一个 Java 数组, 那在对象头中还必须有一块用于记录数组长度的数据, 因为虚拟机可以通过普通 Java 对象的元数据信息确定 Java 对象的大小, 但是从数组的元数据中无法确定数组的大小.</p>
+<p>实例数据部分是对象真正存储的有效信息, 也是在程序代码中所定义的各种类型的字段内容. 无论是从父类继承下来的, 还是在子类中定义的, 都需要记录起来.</p>
+<p>对齐填充并不是必然存在的, 也没有特别的含义, 它仅仅起着占位符的作用. 是由于 HotSpot VM 的自动内存管理系统要求对象起始地址必须是 8 字节的整数倍.</p>
+</blockquote>
+<p><a href="#synchronized">synchronized</a> 用的锁是存在 Java 对象头中的. 如果对象是数组类型, 则虚拟机用 3 个字宽(Word)存储对象头, 如果对象是非数组类型, 则用 2 个字宽存储对象头.</p>
 <table>
 <thead>
 <tr>
@@ -700,6 +716,16 @@
 <li>HashCode: 保存从对象头拷贝过来的 HashCode 值</li>
 <li>Cadidate: 用来避免不必要的阻塞或等待线程唤醒, 因为每一次只有一个线程能够成功拥有锁, 如果每次前一个释放锁的线程唤醒所有阻塞或等待的线程, 会引起不必要的<a href="#上下文切换">上下文切换</a>(从阻塞到就绪然后因为竞争锁失败又被阻塞)从而导致的性能下降. Candidate 只有两种可能的值: 0 表示没有需要唤醒的线程, 1 表示要唤醒的一个继任线程来竞争锁.</li>
 </ul>
+<h2 id="happen-before"><a href="#happen-before" class="headerlink" title="happen-before"></a>happen-before</h2><p>happen-before 关系, 是 Java 内存模型中保证多线程操作可见性的机制, 也是对早期语言规范中含糊的可见性概念的一个精确定义. 它的具体表现形式, 包括但远不止我们自觉中的 synchronized, volatile, lock 操作顺序等方面, 例如:</p>
+<ul>
+<li>线程内执行的每个操作, 都保证 happen-before 后面的操作, 这就保证了基本的程序顺序规则, 这是开发者在书写程序时的基本约定.</li>
+<li>对于 volatile 变量, 对它的写操作, 保证 happen-before 在随后对该变量的读取操作.</li>
+<li>对于一个锁的解锁操作, 保证 happen-before 加锁操作.</li>
+<li>对象构建完成, 保证 happen-before 于 finalizer 的开始动作.</li>
+<li>类似线程内部操作的完成, 保证 happen-before 其它 Thread.join() 的线程等.</li>
+</ul>
+<p>happen-before 关系存在着传递性, a happen-before b, b happen-before c, 那么 a happen-before c.</p>
+<p>happen-before 不仅仅时对执行时间的保证, 也包括对内存读, 写操作顺序的保证, 但不能保证线程交互的可见性.</p>
 <h2 id="volatile-关键字"><a href="#volatile-关键字" class="headerlink" title="volatile 关键字"></a>volatile 关键字</h2><p>在 JDK1.2 之前, Java 的内存模型实现总是从主存(共享内存)中读取变量, 是不需要进行特别注意的. 而现在的 Java 内存模型下, 线程可以把变量保存到 本地内存(机器的寄存器)中, 而不是直接在主存中进行读写. 这可能导致一个线程在主存中修改了一个变量的值, 而另外一个线程继续使用它在寄存器中的变量值的拷贝, 造成数据不一致.</p>
 <p><img src="https://i.loli.net/2019/03/29/5c9e2416d122c.jpg" alt="JDK1.2 内存模型"></p>
 <blockquote>
@@ -772,6 +798,7 @@
 <h3 id="sleep-和-wait-区别"><a href="#sleep-和-wait-区别" class="headerlink" title="sleep() 和 wait() 区别"></a>sleep() 和 wait() 区别</h3><p><code>sleep()</code> 方法是线程类(Thread)的静态方法, 让此线程暂停执行指定时间, 将执行机会让给其他线程, 但是监控状态依然保持, 到时后会自动恢复到就绪状态. 调用 sleep 不会释放对象锁.</p>
 <p><code>wait()</code> 方法是 Object 类的方法, 对此对象调用 wait() 方法导致本线程放弃对象锁, 进入该对象的等待池, 只有针对此对象发出的 notify/notifAll 方法后, 线程才会进入对象锁池准备获得对象锁进入就绪状态.</p>
 <h2 id="ThreadLocal"><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h2><p>JDK 中提供 ThreadLocal 类来解决多个线程使用同一个 public static 变量的问题. ThreadLocal 让每个线程绑定自己的值. 也就是说它让每个线程可以存储自己的数据, 存放在堆中.</p>
+<p><strong>重要</strong>: ThreadLocal 中的废弃项目的回收依赖于显式地触发, 否则就要等待到线程结束. 所以应用一定要自己负责 remove, 且不要和线程池配合, 因为 worker 线程往往是不会退出的.</p>
 <blockquote>
 <p>堆内存中的对象可以被所有线程访问, 但是 ThreadLocal 通过一些技巧将可见性修改成了线程可见.</p>
 </blockquote>
@@ -1307,7 +1334,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/Java/Basic/Java多线程.html" title="Java 多线程">http://blog.vnaso.live/JavaLearning/Java/Basic/Java多线程.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Java/Basis/Java多线程.html" title="Java 多线程">http://blog.vnaso.live/JavaLearning/Java/Basis/Java多线程.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -1333,7 +1360,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/Java/Basic/Java集合.html" rel="next" title="集合框架">
+              <a href="/JavaLearning/Java/Basis/Java集合.html" rel="next" title="集合框架">
                 <i class="fa fa-chevron-left"></i> 集合框架
               </a>
             
@@ -1595,7 +1622,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重要概念"><span class="nav-number">1.</span> <span class="nav-text">重要概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步和同步"><span class="nav-number">1.1.</span> <span class="nav-text">异步和同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发和并行"><span class="nav-number">1.2.</span> <span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发"><span class="nav-number">1.3.</span> <span class="nav-text">高并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#临界区"><span class="nav-number">1.4.</span> <span class="nav-text">临界区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-number">1.5.</span> <span class="nav-text">阻塞和非阻塞</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程使用的常见三种方式"><span class="nav-number">2.</span> <span class="nav-text">多线程使用的常见三种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程生命周期"><span class="nav-number">3.</span> <span class="nav-text">线程生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程状态"><span class="nav-number">3.1.</span> <span class="nav-text">线程状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程控制"><span class="nav-number">3.2.</span> <span class="nav-text">线程控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例变量和线程安全"><span class="nav-number">4.</span> <span class="nav-text">实例变量和线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程分类"><span class="nav-number">5.</span> <span class="nav-text">多线程分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized-关键字"><span class="nav-number">6.</span> <span class="nav-text">synchronized 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全"><span class="nav-number">6.1.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">6.2.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized-锁重入"><span class="nav-number">6.3.</span> <span class="nav-text">synchronized 锁重入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象头"><span class="nav-number">7.</span> <span class="nav-text">对象头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象监视器-monitor"><span class="nav-number">8.</span> <span class="nav-text">对象监视器(monitor)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile-关键字"><span class="nav-number">9.</span> <span class="nav-text">volatile 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性"><span class="nav-number">9.1.</span> <span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止重排序"><span class="nav-number">9.1.1.</span> <span class="nav-text">禁止重排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原子性"><span class="nav-number">9.2.</span> <span class="nav-text">原子性?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等待-通知-wait-notify-机制"><span class="nav-number">10.</span> <span class="nav-text">等待/通知(wait/notify)机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关方法"><span class="nav-number">10.1.</span> <span class="nav-text">相关方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和-wait-区别"><span class="nav-number">10.2.</span> <span class="nav-text">sleep() 和 wait() 区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ThreadLocal"><span class="nav-number">11.</span> <span class="nav-text">ThreadLocal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#InheritableThreadLocal"><span class="nav-number">11.1.</span> <span class="nav-text">InheritableThreadLocal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock-接口"><span class="nav-number">12.</span> <span class="nav-text">Lock 接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lock-接口简介"><span class="nav-number">12.1.</span> <span class="nav-text">Lock 接口简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-number">12.2.</span> <span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性和方法"><span class="nav-number">12.3.</span> <span class="nav-text">特性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantLock"><span class="nav-number">12.4.</span> <span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Condition"><span class="nav-number">12.5.</span> <span class="nav-text">Condition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公平锁与非公平锁"><span class="nav-number">12.6.</span> <span class="nav-text">公平锁与非公平锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantReadWriteLock"><span class="nav-number">12.7.</span> <span class="nav-text">ReentrantReadWriteLock</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特性与方法"><span class="nav-number">12.7.1.</span> <span class="nav-text">特性与方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的状态"><span class="nav-number">13.</span> <span class="nav-text">锁的状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#偏向锁"><span class="nav-number">13.1.</span> <span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轻量级锁"><span class="nav-number">13.2.</span> <span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重量级锁"><span class="nav-number">13.3.</span> <span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自旋锁"><span class="nav-number">13.4.</span> <span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自适应自旋锁"><span class="nav-number">13.5.</span> <span class="nav-text">自适应自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点对比"><span class="nav-number">13.6.</span> <span class="nav-text">优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAS"><span class="nav-number">14.</span> <span class="nav-text">CAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-Compare-and-swap-简介"><span class="nav-number">14.1.</span> <span class="nav-text">CAS(Compare and swap) 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乐观锁的实现方式-CAS"><span class="nav-number">14.2.</span> <span class="nav-text">乐观锁的实现方式 CAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-的缺点"><span class="nav-number">14.3.</span> <span class="nav-text">CAS 的缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下文切换"><span class="nav-number">15.</span> <span class="nav-text">上下文切换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少上下文切换"><span class="nav-number">15.1.</span> <span class="nav-text">减少上下文切换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池"><span class="nav-number">16.</span> <span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用线程池的好处"><span class="nav-number">16.1.</span> <span class="nav-text">使用线程池的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor-框架"><span class="nav-number">16.2.</span> <span class="nav-text">Executor 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor-框架流程图"><span class="nav-number">16.2.1.</span> <span class="nav-text">Executor 框架流程图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ThreadPoolExecutor"><span class="nav-number">16.3.</span> <span class="nav-text">ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建-ThreadPoolExecutor"><span class="nav-number">16.3.1.</span> <span class="nav-text">创建 ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方式一-通过构造方法实现"><span class="nav-number">16.3.1.1.</span> <span class="nav-text">方式一: 通过构造方法实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方式二-通过-Executors-工具类创建-常见的有-4-种"><span class="nav-number">16.3.1.2.</span> <span class="nav-text">方式二: 通过 Executors 工具类创建, 常见的有 4 种:</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">17.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重要概念"><span class="nav-number">1.</span> <span class="nav-text">重要概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步和同步"><span class="nav-number">1.1.</span> <span class="nav-text">异步和同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并发和并行"><span class="nav-number">1.2.</span> <span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发"><span class="nav-number">1.3.</span> <span class="nav-text">高并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#临界区"><span class="nav-number">1.4.</span> <span class="nav-text">临界区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-number">1.5.</span> <span class="nav-text">阻塞和非阻塞</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程使用的常见三种方式"><span class="nav-number">2.</span> <span class="nav-text">多线程使用的常见三种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程生命周期"><span class="nav-number">3.</span> <span class="nav-text">线程生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程状态"><span class="nav-number">3.1.</span> <span class="nav-text">线程状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程控制"><span class="nav-number">3.2.</span> <span class="nav-text">线程控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例变量和线程安全"><span class="nav-number">4.</span> <span class="nav-text">实例变量和线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程分类"><span class="nav-number">5.</span> <span class="nav-text">多线程分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized-关键字"><span class="nav-number">6.</span> <span class="nav-text">synchronized 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全"><span class="nav-number">6.1.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">6.2.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized-锁重入"><span class="nav-number">6.3.</span> <span class="nav-text">synchronized 锁重入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象头"><span class="nav-number">7.</span> <span class="nav-text">对象头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象监视器-monitor"><span class="nav-number">8.</span> <span class="nav-text">对象监视器(monitor)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#happen-before"><span class="nav-number">9.</span> <span class="nav-text">happen-before</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile-关键字"><span class="nav-number">10.</span> <span class="nav-text">volatile 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性"><span class="nav-number">10.1.</span> <span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止重排序"><span class="nav-number">10.1.1.</span> <span class="nav-text">禁止重排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原子性"><span class="nav-number">10.2.</span> <span class="nav-text">原子性?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等待-通知-wait-notify-机制"><span class="nav-number">11.</span> <span class="nav-text">等待/通知(wait/notify)机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关方法"><span class="nav-number">11.1.</span> <span class="nav-text">相关方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和-wait-区别"><span class="nav-number">11.2.</span> <span class="nav-text">sleep() 和 wait() 区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ThreadLocal"><span class="nav-number">12.</span> <span class="nav-text">ThreadLocal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#InheritableThreadLocal"><span class="nav-number">12.1.</span> <span class="nav-text">InheritableThreadLocal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock-接口"><span class="nav-number">13.</span> <span class="nav-text">Lock 接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lock-接口简介"><span class="nav-number">13.1.</span> <span class="nav-text">Lock 接口简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-number">13.2.</span> <span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性和方法"><span class="nav-number">13.3.</span> <span class="nav-text">特性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantLock"><span class="nav-number">13.4.</span> <span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Condition"><span class="nav-number">13.5.</span> <span class="nav-text">Condition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公平锁与非公平锁"><span class="nav-number">13.6.</span> <span class="nav-text">公平锁与非公平锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantReadWriteLock"><span class="nav-number">13.7.</span> <span class="nav-text">ReentrantReadWriteLock</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特性与方法"><span class="nav-number">13.7.1.</span> <span class="nav-text">特性与方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的状态"><span class="nav-number">14.</span> <span class="nav-text">锁的状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#偏向锁"><span class="nav-number">14.1.</span> <span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轻量级锁"><span class="nav-number">14.2.</span> <span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重量级锁"><span class="nav-number">14.3.</span> <span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自旋锁"><span class="nav-number">14.4.</span> <span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自适应自旋锁"><span class="nav-number">14.5.</span> <span class="nav-text">自适应自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点对比"><span class="nav-number">14.6.</span> <span class="nav-text">优缺点对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAS"><span class="nav-number">15.</span> <span class="nav-text">CAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-Compare-and-swap-简介"><span class="nav-number">15.1.</span> <span class="nav-text">CAS(Compare and swap) 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乐观锁的实现方式-CAS"><span class="nav-number">15.2.</span> <span class="nav-text">乐观锁的实现方式 CAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS-的缺点"><span class="nav-number">15.3.</span> <span class="nav-text">CAS 的缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下文切换"><span class="nav-number">16.</span> <span class="nav-text">上下文切换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少上下文切换"><span class="nav-number">16.1.</span> <span class="nav-text">减少上下文切换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池"><span class="nav-number">17.</span> <span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用线程池的好处"><span class="nav-number">17.1.</span> <span class="nav-text">使用线程池的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor-框架"><span class="nav-number">17.2.</span> <span class="nav-text">Executor 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor-框架流程图"><span class="nav-number">17.2.1.</span> <span class="nav-text">Executor 框架流程图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ThreadPoolExecutor"><span class="nav-number">17.3.</span> <span class="nav-text">ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建-ThreadPoolExecutor"><span class="nav-number">17.3.1.</span> <span class="nav-text">创建 ThreadPoolExecutor</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方式一-通过构造方法实现"><span class="nav-number">17.3.1.1.</span> <span class="nav-text">方式一: 通过构造方法实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方式二-通过-Executors-工具类创建-常见的有-4-种"><span class="nav-number">17.3.1.2.</span> <span class="nav-text">方式二: 通过 Executors 工具类创建, 常见的有 4 种:</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">18.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -1629,7 +1656,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">240k</span>
+    <span title="站点总字数">242k</span>
   
 
   
@@ -1638,7 +1665,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17:22</span>
+    <span title="站点阅读时长">17:32</span>
   
 </div>
 
@@ -1789,8 +1816,8 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-    appKey: 'guStzHNvDHlTGtL46Ow1MKfL',
+    appId: 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+    appKey: '9NJtqCEIw1jcUK4ddmnIEjmk',
     placeholder: 'hope u get it...',
     avatar: 'mm',
     meta: guest,
@@ -2170,15 +2197,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-                'X-LC-Key': 'guStzHNvDHlTGtL46Ow1MKfL',
+                'X-LC-Id': 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+                'X-LC-Key': '9NJtqCEIw1jcUK4ddmnIEjmk',
                 'Content-Type': 'application/json',
               },
               data: data

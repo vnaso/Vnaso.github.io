@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/JavaEE.html</loc>
-    <lastmod>2019-07-31</lastmod>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</loc>
+    <lastmod>2019-08-12</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/JVM.html</loc>
+    <lastmod>2019-08-11</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/HashMap%20%E5%92%8C%20ConcurrentHashMap.html</loc>
+    <lastmod>2019-08-07</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/Java%E5%9F%BA%E7%A1%80.html</loc>
+    <lastmod>2019-08-06</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Notes/DevNote.html</loc>
+    <lastmod>2019-08-02</lastmod>
+  </url>  <url>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/JavaEE.html</loc>
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Notes/Solutions.html</loc>
     <lastmod>2019-07-31</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/HashMap%20%E5%92%8C%20ConcurrentHashMap.html</loc>
-    <lastmod>2019-07-31</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%E5%9F%BA%E7%A1%80.html</loc>
-    <lastmod>2019-07-27</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html</loc>
     <lastmod>2019-07-10</lastmod>
@@ -25,7 +31,7 @@
     <loc>http://blog.vnaso.live/JavaLearning/Ops/ServerSetting.html</loc>
     <lastmod>2019-06-27</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%20IO.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/Java%20IO.html</loc>
     <lastmod>2019-06-18</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Ops/Git%E5%91%BD%E4%BB%A4.html</loc>
@@ -40,13 +46,7 @@
     <loc>http://blog.vnaso.live/JavaLearning/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8.html</loc>
     <lastmod>2019-05-15</lastmod>
   </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</loc>
-    <lastmod>2019-05-15</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/Java%E9%9B%86%E5%90%88.html</loc>
-    <lastmod>2019-05-15</lastmod>
-  </url>  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/Java/Basic/JVM.html</loc>
+    <loc>http://blog.vnaso.live/JavaLearning/Java/Basis/Java%E9%9B%86%E5%90%88.html</loc>
     <lastmod>2019-05-15</lastmod>
   </url>  <url>
     <loc>http://blog.vnaso.live/JavaLearning/Web/CORS%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB.html</loc>

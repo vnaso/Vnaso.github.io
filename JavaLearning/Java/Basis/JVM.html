@@ -102,7 +102,7 @@
 <meta name="keywords" content="Java,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM">
-<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Java/Basic/JVM.html">
+<meta property="og:url" content="http://blog.vnaso.live/JavaLearning/Java/Basis/JVM.html">
 <meta property="og:site_name" content="Vnaso">
 <meta property="og:description" content="简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据, 也就是调用类的 &amp;lt;clinit&amp;gt;() 方法.  运行时数据区  堆: 线程共享. 存放对象及数组实例, 也就是运行期">
 <meta property="og:locale" content="zh-CN">
@@ -133,7 +133,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0c0c8e67f.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc0f22344f5.png">
 <meta property="og:image" content="https://i.loli.net/2019/05/03/5ccc12684a9b3.png">
-<meta property="og:updated_time" content="2019-05-15T02:41:40.019Z">
+<meta property="og:updated_time" content="2019-08-11T07:52:50.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM">
 <meta name="twitter:description" content="简介JVM 组成架构  类加载器 类加载器主要用于定位类定义的二进制信息, 然后将这些信息解析并加载至虚拟机. 类加载器在方法区构造具有这个类的信息的数据结构后, 会在堆上创建一个 Class 对象作为访问这个数据结构的接口.  同时, 类加载器还会初始化类的静态数据, 也就是调用类的 &amp;lt;clinit&amp;gt;() 方法.  运行时数据区  堆: 线程共享. 存放对象及数组实例, 也就是运行期">
@@ -145,7 +145,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Java/Basic/JVM">
+  <link rel="canonical" href="http://blog.vnaso.live/JavaLearning/Java/Basis/JVM">
 
 
 
@@ -424,7 +424,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Java/Basic/JVM.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.vnaso.live/JavaLearning/Java/Basis/JVM.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vnaso">
@@ -484,7 +484,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-15 10:41:40" itemprop="dateModified" datetime="2019-05-15T10:41:40+08:00">2019-05-15</time>
+                <time title="修改时间：2019-08-11 15:52:50" itemprop="dateModified" datetime="2019-08-11T15:52:50+08:00">2019-08-11</time>
               
             
           </span>
@@ -520,8 +520,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/JavaLearning/Java/Basic/JVM.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Java/Basic/JVM.html" itemprop="commentCount"></span>
+                <a href="/JavaLearning/Java/Basis/JVM.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaLearning/Java/Basis/JVM.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -529,7 +529,7 @@
 
           
           
-            <span id="/JavaLearning/Java/Basic/JVM.html" class="leancloud_visitors" data-flag-title="JVM">
+            <span id="/JavaLearning/Java/Basis/JVM.html" class="leancloud_visitors" data-flag-title="JVM">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -568,7 +568,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1:36</span>
+                <span title="阅读时长">1:37</span>
               
             </div>
           
@@ -614,7 +614,7 @@
 <p>类加载器并不需要等到某个类被<strong>首次主动使用</strong>时再加载它, JVM 规范允许类加载器在预料某个类将要被使用时就预先加载它, 如果在预先加载的过程中遇到了 .class 文件缺失或存在错误, 类加载器必须在程序首次主动使用该类时才报告错误. 如果这个类一直没有被程序主动使用, 那么类加载器就不会报错.</p>
 <h3 id="类的生命周期"><a href="#类的生命周期" class="headerlink" title="类的生命周期"></a>类的生命周期</h3><p><img src="https://i.loli.net/2019/05/01/5cc939d845bf8.png" alt="UTOOLS1556691416326.png"></p>
 <h4 id="类的加载过程"><a href="#类的加载过程" class="headerlink" title="类的加载过程"></a>类的加载过程</h4><p>类的加载过程包括了: 加载, 验证, 准备, 解析, 初始化五个阶段. 在这五个阶段中, 加载, 验证, 准备, 初始化和卸载这五个阶段发生的顺序是确定的. 解析阶段可以在初始化之后再开始, 这是为了支持 Java 的<em>运行时绑定</em>(也称为 <em>动态绑定</em>或<em>晚期绑定</em>).</p>
-<h5 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h5><p>查找并加载类的二进制数据, 是加载过程的第一个阶段. 在加载阶段, 虚拟机需要完成以下三件事:</p>
+<h5 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h5><p>将 Java 字节码数据从不同的数据源读取到 JVM 中, 并映射为 JVM 认可的数据结构(Class 对象). 在加载阶段, 虚拟机需要完成以下三件事:</p>
 <ol>
 <li>通过一个类的全限定类名来获取此类的二进制字节流.</li>
 <li>将这个字节流所代表的静态存储结构转化为<em>方法区</em>的运行时数据结构.</li>
@@ -622,11 +622,11 @@
 </ol>
 <p>加载阶段是可控性最强的阶段, 开发人员可以使用自定义自己的类加载器来完成类的加载.</p>
 <p>加载阶段完成后, 虚拟机外部的二进制字节流就按照虚拟机所需的格式存储在<em>方法区</em>之中, 而且在<em>堆</em>中也创建一个 <code>java.lang.Class</code> 类的对象, 这样便可以通过该对象访问<em>方法区</em>中的这些数据.</p>
-<h5 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h5><p>连接就是将已读入到内存的类的二进制数据合并到虚拟机的<em>运行时环境</em>中. 该阶段可分为三个步骤: </p>
+<h5 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h5><p>连接就是将已读入到内存的类的二进制数据合并到虚拟机的<em>运行时环境</em>中, 即把原始的类定义信息平滑地转化入 JVM 运行中. 该阶段可分为三个步骤: </p>
 <ol>
-<li>验证: 确保被加载类的正确性.</li>
+<li>验证: 虚拟机安全的重要保障, JVm 需要核验字节信息是符合 Java 虚拟机规范的, 否则就被认为是 VerifyError, 确保被加载类的正确性. 验证阶段有可能触发更多 class 的加载.</li>
 <li>准备: 为类的静态变量分配内存, 并将其初始化为默认值.</li>
-<li>解析: 把类中的符号引用转化为直接引用.</li>
+<li>解析: 将常量池中的符号引用替换为直接引用.</li>
 </ol>
 <h5 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h5><p>验证是连接阶段的第一步, 这一阶段的目的是为了确保 Class 文件的字节流中包含的信息符合当前虚拟机的要求, 并且不回危害到虚拟机自身的安全. 验证阶段大致会完成 4 个阶段的检验动作.</p>
 <ol>
@@ -660,7 +660,7 @@
 <h5 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h5><p>解析阶段是虚拟机将<em>常量池</em>内的<em>符号引用</em>替换为<em>直接引用</em>的过程. 解析动作主要针对<em>类</em>或<em>接口</em>, <em>字段</em>, <em>类方法</em>, <em>接口方法</em>, <em>方法类型</em>, <em>方法句柄</em>和<em>调用点限定符</em> 7 类<em>符号引用</em>进行. </p>
 <p><em>符号引用</em>就是一组符号来描述目标, 可以使任何字面量.</p>
 <p><em>直接引用</em>就是直接指向目标的指针, 相对偏移量或一个间接定位到目标的句柄.</p>
-<h5 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h5><p>初始化为类的静态变量赋予正确的初始值. JVM 负责对类进行初始化, 主要对类变量进行初始化. 在 Java 中对类变量进行初始值设定有两种方式:</p>
+<h5 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h5><p>初始化为类的静态变量赋予正确的初始值. JVM 负责对类进行初始化, 主要对类变量进行初始化, 父类型的初始化逻辑优先于当前类型的逻辑. 在 Java 中对类变量进行初始值设定有两种方式:</p>
 <ol>
 <li>在声明类变量时为其指定初始值.</li>
 <li>使用静态代码块为类变量指定初始值.</li>
@@ -687,7 +687,7 @@
 <p><code>&lt;clinit&gt;()</code> 方法是由编译器自动收集类中定义的所有<em>类变量</em>的<strong>赋值动作</strong>和<em>静态语句块</em>(static 语句块)中的语句<strong>合并生成的</strong>. 编译器<strong>收集的顺序</strong>是由语句在源文件中<strong>出现的顺序</strong>决定的. <em>静态语句块</em>中只能访问到定义在<em>静态语句块</em>之前的变量; 定义在它之后的变量, 在前面的<em>静态语句块</em>中可以赋值, 但是不能访问.</p>
 <p><code>&lt;clinit&gt;()</code> 方法与构造函数 <code>&lt;init&gt;()</code> 方法不同, 它不需要显式地调用父类构造器, 虚拟机会保证在子类的 <code>&lt;clinit&gt;()</code> 方法执行之前, 父类的 <code>&lt;clinit&gt;()</code> 已经执行完毕. 因此, 在虚拟机中第一个被执行的 <code>&lt;clinit&gt;()</code> 方法一定是 <code>java.lang.Object</code> 的.</p>
 <p>如果一个类中既没有<em>静态语句块</em>, 也没有<em>静态变量</em>赋值动作, 那么编译器都不会为类生成 <code>&lt;clinit&gt;()</code> 方法.</p>
-<p>虚拟机会保证一个类的 <code>&lt;clinit&gt;()</code> 方法在多线程环境中能正确的加锁, 同步. 如果多个线程初始化一个类, 那么只有一个线程回去执行 <code>&lt;clinit&gt;()</code> 方法, 其他线程都需要等待.</p>
+<p>虚拟机会保证一个类的 <code>&lt;clinit&gt;()</code> 方法在<strong>多线程环境中能正确的加锁</strong>, 同步. 如果多个线程初始化一个类, 那么只有一个线程回去执行 <code>&lt;clinit&gt;()</code> 方法, 其他线程都需要等待.</p>
 <h5 id="结束生命周期"><a href="#结束生命周期" class="headerlink" title="结束生命周期:"></a>结束生命周期:</h5><p>在以下几种情况下, Java 虚拟机将结束生命周期:</p>
 <ol>
 <li>执行了 <code>System.exit()</code>方法.</li>
@@ -992,7 +992,8 @@
 </tbody>
 </table>
 <h2 id="JVM-常用参数"><a href="#JVM-常用参数" class="headerlink" title="JVM 常用参数"></a>JVM 常用参数</h2><ul>
-<li><code>-XX:PrintFlagsFinal</code>: 显示所有可设置的参数及它们的值.</li>
+<li><p><code>-XX:PrintFlagsFinal</code>: 显示所有可设置的参数及它们的值.</p>
+</li>
 <li><p><code>-XX:PrintFlagsInitial</code>: 显示在处理参数之前所有可设置的参数及它们的值, 然后直接退出程序.</p>
 </li>
 <li><p><code>-Xms</code>=<code>-XX:InitialHeapSize</code>: 初始堆大小, 默认物理内存的 1/64. 空余堆内存小于 40% 时, JVM 就会增大堆直到 <code>-Xmx</code> 的最大限制.</p>
@@ -1016,6 +1017,8 @@
 </li>
 <li><p><code>-XX:MaxTenuringThreshold</code>: 垃圾最大年龄. 最大为 15.</p>
 <p>如果设置为 0 的话, 则<em>新生代</em>对象不经过 <em>Survivor 区</em>, 直接进入<em>老年代</em>. 该参数只有在串行 GC 时才有效.</p>
+</li>
+<li><p><code>-XX:+UseStringDeduplication</code>: 在使用 G1 GC 时进行字符串排重, 将相同数据的字符串指向同一份数据.</p>
 </li>
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a><strong>参考</strong></h2><ul>
@@ -1094,7 +1097,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://blog.vnaso.live/JavaLearning/Java/Basic/JVM.html" title="JVM">http://blog.vnaso.live/JavaLearning/Java/Basic/JVM.html</a>
+    <a href="http://blog.vnaso.live/JavaLearning/Java/Basis/JVM.html" title="JVM">http://blog.vnaso.live/JavaLearning/Java/Basis/JVM.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -1418,7 +1421,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">240k</span>
+    <span title="站点总字数">242k</span>
   
 
   
@@ -1427,7 +1430,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17:22</span>
+    <span title="站点阅读时长">17:32</span>
   
 </div>
 
@@ -1578,8 +1581,8 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-    appKey: 'guStzHNvDHlTGtL46Ow1MKfL',
+    appId: 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+    appKey: '9NJtqCEIw1jcUK4ddmnIEjmk',
     placeholder: 'hope u get it...',
     avatar: 'mm',
     meta: guest,
@@ -1959,15 +1962,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-                'X-LC-Key': 'guStzHNvDHlTGtL46Ow1MKfL',
+                'X-LC-Id': 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+                'X-LC-Key': '9NJtqCEIw1jcUK4ddmnIEjmk',
                 'Content-Type': 'application/json',
               },
               data: data

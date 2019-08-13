@@ -788,7 +788,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/Java/Basic/Java多线程.html" rel="next" title="Java 多线程">
+              <a href="/JavaLearning/Java/Basis/Java多线程.html" rel="next" title="Java 多线程">
                 <i class="fa fa-chevron-left"></i> Java 多线程
               </a>
             
@@ -798,7 +798,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/JavaLearning/Java/Basic/Java IO.html" rel="prev" title="Java IO">
+              <a href="/JavaLearning/Java/Basis/Java IO.html" rel="prev" title="Java IO">
                 Java IO <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -1084,7 +1084,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">240k</span>
+    <span title="站点总字数">242k</span>
   
 
   
@@ -1093,7 +1093,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17:22</span>
+    <span title="站点阅读时长">17:32</span>
   
 </div>
 
@@ -1244,8 +1244,8 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-    appKey: 'guStzHNvDHlTGtL46Ow1MKfL',
+    appId: 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+    appKey: '9NJtqCEIw1jcUK4ddmnIEjmk',
     placeholder: 'hope u get it...',
     avatar: 'mm',
     meta: guest,
@@ -1625,15 +1625,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-                'X-LC-Key': 'guStzHNvDHlTGtL46Ow1MKfL',
+                'X-LC-Id': 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+                'X-LC-Key': '9NJtqCEIw1jcUK4ddmnIEjmk',
                 'Content-Type': 'application/json',
               },
               data: data

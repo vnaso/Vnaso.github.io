@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Vnaso">
 <meta property="og:description" content="DBMySQL 8.x jdbc 连接参数1jdbc:mysql://&amp;#123;host&amp;#125;:&amp;#123;port&amp;#125;/&amp;#123;schema&amp;#125;?useUnicode=true&amp;amp;characterEncoding=utf8&amp;amp;useSSL=false&amp;amp;serverTimezone=GMT%2B8 不设置时区会导致数据库无法连接, 报错: The">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-31T05:00:57.678Z">
+<meta property="og:updated_time" content="2019-08-02T07:35:53.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dev Note">
 <meta name="twitter:description" content="DBMySQL 8.x jdbc 连接参数1jdbc:mysql://&amp;#123;host&amp;#125;:&amp;#123;port&amp;#125;/&amp;#123;schema&amp;#125;?useUnicode=true&amp;amp;characterEncoding=utf8&amp;amp;useSSL=false&amp;amp;serverTimezone=GMT%2B8 不设置时区会导致数据库无法连接, 报错: The">
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-31 13:00:57" itemprop="dateModified" datetime="2019-07-31T13:00:57+08:00">2019-07-31</time>
+                <time title="修改时间：2019-08-02 15:35:53" itemprop="dateModified" datetime="2019-08-02T15:35:53+08:00">2019-08-02</time>
               
             
           </span>
@@ -526,7 +526,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">1.8k</span>
               
 
               
@@ -540,7 +540,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">7 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -567,8 +567,10 @@
 <p>然后在主配置文件(通用)中通过 <code>spring.profiles.active : ${env}</code> 来切换当前环境, 达到环境隔离的效果.</p>
 <h4 id="拆分"><a href="#拆分" class="headerlink" title="拆分"></a>拆分</h4><p>如果一个 profile 中配置过多, 想让文件更加简洁, 或按功能拆分, 比如配置了 redis, mybatis, 可以单独创建这两个的配置文件: <code>application-devRedis.yml</code>, <code>application-devMybatis.yml</code>. 然后在主配置文件中通过 <code>spring.profiles.include: devRedis,devMybatis</code> 来引入这两个配置.</p>
 <h3 id="springBoot-序列化时忽略-null-字段"><a href="#springBoot-序列化时忽略-null-字段" class="headerlink" title="springBoot 序列化时忽略 null 字段."></a>springBoot 序列化时忽略 null 字段.</h3><p>添加注解的方式无法生效, 需要在 <code>application.yml</code> 中通过 <code>spring.jackson.default-property-inclusion: non_null</code> 来指定.</p>
-<h3 id="Swagger-ApiImplicParam-和-ApiParam-的使用"><a href="#Swagger-ApiImplicParam-和-ApiParam-的使用" class="headerlink" title="Swagger @ApiImplicParam 和 @ApiParam 的使用"></a>Swagger @ApiImplicParam 和 @ApiParam 的使用</h3><p><code>@ApiImplicParam</code> 用于描述基本数据类型.</p>
-<p><code>@ApiParam</code> 用于描述实体类, 如 pojo 等. 否则在生成的接口文档中会把本来只是作为参数的实体类的变量名也作为一个接口的参数.</p>
+<h3 id="Swagger-ApiImplicitParam-和-ApiParam-的使用"><a href="#Swagger-ApiImplicitParam-和-ApiParam-的使用" class="headerlink" title="Swagger @ApiImplicitParam 和 @ApiParam 的使用"></a>Swagger @ApiImplicitParam 和 @ApiParam 的使用</h3><p><code>@ApiImplicParam</code> 用于描述接口方法参数对象的属性.</p>
+<p><code>@ApiParam</code> 用于描述接口方法所需的参数对象.</p>
+<p>例:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiImplicitParams</span>(&#123;</span><br><span class="line">    <span class="meta">@ApiImplicitParam</span>(name = <span class="string">"people 的 name"</span>, value = <span class="string">"name"</span>),</span><br><span class="line">    <span class="meta">@ApiImplicitParam</span>(name = <span class="string">"people 的 age"</span>, value = <span class="string">"age)</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">public void updatePeople(@ApiParam People p, @ApiParam String type)&#123;&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用-Nginx-反向代理后获取不到真实客户端-IP"><a href="#使用-Nginx-反向代理后获取不到真实客户端-IP" class="headerlink" title="使用 Nginx 反向代理后获取不到真实客户端 IP"></a>使用 Nginx 反向代理后获取不到真实客户端 IP</h3><h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>由于配置了 Nginx 反向代理, 使用 proxy_pass 代理了客户端请求, 导致通过 <code>HttpServletRequest.getRemoteAddr()</code> 获取到的 IP 地址为 Nginx 服务器所在的地址.</p>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>Nginx 添加配置:</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> / &#123;</span><br><span class="line">    <span class="attribute">proxy_set_header</span> Host				<span class="variable">$host</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span> X-Real-IP			<span class="variable">$remote_addr</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span> X-Forwarded-For	<span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span> X-Forwarded-Proto	<span class="variable">$scheme</span>;</span><br><span class="line">    <span class="attribute">proxy_redirect</span>                      <span class="literal">off</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -667,8 +669,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JavaLearning/Ops/Docker介绍.html" rel="next" title="Docker介绍">
-                <i class="fa fa-chevron-left"></i> Docker介绍
+              <a href="/JavaLearning/Notes/Solutions.html" rel="next" title="工具踩坑记录">
+                <i class="fa fa-chevron-left"></i> 工具踩坑记录
               </a>
             
           </div>
@@ -676,10 +678,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/JavaLearning/Notes/Solutions.html" rel="prev" title="工具踩坑记录">
-                工具踩坑记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -929,7 +927,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DB"><span class="nav-number">1.</span> <span class="nav-text">DB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL-8-x-jdbc-连接参数"><span class="nav-number">1.1.</span> <span class="nav-text">MySQL 8.x jdbc 连接参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot"><span class="nav-number">2.</span> <span class="nav-text">Spring Boot</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Boot-profile-拆分"><span class="nav-number">2.1.</span> <span class="nav-text">Spring Boot profile 拆分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境隔离"><span class="nav-number">2.1.1.</span> <span class="nav-text">环境隔离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拆分"><span class="nav-number">2.1.2.</span> <span class="nav-text">拆分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#springBoot-序列化时忽略-null-字段"><span class="nav-number">2.2.</span> <span class="nav-text">springBoot 序列化时忽略 null 字段.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swagger-ApiImplicParam-和-ApiParam-的使用"><span class="nav-number">2.3.</span> <span class="nav-text">Swagger @ApiImplicParam 和 @ApiParam 的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Nginx-反向代理后获取不到真实客户端-IP"><span class="nav-number">2.4.</span> <span class="nav-text">使用 Nginx 反向代理后获取不到真实客户端 IP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#起因"><span class="nav-number">2.4.1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.4.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DB"><span class="nav-number">1.</span> <span class="nav-text">DB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL-8-x-jdbc-连接参数"><span class="nav-number">1.1.</span> <span class="nav-text">MySQL 8.x jdbc 连接参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot"><span class="nav-number">2.</span> <span class="nav-text">Spring Boot</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Boot-profile-拆分"><span class="nav-number">2.1.</span> <span class="nav-text">Spring Boot profile 拆分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境隔离"><span class="nav-number">2.1.1.</span> <span class="nav-text">环境隔离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拆分"><span class="nav-number">2.1.2.</span> <span class="nav-text">拆分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#springBoot-序列化时忽略-null-字段"><span class="nav-number">2.2.</span> <span class="nav-text">springBoot 序列化时忽略 null 字段.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swagger-ApiImplicitParam-和-ApiParam-的使用"><span class="nav-number">2.3.</span> <span class="nav-text">Swagger @ApiImplicitParam 和 @ApiParam 的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Nginx-反向代理后获取不到真实客户端-IP"><span class="nav-number">2.4.</span> <span class="nav-text">使用 Nginx 反向代理后获取不到真实客户端 IP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#起因"><span class="nav-number">2.4.1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.4.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -963,7 +961,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">240k</span>
+    <span title="站点总字数">242k</span>
   
 
   
@@ -972,7 +970,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17:22</span>
+    <span title="站点阅读时长">17:32</span>
   
 </div>
 
@@ -1123,8 +1121,8 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-    appKey: 'guStzHNvDHlTGtL46Ow1MKfL',
+    appId: 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+    appKey: '9NJtqCEIw1jcUK4ddmnIEjmk',
     placeholder: 'hope u get it...',
     avatar: 'mm',
     meta: guest,
@@ -1504,15 +1502,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'WEdgA0QRiTUSwHOq7bqDAYll-gzGzoHsz',
-                'X-LC-Key': 'guStzHNvDHlTGtL46Ow1MKfL',
+                'X-LC-Id': 'JSBlD6cHT2ie9PORLu8naUVi-MdYXbMMI',
+                'X-LC-Key': '9NJtqCEIw1jcUK4ddmnIEjmk',
                 'Content-Type': 'application/json',
               },
               data: data
