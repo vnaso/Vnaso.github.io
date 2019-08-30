@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[RabbitMQ 笔记]]></title>
+    <title><![CDATA[RabbitMQ笔记]]></title>
     <url>%2FJavaLearning%2F%E4%B8%AD%E9%97%B4%E4%BB%B6%2FRabbitMQ.html</url>
     <content type="text"><![CDATA[RabbitMQRabbitMQ 是一个由 Erlang 语言开发的 AMQP 的开源实现. AMQP: Advanved Message Queue, 高级消息队列协议. 它是应用层协议的一个开放标准, 为面向消息的中间件设计, 基于此协议的客户端与消息中间件可传递消息, 且不受产品, 开发语言条件的限制. RabbitMQ 的特点有: 可靠性(Reliability): 使用持久化, 传输确认, 发布确认等机制来保证可靠性. 灵活的路由(Flexible Routing): 在消息进入队列之前, 通过 Exchange 来路由消息的. 对于典型的路由功能, RabbitMQ 已经提供了一些内置的 Exchange 来实现. 针对更复杂的路由功能, 可以将多个 Exchange 绑定在一起, 也可以通过插件机制实现自己的 Exchange. 消息集群(Clustering): 多个 RabbitMQ 服务器可以组成一个集群, 形成一个逻辑 Broker. 高可用(Highly Available Queues): 队列可以在集群的机器上创建镜像节点, 使得在部分节点出问题的情况下队列仍然可用. 多种协议(Multi-protocol): RabbitMQ 支持多种消息队列协议, 如 STOMP, MQTT 等. 多语言客户端(Many Clients): RabbitMQ 几乎支持所有语言. 管理界面(Management UI): RabbitMQ 提供了一个易用的用户界面, 使得用户可以监控和管理消息 Broker 的诸多方面. 跟踪机制(Tracing): 如果消息异常, RabbitMQ 提供了消息跟踪机制. 插件机制(Plugin System): RabbitMQ 提供了许多插件, 来从许多方面进行扩展, 也可以编写自己的插件. 系统架构消息模型所有 MQ 产品从模型抽象上来说都是相似的过程: 消费者(Consumer)订阅某个队列(Queue), 生产者(Producer)创建消息, 然后发布到队列(Queue)中, Server(Broker)负责将队列中的消息发送给订阅该队列的消费者. Server 也叫 Broker, 它的角色就是维护从 Producer 到 Comsumer 的路线, 保证数据能够按照指定的方式进行传输. Publisher 数据发送方, 负责发送 Message 到 Server. Consumer 数据接收方, 负责从 Server 中订阅的 Queue 获取 Message. Message 消息, 一个 Message 由两个部分组成: Header 和 Body, Header 是由生产者添加的各种属性的集合, 包括 routing-key(路由键), priority(优先级), delivery-mode(消息是否需要持久化)等. Exchange 交换器, 根据消息的 routing-key 来将其路由给服务器中的队列. Queue 消息队列, 用来保存消息, 直到消息过期或被消费者获取. 它是消息的容器, 也是消息的终点. 一个消息可路由到一个或多个队列. Binding 绑定, 用于定义消息队列和交换器之间的关联. 一个绑定就是基于路由键将交换器和消息队列连接起来的路由规则. Connection 网络连接. Channel 信道, 多路复用连接中的一条独立的双向数据流通道. 信道建立在真实的 TCP 连接内的虚拟连接, AMQP 命令不管是发布消息, 订阅队列还是接收消息, 都是通过信道发出. 因为对于操作系统来说, 建立和销毁 TCP 都是非常昂贵的开销, 所以引入了信道的概念, 以复用一条 TCP 连接. Virtual Host 虚拟主机, 每个 vhost 都拥有自己的队列, 交换器, 绑定和权限机制. 消息路由AMQP 中的消息的路由和 JMS 存在一些差别, AMQP 中增加了 Exchange 和 Binding 的角色. 生产者把消息发布到 Exchange 上, 消息最终到达队列并被消费者接收, 而 Binding 决定交换器的消息该发送到哪个队列. Exchange 类型Exchange 分发消息是根据类型的不同, 采用不同的分发策略. 目前共有四种类型: direct 消息中的路由键(routing-key)如果和 Binding 中的 binding key 完全匹配才将消息发到对应的队列中. fanout 每个发到 fanout 类型交换器的消息都会被分发到所有绑定的队列中区. fanout 交换器不处理路由键, 所以效率是最高的. topic topic 交换器通过模式匹配消息的路由键来路由消息, 它将路由键和绑定键的字符串用 . 分隔为多个单词, 同样也会识别两个通配符: # 匹配 0 个或多个单词, * 仅匹配一个单词. headers headers 交换器不依赖 routing key 与 binding key 的匹配规则来路由消息, 而是根据发送的消息内容中的 headers 属性进行匹配. 通过判断 headers 中的键值对与交换器与队列绑定时指定的键值对是否匹配来路由消息. 任务分配机制Round-robin 转发RabbitMQ 会将消息均衡地分发给每个消费者, 平均每个消费者将会获得相等数量的消息. 消息应答(Message Acknowledgement)消费者在处理完消息后告诉 MQ 消息已经处理完成, 之后 MQ 才将消息从队列移除. 如果消费者因为某些原因断开连接而没有发送应答, RabbitMQ 会认为该信息没有被完全地处理, 然后将会重新转发给别的消费者. 这里不存在 timeout, 即除非当前消费者断开连接, 否则消息不会被重新发送给其他消费者. 另外, publish message 是没有 ack 的. 消息持久化(Message durability)将消息持久化到硬盘, 下次 MQ 重启后不会丢失消息. 公平转发(Fair dispatch)如果有多个消费者同时订阅同一个 Queue 中的消息, Queue 中的消息会被平摊给多个消费者. 这时, 如果每个消息的处理时间不同, 就可能导致某些消费者一直忙碌, 而另一些消费者处于空闲状态. 我们可以通过设置 Prefetch count 来限制 Queue 每次发送给每个消费者的消息数, 比如 prefetchCount = 1, 则每个消费者每次只能接收到一条消息, 消费者只有在处理完(Ack)这条消息后才能再次获得一条新的消息. RPCMQ 本身是基于异步的消息处理, 生产者将消息发送到 RabbitMQ 后不会知道消费者是否处理成功. 如果生产者需要根据消息被处理的情况进行下一步处理, 这相当于 RPC(Remote Procedure Call, 远程过程调用). 在 RabbitMQ 中也支持 RPC. 实现的机制是: 客户端发送消息时, 在消息的属性(Message Properties, 在 AMQP 协议中定义了 14 种 properties, 这些属性会随着消息一起发送)中设置两个值 replyTo(一个 Queue 名称, 用于告诉服务器处理完成后将通知我的消息发送到这个 Queue 中)和 correlationId(此次请求的标识号, 服务器处理完成后需要将此属性返还, 客户端将根据这个 id 了解到辣条请求被成功执行了或执行失败). 服务端收到消息处理完后, 将生成一条应答消息到 replyTo 指定的 Queue, 同时带上 correlationId 属性. 客户端之前已订阅 replyTo 指定的 Queue, 从中收到服务器的应答消息后, 根据其中的 correlationId 属性分析哪条请求被执行了, 根据执行结果进行后续业务处理.]]></content>
       <categories>
@@ -9,19 +9,8 @@
         <category>RabbitMQ</category>
       </categories>
       <tags>
-        <tag>消息中间件</tag>
         <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[工具踩坑记录]]></title>
-    <url>%2FJavaLearning%2FNotes%2FSolutions.html</url>
-    <content type="text"><![CDATA[CmderCmder 进入 Windows Linux Subsystem 后, 进入 vim 界面方向键无法使用.在 Startup -&gt; Tasks -&gt; bash::ubuntu -&gt; 启动参数中添加 %windir%\system32\bash.exe ~ -cur_console:p5. Win10电脑开机后, 亮度自动变为 50.(任务管理器) -&gt; 服务 -&gt; 显示增强服务(DisplayEnhancementService), 把该服务禁用即可.]]></content>
-      <categories>
-        <category>Note</category>
-      </categories>
-      <tags>
-        <tag>Tools</tag>
+        <tag>消息中间件</tag>
       </tags>
   </entry>
   <entry>
@@ -33,6 +22,17 @@
       </categories>
       <tags>
         <tag>Dev</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[工具踩坑记录]]></title>
+    <url>%2FJavaLearning%2FNotes%2FSolutions.html</url>
+    <content type="text"><![CDATA[CmderCmder 进入 Windows Linux Subsystem 后, 进入 vim 界面方向键无法使用.在 Startup -&gt; Tasks -&gt; bash::ubuntu -&gt; 启动参数中添加 %windir%\system32\bash.exe ~ -cur_console:p5. Win10电脑开机后, 亮度自动变为 50.(任务管理器) -&gt; 服务 -&gt; 显示增强服务(DisplayEnhancementService), 把该服务禁用即可.]]></content>
+      <categories>
+        <category>Note</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>
@@ -91,8 +91,8 @@
         <category>Redis</category>
       </categories>
       <tags>
-        <tag>Redis</tag>
         <tag>消息中间件</tag>
+        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -224,17 +224,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Linux学习笔记]]></title>
-    <url>%2FJavaLearning%2FOps%2FLinux.html</url>
-    <content type="text"><![CDATA[Linux学习笔记系统命令tar 解压解压到指定目录:tar -zxvf 要解压的文件 -C 目的路径 tar 命令参数 -x或–extract或–get:从备份文件中还原文件 -Z或–compress或–uncompress:通过compress指令处理备份文件 -f&lt;备份文件&gt;或–file=&lt;备份文件&gt;:指定备份文件 -v:显示操作过程 -C &lt;目录&gt;:这个选项用在解压缩,若要在特定目录解压缩,可以使用这个选项 防火墙(使用firewalld)开启关闭重启:service firewalld start/stop/restart 查看运行状态:service firewalld status/sudo firewall-cmd --state 查看防火墙开放的端口:sudo firewall-cmd --list-ports 删除端口:firewall-cmd --zone=分区名 --remove-port=端口号/通讯协议 --permanent 为防火墙添加端口:sudo firewall-cmd --zone=分区名 --add-port=端口号/通讯协议 --permanent(永久生效) 防火墙分为多个区域,可用sudo firewall-cmd --get-zones查看,默认是public 软件安装查看软件是否安装: rom -qa | grep 软件名&gt; 下载安装软件: yum install 软件名1,2,3.../yum -y install 软件名1,2,3... 安装rpm软件包: rpm -ivh 软件包名 卸载软件: rpm -e 软件包名/yum remove 软件包名 rpm 命令参数 -i: 安装过程中显示正在安装的文件信息 -h: 安装过程中显示安装进度 服务进程查看服务进程: ps -ef | grep &lt;进程名&gt; 修改权限为文件添加可执行权限: chmod +x file.name,可以用通配符*.后缀名 查看文件查看文件最后n行: tail -n &lt;行数&gt; &lt;文件名&gt; 动态查看文件最后n行: tail -n &lt;行数&gt; -f &lt;文件名&gt;,使用ctrl+c来结束 创建文件创建指定大小文件: fallocate -l &lt;文件大小&gt; &lt;文件名&gt; 例:sudo fallocate -l 4G /swapfile(在/下创建一个大小为4G的文件swapfile) 查看系统状态查看内存使用情况: free free 命令参数 -m:以MB为单位显示.默认单位为KB.向下取整 用户操作创建用户: useradd 用户名或adduser 用户名.后者创建的用户会自动创建主目录,系统shell版本和创建时输入密码,而前者没有. 修改用户密码: passwd 用户名 删除用户: userdel 用户名 下载下载: wget 下载地址 下载并指定名称: wget -O 文件名称 下载地址 查找查找文件: find &lt;path&gt; -name &quot;&lt;文件名&gt;&quot;. 必须有双引号, 可以使用通配符来模糊查找. -iname - 忽略大小写. vim 搜索 在 normal 模式下按下 / 即可进入查找模式, 输入要查找的字符串并按下回车. Vim 会跳转到第一个匹配. 按下 n查找下一个, 按下 N查找上一个. 注意查找回车应当用 \n,替换回车应当用 \r vim默认采用大小写敏感.在查找模式中加入 \c 表示大小写不敏感 ,\C敏感. 问题解决Linux Terminal 提示符显示 bash-4.2用 root 用户登录, 发现提示符显示的不是 root@主机名+路径, 原因是家目录下配置文件丢失. .bash_profile 和 .bashrc 这两个文件是用户必须的配置文件. 解决方案: 从主默认文件重新拷贝一份配置信息 12cp /etc/skel/.bashrc /root/cp /etc/skel/.bash_profile /root]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Nginx学习笔记]]></title>
     <url>%2FJavaLearning%2FOps%2FNginx.html</url>
     <content type="text"><![CDATA[Nginx配置 在···/nginx/conf目录下的nginx.conf 123456789101112131415161718192021222324252627282930313233# 全局块... # events块events &#123; ...&#125;# http块http &#123; # http全局块 ... # 虚拟主机server块 server &#123; # server全局块 ... # location块 location [PATTERN] &#123; ... &#125; location [PATTERN] &#123; ... &#125; &#125; server &#123; ... &#125; # http全局块 ... &#125; 全局块 配置影响nginx全局的指令.一般有运行nginx服务器的用户组,nginx进程pid存放路径,日志存放路径,配置文件引入,允许生成worker process数等. 12345########### 每个指令必须有分号结束。##################user administrator administrators; #配置用户或者组，默认为nobody nobody。#worker_processes 2; #允许生成的进程数，默认为1#pid /nginx/pid/nginx.pid; #指定nginx进程运行文件存放地址error_log log/error.log debug; #制定日志路径，级别。这个设置可以放入全局块，http块，server块，级别以此为：debug|info|notice|warn|error|crit|alert|emerg events块 配置影响nginx服务器或与用户的网络连接.有每个进程的最大连接数,选取哪种事件驱动模型处理连接请求,是否允许同时接受多个网路连接,开启多个网络连接序列化等. 123456events &#123; accept_mutex on; #设置网路连接序列化，防止惊群现象发生，默认为on multi_accept on; #设置一个进程是否同时接受多个网络连接，默认为off #use epoll; #事件驱动模型，select|poll|kqueue|epoll|resig|/dev/poll|eventport worker_connections 1024; #每个worker process最大连接数&#125; http块 可以嵌套多个server,配置代理,缓存,日志定义等绝大多数功能和第三方模块的配置.如文件引入,mime-type定义,日志自定义,是否使用sendfile传输文件,连接超时时间,单连接请求数等. 1234567891011121314151617http &#123; include mime.types; #文件扩展名与文件类型映射表 default_type application/octet-stream; #默认文件类型，默认为text/plain #access_log off; #取消服务日志 log_format myFormat '$remote_addr–$remote_user [$time_local] $request $status $body_bytes_sent $http_referer $http_user_agent $http_x_forwarded_for'; #自定义格式 access_log log/access.log myFormat; #combined为日志格式的默认值 sendfile on; #允许sendfile方式传输文件，默认为off，可以在http块，server块，location块。 sendfile_max_chunk 100k; #每个进程每次调用传输数量不能大于设定的值，默认为0，即不设上限。 keepalive_timeout 65; #连接超时时间，默认为75s，可以在http，server，location块。 # 定义常量 # 负载均衡,按权重或规则将请求转发到某个服务器 upstream mysvr &#123; server 127.0.0.1:7878; server 192.168.10.121:3333 backup; #热备 &#125; error_page 404 https://www.baidu.com; #请求失败时跳转的错误页 server块 配置虚拟主机的相关参数,一个http中可以有多个server. 并且可以过滤有人恶意将某些域名指向自己的主机服务器. 123456#定义某个负载均衡服务器 server &#123; keepalive_requests 120; #单连接请求上限次数。 listen 4545; #监听端口 server_name 127.0.0.1; #监听地址 &#125; server_name server_name是监听你的HTTP请求头中的host. 默认情况下，Nginx 允许直接以 IP 的方式就能直接访问到网站，或者通过未设置的域名访问(比如有人把他自己的域名指向了你的服务器 IP),可通过如下设置进行防护 例如: 1234567891011121314151617181920&gt; server &#123;&gt; listen 80 default_server;&gt; server_name _;&gt; return 444; # 过滤其他域名的请求，返回444状态码&gt; &#125;&gt; server &#123;&gt; listen 80;&gt; server_name www.aaa.com; # www.aaa.com域名&gt; location / &#123;&gt; proxy_pass http://localhost:8080; # 对应端口号8080&gt; &#125;&gt; &#125;&gt; server &#123;&gt; listen 80;&gt; server_name www.bbb.com; # www.bbb.com域名&gt; location / &#123;&gt; proxy_pass http://localhost:8081; # 对应端口号8081&gt; &#125;&gt; &#125;&gt; server_name的值为www.aaa.com.在浏览器中输入www.aaa.com,那么匹配到了对应server_name,请求就会被转发到http://localhost:8080.这里www.aaa.com和www.bbb.com都绑定到了服务器 而对于未绑定的域名指向服务器时,匹配不到配置的虚拟主机域名,就会使用默认的虚拟主机,然会返回444. listen 80 default_server:指定该server配置段为80端口的默认主机，即对于未绑定的域名指向你的服务器时,匹配不到你配置的虚拟主机域名后,会默认使用这个虚拟主机 server_name _:此处的_可以换成任意其他无效字符或无效的域名,表示该server配置不会被正常访问到 access_log:日志 格式:access_log logs/aaa.access.log main-日志类型 日志存放路径 日志格式 location块详细参考-知否 详细参考-本地 nginx跨域代理的一些设置 配置请求的路由,以及各种页面的处理情况 1234567location ~*^.+$ &#123; #请求的url过滤,正则匹配 #root path; #根目录 #index vv.txt; #设置默认页 proxy_pass http://mysvr; #请求转向mysvr 定义的服务器列表 deny 127.0.0.1; #拒绝的ip allow 172.18.5.54; #允许的ip &#125; 通配符 =表示精确匹配.只有请求的url路径与后面的字符串完全相等时,才会命中 ~表示该规则是使用正则定义的,区分大小写 ~*表示该规则是使用正则定义的,不区分大小写 ^~表示如果该符号后面的字符是最佳匹配,采用该规则,不再进行后续的查找 属性解释 root表示url匹配上了此location定义的正则后,就将这个url映射到定义的根目录. 例如 location /user/img,root /usr/local/resource;. 那么如果请求为http://www.aaa.com/user/img/aaa.jpg,/user/img对应/usr/local/resource.该请求得到的结果就是/usr/local/resource下的aaa.jpg index就是设置默认的欢迎页面.页面需要存在于定义的root目录下. 接上例index index.html;. 那么如果请求为http://www.aaa.com/user/img/,请求的结果就是/usr/local/resource/user/img下的index.html,有点类似于相对路径.而如果要让index.html为/usr/local/resource/路径下的index.html的话,需要把root换为alias,具体参照root和alias的区别. 注意unknown directive所有关键词后都必须加一个空格,否则会报错unknown directive xxx Linux下命令 在···/nginx/sbin/目录下 启动nginx:nginx -s start 停止nginx:nginx -s stop 重启nginx:nginx -s reload 测试配置:nginx -t Nginx日志目录 在···/nginx/logs/目录下 目录下通常存放有access.log,error.log以及nginx.pid. nginx.pid中保存着nginx的进程号,可以通过查看此文件获取进程号来kill nginx. root和alias的区别root 示例11234location / &#123; root /data/www/; index index.html;&#125; 请求http://example.com这个地址,那么在服务器中真实对应的地址为/data/www/index.html 请求 真实地址 http://example.com /data/www/index.html http://example.com/a.png /data/www/a.png root 示例21234location /aaa/ &#123; root /data/www/; index index.html;&#125; 请求 真实地址 http://example.com/aaa/ /data/www/aaa/indexhtml http://example.com/aaa/a.gif /data/www/aaa/a.gif alias 示例11234location /&#123; alias /data/www/; index index.html;&#125; 请求 真实地址 http://example.com /data/www/index.html http://example.com/b.jpg /data/www/a.jpg alias 示例21234location /bbb/&#123; alias /data/www/; index index.html;&#125; 请求 真实地址 http://example.com/bbb/ /data/www/index.html http://example.com/bbb/b.jpg /data/www/b.jpg 对比上面4个示例可以发现,使用root的真实地址是root+location+(文件名),而使用alias的真实地址是alias+(文件名). 注意 alias只能作用在location中,而root可以存在server,http,location. alias后面必须要用/结束. Nginx 配置静态资源目录12345678910111213server &#123; listen 8082; server_name localhost; location / &#123; # 设置资源根目录 root /root/app/project/upload/files; # 设置默认欢迎页 index index.html; # 目录结构 autoindex on; autoindex_localtime on; &#125;&#125; 如果访问资源显示 403, 则在 nginx.conf 文件中找到被注释的 #user nobody, 添加一行 user root 即可. Nginx实现解决前后端分离的跨域问题参考 在前端使用ajax向从后端获取数据发送跨域请求,由于浏览器的同源策略限制,会报403错误. 同源策略 同源是指”协议+域名+端口”三者相同,即便两个不同的域名指向同一个ip地址,也非同源 同源策略限制行为 Cookie,LocalStorage和IndexDB无法读取 DOM和JS对象无法获得 Ajax请求不能发送 常见的跨域场景 URL 说明 是否允许通信 http://www.domain.com/a.jshttp://www.domain.com/b.jshttp://www.domain.com/lab/c.js 同一域名,不同文件或路径 允许 http://www.domain.com:8000/a.js http://www.domain.com/b.js 同一域名,不同端口 不允许 http://www.domain.com/a.jshttps://www.domain.com/b.js 同一域名,不同协议 不允许 http://www.domain.com/a.jshttp://192.168.4.12/b.js 域名和域名对应相同ip 不允许 http://www.domain.com/a.jshttp://x.domain.com/b.jshttp://domain.com/c.js 主域相同,子域不同 不允许(cookie这种情况下也不允许访问) http://www.domain1.com/a.jshttp://www.domain2.com/b.js 不同域名 不允许 跨域解决方案Nginx代理跨域 一种比较简单的解决方案,无需动后端代码 Nginx配置123456789101112131415161718192021222324252627server &#123; listen 80; server_name vnaso.live; location / &#123; if ($http_origin ~* (http://vnaso\.live$) ) &#123; add_header Access-Control-Allow-Origin '$http_origin'; add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS'; add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization'; add_header 'Access-Control-Allow-Credentials' 'true'; &#125; if ($http_origin ~* (http://127.0.0.1:8080$) ) &#123; add_header Access-Control-Allow-Origin '$http_origin'; add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS'; add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization'; add_header 'Access-Control-Allow-Credentials' 'true'; &#125; proxy_pass http://127.0.0.1:8080/; #proxy_cookie_path / /; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header Cookie $http_cookie; root /opt/Develop/apache-tomcat-9.0.16/webapps/ROOT/; # index index.html; &#125;&#125; if语句来决定匹配跨域请求,并为这些请求添加RequestHeader,上面配置的add_header Access-Control-Allow-Origin:服务器默认是不允许跨域的,这里可以添加接受跨域的请求源(origin). Access-Control-Allow-Methods:设置允许接收哪些方法的跨域请求 Access-Control-Allow-Headers:不添加此属性会报错:Request header field Content-Type is not allowed by Access-Control-Allow-Headers in preflight response.原因是当前的Content-Type不被支持.详情看下方的预检请求. Access-Control-Allow-Credentials:表示是否允许发送 Cookie, 默认情况下, Cookis 不包括在 CORS 请求之中. 不设置为 true, 客户端不会收到服务器发送的 Cookie, 可能会客户端获取不到 session. proxy_pass:表示将匹配的请求转发到该url下 proxy_set_header:为转发的请求添加RequestHeader 相关知识CORS]]></content>
@@ -244,6 +233,17 @@
       </categories>
       <tags>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux学习笔记]]></title>
+    <url>%2FJavaLearning%2FOps%2FLinux.html</url>
+    <content type="text"><![CDATA[Linux学习笔记系统命令tar 解压解压到指定目录:tar -zxvf 要解压的文件 -C 目的路径 tar 命令参数 -x或–extract或–get:从备份文件中还原文件 -Z或–compress或–uncompress:通过compress指令处理备份文件 -f&lt;备份文件&gt;或–file=&lt;备份文件&gt;:指定备份文件 -v:显示操作过程 -C &lt;目录&gt;:这个选项用在解压缩,若要在特定目录解压缩,可以使用这个选项 防火墙(使用firewalld)开启关闭重启:service firewalld start/stop/restart 查看运行状态:service firewalld status/sudo firewall-cmd --state 查看防火墙开放的端口:sudo firewall-cmd --list-ports 删除端口:firewall-cmd --zone=分区名 --remove-port=端口号/通讯协议 --permanent 为防火墙添加端口:sudo firewall-cmd --zone=分区名 --add-port=端口号/通讯协议 --permanent(永久生效) 防火墙分为多个区域,可用sudo firewall-cmd --get-zones查看,默认是public 软件安装查看软件是否安装: rom -qa | grep 软件名&gt; 下载安装软件: yum install 软件名1,2,3.../yum -y install 软件名1,2,3... 安装rpm软件包: rpm -ivh 软件包名 卸载软件: rpm -e 软件包名/yum remove 软件包名 rpm 命令参数 -i: 安装过程中显示正在安装的文件信息 -h: 安装过程中显示安装进度 服务进程查看服务进程: ps -ef | grep &lt;进程名&gt; 修改权限为文件添加可执行权限: chmod +x file.name,可以用通配符*.后缀名 查看文件查看文件最后n行: tail -n &lt;行数&gt; &lt;文件名&gt; 动态查看文件最后n行: tail -n &lt;行数&gt; -f &lt;文件名&gt;,使用ctrl+c来结束 创建文件创建指定大小文件: fallocate -l &lt;文件大小&gt; &lt;文件名&gt; 例:sudo fallocate -l 4G /swapfile(在/下创建一个大小为4G的文件swapfile) 查看系统状态查看内存使用情况: free free 命令参数 -m:以MB为单位显示.默认单位为KB.向下取整 用户操作创建用户: useradd 用户名或adduser 用户名.后者创建的用户会自动创建主目录,系统shell版本和创建时输入密码,而前者没有. 修改用户密码: passwd 用户名 删除用户: userdel 用户名 下载下载: wget 下载地址 下载并指定名称: wget -O 文件名称 下载地址 查找查找文件: find &lt;path&gt; -name &quot;&lt;文件名&gt;&quot;. 必须有双引号, 可以使用通配符来模糊查找. -iname - 忽略大小写. vim 搜索 在 normal 模式下按下 / 即可进入查找模式, 输入要查找的字符串并按下回车. Vim 会跳转到第一个匹配. 按下 n查找下一个, 按下 N查找上一个. 注意查找回车应当用 \n,替换回车应当用 \r vim默认采用大小写敏感.在查找模式中加入 \c 表示大小写不敏感 ,\C敏感. 问题解决Linux Terminal 提示符显示 bash-4.2用 root 用户登录, 发现提示符显示的不是 root@主机名+路径, 原因是家目录下配置文件丢失. .bash_profile 和 .bashrc 这两个文件是用户必须的配置文件. 解决方案: 从主默认文件重新拷贝一份配置信息 12cp /etc/skel/.bashrc /root/cp /etc/skel/.bash_profile /root]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

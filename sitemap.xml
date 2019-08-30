@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.vnaso.live/JavaLearning/%E4%B8%AD%E9%97%B4%E4%BB%B6/RabbitMQ.html</loc>
+    
+    <lastmod>2019-08-30T10:07:11.413Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.vnaso.live/JavaLearning/%E4%B8%AD%E9%97%B4%E4%BB%B6/Redis.html</loc>
     
     <lastmod>2019-08-30T10:03:28.166Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://blog.vnaso.live/JavaLearning/Java/Framework/logback.html</loc>
     
     <lastmod>2019-08-21T04:45:10.431Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.vnaso.live/JavaLearning/%E4%B8%AD%E9%97%B4%E4%BB%B6/RabbitMQ.html</loc>
-    
-    <lastmod>2019-08-20T13:09:12.526Z</lastmod>
     
   </url>
   
