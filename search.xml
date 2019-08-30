@@ -14,17 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Dev Note]]></title>
-    <url>%2FJavaLearning%2FNotes%2FDevNote.html</url>
-    <content type="text"><![CDATA[DBMySQL 8.x jdbc 连接参数1jdbc:mysql://&#123;host&#125;:&#123;port&#125;/&#123;schema&#125;?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2B8 不设置时区会导致数据库无法连接, 报错: The server time zone value &#39;ÖÐ¹ú±ê×¼Ê±¼ä&#39; is unrecognized or represents more than one time zone. Spring BootSpring Boot profile 拆分通过 application-{profile} 的形式, 可实现 profile 的环境隔离和拆分. 环境隔离比如有 prod, dev 和 beta 三个环境. 可将环境特有的配置分别写在 application-prod.yml, application-dev.yml 和 application-beta.yml 中. 然后在主配置文件(通用)中通过 spring.profiles.active : ${env} 来切换当前环境, 达到环境隔离的效果. 拆分如果一个 profile 中配置过多, 想让文件更加简洁, 或按功能拆分, 比如配置了 redis, mybatis, 可以单独创建这两个的配置文件: application-devRedis.yml, application-devMybatis.yml. 然后在主配置文件中通过 spring.profiles.include: devRedis,devMybatis 来引入这两个配置. springBoot 序列化时忽略 null 字段.添加注解的方式无法生效, 需要在 application.yml 中通过 spring.jackson.default-property-inclusion: non_null 来指定. Swagger @ApiImplicitParam 和 @ApiParam 的使用@ApiImplicParam 用于描述接口方法参数对象的属性. @ApiParam 用于描述接口方法所需的参数对象. 例: 12345@ApiImplicitParams(&#123; @ApiImplicitParam(name = "people 的 name", value = "name"), @ApiImplicitParam(name = "people 的 age", value = "age) &#125;)public void updatePeople(@ApiParam People p, @ApiParam String type)&#123;&#125; 使用 Nginx 反向代理后获取不到真实客户端 IP起因由于配置了 Nginx 反向代理, 使用 proxy_pass 代理了客户端请求, 导致通过 HttpServletRequest.getRemoteAddr() 获取到的 IP 地址为 Nginx 服务器所在的地址. 解决方案Nginx 添加配置: 1234567location / &#123; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; proxy_redirect off;&#125; SpringBoot 添加配置 12345server: use-forward-headers: true tomcat: remote-ip-header: X-Real-IP protocol-header: X-Forwarded-Proto]]></content>
-      <categories>
-        <category>Note</category>
-      </categories>
-      <tags>
-        <tag>Dev</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[工具踩坑记录]]></title>
     <url>%2FJavaLearning%2FNotes%2FSolutions.html</url>
     <content type="text"><![CDATA[CmderCmder 进入 Windows Linux Subsystem 后, 进入 vim 界面方向键无法使用.在 Startup -&gt; Tasks -&gt; bash::ubuntu -&gt; 启动参数中添加 %windir%\system32\bash.exe ~ -cur_console:p5. Win10电脑开机后, 亮度自动变为 50.(任务管理器) -&gt; 服务 -&gt; 显示增强服务(DisplayEnhancementService), 把该服务禁用即可.]]></content>
@@ -33,6 +22,17 @@
       </categories>
       <tags>
         <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Dev Note]]></title>
+    <url>%2FJavaLearning%2FNotes%2FDevNote.html</url>
+    <content type="text"><![CDATA[DBMySQL 8.x jdbc 连接参数1jdbc:mysql://&#123;host&#125;:&#123;port&#125;/&#123;schema&#125;?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2B8 不设置时区会导致数据库无法连接, 报错: The server time zone value &#39;ÖÐ¹ú±ê×¼Ê±¼ä&#39; is unrecognized or represents more than one time zone. Spring BootSpring Boot profile 拆分通过 application-{profile} 的形式, 可实现 profile 的环境隔离和拆分. 环境隔离比如有 prod, dev 和 beta 三个环境. 可将环境特有的配置分别写在 application-prod.yml, application-dev.yml 和 application-beta.yml 中. 然后在主配置文件(通用)中通过 spring.profiles.active : ${env} 来切换当前环境, 达到环境隔离的效果. 拆分如果一个 profile 中配置过多, 想让文件更加简洁, 或按功能拆分, 比如配置了 redis, mybatis, 可以单独创建这两个的配置文件: application-devRedis.yml, application-devMybatis.yml. 然后在主配置文件中通过 spring.profiles.include: devRedis,devMybatis 来引入这两个配置. springBoot 序列化时忽略 null 字段.添加注解的方式无法生效, 需要在 application.yml 中通过 spring.jackson.default-property-inclusion: non_null 来指定. Swagger @ApiImplicitParam 和 @ApiParam 的使用@ApiImplicParam 用于描述接口方法参数对象的属性. @ApiParam 用于描述接口方法所需的参数对象. 例: 12345@ApiImplicitParams(&#123; @ApiImplicitParam(name = "people 的 name", value = "name"), @ApiImplicitParam(name = "people 的 age", value = "age) &#125;)public void updatePeople(@ApiParam People p, @ApiParam String type)&#123;&#125; 使用 Nginx 反向代理后获取不到真实客户端 IP起因由于配置了 Nginx 反向代理, 使用 proxy_pass 代理了客户端请求, 导致通过 HttpServletRequest.getRemoteAddr() 获取到的 IP 地址为 Nginx 服务器所在的地址. 解决方案Nginx 添加配置: 1234567location / &#123; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; proxy_redirect off;&#125; SpringBoot 添加配置 12345server: use-forward-headers: true tomcat: remote-ip-header: X-Real-IP protocol-header: X-Forwarded-Proto]]></content>
+      <categories>
+        <category>Note</category>
+      </categories>
+      <tags>
+        <tag>Dev</tag>
       </tags>
   </entry>
   <entry>
