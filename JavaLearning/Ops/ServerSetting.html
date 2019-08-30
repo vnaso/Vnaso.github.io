@@ -113,7 +113,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b8283e0357.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b83014f41b.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/03/5c7b96f1831a8.png">
-<meta property="og:updated_time" content="2019-06-27T11:19:06.294Z">
+<meta property="og:updated_time" content="2019-08-20T10:50:37.789Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux线上环境搭建">
 <meta name="twitter:description" content="服务器环境搭建 Java安装 到官网下载 jdk.  注意要使用带 Auth 的下载链接下载   解压到 tar -zxvf jdk_8u_201 -C /usr/java  编辑环境变量 vim /etc/profile, 使环境变量生效 source /etc/profile 1234export JAVA_HOME=/usr/java/jdk...export JRE_HOME=/usr/j">
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-27 19:19:06" itemprop="dateModified" datetime="2019-06-27T19:19:06+08:00">2019-06-27</time>
+                <time title="修改时间：2019-08-20 18:50:37" itemprop="dateModified" datetime="2019-08-20T18:50:37+08:00">2019-08-20</time>
               
             
           </span>
@@ -534,7 +534,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">8.9k</span>
+                <span title="本文字数">9.5k</span>
               
 
               
@@ -845,6 +845,23 @@
 <li><p>在挂载的目录下创建 <code>custom.cnf</code>, 添加相关 mysql 配置后, 在 MySQL 容器中对应的目录下将 <code>custom.cnf</code> 拷贝到 <code>/etc/mysql/conf.d</code> 下.</p>
 </li>
 </ol>
+<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><h3 id="安装-8"><a href="#安装-8" class="headerlink" title="安装"></a>安装</h3><h4 id="通过-Docker-安装"><a href="#通过-Docker-安装" class="headerlink" title="通过 Docker 安装"></a>通过 Docker 安装</h4><ol>
+<li><p>拉取镜像.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull rabbitmq:3.3.7-management</span><br></pre></td></tr></table></figure>
+<p>注意: 带有 management 的版本才有后台管理.</p>
+</li>
+<li><p>后台运行容器.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 -v ~/app/rabbitmq/data:/var/lib/rabbitmq --hostname rabbitNo1 -e RABBITMQ_DEFAULT_VHOST=my_vhost -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin rabbitmq:3.7.7-management</span><br></pre></td></tr></table></figure>
+<ul>
+<li>5672 为运行 rabbitmq 运行端口, 15672 为后台管理界面端口.</li>
+<li><code>-e RABBITMQ_DEFAULT_VHOST</code>: 改变默认的 vhost.</li>
+<li><code>-e RABBITMQ_DEFAULT_USER</code>: 设置登录名.</li>
+<li><code>-e RABBITMQ_DEFAULT_PASS=admin</code>: 设置登录密码.</li>
+</ul>
+</li>
+<li><p>访问 <code>{IP}:15672</code> 验证是否启动成功.</p>
+</li>
+</ol>
 <h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><p>在腾讯云服务器中的配置</p>
 <p><img src="https://i.loli.net/2019/03/03/5c7b96f1831a8.png" alt="profile.png"></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">CLASS_PATH</span>=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$GIT_HOME/bin:$MAVEN_HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">GIT_HOME</span>=/usr/local/git</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">MAVEN_HOME</span>=/opt/Develop/apache-maven-3.6.0</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/usr/java/jdk1.8.0_201</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JRE_HOME</span>=/usr/java/jdk1.8.0_201/jre</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">CATALINA_HOME</span>=/opt/Develop/apache-tomcat-9.0.16</span><br></pre></td></tr></table></figure>
@@ -1028,7 +1045,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1075,7 +1092,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1134,7 +1153,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">21</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1203,7 +1226,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行打包好的-jar"><span class="nav-number">1.0.2.</span> <span class="nav-text">运行打包好的 jar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK"><span class="nav-number">1.1.</span> <span class="nav-text">OpenJDK</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-number">2.</span> <span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">3.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">4.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-number">4.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-number">4.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">5.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-number">5.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-number">5.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-number">6.</span> <span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-number">6.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-4"><span class="nav-number">6.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-number">7.</span> <span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-6"><span class="nav-number">7.0.1.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis"><span class="nav-number">8.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh"><span class="nav-number">9.</span> <span class="nav-text">zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-5"><span class="nav-number">9.1.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-number">10.</span> <span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-number">10.0.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-number">10.0.2.</span> <span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker"><span class="nav-number">11.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-7"><span class="nav-number">11.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-6"><span class="nav-number">11.2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用阿里云镜像加速"><span class="nav-number">11.2.1.</span> <span class="nav-text">使用阿里云镜像加速</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-MySQL"><span class="nav-number">11.3.</span> <span class="nav-text">安装 MySQL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-number">12.</span> <span class="nav-text">环境变量配置</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行打包好的-jar"><span class="nav-number">1.0.2.</span> <span class="nav-text">运行打包好的 jar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK"><span class="nav-number">1.1.</span> <span class="nav-text">OpenJDK</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql"><span class="nav-number">2.</span> <span class="nav-text">Mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">3.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">4.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-number">4.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-number">4.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">5.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-4"><span class="nav-number">5.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-number">5.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-number">6.</span> <span class="nav-text">Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-5"><span class="nav-number">6.0.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-4"><span class="nav-number">6.0.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vstpd"><span class="nav-number">7.</span> <span class="nav-text">Vstpd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-6"><span class="nav-number">7.0.1.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis"><span class="nav-number">8.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh"><span class="nav-number">9.</span> <span class="nav-text">zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-5"><span class="nav-number">9.1.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap交换缓存"><span class="nav-number">10.</span> <span class="nav-text">swap交换缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建"><span class="nav-number">10.0.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使swap永久生效"><span class="nav-number">10.0.2.</span> <span class="nav-text">使swap永久生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker"><span class="nav-number">11.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-7"><span class="nav-number">11.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-6"><span class="nav-number">11.2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用阿里云镜像加速"><span class="nav-number">11.2.1.</span> <span class="nav-text">使用阿里云镜像加速</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-MySQL"><span class="nav-number">11.3.</span> <span class="nav-text">安装 MySQL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RabbitMQ"><span class="nav-number">12.</span> <span class="nav-text">RabbitMQ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-8"><span class="nav-number">12.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-Docker-安装"><span class="nav-number">12.1.1.</span> <span class="nav-text">通过 Docker 安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量配置"><span class="nav-number">13.</span> <span class="nav-text">环境变量配置</span></a></li></div>
             
 
           </div>
